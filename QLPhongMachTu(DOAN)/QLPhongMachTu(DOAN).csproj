@@ -49,9 +49,18 @@
     <Compile Include="DTO\BacSi.cs" />
     <Compile Include="DTO\BaseConNguoi.cs" />
     <Compile Include="DTO\BenhNhan.cs" />
+    <Compile Include="DTO\ChiTietToaThuoc.cs" />
+    <Compile Include="DTO\HoaDonKhamBenh.cs" />
+    <Compile Include="DTO\HoaDonThuoc.cs" />
+    <Compile Include="DTO\LichKham.cs" />
+    <Compile Include="DTO\LichPhanCong.cs" />
+    <Compile Include="DTO\NhapThuoc.cs" />
+    <Compile Include="DTO\PhieuKham.cs" />
     <Compile Include="DTO\PhongKhoa.cs" />
     <Compile Include="DTO\NhanVien.cs" />
     <Compile Include="DTO\PhanQuyen.cs" />
+    <Compile Include="DTO\Thuoc.cs" />
+    <Compile Include="DTO\ToaThuoc.cs" />
     <Compile Include="DTO\User.cs" />
     <Compile Include="GUI\Login.cs">
       <SubType>Form</SubType>

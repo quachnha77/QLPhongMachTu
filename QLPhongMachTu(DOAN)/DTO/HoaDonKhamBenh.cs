@@ -16,6 +16,6 @@ namespace QLPhongMachTu_DOAN_.DTO
 
         public BenhNhan BenhNhan { get; set; }
         public BacSi BacSi { get; set; }
-        public PhieuKham PhieuKham { get; set;s }
+        public PhieuKham PhieuKham { get; set; }
     }
 }
