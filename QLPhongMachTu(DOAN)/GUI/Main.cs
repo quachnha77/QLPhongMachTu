@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QLPhongMachTu_DOAN_.GUI;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -36,5 +37,6 @@ namespace QLPhongMachTu_DOAN_
         {
 
         }
+
     }
 }
