@@ -1,0 +1,221 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1AD6BEAF-FBE1-45C1-A861-C4C1B16E90E7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>QLPhongMachTu_DOAN_</RootNamespace>
+    <AssemblyName>QLPhongMachTu%28DOAN%29</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DTO\BacSi.cs" />
+    <Compile Include="DTO\BaseConNguoi.cs" />
+    <Compile Include="DTO\BenhNhan.cs" />
+    <Compile Include="DTO\ChiTietToaThuoc.cs" />
+    <Compile Include="DTO\HoaDonKhamBenh.cs" />
+    <Compile Include="DTO\HoaDonThuoc.cs" />
+    <Compile Include="DTO\LichKham.cs" />
+    <Compile Include="DTO\LichPhanCong.cs" />
+    <Compile Include="DTO\NhanVien.cs" />
+    <Compile Include="DTO\NhapThuoc.cs" />
+    <Compile Include="DTO\PhanQuyen.cs" />
+    <Compile Include="DTO\PhieuKham.cs" />
+    <Compile Include="DTO\PhongKhoa.cs" />
+    <Compile Include="DTO\Thuoc.cs" />
+    <Compile Include="DTO\ToaThuoc.cs" />
+    <Compile Include="DTO\User.cs" />
+    <Compile Include="GUI\KhamBenh.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\KhamBenh.Designer.cs">
+      <DependentUpon>KhamBenh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Login1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Login1.Designer.cs">
+      <DependentUpon>Login1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\NavbarBacSi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\NavbarBacSi.Designer.cs">
+      <DependentUpon>NavbarBacSi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\NavbarBenhNhan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\NavbarBenhNhan.Designer.cs">
+      <DependentUpon>NavbarBenhNhan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\NavbarDuocSi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\NavbarDuocSi.Designer.cs">
+      <DependentUpon>NavbarDuocSi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\NavbarLeTan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\NavbarLeTan.Designer.cs">
+      <DependentUpon>NavbarLeTan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\NavbarQuanLi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\NavbarQuanLi.Designer.cs">
+      <DependentUpon>NavbarQuanLi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\NavbarYTa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\NavbarYTa.Designer.cs">
+      <DependentUpon>NavbarYTa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\SignUp.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\SignUp.Designer.cs">
+      <DependentUpon>SignUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\TaiKhoan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\TaiKhoan.Designer.cs">
+      <DependentUpon>TaiKhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\TestControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\TestControl.Designer.cs">
+      <DependentUpon>TestControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ThanhToan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\ThanhToan.Designer.cs">
+      <DependentUpon>ThanhToan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ToaThuocDonThuoc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\ToaThuocDonThuoc.Designer.cs">
+      <DependentUpon>ToaThuocDonThuoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\KhamBenh.resx">
+      <DependentUpon>KhamBenh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Login1.resx">
+      <DependentUpon>Login1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\NavbarBacSi.resx">
+      <DependentUpon>NavbarBacSi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\NavbarBenhNhan.resx">
+      <DependentUpon>NavbarBenhNhan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\NavbarDuocSi.resx">
+      <DependentUpon>NavbarDuocSi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\NavbarLeTan.resx">
+      <DependentUpon>NavbarLeTan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\NavbarQuanLi.resx">
+      <DependentUpon>NavbarQuanLi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\NavbarYTa.resx">
+      <DependentUpon>NavbarYTa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\SignUp.resx">
+      <DependentUpon>SignUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\TaiKhoan.resx">
+      <DependentUpon>TaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\TestControl.resx">
+      <DependentUpon>TestControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ThanhToan.resx">
+      <DependentUpon>ThanhToan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ToaThuocDonThuoc.resx">
+      <DependentUpon>ToaThuocDonThuoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Image\Background.jpg" />
+    <None Include="Image\duocthu.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
