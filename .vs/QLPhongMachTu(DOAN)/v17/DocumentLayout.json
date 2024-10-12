@@ -3,8 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\2301\\Desktop\\C#\\QLPhongMachTu(DOAN)\\QLPhongMachTu(DOAN)\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\2301\\Desktop\\C#\\QLPhongMachTu(DOAN)\\QLPhongMachTu(DOAN)\\QLPhongMachTu(DOAN).csproj.user||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:QLPhongMachTu(DOAN).csproj.user||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\2301\\Desktop\\C#\\QLPhongMachTu(DOAN)\\QLPhongMachTu(DOAN)\\GUI\\Login1.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:GUI\\Login1.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\2301\\Desktop\\C#\\QLPhongMachTu(DOAN)\\QLPhongMachTu(DOAN)\\QLPhongMachTu(DOAN).csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:QLPhongMachTu(DOAN).csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\2301\\Desktop\\C#\\QLPhongMachTu(DOAN)\\QLPhongMachTu(DOAN)\\GUI\\Main.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -17,14 +25,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\2301\\Desktop\\C#\\QLPhongMachTu(DOAN)\\QLPhongMachTu(DOAN)\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\2301\\Desktop\\C#\\QLPhongMachTu(DOAN)\\QLPhongMachTu(DOAN)\\QLPhongMachTu(DOAN).csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:QLPhongMachTu(DOAN).csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\2301\\Desktop\\C#\\QLPhongMachTu(DOAN)\\QLPhongMachTu(DOAN)\\QLPhongMachTu(DOAN).csproj.user||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:QLPhongMachTu(DOAN).csproj.user||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -46,7 +46,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Main.Designer.cs",
               "DocumentMoniker": "C:\\Users\\2301\\Desktop\\C#\\QLPhongMachTu(DOAN)\\QLPhongMachTu(DOAN)\\GUI\\Main.Designer.cs",
               "RelativeDocumentMoniker": "GUI\\Main.Designer.cs",
@@ -54,12 +54,11 @@
               "RelativeToolTip": "GUI\\Main.Designer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-11T16:29:22.393Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-11T16:29:22.393Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "App.config",
               "DocumentMoniker": "C:\\Users\\2301\\Desktop\\C#\\QLPhongMachTu(DOAN)\\QLPhongMachTu(DOAN)\\App.config",
               "RelativeDocumentMoniker": "App.config",
@@ -67,12 +66,11 @@
               "RelativeToolTip": "App.config",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2024-10-11T16:29:19.937Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-11T16:29:19.937Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\2301\\Desktop\\C#\\QLPhongMachTu(DOAN)\\QLPhongMachTu(DOAN)\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -80,12 +78,11 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-11T16:29:19.241Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-11T16:29:19.241Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "QLPhongMachTu(DOAN).csproj",
               "DocumentMoniker": "C:\\Users\\2301\\Desktop\\C#\\QLPhongMachTu(DOAN)\\QLPhongMachTu(DOAN)\\QLPhongMachTu(DOAN).csproj",
               "RelativeDocumentMoniker": "QLPhongMachTu(DOAN).csproj",
@@ -98,7 +95,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Login1.Designer.cs",
               "DocumentMoniker": "C:\\Users\\2301\\Desktop\\C#\\QLPhongMachTu(DOAN)\\QLPhongMachTu(DOAN)\\GUI\\Login1.Designer.cs",
               "RelativeDocumentMoniker": "GUI\\Login1.Designer.cs",
@@ -110,12 +107,8 @@
               "EditorCaption": ""
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{e5c86464-96be-4d7c-9a8b-abcb3bbf5f92}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
               "Title": "QLPhongMachTu(DOAN).csproj.user",
               "DocumentMoniker": "C:\\Users\\2301\\Desktop\\C#\\QLPhongMachTu(DOAN)\\QLPhongMachTu(DOAN)\\QLPhongMachTu(DOAN).csproj.user",
               "RelativeDocumentMoniker": "QLPhongMachTu(DOAN).csproj.user",
