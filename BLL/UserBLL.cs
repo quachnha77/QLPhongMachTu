@@ -14,24 +14,24 @@ namespace QLPhongMachTu_DOAN_.BLL
 
         public UserBLL() => this.dal = new UserDAL();
 
-        public void CreateUser()
+        public void CreateUser(User user)
         {
-            throw new NotImplementedException();
+            dal.CreateUser(user);
         }
 
-        public void Update()
+        public void Update(long id, User updatedUser)
         {
-            throw new NotImplementedException();
+            dal.UpdateUser(updatedUser, id);
         }
 
-        public void Delete()
+        public void Delete(long id)
         {
-            throw new NotImplementedException();
+            dal.DeleteUser(id);
         }
 
         public List<User> GetAll()
         {
-            return dal.GetAll();
+            return dal.GetAllUser();
         }
 
         public User GetById(long id)

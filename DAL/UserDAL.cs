@@ -6,19 +6,12 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace QLPhongMachTu_DOAN_.DAL
-{ // Truy cập database
+{
     public class UserDAL
     {
-        // Đổ dữ liệu mẫu
-        private List<User> userList = new List<User>
-        {
-            new User{MaUser = 1,  MaQuyen = 1, Username="Dummy", Email="DM@example.com", Password="123" },
-            new User{MaUser = 2,  MaQuyen = 3, Username="admin", Email="admin@example.com", Password="123" },
-            new User{MaUser = 3,  MaQuyen = 2, Username="Dummy2", Email="DM@example.com", Password="123" },
-            new User{MaUser = 4,  MaQuyen = 4, Username="Dummy3", Email="DM@example.com", Password="123" }
-        };
         public bool CheckLogin(string userName, string matKhau)
         {
+            List<User> userList = GetAllUser();
             foreach(var user in userList){
                 if(user.Username == userName && user.Password == matKhau)
                     return true;
@@ -26,18 +19,57 @@ namespace QLPhongMachTu_DOAN_.DAL
             return false;
         }
 
-        public void Create(User user)
+        public User CreateUser(User user)
         {
-            userList.Add(user);
+            using(var context = new ApplicationDbContext())
+            {
+                var newUser = context.User.Add(user);
+                context.SaveChanges();
+                return newUser;
+            }
         }
 
-        internal List<User> GetAll()
+        public void UpdateUser(User updatedUser, long id)
         {
-            return userList;
+            using(var context = new ApplicationDbContext())
+            {
+                var existedUser = context.User.Find(id);
+                context.User.Attach(existedUser);
+                if(existedUser != null)
+                {
+                    existedUser.Username = updatedUser.Username;
+                    existedUser.Password = updatedUser.Password;
+                    existedUser.Email = updatedUser.Email;
+                    existedUser.PhanQuyen = context.PhanQuyen.Find(updatedUser.MaPQ);
+                    existedUser.MaPQ = updatedUser.MaPQ;
+                }
+                context.SaveChanges();
+            }
         }
 
-        internal User GetById(long id)
+        public void DeleteUser(long id)
         {
+            using(var context = new ApplicationDbContext())
+            {
+                var existedUser = context.User.Find(id);
+                Console.WriteLine("\n ==> Remove User with id " + id);
+                context.User.Attach(existedUser);
+                context.User.Remove(existedUser);
+                context.SaveChanges();
+            }
+        }
+
+        public List<User> GetAllUser()
+        {
+            using(var context = new ApplicationDbContext())
+            {
+                return context.User.ToList();
+            }
+        }
+
+        public User GetById(long id)
+        {
+            var userList = this.GetAllUser();
             return userList.FirstOrDefault(u => u.MaUser == id);
         }
     }

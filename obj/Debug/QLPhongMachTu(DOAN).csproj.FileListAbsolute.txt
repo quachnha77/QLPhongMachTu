@@ -44,3 +44,9 @@ C:\Users\HUYKIEN\Desktop\SGU\C#\DoAN\QLPhongMachTu\obj\Debug\QLPhongMachTu(DOAN)
 C:\Users\HUYKIEN\Desktop\SGU\C#\DoAN\QLPhongMachTu\obj\Debug\QLPhongMachTu(DOAN).csproj.CoreCompileInputs.cache
 C:\Users\HUYKIEN\Desktop\SGU\C#\DoAN\QLPhongMachTu\obj\Debug\QLPhongMachTu(DOAN).exe
 C:\Users\HUYKIEN\Desktop\SGU\C#\DoAN\QLPhongMachTu\obj\Debug\QLPhongMachTu(DOAN).pdb
+C:\Users\HUYKIEN\Desktop\SGU\C#\DoAN\QLPhongMachTu\bin\Debug\EntityFramework.dll
+C:\Users\HUYKIEN\Desktop\SGU\C#\DoAN\QLPhongMachTu\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\HUYKIEN\Desktop\SGU\C#\DoAN\QLPhongMachTu\bin\Debug\EntityFramework.xml
+C:\Users\HUYKIEN\Desktop\SGU\C#\DoAN\QLPhongMachTu\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\HUYKIEN\Desktop\SGU\C#\DoAN\QLPhongMachTu\obj\Debug\QLPhongM.B43FB2E6.Up2Date
+C:\Users\HUYKIEN\Desktop\SGU\C#\DoAN\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.Migrations.InitialCreate.resources
