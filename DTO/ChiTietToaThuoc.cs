@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,7 +14,7 @@ namespace QLPhongMachTu_DOAN_.DTO
         public int SoLuong { get; set; }
         public string CachDung { get; set; }
 
-        public ToaThuoc ToaThuoc { get; set; } = new ToaThuoc();
-        public KhoThuoc Thuoc { get; set; } = new KhoThuoc();
+        public ToaThuoc ToaThuoc { get; set; }
+        public KhoThuoc Thuoc { get; set; }
     }
 }

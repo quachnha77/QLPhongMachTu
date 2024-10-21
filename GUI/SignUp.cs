@@ -1,4 +1,6 @@
-﻿using System;
+﻿using QLPhongMachTu_DOAN_.BLL;
+using QLPhongMachTu_DOAN_.DTO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -38,6 +40,30 @@ namespace QLPhongMachTu_DOAN_.GUI
         private void SignUp_Load(object sender, EventArgs e)
         {
 
+        }
+
+
+        private void dangKyBtn_Click(object sender, EventArgs e)
+        {
+            string userName = userNameTxt.Text;
+            string matKhau = passwordTxt.Text;
+            string email = emailTxt.Text;
+            string hoTen = hoTenTxt.Text;
+            string CCCD = CCTxt.Text;
+
+            var user = new User()
+            {
+                Username = userName,
+                Password = matKhau,
+                Email = email,
+                MaPQ = 1, // Đặt tạm cái quyền. Mốt chỉnh sau.
+
+            };
+
+            var userBll = new UserBLL();
+            userBll.CreateUser(user);
+            MessageBox.Show("Tạo User thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            
         }
     }
 }

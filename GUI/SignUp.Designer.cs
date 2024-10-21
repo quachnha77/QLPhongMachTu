@@ -31,22 +31,22 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SignUp));
             this.panel2 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.CCTxt = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.hoTenTxt = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.emailTxt = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.txtBanDaCoTaiKhoan = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.dangKyBtn = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.passwordTxt = new System.Windows.Forms.TextBox();
+            this.userNameTxt = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
@@ -56,7 +56,7 @@
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.panel12 = new System.Windows.Forms.Panel();
             this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
+            this.dangKyBtn.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel12.SuspendLayout();
@@ -66,21 +66,21 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.Azure;
             this.panel2.Controls.Add(this.label12);
-            this.panel2.Controls.Add(this.textBox6);
+            this.panel2.Controls.Add(this.CCTxt);
             this.panel2.Controls.Add(this.label13);
             this.panel2.Controls.Add(this.label10);
-            this.panel2.Controls.Add(this.textBox5);
+            this.panel2.Controls.Add(this.hoTenTxt);
             this.panel2.Controls.Add(this.label11);
             this.panel2.Controls.Add(this.label6);
-            this.panel2.Controls.Add(this.textBox3);
+            this.panel2.Controls.Add(this.emailTxt);
             this.panel2.Controls.Add(this.label9);
             this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.txtBanDaCoTaiKhoan);
-            this.panel2.Controls.Add(this.panel3);
+            this.panel2.Controls.Add(this.dangKyBtn);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.textBox2);
-            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.passwordTxt);
+            this.panel2.Controls.Add(this.userNameTxt);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
@@ -99,17 +99,17 @@
             this.label12.Size = new System.Drawing.Size(500, 4);
             this.label12.TabIndex = 20;
             // 
-            // textBox6
+            // CCTxt
             // 
-            this.textBox6.BackColor = System.Drawing.Color.Azure;
-            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.textBox6.Location = new System.Drawing.Point(145, 594);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(500, 23);
-            this.textBox6.TabIndex = 19;
+            this.CCTxt.BackColor = System.Drawing.Color.Azure;
+            this.CCTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.CCTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CCTxt.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.CCTxt.Location = new System.Drawing.Point(145, 594);
+            this.CCTxt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.CCTxt.Name = "CCTxt";
+            this.CCTxt.Size = new System.Drawing.Size(500, 23);
+            this.CCTxt.TabIndex = 19;
             // 
             // label13
             // 
@@ -131,17 +131,17 @@
             this.label10.Size = new System.Drawing.Size(500, 4);
             this.label10.TabIndex = 17;
             // 
-            // textBox5
+            // hoTenTxt
             // 
-            this.textBox5.BackColor = System.Drawing.Color.Azure;
-            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.textBox5.Location = new System.Drawing.Point(145, 496);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(500, 23);
-            this.textBox5.TabIndex = 16;
+            this.hoTenTxt.BackColor = System.Drawing.Color.Azure;
+            this.hoTenTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.hoTenTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.hoTenTxt.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.hoTenTxt.Location = new System.Drawing.Point(145, 496);
+            this.hoTenTxt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.hoTenTxt.Name = "hoTenTxt";
+            this.hoTenTxt.Size = new System.Drawing.Size(500, 23);
+            this.hoTenTxt.TabIndex = 16;
             // 
             // label11
             // 
@@ -163,17 +163,17 @@
             this.label6.Size = new System.Drawing.Size(500, 4);
             this.label6.TabIndex = 14;
             // 
-            // textBox3
+            // emailTxt
             // 
-            this.textBox3.BackColor = System.Drawing.Color.Azure;
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.textBox3.Location = new System.Drawing.Point(145, 393);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(500, 23);
-            this.textBox3.TabIndex = 13;
+            this.emailTxt.BackColor = System.Drawing.Color.Azure;
+            this.emailTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.emailTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.emailTxt.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.emailTxt.Location = new System.Drawing.Point(145, 393);
+            this.emailTxt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.emailTxt.Name = "emailTxt";
+            this.emailTxt.Size = new System.Drawing.Size(500, 23);
+            this.emailTxt.TabIndex = 13;
             // 
             // label9
             // 
@@ -210,16 +210,17 @@
             this.txtBanDaCoTaiKhoan.Text = "Bạn đã có tài khoản?";
             this.txtBanDaCoTaiKhoan.Click += new System.EventHandler(this.label7_Click);
             // 
-            // panel3
+            // dangKyBtn
             // 
-            this.panel3.BackColor = System.Drawing.Color.Teal;
-            this.panel3.Controls.Add(this.label5);
-            this.panel3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panel3.Location = new System.Drawing.Point(228, 708);
-            this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(327, 47);
-            this.panel3.TabIndex = 7;
+            this.dangKyBtn.BackColor = System.Drawing.Color.Teal;
+            this.dangKyBtn.Controls.Add(this.label5);
+            this.dangKyBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dangKyBtn.Location = new System.Drawing.Point(228, 708);
+            this.dangKyBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dangKyBtn.Name = "dangKyBtn";
+            this.dangKyBtn.Size = new System.Drawing.Size(327, 47);
+            this.dangKyBtn.TabIndex = 7;
+            this.dangKyBtn.Click += new System.EventHandler(this.dangKyBtn_Click);
             // 
             // label5
             // 
@@ -250,30 +251,30 @@
             this.label3.Size = new System.Drawing.Size(500, 4);
             this.label3.TabIndex = 5;
             // 
-            // textBox2
+            // passwordTxt
             // 
-            this.textBox2.BackColor = System.Drawing.Color.Azure;
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.textBox2.Location = new System.Drawing.Point(145, 300);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(500, 23);
-            this.textBox2.TabIndex = 3;
-            this.textBox2.UseSystemPasswordChar = true;
+            this.passwordTxt.BackColor = System.Drawing.Color.Azure;
+            this.passwordTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.passwordTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.passwordTxt.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.passwordTxt.Location = new System.Drawing.Point(145, 300);
+            this.passwordTxt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.passwordTxt.Name = "passwordTxt";
+            this.passwordTxt.Size = new System.Drawing.Size(500, 23);
+            this.passwordTxt.TabIndex = 3;
+            this.passwordTxt.UseSystemPasswordChar = true;
             // 
-            // textBox1
+            // userNameTxt
             // 
-            this.textBox1.BackColor = System.Drawing.Color.Azure;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.textBox1.Location = new System.Drawing.Point(151, 199);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(500, 23);
-            this.textBox1.TabIndex = 2;
+            this.userNameTxt.BackColor = System.Drawing.Color.Azure;
+            this.userNameTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.userNameTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userNameTxt.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.userNameTxt.Location = new System.Drawing.Point(151, 199);
+            this.userNameTxt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.userNameTxt.Name = "userNameTxt";
+            this.userNameTxt.Size = new System.Drawing.Size(500, 23);
+            this.userNameTxt.TabIndex = 2;
             // 
             // label2
             // 
@@ -388,8 +389,8 @@
             this.Load += new System.EventHandler(this.SignUp_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
+            this.dangKyBtn.ResumeLayout(false);
+            this.dangKyBtn.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel12.ResumeLayout(false);
@@ -404,22 +405,22 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label txtBanDaCoTaiKhoan;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel dangKyBtn;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox passwordTxt;
+        private System.Windows.Forms.TextBox userNameTxt;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox emailTxt;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox hoTenTxt;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox CCTxt;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label txtLogo;
