@@ -1,0 +1,12 @@
+C:\Users\HUYKIEN\Desktop\SGU\C#\DoAN\QLPhongMachTu\QLPhongMachTu(DOAN)\bin\Debug\QLPhongMachTu(DOAN).exe.config
+C:\Users\HUYKIEN\Desktop\SGU\C#\DoAN\QLPhongMachTu\QLPhongMachTu(DOAN)\bin\Debug\QLPhongMachTu(DOAN).exe
+C:\Users\HUYKIEN\Desktop\SGU\C#\DoAN\QLPhongMachTu\QLPhongMachTu(DOAN)\bin\Debug\QLPhongMachTu(DOAN).pdb
+C:\Users\HUYKIEN\Desktop\SGU\C#\DoAN\QLPhongMachTu\QLPhongMachTu(DOAN)\obj\Debug\QLPhongMachTu(DOAN).csproj.AssemblyReference.cache
+C:\Users\HUYKIEN\Desktop\SGU\C#\DoAN\QLPhongMachTu\QLPhongMachTu(DOAN)\obj\Debug\QLPhongMachTu_DOAN_.GUI.Login.resources
+C:\Users\HUYKIEN\Desktop\SGU\C#\DoAN\QLPhongMachTu\QLPhongMachTu(DOAN)\obj\Debug\QLPhongMachTu_DOAN_.Main.resources
+C:\Users\HUYKIEN\Desktop\SGU\C#\DoAN\QLPhongMachTu\QLPhongMachTu(DOAN)\obj\Debug\QLPhongMachTu_DOAN_.Properties.Resources.resources
+C:\Users\HUYKIEN\Desktop\SGU\C#\DoAN\QLPhongMachTu\QLPhongMachTu(DOAN)\obj\Debug\QLPhongMachTu(DOAN).csproj.GenerateResource.cache
+C:\Users\HUYKIEN\Desktop\SGU\C#\DoAN\QLPhongMachTu\QLPhongMachTu(DOAN)\obj\Debug\QLPhongMachTu(DOAN).csproj.CoreCompileInputs.cache
+C:\Users\HUYKIEN\Desktop\SGU\C#\DoAN\QLPhongMachTu\QLPhongMachTu(DOAN)\obj\Debug\QLPhongMachTu(DOAN).exe
+C:\Users\HUYKIEN\Desktop\SGU\C#\DoAN\QLPhongMachTu\QLPhongMachTu(DOAN)\obj\Debug\QLPhongMachTu(DOAN).pdb
+C:\Users\HUYKIEN\Desktop\SGU\C#\DoAN\QLPhongMachTu\QLPhongMachTu(DOAN)\obj\Debug\QLPhongMachTu_DOAN_.GUI.TestControl.resources

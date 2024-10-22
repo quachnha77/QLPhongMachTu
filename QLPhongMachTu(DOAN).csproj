@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\EntityFramework.6.5.1\build\EntityFramework.props" Condition="Exists('packages\EntityFramework.6.5.1\build\EntityFramework.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -12,6 +13,8 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -33,10 +36,24 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.5.1\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.5.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+<<<<<<< HEAD
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
+=======
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+>>>>>>> ConKienHuy
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -48,7 +65,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Compile Include="DAL\DatabaseConnection.cs" />
+=======
+    <Compile Include="BLL\UserBLL.cs" />
+    <Compile Include="DAL\ApplicationDbContext.cs" />
+    <Compile Include="DAL\UserDAL.cs" />
+>>>>>>> ConKienHuy
     <Compile Include="DTO\BacSi.cs" />
     <Compile Include="DTO\BaseConNguoi.cs" />
     <Compile Include="DTO\BenhNhan.cs" />
@@ -209,12 +232,20 @@
     <Compile Include="GUI\ToaThuocDonThuoc.Designer.cs">
       <DependentUpon>ToaThuocDonThuoc.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="GUI\ToaThuocDonThuoc_DS.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="GUI\ToaThuocDonThuoc_DS.Designer.cs">
       <DependentUpon>ToaThuocDonThuoc_DS.cs</DependentUpon>
     </Compile>
+=======
+    <Compile Include="Migrations\202410210600284_InitialCreate.cs" />
+    <Compile Include="Migrations\202410210600284_InitialCreate.Designer.cs">
+      <DependentUpon>202410210600284_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+>>>>>>> ConKienHuy
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="GUI\HoaDonKhamBenh.resx">
@@ -289,8 +320,13 @@
     <EmbeddedResource Include="GUI\ToaThuocDonThuoc.resx">
       <DependentUpon>ToaThuocDonThuoc.cs</DependentUpon>
     </EmbeddedResource>
+<<<<<<< HEAD
     <EmbeddedResource Include="GUI\ToaThuocDonThuoc_DS.resx">
       <DependentUpon>ToaThuocDonThuoc_DS.cs</DependentUpon>
+=======
+    <EmbeddedResource Include="Migrations\202410210600284_InitialCreate.resx">
+      <DependentUpon>202410210600284_InitialCreate.cs</DependentUpon>
+>>>>>>> ConKienHuy
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -302,6 +338,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -319,8 +356,20 @@
     <Content Include="Image\Background.jpg" />
     <None Include="Image\duocthu.png" />
   </ItemGroup>
+<<<<<<< HEAD
   <ItemGroup>
     <Folder Include="BUS\" />
   </ItemGroup>
+=======
+  <ItemGroup />
+>>>>>>> ConKienHuy
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\EntityFramework.6.5.1\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\EntityFramework.6.5.1\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('packages\EntityFramework.6.5.1\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\EntityFramework.6.5.1\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="packages\EntityFramework.6.5.1\build\EntityFramework.targets" Condition="Exists('packages\EntityFramework.6.5.1\build\EntityFramework.targets')" />
 </Project>
