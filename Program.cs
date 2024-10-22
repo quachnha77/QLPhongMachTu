@@ -1,4 +1,5 @@
-﻿using QLPhongMachTu_DOAN_.GUI;
+﻿using QLPhongMachTu_DOAN_.DAL;
+using QLPhongMachTu_DOAN_.GUI;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,9 +16,25 @@ namespace QLPhongMachTu_DOAN_
         [STAThread]
         static void Main()
         {
+            //DatabaseConnection dbConnection = new DatabaseConnection();
+            //bool isConnected = dbConnection.CheckConnection();
+
+            //if (isConnected)
+            //{
+            //    Console.WriteLine("Kết nối cơ sở dữ liệu đã được kiểm tra và thành công.");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Không thể kết nối đến cơ sở dữ liệu.");
+            //}
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Login());
+            Application.Run(new NavbarDuocSi());
+
+
+
+
         }
     }
 }

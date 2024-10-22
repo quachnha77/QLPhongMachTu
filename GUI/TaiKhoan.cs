@@ -16,5 +16,10 @@ namespace QLPhongMachTu_DOAN_.GUI
         {
             InitializeComponent();
         }
+
+        private void TaiKhoan_Load(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

@@ -19,6 +19,6 @@ namespace QLPhongMachTu_DOAN_.DTO
         public string DiaChi { get; set; }
         public string SDT { get; set; }
         public long MaUser { get; set; }
-        public User User { get; set; }
+        public TaiKhoan User { get; set; }
     }
 }

@@ -21,3 +21,14 @@ C:\Users\2301\Desktop\C#\QLPhongMachTu(DOAN)\QLPhongMachTu(DOAN)\obj\Debug\QLPho
 C:\Users\2301\Desktop\C#\QLPhongMachTu(DOAN)\QLPhongMachTu(DOAN)\obj\Debug\QLPhongMachTu_DOAN_.GUI.NavbarLeTan.resources
 C:\Users\2301\Desktop\C#\QLPhongMachTu(DOAN)\QLPhongMachTu(DOAN)\obj\Debug\QLPhongMachTu_DOAN_.GUI.NavbarQuanLi.resources
 C:\Users\2301\Desktop\C#\QLPhongMachTu(DOAN)\QLPhongMachTu(DOAN)\obj\Debug\QLPhongMachTu_DOAN_.GUI.NavbarYTa.resources
+C:\Users\2301\Desktop\C#\QLPhongMachTu(DOAN)\QLPhongMachTu(DOAN)\obj\Debug\QLPhongMachTu_DOAN_.GUI.KhamBenh_BS.resources
+C:\Users\2301\Desktop\C#\QLPhongMachTu(DOAN)\QLPhongMachTu(DOAN)\obj\Debug\QLPhongMachTu_DOAN_.GUI.LichLamViec_BS.resources
+C:\Users\2301\Desktop\C#\QLPhongMachTu(DOAN)\QLPhongMachTu(DOAN)\obj\Debug\QLPhongMachTu_DOAN_.GUI.NhanVien.resources
+C:\Users\2301\Desktop\C#\QLPhongMachTu(DOAN)\QLPhongMachTu(DOAN)\obj\Debug\QLPhongMachTu_DOAN_.GUI.LichLamViec_QL.resources
+C:\Users\2301\Desktop\C#\QLPhongMachTu(DOAN)\QLPhongMachTu(DOAN)\obj\Debug\QLPhongMachTu_DOAN_.GUI.KhamBenh_LT.resources
+C:\Users\2301\Desktop\C#\QLPhongMachTu(DOAN)\QLPhongMachTu(DOAN)\obj\Debug\QLPhongMachTu_DOAN_.GUI.ToaThuoc.resources
+C:\Users\2301\Desktop\C#\QLPhongMachTu(DOAN)\QLPhongMachTu(DOAN)\obj\Debug\QLPhongMachTu_DOAN_.GUI.HoaDonKhamBenh.resources
+C:\Users\2301\Desktop\C#\QLPhongMachTu(DOAN)\QLPhongMachTu(DOAN)\obj\Debug\QLPhongMachTu_DOAN_.GUI.ThongKe.resources
+C:\Users\2301\Desktop\C#\QLPhongMachTu(DOAN)\QLPhongMachTu(DOAN)\obj\Debug\QLPhongMachTu_DOAN_.GUI.KhoThuoc.resources
+C:\Users\2301\Desktop\C#\QLPhongMachTu(DOAN)\QLPhongMachTu(DOAN)\obj\Debug\QLPhongMachTu_DOAN_.GUI.ToaThuocDonThuoc_DS.resources
+C:\Users\2301\Desktop\C#\QLPhongMachTu(DOAN)\QLPhongMachTu(DOAN)\obj\Debug\QLPhongMachTu_DOAN_.GUI.ThanhToan_DS.resources

@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace QLPhongMachTu_DOAN_.DTO
 {
-    public class User
+    public class TaiKhoan
     {
-        public long MaUser { get; set; }
+        public long MaTK { get; set; }
         public long MaQuyen { get; set; }
         public string Username { get; set; }
         public string Password { get; set; }

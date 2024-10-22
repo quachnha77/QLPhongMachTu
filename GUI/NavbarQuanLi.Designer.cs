@@ -87,6 +87,8 @@
             this.pnKhamBenh.Name = "pnKhamBenh";
             this.pnKhamBenh.Size = new System.Drawing.Size(219, 54);
             this.pnKhamBenh.TabIndex = 2;
+            this.pnKhamBenh.Click += new System.EventHandler(this.NhanVien_Click);
+            this.pnKhamBenh.Paint += new System.Windows.Forms.PaintEventHandler(this.pnKhamBenh_Paint);
             // 
             // txtKhamBenh
             // 
@@ -99,6 +101,7 @@
             this.txtKhamBenh.Size = new System.Drawing.Size(102, 23);
             this.txtKhamBenh.TabIndex = 0;
             this.txtKhamBenh.Text = "NHÂN VIÊN";
+            this.txtKhamBenh.Click += new System.EventHandler(this.NhanVien_Click);
             // 
             // txtLogo
             // 
@@ -133,6 +136,7 @@
             this.pnToaThuocDonThuoc.Name = "pnToaThuocDonThuoc";
             this.pnToaThuocDonThuoc.Size = new System.Drawing.Size(219, 54);
             this.pnToaThuocDonThuoc.TabIndex = 0;
+            this.pnToaThuocDonThuoc.Click += new System.EventHandler(this.LichLamViec_QL_Click);
             // 
             // txtToaThuocDonThuoc
             // 
@@ -145,6 +149,7 @@
             this.txtToaThuocDonThuoc.Size = new System.Drawing.Size(125, 23);
             this.txtToaThuocDonThuoc.TabIndex = 1;
             this.txtToaThuocDonThuoc.Text = "LỊCH LÀM VIỆC";
+            this.txtToaThuocDonThuoc.Click += new System.EventHandler(this.LichLamViec_QL_Click);
             // 
             // panel3
             // 
@@ -155,6 +160,7 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(219, 54);
             this.panel3.TabIndex = 1;
+            this.panel3.Click += new System.EventHandler(this.panel3_Click);
             // 
             // txtThanhToan
             // 
@@ -167,6 +173,7 @@
             this.txtThanhToan.Size = new System.Drawing.Size(92, 23);
             this.txtThanhToan.TabIndex = 3;
             this.txtThanhToan.Text = "THỐNG KÊ";
+            this.txtThanhToan.Click += new System.EventHandler(this.panel3_Click);
             // 
             // panel5
             // 
@@ -177,6 +184,7 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(219, 54);
             this.panel5.TabIndex = 1;
+            this.panel5.Click += new System.EventHandler(this.panel5_Click);
             // 
             // txtTaiKhoan
             // 
@@ -189,6 +197,7 @@
             this.txtTaiKhoan.Size = new System.Drawing.Size(99, 23);
             this.txtTaiKhoan.TabIndex = 4;
             this.txtTaiKhoan.Text = "TÀI KHOẢN";
+            this.txtTaiKhoan.Click += new System.EventHandler(this.panel5_Click);
             // 
             // panel4
             // 
