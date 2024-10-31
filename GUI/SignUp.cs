@@ -1,25 +1,31 @@
 ﻿using QLPhongMachTu_DOAN_.BLL;
 using QLPhongMachTu_DOAN_.DTO;
+using QLPhongMachTu_DOAN_.Enums;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace QLPhongMachTu_DOAN_.GUI
 {
     public partial class SignUp : UserControl
     {
+        private readonly UserBLL userBLL;
+        private readonly BenhNhanBLL benhNhanBLL;
+        private readonly PhanQuyenBLL phanQuyenBLL;
+
         public SignUp()
         {
             InitializeComponent();
+            userBLL = new UserBLL();
+            benhNhanBLL = new BenhNhanBLL();
+            phanQuyenBLL = new PhanQuyenBLL();
         }
 
         private void label7_Click(object sender, EventArgs e)
+        {
+            this.ShowLoginPanel();
+        }
+
+        private void ShowLoginPanel()
         {
             // Clear existing controls in panel1
             panel12.Controls.Clear();
@@ -49,20 +55,38 @@ namespace QLPhongMachTu_DOAN_.GUI
             string matKhau = passwordTxt.Text;
             string email = emailTxt.Text;
             string hoTen = hoTenTxt.Text;
-            string CCCD = CCTxt.Text;
+            long cccd = long.Parse(CCCDTxt.Text);
 
-            var user = new User()
+            var maQuyen = (long) EQuyen.BENHNHAN;
+            //var quyen = phanQuyenBLL.GetByMaPQ(maQuyen);
+
+            User userTemp = new User()
             {
                 Username = userName,
                 Password = matKhau,
                 Email = email,
-                MaPQ = 1, // Đặt tạm cái quyền. Mốt chỉnh sau.
-
+                MaPQ = maQuyen
             };
 
-            var userBll = new UserBLL();
-            userBll.CreateUser(user);
-            MessageBox.Show("Tạo User thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            var newUser = userBLL.CreateUser(userTemp);
+
+            BenhNhan benhNhan = new BenhNhan()
+            {
+                HoTen = hoTen,
+                CCCD = cccd,
+                MaUser = newUser.MaUser,
+            };
+
+            var result = benhNhanBLL.Create(benhNhan);
+            if(result != null)
+            { 
+                MessageBox.Show("Tạo User thành công", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.ShowLoginPanel();
+            }
+            else
+            {
+                MessageBox.Show("Tạo User thất bại", "Thất bại", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
             
         }
     }

@@ -83,6 +83,7 @@
             this.pnKhamBenh.Name = "pnKhamBenh";
             this.pnKhamBenh.Size = new System.Drawing.Size(219, 54);
             this.pnKhamBenh.TabIndex = 2;
+            this.pnKhamBenh.Click += new System.EventHandler(this.KhamBenh_BS_Click);
             // 
             // txtKhamBenh
             // 
@@ -95,6 +96,7 @@
             this.txtKhamBenh.Size = new System.Drawing.Size(110, 23);
             this.txtKhamBenh.TabIndex = 0;
             this.txtKhamBenh.Text = "KHÁM BỆNH";
+            this.txtKhamBenh.Click += new System.EventHandler(this.KhamBenh_BS_Click);
             // 
             // txtLogo
             // 
@@ -129,6 +131,7 @@
             this.pnToaThuocDonThuoc.Name = "pnToaThuocDonThuoc";
             this.pnToaThuocDonThuoc.Size = new System.Drawing.Size(219, 54);
             this.pnToaThuocDonThuoc.TabIndex = 0;
+            this.pnToaThuocDonThuoc.Click += new System.EventHandler(this.LichLamViec_BS_Click);
             // 
             // txtToaThuocDonThuoc
             // 
@@ -141,6 +144,7 @@
             this.txtToaThuocDonThuoc.Size = new System.Drawing.Size(125, 23);
             this.txtToaThuocDonThuoc.TabIndex = 1;
             this.txtToaThuocDonThuoc.Text = "LỊCH LÀM VIỆC";
+            this.txtToaThuocDonThuoc.Click += new System.EventHandler(this.LichLamViec_BS_Click);
             // 
             // panel5
             // 
@@ -151,6 +155,7 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(219, 54);
             this.panel5.TabIndex = 1;
+            this.panel5.Click += new System.EventHandler(this.TaiKhoan_Click);
             // 
             // txtTaiKhoan
             // 
@@ -163,6 +168,7 @@
             this.txtTaiKhoan.Size = new System.Drawing.Size(99, 23);
             this.txtTaiKhoan.TabIndex = 4;
             this.txtTaiKhoan.Text = "TÀI KHOẢN";
+            this.txtTaiKhoan.Click += new System.EventHandler(this.TaiKhoan_Click);
             // 
             // panel4
             // 
@@ -195,6 +201,7 @@
             this.Controls.Add(this.panelMain);
             this.Name = "NavbarBacSi";
             this.Text = "NavbarBacSi";
+            this.Load += new System.EventHandler(this.NavbarBacSi_Load);
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
             this.pnKhamBenh.ResumeLayout(false);

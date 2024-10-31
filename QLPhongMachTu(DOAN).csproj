@@ -48,6 +48,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -59,8 +60,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\BenhNhanBLL.cs" />
+    <Compile Include="BLL\PhanQuyenBLL.cs" />
     <Compile Include="BLL\UserBLL.cs" />
     <Compile Include="DAL\ApplicationDbContext.cs" />
+    <Compile Include="DAL\BenhNhanDAL.cs" />
+    <Compile Include="DAL\PhanQuyenDAL.cs" />
     <Compile Include="DAL\UserDAL.cs" />
     <Compile Include="DTO\BacSi.cs" />
     <Compile Include="DTO\BaseConNguoi.cs" />
@@ -78,11 +83,48 @@
     <Compile Include="DTO\Thuoc.cs" />
     <Compile Include="DTO\ToaThuoc.cs" />
     <Compile Include="DTO\User.cs" />
+    <Compile Include="Enums\EQuyen.cs" />
+    <Compile Include="GUI\HoaDonKhamBenh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\HoaDonKhamBenh.Designer.cs">
+      <DependentUpon>HoaDonKhamBenh.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\KhamBenh.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="GUI\KhamBenh.Designer.cs">
       <DependentUpon>KhamBenh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\KhamBenh_BS.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\KhamBenh_BS.Designer.cs">
+      <DependentUpon>KhamBenh_BS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\KhamBenh_LT.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\KhamBenh_LT.Designer.cs">
+      <DependentUpon>KhamBenh_LT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\KhoThuoc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\KhoThuoc.Designer.cs">
+      <DependentUpon>KhoThuoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\LichLamViec_BS.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\LichLamViec_BS.Designer.cs">
+      <DependentUpon>LichLamViec_BS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\LichLamViec_QL.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\LichLamViec_QL.Designer.cs">
+      <DependentUpon>LichLamViec_QL.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\Login.cs">
       <SubType>Form</SubType>
@@ -132,6 +174,12 @@
     <Compile Include="GUI\NavbarYTa.Designer.cs">
       <DependentUpon>NavbarYTa.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\NhanVien.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\NhanVien.Designer.cs">
+      <DependentUpon>NhanVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\SignUp.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -156,11 +204,35 @@
     <Compile Include="GUI\ThanhToan.Designer.cs">
       <DependentUpon>ThanhToan.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\ThanhToan_DS.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\ThanhToan_DS.Designer.cs">
+      <DependentUpon>ThanhToan_DS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ThongKe.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\ThongKe.Designer.cs">
+      <DependentUpon>ThongKe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ToaThuoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ToaThuoc.Designer.cs">
+      <DependentUpon>ToaThuoc.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\ToaThuocDonThuoc.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="GUI\ToaThuocDonThuoc.Designer.cs">
       <DependentUpon>ToaThuocDonThuoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ToaThuocDonThuoc_DS.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\ToaThuocDonThuoc_DS.Designer.cs">
+      <DependentUpon>ToaThuocDonThuoc_DS.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\202410210600284_InitialCreate.cs" />
     <Compile Include="Migrations\202410210600284_InitialCreate.Designer.cs">
@@ -169,8 +241,26 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\HoaDonKhamBenh.resx">
+      <DependentUpon>HoaDonKhamBenh.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\KhamBenh.resx">
       <DependentUpon>KhamBenh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\KhamBenh_BS.resx">
+      <DependentUpon>KhamBenh_BS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\KhamBenh_LT.resx">
+      <DependentUpon>KhamBenh_LT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\KhoThuoc.resx">
+      <DependentUpon>KhoThuoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\LichLamViec_BS.resx">
+      <DependentUpon>LichLamViec_BS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\LichLamViec_QL.resx">
+      <DependentUpon>LichLamViec_QL.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -196,6 +286,9 @@
     <EmbeddedResource Include="GUI\NavbarYTa.resx">
       <DependentUpon>NavbarYTa.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\NhanVien.resx">
+      <DependentUpon>NhanVien.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\SignUp.resx">
       <DependentUpon>SignUp.cs</DependentUpon>
     </EmbeddedResource>
@@ -208,8 +301,20 @@
     <EmbeddedResource Include="GUI\ThanhToan.resx">
       <DependentUpon>ThanhToan.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ThanhToan_DS.resx">
+      <DependentUpon>ThanhToan_DS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ThongKe.resx">
+      <DependentUpon>ThongKe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ToaThuoc.resx">
+      <DependentUpon>ToaThuoc.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\ToaThuocDonThuoc.resx">
       <DependentUpon>ToaThuocDonThuoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ToaThuocDonThuoc_DS.resx">
+      <DependentUpon>ToaThuocDonThuoc_DS.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202410210600284_InitialCreate.resx">
       <DependentUpon>202410210600284_InitialCreate.cs</DependentUpon>
@@ -242,9 +347,7 @@
     <Content Include="Image\Background.jpg" />
     <None Include="Image\duocthu.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Enums\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

@@ -9,14 +9,11 @@ namespace QLPhongMachTu_DOAN_.DAL
 {
     public class UserDAL
     {
-        public bool CheckLogin(string userName, string matKhau)
+        public User CheckLogin(string userName, string matKhau)
         {
-            List<User> userList = GetAllUser();
-            foreach(var user in userList){
-                if(user.Username == userName && user.Password == matKhau)
-                    return true;
-            }
-            return false;
+            var userLogin = GetAllUser()
+                .FirstOrDefault(user => user.Username == userName && user.Password == matKhau);
+            return userLogin;
         }
 
         public User CreateUser(User user)

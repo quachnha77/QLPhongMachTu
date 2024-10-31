@@ -17,7 +17,7 @@ namespace QLPhongMachTu_DOAN_.DTO
         public long MaSo { get; set; }
         public long CCCD { get; set; }
         public string HoTen { get; set; }
-        public DateTime NgaySinh { get; set; }
+        public DateTime NgaySinh { get; set; } = new DateTime(2001, 1, 1);
         public string GioiTinh { get; set; }
         public string DiaChi { get; set; }
         public string SDT { get; set; }

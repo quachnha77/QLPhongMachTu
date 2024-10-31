@@ -305,6 +305,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Login1";
             this.Size = new System.Drawing.Size(1604, 907);
+            this.Click += new System.EventHandler(this.dangnhapBtn_Click);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);

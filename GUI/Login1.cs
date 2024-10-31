@@ -1,5 +1,6 @@
 ﻿using QLPhongMachTu_DOAN_.BLL;
 using QLPhongMachTu_DOAN_.DTO;
+using QLPhongMachTu_DOAN_.Enums;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -57,14 +58,41 @@ namespace QLPhongMachTu_DOAN_.GUI
                 return;
             }
 
-            if (LoginHandle(userName, matKhau))
+            var quyenNguoiDung = LoginHandle(userName, matKhau);
+            switch (quyenNguoiDung)
             {
-                MessageBox.Show("Đăng nhập thành công!");
+                case (long)EQuyen.ADMIN:
+                    NavbarQuanLi navQuanLi = new NavbarQuanLi();
+                    navQuanLi.Show();
+                    this.Dispose();
+                    break;
+                case (long)EQuyen.BACSI:
+                    NavbarBacSi navBacSi = new NavbarBacSi();
+                    navBacSi.Show();
+                    this.Dispose();
+                    break;
+                case (long)EQuyen.DUOCSI:
+                    NavbarDuocSi naDuocSi = new NavbarDuocSi();
+                    naDuocSi.Show();
+                    this.Dispose();
+                    break;
+                case (long)EQuyen.LETAN:
+                    NavbarLeTan navLeTan = new NavbarLeTan();
+                    navLeTan.Show();
+                    this.Dispose();
+                    break;
+                case (long)EQuyen.BENHNHAN:
+                    NavbarBenhNhan navBenhNhan = new NavbarBenhNhan();
+                    navBenhNhan.Show();
+                    this.Dispose();
+                    break;
+                case -1: default:
+                    MessageBox.Show("Đăng nhập thất bại", "Thất bại", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    break;
             }
-            else MessageBox.Show("Đăng nhập thất bại!");
         }
 
-        private bool LoginHandle(string userName, string matKhau)
+        private long LoginHandle(string userName, string matKhau)
         {
             return userBLL.CheckLogin(userName, matKhau);
         }
