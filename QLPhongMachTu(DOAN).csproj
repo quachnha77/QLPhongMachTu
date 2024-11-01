@@ -62,10 +62,12 @@
   <ItemGroup>
     <Compile Include="BLL\BenhNhanBLL.cs" />
     <Compile Include="BLL\PhanQuyenBLL.cs" />
+    <Compile Include="BLL\PhieuKhamBLL.cs" />
     <Compile Include="BLL\UserBLL.cs" />
     <Compile Include="DAL\ApplicationDbContext.cs" />
     <Compile Include="DAL\BenhNhanDAL.cs" />
     <Compile Include="DAL\PhanQuyenDAL.cs" />
+    <Compile Include="DAL\PhieuKhamDAL.cs" />
     <Compile Include="DAL\UserDAL.cs" />
     <Compile Include="DTO\BacSi.cs" />
     <Compile Include="DTO\BaseConNguoi.cs" />

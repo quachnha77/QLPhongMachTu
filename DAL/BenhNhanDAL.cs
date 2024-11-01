@@ -2,18 +2,19 @@
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace QLPhongMachTu_DOAN_.DAL
 {
     public class BenhNhanDAL
     {
-        public async Task<List<BenhNhan>> GetAll()
+        public List<BenhNhan> GetAll()
         {
             var benhNhanList = new List<BenhNhan>();
             using(var context = new ApplicationDbContext())
             {
-                benhNhanList = await context.BenhNhan.ToListAsync();
+                benhNhanList = context.BenhNhan.ToList();
             }
             return benhNhanList;
         }
@@ -25,6 +26,16 @@ namespace QLPhongMachTu_DOAN_.DAL
                 var result = context.BenhNhan.Add(newBenhNhan);
                 context.SaveChanges();
                 return result;
+            }
+        }
+
+        public BenhNhan GetByUserID(long userID)
+        {
+            using(var context = new ApplicationDbContext())
+            {
+                var benhNhan = context.BenhNhan
+                    .FirstOrDefault(bn => bn.MaUser == userID);
+                return benhNhan;
             }
         }
     }

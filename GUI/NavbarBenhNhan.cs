@@ -1,4 +1,5 @@
-﻿using QLPhongMachTu_DOAN_.GUI;
+﻿using QLPhongMachTu_DOAN_.DTO;
+using QLPhongMachTu_DOAN_.GUI;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,9 +14,13 @@ namespace QLPhongMachTu_DOAN_
 {
     public partial class NavbarBenhNhan : Form
     {
-        public NavbarBenhNhan()
+        private User userLogin;
+        private BenhNhan benhNhanLogin;
+        public NavbarBenhNhan(User userLogin, BenhNhan benhNhanLogin)
         {
             InitializeComponent();
+            this.userLogin = userLogin;
+            this.benhNhanLogin = benhNhanLogin;
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -56,7 +61,7 @@ namespace QLPhongMachTu_DOAN_
         private void KhamBenh_Click(object sender, EventArgs e)
         {
             panelMain.Controls.Clear();
-            KhamBenh khamBenhControl = new KhamBenh();
+            KhamBenh khamBenhControl = new KhamBenh(userLogin, benhNhanLogin);
             khamBenhControl.Dock = DockStyle.Fill;
             panelMain.Controls.Add(khamBenhControl);
             panelMain.Refresh();

@@ -15,10 +15,12 @@ namespace QLPhongMachTu_DOAN_.GUI
 {
     public partial class Login1 : UserControl
     {
-        private UserBLL userBLL;
+        private readonly UserBLL userBLL;
+        private readonly BenhNhanBLL benhNhanBLL;
         public Login1()
         {
             userBLL = new UserBLL();
+            benhNhanBLL = new BenhNhanBLL();
             InitializeComponent();
         }
 
@@ -58,8 +60,9 @@ namespace QLPhongMachTu_DOAN_.GUI
                 return;
             }
 
-            var quyenNguoiDung = LoginHandle(userName, matKhau);
-            switch (quyenNguoiDung)
+            var user = LoginHandle(userName, matKhau);
+            var benhNhan = TimTheoUserID(user.MaUser);
+            switch (user.MaPQ)
             {
                 case (long)EQuyen.ADMIN:
                     NavbarQuanLi navQuanLi = new NavbarQuanLi();
@@ -82,7 +85,7 @@ namespace QLPhongMachTu_DOAN_.GUI
                     this.Dispose();
                     break;
                 case (long)EQuyen.BENHNHAN:
-                    NavbarBenhNhan navBenhNhan = new NavbarBenhNhan();
+                    NavbarBenhNhan navBenhNhan = new NavbarBenhNhan(user, benhNhan);
                     navBenhNhan.Show();
                     this.Dispose();
                     break;
@@ -92,9 +95,14 @@ namespace QLPhongMachTu_DOAN_.GUI
             }
         }
 
-        private long LoginHandle(string userName, string matKhau)
+        private User LoginHandle(string userName, string matKhau)
         {
             return userBLL.CheckLogin(userName, matKhau);
+        }
+
+        private BenhNhan TimTheoUserID(long userId)
+        {
+            return benhNhanBLL.GetByUserID(userId);
         }
     }
 }

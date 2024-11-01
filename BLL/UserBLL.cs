@@ -39,13 +39,10 @@ namespace QLPhongMachTu_DOAN_.BLL
             return dal.GetById(id);
         }
 
-        public long CheckLogin(string userName, string matKhau)
-        {   // Trả về mã quyền của User
+        public User CheckLogin(string userName, string matKhau)
+        {   
             var user = dal.CheckLogin(userName, matKhau);
-            if (user != null)
-                return user.MaPQ;
-            else
-                return -1;
+            return user;
         }
     }
 }

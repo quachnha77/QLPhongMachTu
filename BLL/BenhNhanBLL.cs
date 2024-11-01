@@ -25,5 +25,11 @@ namespace QLPhongMachTu_DOAN_.BLL
             var benhNhan = dal.Create(newBenhNhan);
             return benhNhan;
         }
+
+        public BenhNhan GetByUserID(long userID)
+        {
+            var user = dal.GetByUserID(userID);
+            return user;
+        }
     }
 }
