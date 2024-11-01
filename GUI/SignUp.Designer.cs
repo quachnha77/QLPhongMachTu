@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SignUp));
             this.panel2 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
-            this.CCTxt = new System.Windows.Forms.TextBox();
+            this.CCCDTxt = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.hoTenTxt = new System.Windows.Forms.TextBox();
@@ -66,7 +66,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.Azure;
             this.panel2.Controls.Add(this.label12);
-            this.panel2.Controls.Add(this.CCTxt);
+            this.panel2.Controls.Add(this.CCCDTxt);
             this.panel2.Controls.Add(this.label13);
             this.panel2.Controls.Add(this.label10);
             this.panel2.Controls.Add(this.hoTenTxt);
@@ -99,17 +99,17 @@
             this.label12.Size = new System.Drawing.Size(500, 4);
             this.label12.TabIndex = 20;
             // 
-            // CCTxt
+            // CCCDTxt
             // 
-            this.CCTxt.BackColor = System.Drawing.Color.Azure;
-            this.CCTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.CCTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CCTxt.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.CCTxt.Location = new System.Drawing.Point(145, 594);
-            this.CCTxt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.CCTxt.Name = "CCTxt";
-            this.CCTxt.Size = new System.Drawing.Size(500, 23);
-            this.CCTxt.TabIndex = 19;
+            this.CCCDTxt.BackColor = System.Drawing.Color.Azure;
+            this.CCCDTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.CCCDTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CCCDTxt.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.CCCDTxt.Location = new System.Drawing.Point(145, 594);
+            this.CCCDTxt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.CCCDTxt.Name = "CCCDTxt";
+            this.CCCDTxt.Size = new System.Drawing.Size(500, 23);
+            this.CCCDTxt.TabIndex = 19;
             // 
             // label13
             // 
@@ -420,7 +420,7 @@
         private System.Windows.Forms.TextBox hoTenTxt;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox CCTxt;
+        private System.Windows.Forms.TextBox CCCDTxt;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label txtLogo;

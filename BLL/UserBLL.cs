@@ -14,9 +14,9 @@ namespace QLPhongMachTu_DOAN_.BLL
 
         public UserBLL() => this.dal = new UserDAL();
 
-        public void CreateUser(User user)
+        public User CreateUser(User user)
         {
-            dal.CreateUser(user);
+            return dal.CreateUser(user);
         }
 
         public void Update(long id, User updatedUser)
@@ -38,9 +38,11 @@ namespace QLPhongMachTu_DOAN_.BLL
         {
             return dal.GetById(id);
         }
-        public bool CheckLogin(string userName, string matKhau)
-        {
-            return dal.CheckLogin(userName, matKhau);
+
+        public User CheckLogin(string userName, string matKhau)
+        {   
+            var user = dal.CheckLogin(userName, matKhau);
+            return user;
         }
     }
 }

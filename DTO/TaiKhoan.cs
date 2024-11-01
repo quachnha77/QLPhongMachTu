@@ -24,6 +24,6 @@ namespace QLPhongMachTu_DOAN_.DTO
         public string Password { get; set; }
         public string Email { get; set; }
 
-        public PhanQuyen PhanQuyen { get; set; }
+        public virtual PhanQuyen PhanQuyen { get; set; }
     }
 }

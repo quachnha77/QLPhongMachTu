@@ -53,6 +53,10 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+<<<<<<< HEAD
+>>>>>>> ConKienHuy
+=======
+    <Reference Include="System.Windows.Forms.DataVisualization" />
 >>>>>>> ConKienHuy
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -66,10 +70,19 @@
   </ItemGroup>
   <ItemGroup>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <Compile Include="DAL\DatabaseConnection.cs" />
 =======
+=======
+    <Compile Include="BLL\BenhNhanBLL.cs" />
+    <Compile Include="BLL\PhanQuyenBLL.cs" />
+    <Compile Include="BLL\PhieuKhamBLL.cs" />
+>>>>>>> ConKienHuy
     <Compile Include="BLL\UserBLL.cs" />
     <Compile Include="DAL\ApplicationDbContext.cs" />
+    <Compile Include="DAL\BenhNhanDAL.cs" />
+    <Compile Include="DAL\PhanQuyenDAL.cs" />
+    <Compile Include="DAL\PhieuKhamDAL.cs" />
     <Compile Include="DAL\UserDAL.cs" />
 >>>>>>> ConKienHuy
     <Compile Include="DTO\BacSi.cs" />
@@ -87,7 +100,12 @@
     <Compile Include="DTO\PhongKhoa.cs" />
     <Compile Include="DTO\Thuoc.cs" />
     <Compile Include="DTO\ToaThuoc.cs" />
+<<<<<<< HEAD
     <Compile Include="DTO\TaiKhoan.cs" />
+=======
+    <Compile Include="DTO\User.cs" />
+    <Compile Include="Enums\EQuyen.cs" />
+>>>>>>> ConKienHuy
     <Compile Include="GUI\HoaDonKhamBenh.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -184,6 +202,7 @@
     <Compile Include="GUI\NhanVien.Designer.cs">
       <DependentUpon>NhanVien.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="GUI\ThanhToan_DS.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -202,6 +221,8 @@
     <Compile Include="GUI\ToaThuoc.Designer.cs">
       <DependentUpon>ToaThuoc.cs</DependentUpon>
     </Compile>
+=======
+>>>>>>> ConKienHuy
     <Compile Include="GUI\SignUp.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -226,6 +247,24 @@
     <Compile Include="GUI\ThanhToan.Designer.cs">
       <DependentUpon>ThanhToan.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\ThanhToan_DS.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\ThanhToan_DS.Designer.cs">
+      <DependentUpon>ThanhToan_DS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ThongKe.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\ThongKe.Designer.cs">
+      <DependentUpon>ThongKe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ToaThuoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ToaThuoc.Designer.cs">
+      <DependentUpon>ToaThuoc.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\ToaThuocDonThuoc.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -233,13 +272,19 @@
       <DependentUpon>ToaThuocDonThuoc.cs</DependentUpon>
     </Compile>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ConKienHuy
     <Compile Include="GUI\ToaThuocDonThuoc_DS.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="GUI\ToaThuocDonThuoc_DS.Designer.cs">
       <DependentUpon>ToaThuocDonThuoc_DS.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> ConKienHuy
     <Compile Include="Migrations\202410210600284_InitialCreate.cs" />
     <Compile Include="Migrations\202410210600284_InitialCreate.Designer.cs">
       <DependentUpon>202410210600284_InitialCreate.cs</DependentUpon>
@@ -321,9 +366,15 @@
       <DependentUpon>ToaThuocDonThuoc.cs</DependentUpon>
     </EmbeddedResource>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <EmbeddedResource Include="GUI\ToaThuocDonThuoc_DS.resx">
       <DependentUpon>ToaThuocDonThuoc_DS.cs</DependentUpon>
 =======
+=======
+    <EmbeddedResource Include="GUI\ToaThuocDonThuoc_DS.resx">
+      <DependentUpon>ToaThuocDonThuoc_DS.cs</DependentUpon>
+    </EmbeddedResource>
+>>>>>>> ConKienHuy
     <EmbeddedResource Include="Migrations\202410210600284_InitialCreate.resx">
       <DependentUpon>202410210600284_InitialCreate.cs</DependentUpon>
 >>>>>>> ConKienHuy
