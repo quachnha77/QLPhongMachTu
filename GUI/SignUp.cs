@@ -65,7 +65,8 @@ namespace QLPhongMachTu_DOAN_.GUI
                 Username = userName,
                 Password = matKhau,
                 Email = email,
-                MaPQ = maQuyen
+                MaPQ = maQuyen,
+                TinhTrang = true
             };
 
             var newUser = userBLL.CreateUser(userTemp);
@@ -87,7 +88,6 @@ namespace QLPhongMachTu_DOAN_.GUI
             {
                 MessageBox.Show("Tạo User thất bại", "Thất bại", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            
         }
     }
 }

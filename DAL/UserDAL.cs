@@ -12,14 +12,16 @@ namespace QLPhongMachTu_DOAN_.DAL
         public User CheckLogin(string userName, string matKhau)
         {
             var userLogin = GetAllUser()
-                .FirstOrDefault(user => user.Username == userName && user.Password == matKhau);
+                .FirstOrDefault(user => user.Username == userName && user.Password == matKhau && user.TinhTrang);
             return userLogin;
         }
 
         public User CreateUser(User user)
         {
-            using(var context = new ApplicationDbContext())
+            using (var context = new ApplicationDbContext())
             {
+                // Mã hóa mật khẩu trước khi lưu trữ
+                user.Password = HashPassword(user.Password);
                 var newUser = context.User.Add(user);
                 context.SaveChanges();
                 return newUser;
@@ -28,25 +30,30 @@ namespace QLPhongMachTu_DOAN_.DAL
 
         public void UpdateUser(User updatedUser, long id)
         {
-            using(var context = new ApplicationDbContext())
+            using (var context = new ApplicationDbContext())
             {
                 var existedUser = context.User.Find(id);
                 context.User.Attach(existedUser);
-                if(existedUser != null)
+                if (existedUser != null)
                 {
                     existedUser.Username = updatedUser.Username;
-                    existedUser.Password = updatedUser.Password;
+                    if (!string.IsNullOrEmpty(updatedUser.Password))
+                    {
+                        existedUser.Password = HashPassword(updatedUser.Password);
+                    }
                     existedUser.Email = updatedUser.Email;
+                    existedUser.TinhTrang = updatedUser.TinhTrang;
                     existedUser.PhanQuyen = context.PhanQuyen.Find(updatedUser.MaPQ);
                     existedUser.MaPQ = updatedUser.MaPQ;
+
+                    context.SaveChanges();
                 }
-                context.SaveChanges();
             }
         }
 
         public void DeleteUser(long id)
         {
-            using(var context = new ApplicationDbContext())
+            using (var context = new ApplicationDbContext())
             {
                 var existedUser = context.User.Find(id);
                 Console.WriteLine("\n ==> Remove User with id " + id);
@@ -58,7 +65,7 @@ namespace QLPhongMachTu_DOAN_.DAL
 
         public List<User> GetAllUser()
         {
-            using(var context = new ApplicationDbContext())
+            using (var context = new ApplicationDbContext())
             {
                 return context.User.ToList();
             }
@@ -68,6 +75,12 @@ namespace QLPhongMachTu_DOAN_.DAL
         {
             var userList = this.GetAllUser();
             return userList.FirstOrDefault(u => u.MaUser == id);
+        }
+
+        private string HashPassword(string password)
+        {
+            // Sử dụng BCrypt để băm mật khẩu
+            return BCrypt.Net.BCrypt.HashPassword(password);
         }
     }
 }
