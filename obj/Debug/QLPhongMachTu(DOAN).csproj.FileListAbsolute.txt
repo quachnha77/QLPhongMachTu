@@ -61,3 +61,4 @@ C:\Users\HUYKIEN\Desktop\SGU\C#\DoAN\QLPhongMachTu\bin\Debug\EntityFramework.Sql
 C:\Users\HUYKIEN\Desktop\SGU\C#\DoAN\QLPhongMachTu\obj\Debug\QLPhongM.B43FB2E6.Up2Date
 C:\Users\HUYKIEN\Desktop\SGU\C#\DoAN\QLPhongMachTu\obj\Debug\QLPhongMachTu(DOAN).exe
 C:\Users\HUYKIEN\Desktop\SGU\C#\DoAN\QLPhongMachTu\obj\Debug\QLPhongMachTu(DOAN).pdb
+C:\Users\HUYKIEN\Desktop\SGU\C#\DoAN\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.Migrations.Update2th.resources

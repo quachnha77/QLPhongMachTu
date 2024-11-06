@@ -60,12 +60,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\BacSiBLL.cs" />
     <Compile Include="BLL\BenhNhanBLL.cs" />
+    <Compile Include="BLL\KhoaBLL.cs" />
+    <Compile Include="BLL\PhanCongBLL.cs" />
     <Compile Include="BLL\PhanQuyenBLL.cs" />
     <Compile Include="BLL\PhieuKhamBLL.cs" />
     <Compile Include="BLL\UserBLL.cs" />
     <Compile Include="DAL\ApplicationDbContext.cs" />
+    <Compile Include="DAL\BacSiDAL.cs" />
     <Compile Include="DAL\BenhNhanDAL.cs" />
+    <Compile Include="DAL\KhoaDAL.cs" />
+    <Compile Include="DAL\PhanCongDAL.cs" />
     <Compile Include="DAL\PhanQuyenDAL.cs" />
     <Compile Include="DAL\PhieuKhamDAL.cs" />
     <Compile Include="DAL\UserDAL.cs" />
@@ -86,6 +92,7 @@
     <Compile Include="DTO\ToaThuoc.cs" />
     <Compile Include="DTO\User.cs" />
     <Compile Include="Enums\EQuyen.cs" />
+    <Compile Include="Enums\EWorkingDay.cs" />
     <Compile Include="GUI\HoaDonKhamBenh.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -240,6 +247,10 @@
     <Compile Include="Migrations\202410210600284_InitialCreate.Designer.cs">
       <DependentUpon>202410210600284_InitialCreate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202411030904259_Update2th.cs" />
+    <Compile Include="Migrations\202411030904259_Update2th.Designer.cs">
+      <DependentUpon>202411030904259_Update2th.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -320,6 +331,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202410210600284_InitialCreate.resx">
       <DependentUpon>202410210600284_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202411030904259_Update2th.resx">
+      <DependentUpon>202411030904259_Update2th.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

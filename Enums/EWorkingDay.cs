@@ -6,12 +6,16 @@ using System.Threading.Tasks;
 
 namespace QLPhongMachTu_DOAN_.Enums
 {
-    public enum EQuyen
+    [Flags]
+    public enum EWorkingDay
     {
-        ADMIN = 0,
-        BACSI = 1,
-        DUOCSI = 2,
-        LETAN = 8,
-        BENHNHAN = 10
+        None=0,
+        CN = 1,
+        T2 = 2,
+        T3 = 3,
+        T4 = 4,
+        T5 = 5,
+        T6 = 6,
+        T7 = 7
     }
 }
