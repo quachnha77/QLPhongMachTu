@@ -42,40 +42,33 @@ namespace QLPhongMachTu_DOAN_.GUI
         public void ShowAvailableDoctor(long khoaId)
         {
             List<BacSi> bacSiList = bacSiBLL.GetAllByChuyenKhoa(khoaId);
-            ComboBox cmbTemp = new ComboBox();
-            foreach(var bacsi in bacSiList)
-            {
-                cmbTemp.Items.Add(bacsi);
-            }
-            comboBox1 = cmbTemp;
+
+            comboBox1.DataSource = bacSiList;
+            comboBox1.DisplayMember = "HoTen";
+            comboBox1.ValueMember = "MaSo";
         }
 
-        // Chọn các ngày hẹn
-        private void ShowAvailableDate(long khoaId)
-        {
-
-        }
-
+        // Bước 2: Chọn các bác sĩ thuộc chuyên khoa vừa được chọn
         private void chuyenKhoaSlt_DropDownClosed(object sender, EventArgs e)
         {
-            string chuyenKhoa = (string)chuyenKhoaSlt.SelectedItem;
+            string chuyenKhoa = chuyenKhoaSlt.SelectedText;
             if (chuyenKhoa != null)
             {
                 // Lấy phòng khoa theo chuyên khoa
                 PhongKhoa khoa = khoaBLL.GetByChuyenKhoa(chuyenKhoa);
                 ShowAvailableDoctor(khoa.MaPK);
-                ShowAvailableDate(khoa.MaPK);
             }
         }
 
-        // Đổ dữ liệu vào combobox
+        // Bước 1: Đưa hết các chuyên khoa lên màn hình
         private void InserData()
         {
             List<PhongKhoa> chuyenKhoaList = khoaBLL.GetAll();
-            foreach(var khoa in chuyenKhoaList)
-            {
-                chuyenKhoaSlt.Items.Add(khoa.ChuyenKhoa);
-            }
+
+            chuyenKhoaSlt.DataSource = chuyenKhoaList;
+            chuyenKhoaSlt.DisplayMember = "TenPhongBan";
+            chuyenKhoaSlt.ValueMember = "MaPk";
         }
+
     }
 }

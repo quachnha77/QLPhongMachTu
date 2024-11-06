@@ -33,6 +33,9 @@
             this.dangKyBtn = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.ngayHenCb = new System.Windows.Forms.ComboBox();
             this.trieuChungTxt = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -54,9 +57,6 @@
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.button6 = new System.Windows.Forms.Button();
             this.textBox5 = new System.Windows.Forms.TextBox();
-            this.ngayHenCb = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -142,6 +142,34 @@
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Đăng ký lịch khám";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(13, 248);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(239, 24);
+            this.comboBox1.TabIndex = 12;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(15, 230);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(46, 16);
+            this.label6.TabIndex = 11;
+            this.label6.Text = "Bác sĩ";
+            // 
+            // ngayHenCb
+            // 
+            this.ngayHenCb.FormattingEnabled = true;
+            this.ngayHenCb.Location = new System.Drawing.Point(13, 314);
+            this.ngayHenCb.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ngayHenCb.Name = "ngayHenCb";
+            this.ngayHenCb.Size = new System.Drawing.Size(239, 24);
+            this.ngayHenCb.TabIndex = 8;
             // 
             // trieuChungTxt
             // 
@@ -371,34 +399,6 @@
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(237, 22);
             this.textBox5.TabIndex = 6;
-            // 
-            // ngayHenCb
-            // 
-            this.ngayHenCb.FormattingEnabled = true;
-            this.ngayHenCb.Location = new System.Drawing.Point(13, 314);
-            this.ngayHenCb.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.ngayHenCb.Name = "ngayHenCb";
-            this.ngayHenCb.Size = new System.Drawing.Size(239, 24);
-            this.ngayHenCb.TabIndex = 8;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(13, 248);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(239, 24);
-            this.comboBox1.TabIndex = 12;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(15, 230);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(46, 16);
-            this.label6.TabIndex = 11;
-            this.label6.Text = "Bác sĩ";
             // 
             // KhamBenh
             // 
