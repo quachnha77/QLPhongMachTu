@@ -62,3 +62,4 @@ C:\Users\HUYKIEN\Desktop\SGU\C#\DoAN\QLPhongMachTu\obj\Debug\QLPhongM.B43FB2E6.U
 C:\Users\HUYKIEN\Desktop\SGU\C#\DoAN\QLPhongMachTu\obj\Debug\QLPhongMachTu(DOAN).exe
 C:\Users\HUYKIEN\Desktop\SGU\C#\DoAN\QLPhongMachTu\obj\Debug\QLPhongMachTu(DOAN).pdb
 C:\Users\HUYKIEN\Desktop\SGU\C#\DoAN\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.Migrations.Update2th.resources
+C:\Users\HUYKIEN\Desktop\SGU\C#\DoAN\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.Migrations.Update3th.resources

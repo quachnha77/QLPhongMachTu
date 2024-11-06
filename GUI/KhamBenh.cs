@@ -14,12 +14,31 @@ namespace QLPhongMachTu_DOAN_.GUI
         private PhanCongBLL phanCongBLL = new PhanCongBLL();
         private KhoaBLL khoaBLL = new KhoaBLL();
         private BacSiBLL bacSiBLL = new BacSiBLL();
+        private PhieuKhamBLL phieuKhamBLL = new PhieuKhamBLL();
+        private LichKhamBLL lichKhamBLL = new LichKhamBLL();
+
         public KhamBenh(User user, BenhNhan benhNhan)
         {
             this.user = user; this.benhNhan = benhNhan;
             InitializeComponent();
             InserData();
-            
+            // Tạo bảng hiển thị dữ liệu với các cột mong muốn
+            var lichKhams = lichKhamBLL.GetByMaBenhNhan(benhNhan.MaSo);
+            var displayData = new List<dynamic>();
+            foreach (var lichKham in lichKhams)
+            {
+                displayData.Add(new
+                {
+                    //ChuyenKhoa = lichKham.ChuyenKhoa,
+                    NgayHen = lichKham.NgayKham,
+                    TrieuChung = lichKham.TrieuChung,
+                    //TrangThai = lichKham.TrangThai
+                });
+            }
+
+            // Gán dữ liệu vào DataGridView
+            dataGridView1.DataSource = displayData;
+
             hoTenTxt.Text = benhNhan.HoTen;
             SDTTxt.Text = benhNhan.SDT != null? benhNhan.SDT.ToString() : "";
 
@@ -28,14 +47,19 @@ namespace QLPhongMachTu_DOAN_.GUI
             SDTTxt.Enabled = false;
         }
 
-        // Đăng ký phiếu khám
+        // Đăng ký lich khám
         private void button1_Click(object sender, EventArgs e)
         {
-            //LichKham lichKham = new LichKham();
-            //lichKham.MaBN = 1;
-            //lichKham.MaBS = 7;
-            //lichKham.MaNV = 1;
-            //lichKham.
+            LichKham lichKham = new LichKham();
+            lichKham.MaBN = benhNhan.MaSo;
+            lichKham.MaBS = (long)comboBox1.SelectedValue;
+            lichKham.TrieuChung = trieuChungTxt.Text;
+            lichKham.NgayKham = new DateTime(1990, 1, 1);
+            lichKhamBLL.TaoLichKham(lichKham);
+
+            dataGridView1.DataSource = lichKhamBLL.GetByMaBenhNhan(benhNhan.MaSo);
+            //dataB
+            return;
         }
 
         // Chọn các bác sĩ có trong chuyên khoa
@@ -67,7 +91,7 @@ namespace QLPhongMachTu_DOAN_.GUI
 
             chuyenKhoaSlt.DataSource = chuyenKhoaList;
             chuyenKhoaSlt.DisplayMember = "TenPhongBan";
-            chuyenKhoaSlt.ValueMember = "MaPk";
+            chuyenKhoaSlt.ValueMember = "MaPK";
         }
 
     }

@@ -26,9 +26,7 @@ namespace QLPhongMachTu_DOAN_.DTO
         public int SoThuTu { get; set; }
         [Required]
         public string TrieuChung { get; set; }
-        [Required]
         public string TieuSuBenhLy { get; set; }
-        [Required]
         public string ChuanDoan { get; set; }
 
         public LichKham LichKham { get; set; }

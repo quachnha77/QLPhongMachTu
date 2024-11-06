@@ -18,13 +18,14 @@ namespace QLPhongMachTu_DOAN_.DTO
 
         [ForeignKey("BenhNhan")]
         public long MaBN { get; set; }
-        public DateTime NgayKham { get; set; }
+        public DateTime NgayKham { get; set; } = new DateTime(1900, 1, 20);
+        public string TrieuChung;
         
-        [ForeignKey("NhanVien")]
-        public long MaNV { get; set; }
+        //[ForeignKey("NhanVien")]
+        //public long MaNV { get; set; }
 
         public BacSi BacSi { get; set; }
         public BenhNhan BenhNhan { get; set; }
-        public NhanVien NhanVien { get; set; }
+        //public NhanVien NhanVien { get; set; }
     }
 }
