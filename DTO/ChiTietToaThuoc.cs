@@ -1,12 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace QLPhongMachTu_DOAN_.DTO
 {
+    [Table("ChiTietToaThuoc")]
     public class ChiTietToaThuoc
     {
         public long MaTT { get; set; } // Primary Key

@@ -1,13 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace QLPhongMachTu_DOAN_.DTO
 {
+    [Table("ToaThuoc")]
     public class ToaThuoc
     {
         [Key]
@@ -15,16 +12,16 @@ namespace QLPhongMachTu_DOAN_.DTO
 
         [ForeignKey("BenhNhan")]
         public long MaBN { get; set; }
-        
+
         [ForeignKey("BacSi")]
         public long MaBS { get; set; }
-        
+
         [ForeignKey("LichKham")]
         public long MaLK { get; set; }
-        
+
         [ForeignKey("PhieuKham")]
         public long MaPK { get; set; }
-        
+
         public DateTime NgayKeToa { get; set; }
 
         public BenhNhan BenhNhan { get; set; }
