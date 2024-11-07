@@ -1,5 +1,4 @@
 ﻿using QLPhongMachTu_DOAN_.BLL;
-using QLPhongMachTu_DOAN_.DTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,10 +13,9 @@ namespace QLPhongMachTu_DOAN_.GUI
 {
     public partial class Login1 : UserControl
     {
-        private UserBLL userBLL;
+        private UserBLL userBLL = new UserBLL();
         public Login1()
         {
-            userBLL = new UserBLL();
             InitializeComponent();
         }
 
@@ -39,11 +37,11 @@ namespace QLPhongMachTu_DOAN_.GUI
             panel1.Refresh();
         }
 
-        private void dangnhapBtn_Click(object sender, EventArgs e)
+        private void panel3_Click(object sender, EventArgs e)
         {
             // Loại bỏ khoảng trắng ở đầu và cuối trước khi kiểm tra
             string userName = userNameTxt.Text.Trim();
-            string matKhau = matkhauTxt.Text.Trim();
+            string matKhau = matKhauTxt.Text.Trim();
 
             if (string.IsNullOrEmpty(userName))
             {
@@ -60,6 +58,8 @@ namespace QLPhongMachTu_DOAN_.GUI
             if (LoginHandle(userName, matKhau))
             {
                 MessageBox.Show("Đăng nhập thành công!");
+                // Phần show màn hình dựa trên phân quyền....
+
             }
             else MessageBox.Show("Đăng nhập thất bại!");
         }

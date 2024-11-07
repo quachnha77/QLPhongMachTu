@@ -35,12 +35,12 @@
             this.label6 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.lbBanChuaCoTaiKhoan = new System.Windows.Forms.Label();
-            this.dangnhapBtn = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.matkhauTxt = new System.Windows.Forms.TextBox();
+            this.matKhauTxt = new System.Windows.Forms.TextBox();
             this.userNameTxt = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -50,7 +50,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.dangnhapBtn.SuspendLayout();
+            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -79,11 +79,11 @@
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.textBox4);
             this.panel2.Controls.Add(this.lbBanChuaCoTaiKhoan);
-            this.panel2.Controls.Add(this.dangnhapBtn);
+            this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.checkBox1);
-            this.panel2.Controls.Add(this.matkhauTxt);
+            this.panel2.Controls.Add(this.matKhauTxt);
             this.panel2.Controls.Add(this.userNameTxt);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label1);
@@ -142,17 +142,17 @@
             this.lbBanChuaCoTaiKhoan.Text = "Bạn chưa có tài khoản?";
             this.lbBanChuaCoTaiKhoan.Click += new System.EventHandler(this.lbBanChuaCoTaiKhoan_Click);
             // 
-            // dangnhapBtn
+            // panel3
             // 
-            this.dangnhapBtn.BackColor = System.Drawing.Color.Teal;
-            this.dangnhapBtn.Controls.Add(this.label5);
-            this.dangnhapBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dangnhapBtn.Location = new System.Drawing.Point(260, 607);
-            this.dangnhapBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dangnhapBtn.Name = "dangnhapBtn";
-            this.dangnhapBtn.Size = new System.Drawing.Size(327, 47);
-            this.dangnhapBtn.TabIndex = 7;
-            this.dangnhapBtn.Click += new System.EventHandler(this.dangnhapBtn_Click);
+            this.panel3.BackColor = System.Drawing.Color.Teal;
+            this.panel3.Controls.Add(this.label5);
+            this.panel3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panel3.Location = new System.Drawing.Point(260, 607);
+            this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(327, 47);
+            this.panel3.TabIndex = 7;
+            this.panel3.Click += new System.EventHandler(this.panel3_Click);
             // 
             // label5
             // 
@@ -196,18 +196,18 @@
             this.checkBox1.Text = "Ghi nhớ thông tin đăng nhập";
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
-            // matkhauTxt
+            // matKhauTxt
             // 
-            this.matkhauTxt.BackColor = System.Drawing.Color.Azure;
-            this.matkhauTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.matkhauTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.matkhauTxt.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.matkhauTxt.Location = new System.Drawing.Point(155, 450);
-            this.matkhauTxt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.matkhauTxt.Name = "matkhauTxt";
-            this.matkhauTxt.Size = new System.Drawing.Size(500, 23);
-            this.matkhauTxt.TabIndex = 3;
-            this.matkhauTxt.UseSystemPasswordChar = true;
+            this.matKhauTxt.BackColor = System.Drawing.Color.Azure;
+            this.matKhauTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.matKhauTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.matKhauTxt.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.matKhauTxt.Location = new System.Drawing.Point(155, 450);
+            this.matKhauTxt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.matKhauTxt.Name = "matKhauTxt";
+            this.matKhauTxt.Size = new System.Drawing.Size(500, 23);
+            this.matKhauTxt.TabIndex = 3;
+            this.matKhauTxt.UseSystemPasswordChar = true;
             // 
             // userNameTxt
             // 
@@ -309,8 +309,8 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.dangnhapBtn.ResumeLayout(false);
-            this.dangnhapBtn.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -325,12 +325,12 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label lbBanChuaCoTaiKhoan;
-        private System.Windows.Forms.Panel dangnhapBtn;
+        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.TextBox matkhauTxt;
+        private System.Windows.Forms.TextBox matKhauTxt;
         private System.Windows.Forms.TextBox userNameTxt;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;

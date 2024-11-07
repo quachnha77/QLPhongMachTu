@@ -6,7 +6,34 @@
     public partial class InitialCreate : DbMigration
     {
         public override void Up()
-        {
+        {//******************
+            // Tạo bảng DichVu với kiểu NVARCHAR
+            CreateTable(
+                "dbo.DichVus",
+                c => new
+                {
+                    MaDV = c.Long(nullable: false, identity: true),
+                    TenDichVu = c.String(nullable: false, maxLength: 255, unicode: true),  // Sử dụng NVARCHAR
+                    MoTa = c.String(maxLength: 500, unicode: true),                        // Sử dụng NVARCHAR
+                    DonGia = c.Double(nullable: false),
+                })
+                .PrimaryKey(t => t.MaDV);
+
+            // Tạo bảng PhieuKhamDichVu với DonGia và hỗ trợ Unicode cho các cột văn bản
+            CreateTable(
+                "dbo.PhieuKhamDichVus",
+                c => new
+                {
+                    MaPK = c.Long(nullable: false),
+                    MaDV = c.Long(nullable: false),
+                    DonGia = c.Double(nullable: false),  // Lưu đơn giá tại thời điểm sử dụng dịch vụ
+                })
+                .PrimaryKey(t => new { t.MaPK, t.MaDV })
+                .ForeignKey("dbo.PhieuKhams", t => t.MaPK, cascadeDelete: true)
+                .ForeignKey("dbo.DichVus", t => t.MaDV, cascadeDelete: true)
+                .Index(t => t.MaPK)
+                .Index(t => t.MaDV);
+            //**************************
             CreateTable(
                 "dbo.BacSis",
                 c => new
@@ -31,7 +58,7 @@
                 "dbo.PhongKhoas",
                 c => new
                     {
-                        MaPK = c.Long(nullable: false, identity: true),
+                        MaPK = c.Long(nullable: false),
                         TenPhongBan = c.String(),
                         ChuyenKhoa = c.String(),
                     })
@@ -55,7 +82,7 @@
                 "dbo.PhanQuyens",
                 c => new
                     {
-                        MaPQ = c.Long(nullable: false, identity: true),
+                        MaPQ = c.Long(nullable: false),
                         TenQuyen = c.String(nullable: false),
                         ChucNang = c.String(nullable: false),
                         MoTa = c.String(),
@@ -129,17 +156,18 @@
                 .Index(t => t.MaBS)
                 .Index(t => t.MaLK)
                 .Index(t => t.MaPK);
-            
+
             CreateTable(
                 "dbo.LichKhams",
                 c => new
-                    {
+                {
                         MaLK = c.Long(nullable: false, identity: true),
                         MaBS = c.Long(nullable: false),
                         MaBN = c.Long(nullable: false),
                         NgayKham = c.DateTime(nullable: false),
                         MaNV = c.Long(nullable: false),
-                    })
+                        TrangThai = c.Int(nullable: false, defaultValue: 1) 
+                })
                 .PrimaryKey(t => t.MaLK)
                 .ForeignKey("dbo.BacSis", t => t.MaBS)
                 .ForeignKey("dbo.BenhNhans", t => t.MaBN)
@@ -147,7 +175,8 @@
                 .Index(t => t.MaBS)
                 .Index(t => t.MaBN)
                 .Index(t => t.MaNV);
-            
+
+
             CreateTable(
                 "dbo.NhanViens",
                 c => new
@@ -261,6 +290,14 @@
         
         public override void Down()
         {
+            //**********
+            DropForeignKey("dbo.PhieuKhamDichVus", "MaDV", "dbo.DichVus");
+            DropForeignKey("dbo.PhieuKhamDichVus", "MaPK", "dbo.PhieuKhams");
+            DropIndex("dbo.PhieuKhamDichVus", new[] { "MaDV" });
+            DropIndex("dbo.PhieuKhamDichVus", new[] { "MaPK" });
+            DropTable("dbo.PhieuKhamDichVus");
+            DropTable("dbo.DichVus");
+            //**********
             DropForeignKey("dbo.LichPhanCongs", "MaNV", "dbo.NhanViens");
             DropForeignKey("dbo.LichPhanCongs", "MaLK", "dbo.LichKhams");
             DropForeignKey("dbo.LichPhanCongs", "MaBS", "dbo.BacSis");
