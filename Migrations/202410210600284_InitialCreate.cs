@@ -3,7 +3,7 @@
     using System;
     using System.Data.Entity.Migrations;
 
-    public partial class InitialCreate : DbMigration
+    public partial class DB : DbMigration
     {
         public override void Up()
         {
@@ -46,7 +46,7 @@
                     Username = c.String(),
                     Password = c.String(),
                     Email = c.String(),
-                    TinhTrang = c.Boolean(nullable: false, defaultValue: true),
+                    TrangThai = c.Boolean(nullable: false),
                 })
                 .PrimaryKey(t => t.MaUser)
                 .ForeignKey("dbo.PhanQuyen", t => t.MaPQ)
@@ -154,6 +154,7 @@
                 c => new
                 {
                     MaNV = c.Long(nullable: false, identity: true),
+                    ChucVu = c.String(),
                     CCCD = c.Long(nullable: false),
                     HoTen = c.String(),
                     NgaySinh = c.DateTime(nullable: false),
