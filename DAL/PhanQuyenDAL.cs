@@ -1,10 +1,7 @@
 ﻿using QLPhongMachTu_DOAN_.DTO;
 using System;
 using System.Collections.Generic;
-using System.Data.Entity;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace QLPhongMachTu_DOAN_.DAL
 {
@@ -22,5 +19,21 @@ namespace QLPhongMachTu_DOAN_.DAL
             var result = context.PhanQuyen.FirstOrDefault(pq => pq.MaPQ == MaQP);
             return result;
         }
+
+        public List<string> GetPhanQuyenByName()
+        {
+            return context.PhanQuyen
+                .Where(pq => pq.TenQuyen != "Bệnh nhân")
+                .Select(pq => pq.TenQuyen).ToList();
+        }
+
+        public long GetMaPQByName(string name)
+        {
+            var result = context.PhanQuyen.FirstOrDefault(pq => pq.TenQuyen == name);
+
+            // Nếu tìm thấy phân quyền, trả về MaPQ, nếu không thì trả về giá trị mặc định 0
+            return result != null ? result.MaPQ : 0;
+        }
+
     }
 }

@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace QLPhongMachTu_DOAN_.GUI
@@ -15,12 +8,14 @@ namespace QLPhongMachTu_DOAN_.GUI
         public NavbarQuanLi()
         {
             InitializeComponent();
+            StartPosition = FormStartPosition.CenterScreen;
+            NhanVien_Click(null, null);
         }
 
         private void NhanVien_Click(object sender, EventArgs e)
         {
             panelMain.Controls.Clear();
-            NhanVien nhanVienControl = new NhanVien();
+            NhanVienGUI nhanVienControl = new NhanVienGUI();
             nhanVienControl.Dock = DockStyle.Fill;
             panelMain.Controls.Add(nhanVienControl);
             panelMain.Refresh();
@@ -33,11 +28,6 @@ namespace QLPhongMachTu_DOAN_.GUI
             lichLamViecControl.Dock = DockStyle.Fill;
             panelMain.Controls.Add(lichLamViecControl);
             panelMain.Refresh();
-        }
-
-        private void pnKhamBenh_Paint(object sender, PaintEventArgs e)
-        {
-
         }
 
         private void panel5_Click(object sender, EventArgs e)

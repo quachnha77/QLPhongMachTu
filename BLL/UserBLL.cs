@@ -2,9 +2,6 @@
 using QLPhongMachTu_DOAN_.DTO;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace QLPhongMachTu_DOAN_.BLL
 { // Quản lý logic nghiệp vụ
@@ -14,7 +11,7 @@ namespace QLPhongMachTu_DOAN_.BLL
 
         public UserBLL() => this.dal = new UserDAL();
 
-        public User CreateUser(User user)
+        public bool CreateUser(User user)
         {
             return dal.CreateUser(user);
         }

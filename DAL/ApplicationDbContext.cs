@@ -1,12 +1,7 @@
 ﻿using QLPhongMachTu_DOAN_.DTO;
 using System;
-using System.Collections.Generic;
-using System.Configuration;
 using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace QLPhongMachTu_DOAN_.DAL
 {
@@ -22,7 +17,6 @@ namespace QLPhongMachTu_DOAN_.DAL
 
             modelBuilder.Entity<ChiTietToaThuoc>()
                 .HasKey(ct => new { ct.MaThuoc, ct.MaTT });
-
         }
 
         public DbSet<BacSi> BacSi { get; set; }

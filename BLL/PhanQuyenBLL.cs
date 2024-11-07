@@ -2,9 +2,6 @@
 using QLPhongMachTu_DOAN_.DTO;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace QLPhongMachTu_DOAN_.BLL
 {
@@ -20,6 +17,16 @@ namespace QLPhongMachTu_DOAN_.BLL
         public PhanQuyen GetByMaPQ(long maPQ)
         {
             return dal.GetByMaQP(maPQ);
+        }
+
+        public List<string> GetPhanQuyenByName()
+        {
+            return dal.GetPhanQuyenByName();
+        }
+
+        public long GetMaPQByName(string name)
+        {
+            return dal.GetMaPQByName(name);
         }
     }
 }

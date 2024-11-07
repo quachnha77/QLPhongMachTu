@@ -1,9 +1,7 @@
 ﻿using QLPhongMachTu_DOAN_.DTO;
 using System;
 using System.Collections.Generic;
-using System.Data.Entity;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace QLPhongMachTu_DOAN_.DAL
 {
@@ -12,7 +10,7 @@ namespace QLPhongMachTu_DOAN_.DAL
         public List<BenhNhan> GetAll()
         {
             var benhNhanList = new List<BenhNhan>();
-            using(var context = new ApplicationDbContext())
+            using (var context = new ApplicationDbContext())
             {
                 benhNhanList = context.BenhNhan.ToList();
             }
@@ -31,7 +29,7 @@ namespace QLPhongMachTu_DOAN_.DAL
 
         public BenhNhan GetByUserID(long userID)
         {
-            using(var context = new ApplicationDbContext())
+            using (var context = new ApplicationDbContext())
             {
                 var benhNhan = context.BenhNhan
                     .FirstOrDefault(bn => bn.MaUser == userID);

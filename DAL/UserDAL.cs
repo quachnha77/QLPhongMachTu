@@ -2,8 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace QLPhongMachTu_DOAN_.DAL
 {
@@ -12,19 +10,19 @@ namespace QLPhongMachTu_DOAN_.DAL
         public User CheckLogin(string userName, string matKhau)
         {
             var userLogin = GetAllUser()
-                .FirstOrDefault(user => user.Username == userName && user.Password == matKhau && user.TinhTrang);
+                .FirstOrDefault(user => user.Username == userName && user.Password == matKhau && user.TrangThai);
             return userLogin;
         }
 
-        public User CreateUser(User user)
+        public bool CreateUser(User user)
         {
             using (var context = new ApplicationDbContext())
             {
                 // Mã hóa mật khẩu trước khi lưu trữ
                 user.Password = HashPassword(user.Password);
-                var newUser = context.User.Add(user);
+                context.User.Add(user);
                 context.SaveChanges();
-                return newUser;
+                return true;
             }
         }
 
@@ -42,7 +40,7 @@ namespace QLPhongMachTu_DOAN_.DAL
                         existedUser.Password = HashPassword(updatedUser.Password);
                     }
                     existedUser.Email = updatedUser.Email;
-                    existedUser.TinhTrang = updatedUser.TinhTrang;
+                    existedUser.TrangThai = updatedUser.TrangThai;
                     existedUser.PhanQuyen = context.PhanQuyen.Find(updatedUser.MaPQ);
                     existedUser.MaPQ = updatedUser.MaPQ;
 
