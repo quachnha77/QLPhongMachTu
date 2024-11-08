@@ -22,22 +22,7 @@ namespace QLPhongMachTu_DOAN_.GUI
             this.user = user; this.benhNhan = benhNhan;
             InitializeComponent();
             InserData();
-            // Tạo bảng hiển thị dữ liệu với các cột mong muốn
-            var lichKhams = lichKhamBLL.GetByMaBenhNhan(benhNhan.MaSo);
-            var displayData = new List<dynamic>();
-            foreach (var lichKham in lichKhams)
-            {
-                displayData.Add(new
-                {
-                    //ChuyenKhoa = lichKham.ChuyenKhoa,
-                    NgayHen = lichKham.NgayKham,
-                    TrieuChung = lichKham.TrieuChung,
-                    //TrangThai = lichKham.TrangThai
-                });
-            }
-
-            // Gán dữ liệu vào DataGridView
-            dataGridView1.DataSource = displayData;
+            UpdateData();
 
             hoTenTxt.Text = benhNhan.HoTen;
             SDTTxt.Text = benhNhan.SDT != null? benhNhan.SDT.ToString() : "";
@@ -57,9 +42,7 @@ namespace QLPhongMachTu_DOAN_.GUI
             lichKham.NgayKham = new DateTime(1990, 1, 1);
             lichKhamBLL.TaoLichKham(lichKham);
 
-            dataGridView1.DataSource = lichKhamBLL.GetByMaBenhNhan(benhNhan.MaSo);
-            //dataB
-            return;
+            UpdateData();
         }
 
         // Chọn các bác sĩ có trong chuyên khoa
@@ -94,5 +77,17 @@ namespace QLPhongMachTu_DOAN_.GUI
             chuyenKhoaSlt.ValueMember = "MaPK";
         }
 
+        private void UpdateData()
+        {
+            // List dữ liệu đổ vào datagridView
+            var listOfLichKham = lichKhamBLL.GetByMaBenhNhan(benhNhan.MaSo);
+
+            int STT = 0;
+            foreach (var lk in listOfLichKham)
+            {
+                STT += 1;
+                dataGridView1.Rows.Add(STT, "Thông báo sau", "Thông báo sau", lk.TrieuChung, "Đang xử lý");
+            }
+        }
     }
 }

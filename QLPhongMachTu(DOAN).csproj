@@ -245,17 +245,9 @@
     <Compile Include="GUI\ToaThuocDonThuoc_DS.Designer.cs">
       <DependentUpon>ToaThuocDonThuoc_DS.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202410210600284_InitialCreate.cs" />
-    <Compile Include="Migrations\202410210600284_InitialCreate.Designer.cs">
-      <DependentUpon>202410210600284_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202411030904259_Update2th.cs" />
-    <Compile Include="Migrations\202411030904259_Update2th.Designer.cs">
-      <DependentUpon>202411030904259_Update2th.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202411061018536_Update3th.cs" />
-    <Compile Include="Migrations\202411061018536_Update3th.Designer.cs">
-      <DependentUpon>202411061018536_Update3th.cs</DependentUpon>
+    <Compile Include="Migrations\202411070841426_InitialCreate.cs" />
+    <Compile Include="Migrations\202411070841426_InitialCreate.Designer.cs">
+      <DependentUpon>202411070841426_InitialCreate.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
@@ -335,14 +327,8 @@
     <EmbeddedResource Include="GUI\ToaThuocDonThuoc_DS.resx">
       <DependentUpon>ToaThuocDonThuoc_DS.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202410210600284_InitialCreate.resx">
-      <DependentUpon>202410210600284_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202411030904259_Update2th.resx">
-      <DependentUpon>202411030904259_Update2th.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202411061018536_Update3th.resx">
-      <DependentUpon>202411061018536_Update3th.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202411070841426_InitialCreate.resx">
+      <DependentUpon>202411070841426_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

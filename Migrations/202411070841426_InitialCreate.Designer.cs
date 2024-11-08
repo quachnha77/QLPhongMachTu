@@ -13,7 +13,7 @@ namespace QLPhongMachTu_DOAN_.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "202410210600284_InitialCreate"; }
+            get { return "202411070841426_InitialCreate"; }
         }
         
         string IMigrationMetadata.Source
