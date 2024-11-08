@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\HUYKIEN\\Desktop\\SGU\\C#\\DoAN\\QLPhongMachTu\\",
+  "WorkspaceRootPath": "C:\\Users\\HUYKIEN\\Desktop\\QLPhongMachTu\\",
   "Documents": [
     {
       "AbsoluteMoniker": "D:0:0:{1AD6BEAF-FBE1-45C1-A861-C4C1B16E90E7}|QLPhongMachTu(DOAN).csproj|C:\\Users\\HUYKIEN\\Desktop\\SGU\\C#\\DoAN\\QLPhongMachTu\\gui\\khambenh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -15,7 +15,7 @@
       "RelativeMoniker": "D:0:0:{1AD6BEAF-FBE1-45C1-A861-C4C1B16E90E7}|QLPhongMachTu(DOAN).csproj|solutionrelative:migrations\\configuration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1AD6BEAF-FBE1-45C1-A861-C4C1B16E90E7}|QLPhongMachTu(DOAN).csproj|c:\\users\\huykien\\desktop\\sgu\\c#\\doan\\qlphongmachtu\\dto\\lichkham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{1AD6BEAF-FBE1-45C1-A861-C4C1B16E90E7}|QLPhongMachTu(DOAN).csproj|C:\\Users\\HUYKIEN\\Desktop\\QLPhongMachTu\\dto\\lichkham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1AD6BEAF-FBE1-45C1-A861-C4C1B16E90E7}|QLPhongMachTu(DOAN).csproj|solutionrelative:dto\\lichkham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -43,27 +43,39 @@
       "RelativeMoniker": "D:0:0:{1AD6BEAF-FBE1-45C1-A861-C4C1B16E90E7}|QLPhongMachTu(DOAN).csproj|solutionrelative:dto\\toathuoc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1AD6BEAF-FBE1-45C1-A861-C4C1B16E90E7}|QLPhongMachTu(DOAN).csproj|C:\\Users\\HUYKIEN\\Desktop\\SGU\\C#\\DoAN\\QLPhongMachTu\\dto\\phieukham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{1AD6BEAF-FBE1-45C1-A861-C4C1B16E90E7}|QLPhongMachTu(DOAN).csproj|C:\\Users\\HUYKIEN\\Desktop\\QLPhongMachTu\\bll\\lichkhambll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AD6BEAF-FBE1-45C1-A861-C4C1B16E90E7}|QLPhongMachTu(DOAN).csproj|solutionrelative:bll\\lichkhambll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AD6BEAF-FBE1-45C1-A861-C4C1B16E90E7}|QLPhongMachTu(DOAN).csproj|C:\\Users\\HUYKIEN\\Desktop\\QLPhongMachTu\\dal\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AD6BEAF-FBE1-45C1-A861-C4C1B16E90E7}|QLPhongMachTu(DOAN).csproj|solutionrelative:dal\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AD6BEAF-FBE1-45C1-A861-C4C1B16E90E7}|QLPhongMachTu(DOAN).csproj|C:\\Users\\HUYKIEN\\Desktop\\QLPhongMachTu\\dto\\toathuoc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AD6BEAF-FBE1-45C1-A861-C4C1B16E90E7}|QLPhongMachTu(DOAN).csproj|solutionrelative:dto\\toathuoc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AD6BEAF-FBE1-45C1-A861-C4C1B16E90E7}|QLPhongMachTu(DOAN).csproj|C:\\Users\\HUYKIEN\\Desktop\\QLPhongMachTu\\dto\\phieukham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1AD6BEAF-FBE1-45C1-A861-C4C1B16E90E7}|QLPhongMachTu(DOAN).csproj|solutionrelative:dto\\phieukham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1AD6BEAF-FBE1-45C1-A861-C4C1B16E90E7}|QLPhongMachTu(DOAN).csproj|C:\\Users\\HUYKIEN\\Desktop\\SGU\\C#\\DoAN\\QLPhongMachTu\\GUI\\KhamBenh.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{1AD6BEAF-FBE1-45C1-A861-C4C1B16E90E7}|QLPhongMachTu(DOAN).csproj|C:\\Users\\HUYKIEN\\Desktop\\QLPhongMachTu\\GUI\\KhamBenh.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1AD6BEAF-FBE1-45C1-A861-C4C1B16E90E7}|QLPhongMachTu(DOAN).csproj|solutionrelative:GUI\\KhamBenh.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1AD6BEAF-FBE1-45C1-A861-C4C1B16E90E7}|QLPhongMachTu(DOAN).csproj|C:\\Users\\HUYKIEN\\Desktop\\SGU\\C#\\DoAN\\QLPhongMachTu\\dal\\phieukhamdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{1AD6BEAF-FBE1-45C1-A861-C4C1B16E90E7}|QLPhongMachTu(DOAN).csproj|C:\\Users\\HUYKIEN\\Desktop\\QLPhongMachTu\\dal\\phieukhamdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1AD6BEAF-FBE1-45C1-A861-C4C1B16E90E7}|QLPhongMachTu(DOAN).csproj|solutionrelative:dal\\phieukhamdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1AD6BEAF-FBE1-45C1-A861-C4C1B16E90E7}|QLPhongMachTu(DOAN).csproj|C:\\Users\\HUYKIEN\\Desktop\\SGU\\C#\\DoAN\\QLPhongMachTu\\bll\\phieukhambll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{1AD6BEAF-FBE1-45C1-A861-C4C1B16E90E7}|QLPhongMachTu(DOAN).csproj|C:\\Users\\HUYKIEN\\Desktop\\QLPhongMachTu\\bll\\phieukhambll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1AD6BEAF-FBE1-45C1-A861-C4C1B16E90E7}|QLPhongMachTu(DOAN).csproj|solutionrelative:bll\\phieukhambll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1AD6BEAF-FBE1-45C1-A861-C4C1B16E90E7}|QLPhongMachTu(DOAN).csproj|C:\\Users\\HUYKIEN\\Desktop\\SGU\\C#\\DoAN\\QLPhongMachTu\\dto\\lichphancong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{1AD6BEAF-FBE1-45C1-A861-C4C1B16E90E7}|QLPhongMachTu(DOAN).csproj|C:\\Users\\HUYKIEN\\Desktop\\QLPhongMachTu\\dto\\lichphancong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1AD6BEAF-FBE1-45C1-A861-C4C1B16E90E7}|QLPhongMachTu(DOAN).csproj|solutionrelative:dto\\lichphancong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1AD6BEAF-FBE1-45C1-A861-C4C1B16E90E7}|QLPhongMachTu(DOAN).csproj|C:\\Users\\HUYKIEN\\Desktop\\SGU\\C#\\DoAN\\QLPhongMachTu\\DTO\\PhongKhoa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{1AD6BEAF-FBE1-45C1-A861-C4C1B16E90E7}|QLPhongMachTu(DOAN).csproj|C:\\Users\\HUYKIEN\\Desktop\\QLPhongMachTu\\DTO\\PhongKhoa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1AD6BEAF-FBE1-45C1-A861-C4C1B16E90E7}|QLPhongMachTu(DOAN).csproj|solutionrelative:DTO\\PhongKhoa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -136,16 +148,15 @@
               "RelativeToolTip": "DTO\\LichKham.cs",
               "ViewState": "AgIAAA4AAAAAAAAAAAAkwBYAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T10:17:55.149Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-06T10:16:47.612Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
               "Title": "LichKhamDAL.cs",
-              "DocumentMoniker": "C:\\Users\\HUYKIEN\\Desktop\\SGU\\C#\\DoAN\\QLPhongMachTu\\DAL\\LichKhamDAL.cs",
+              "DocumentMoniker": "C:\\Users\\HUYKIEN\\Desktop\\QLPhongMachTu\\DAL\\LichKhamDAL.cs",
               "RelativeDocumentMoniker": "DAL\\LichKhamDAL.cs",
-              "ToolTip": "C:\\Users\\HUYKIEN\\Desktop\\SGU\\C#\\DoAN\\QLPhongMachTu\\DAL\\LichKhamDAL.cs",
+              "ToolTip": "C:\\Users\\HUYKIEN\\Desktop\\QLPhongMachTu\\DAL\\LichKhamDAL.cs",
               "RelativeToolTip": "DAL\\LichKhamDAL.cs",
               "ViewState": "AgIAAAcAAAAAAAAAAIAwwBsAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -168,9 +179,9 @@
               "$type": "Document",
               "DocumentIndex": 8,
               "Title": "KhamBenh.cs",
-              "DocumentMoniker": "C:\\Users\\HUYKIEN\\Desktop\\SGU\\C#\\DoAN\\QLPhongMachTu\\GUI\\KhamBenh.cs",
+              "DocumentMoniker": "C:\\Users\\HUYKIEN\\Desktop\\QLPhongMachTu\\GUI\\KhamBenh.cs",
               "RelativeDocumentMoniker": "GUI\\KhamBenh.cs",
-              "ToolTip": "C:\\Users\\HUYKIEN\\Desktop\\SGU\\C#\\DoAN\\QLPhongMachTu\\GUI\\KhamBenh.cs",
+              "ToolTip": "C:\\Users\\HUYKIEN\\Desktop\\QLPhongMachTu\\GUI\\KhamBenh.cs",
               "RelativeToolTip": "GUI\\KhamBenh.cs",
               "ViewState": "AgIAAFQAAAAAAAAAAAAAAFkAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -181,13 +192,48 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "KhamBenh.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\HUYKIEN\\Desktop\\SGU\\C#\\DoAN\\QLPhongMachTu\\GUI\\KhamBenh.cs",
+              "DocumentMoniker": "C:\\Users\\HUYKIEN\\Desktop\\QLPhongMachTu\\GUI\\KhamBenh.cs",
               "RelativeDocumentMoniker": "GUI\\KhamBenh.cs",
-              "ToolTip": "C:\\Users\\HUYKIEN\\Desktop\\SGU\\C#\\DoAN\\QLPhongMachTu\\GUI\\KhamBenh.cs [Design]",
+              "ToolTip": "C:\\Users\\HUYKIEN\\Desktop\\QLPhongMachTu\\GUI\\KhamBenh.cs [Design]",
               "RelativeToolTip": "GUI\\KhamBenh.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-03T09:24:13.113Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-11-03T09:24:13.113Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "202411030904259_Update2th.cs",
+              "DocumentMoniker": "C:\\Users\\HUYKIEN\\Desktop\\QLPhongMachTu\\Migrations\\202411030904259_Update2th.cs",
+              "RelativeDocumentMoniker": "Migrations\\202411030904259_Update2th.cs",
+              "ToolTip": "C:\\Users\\HUYKIEN\\Desktop\\QLPhongMachTu\\Migrations\\202411030904259_Update2th.cs",
+              "RelativeToolTip": "Migrations\\202411030904259_Update2th.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAA7wAoAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-07T08:54:49.527Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "LichKham.cs",
+              "DocumentMoniker": "C:\\Users\\HUYKIEN\\Desktop\\QLPhongMachTu\\DTO\\LichKham.cs",
+              "RelativeDocumentMoniker": "DTO\\LichKham.cs",
+              "ToolTip": "C:\\Users\\HUYKIEN\\Desktop\\QLPhongMachTu\\DTO\\LichKham.cs",
+              "RelativeToolTip": "DTO\\LichKham.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAowBUAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-06T10:17:55.149Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "202411070857257_Update3.cs",
+              "DocumentMoniker": "C:\\Users\\HUYKIEN\\Desktop\\QLPhongMachTu\\Migrations\\202411070857257_Update3.cs",
+              "RelativeDocumentMoniker": "Migrations\\202411070857257_Update3.cs",
+              "ToolTip": "C:\\Users\\HUYKIEN\\Desktop\\QLPhongMachTu\\Migrations\\202411070857257_Update3.cs",
+              "RelativeToolTip": "Migrations\\202411070857257_Update3.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-07T08:57:28.179Z"
             },
             {
               "$type": "Document",
@@ -229,9 +275,9 @@
               "$type": "Document",
               "DocumentIndex": 12,
               "Title": "PhieuKhamDAL.cs",
-              "DocumentMoniker": "C:\\Users\\HUYKIEN\\Desktop\\SGU\\C#\\DoAN\\QLPhongMachTu\\DAL\\PhieuKhamDAL.cs",
+              "DocumentMoniker": "C:\\Users\\HUYKIEN\\Desktop\\QLPhongMachTu\\DAL\\PhieuKhamDAL.cs",
               "RelativeDocumentMoniker": "DAL\\PhieuKhamDAL.cs",
-              "ToolTip": "C:\\Users\\HUYKIEN\\Desktop\\SGU\\C#\\DoAN\\QLPhongMachTu\\DAL\\PhieuKhamDAL.cs",
+              "ToolTip": "C:\\Users\\HUYKIEN\\Desktop\\QLPhongMachTu\\DAL\\PhieuKhamDAL.cs",
               "RelativeToolTip": "DAL\\PhieuKhamDAL.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -241,9 +287,9 @@
               "$type": "Document",
               "DocumentIndex": 10,
               "Title": "PhieuKham.cs",
-              "DocumentMoniker": "C:\\Users\\HUYKIEN\\Desktop\\SGU\\C#\\DoAN\\QLPhongMachTu\\DTO\\PhieuKham.cs",
+              "DocumentMoniker": "C:\\Users\\HUYKIEN\\Desktop\\QLPhongMachTu\\DTO\\PhieuKham.cs",
               "RelativeDocumentMoniker": "DTO\\PhieuKham.cs",
-              "ToolTip": "C:\\Users\\HUYKIEN\\Desktop\\SGU\\C#\\DoAN\\QLPhongMachTu\\DTO\\PhieuKham.cs",
+              "ToolTip": "C:\\Users\\HUYKIEN\\Desktop\\QLPhongMachTu\\DTO\\PhieuKham.cs",
               "RelativeToolTip": "DTO\\PhieuKham.cs",
               "ViewState": "AgIAABQAAAAAAAAAAAAiwB8AAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -253,9 +299,9 @@
               "$type": "Document",
               "DocumentIndex": 13,
               "Title": "PhieuKhamBLL.cs",
-              "DocumentMoniker": "C:\\Users\\HUYKIEN\\Desktop\\SGU\\C#\\DoAN\\QLPhongMachTu\\BLL\\PhieuKhamBLL.cs",
+              "DocumentMoniker": "C:\\Users\\HUYKIEN\\Desktop\\QLPhongMachTu\\BLL\\PhieuKhamBLL.cs",
               "RelativeDocumentMoniker": "BLL\\PhieuKhamBLL.cs",
-              "ToolTip": "C:\\Users\\HUYKIEN\\Desktop\\SGU\\C#\\DoAN\\QLPhongMachTu\\BLL\\PhieuKhamBLL.cs",
+              "ToolTip": "C:\\Users\\HUYKIEN\\Desktop\\QLPhongMachTu\\BLL\\PhieuKhamBLL.cs",
               "RelativeToolTip": "BLL\\PhieuKhamBLL.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -265,22 +311,21 @@
               "$type": "Document",
               "DocumentIndex": 11,
               "Title": "KhamBenh.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\HUYKIEN\\Desktop\\SGU\\C#\\DoAN\\QLPhongMachTu\\GUI\\KhamBenh.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\HUYKIEN\\Desktop\\QLPhongMachTu\\GUI\\KhamBenh.Designer.cs",
               "RelativeDocumentMoniker": "GUI\\KhamBenh.Designer.cs",
-              "ToolTip": "C:\\Users\\HUYKIEN\\Desktop\\SGU\\C#\\DoAN\\QLPhongMachTu\\GUI\\KhamBenh.Designer.cs",
+              "ToolTip": "C:\\Users\\HUYKIEN\\Desktop\\QLPhongMachTu\\GUI\\KhamBenh.Designer.cs",
               "RelativeToolTip": "GUI\\KhamBenh.Designer.cs",
               "ViewState": "AgIAAI0AAAAAAAAAAAAywJgAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-03T09:23:05.335Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-03T09:23:05.335Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 14,
               "Title": "LichPhanCong.cs",
-              "DocumentMoniker": "C:\\Users\\HUYKIEN\\Desktop\\SGU\\C#\\DoAN\\QLPhongMachTu\\DTO\\LichPhanCong.cs",
+              "DocumentMoniker": "C:\\Users\\HUYKIEN\\Desktop\\QLPhongMachTu\\DTO\\LichPhanCong.cs",
               "RelativeDocumentMoniker": "DTO\\LichPhanCong.cs",
-              "ToolTip": "C:\\Users\\HUYKIEN\\Desktop\\SGU\\C#\\DoAN\\QLPhongMachTu\\DTO\\LichPhanCong.cs",
+              "ToolTip": "C:\\Users\\HUYKIEN\\Desktop\\QLPhongMachTu\\DTO\\LichPhanCong.cs",
               "RelativeToolTip": "DTO\\LichPhanCong.cs",
               "ViewState": "AgIAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -290,9 +335,9 @@
               "$type": "Document",
               "DocumentIndex": 15,
               "Title": "PhongKhoa.cs",
-              "DocumentMoniker": "C:\\Users\\HUYKIEN\\Desktop\\SGU\\C#\\DoAN\\QLPhongMachTu\\DTO\\PhongKhoa.cs",
+              "DocumentMoniker": "C:\\Users\\HUYKIEN\\Desktop\\QLPhongMachTu\\DTO\\PhongKhoa.cs",
               "RelativeDocumentMoniker": "DTO\\PhongKhoa.cs",
-              "ToolTip": "C:\\Users\\HUYKIEN\\Desktop\\SGU\\C#\\DoAN\\QLPhongMachTu\\DTO\\PhongKhoa.cs",
+              "ToolTip": "C:\\Users\\HUYKIEN\\Desktop\\QLPhongMachTu\\DTO\\PhongKhoa.cs",
               "RelativeToolTip": "DTO\\PhongKhoa.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwAkAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
