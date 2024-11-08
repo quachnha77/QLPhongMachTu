@@ -66,7 +66,6 @@ namespace QLPhongMachTu_DOAN_.GUI
             };
             lichKhamBLL.TaoLichKham(lichKham);
 
-<<<<<<< HEAD
             UpdateData();
         }
 
@@ -78,22 +77,6 @@ namespace QLPhongMachTu_DOAN_.GUI
             comboBox1.DataSource = bacSiList;
             comboBox1.DisplayMember = "HoTen";
             comboBox1.ValueMember = "MaSo";
-        }
-
-        // Bước 2: Chọn các bác sĩ thuộc chuyên khoa vừa được chọn
-        private void chuyenKhoaSlt_DropDownClosed(object sender, EventArgs e)
-        {
-            string chuyenKhoa = chuyenKhoaSlt.SelectedText;
-            if (chuyenKhoa != null)
-            {
-                // Lấy phòng khoa theo chuyên khoa
-                PhongKhoa khoa = khoaBLL.GetByChuyenKhoa(chuyenKhoa);
-                ShowAvailableDoctor(khoa.MaPK);
-            }
-=======
-            // Cập nhật lại dữ liệu
-            UpdateData();
->>>>>>> 280ab2de26987c0a275201e8ff344fa5ab0ee6b5
         }
 
         // Bước 1: Đưa hết các chuyên khoa lên màn hình
@@ -108,10 +91,6 @@ namespace QLPhongMachTu_DOAN_.GUI
             ShowAvailableDoctor((long)chuyenKhoaSlt.SelectedValue);
         }
 
-<<<<<<< HEAD
-        private void UpdateData()
-        {
-=======
         // Bước 2: Sau khi đã chọn chuyên khoa.
         // Truyền chuyên khoa Id vào ShowAvailableDoctor() 
         // Để chọn các bác sĩ thuộc chuyên khoa đó
@@ -135,24 +114,6 @@ namespace QLPhongMachTu_DOAN_.GUI
             }
         }
 
-
-        // Chọn các bác sĩ có trong chuyên khoa
-        public void ShowAvailableDoctor(long khoaId)
-        {
-            List<BacSi> bacSiList = bacSiBLL.GetAllByChuyenKhoa(khoaId);
-
-            if (bacSiList.Count == 0)
-            {
-                MessageBox.Show("Không có bác sĩ nào trong chuyên khoa này.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                comboBox1.DataSource = null; // Làm trống danh sách bác sĩ nếu không có
-                return;
-            }
-
-            comboBox1.DataSource = bacSiList;
-            comboBox1.DisplayMember = "HoTen";
-            comboBox1.ValueMember = "MaSo";
-        }
-
         // Phần hiển thị data lên gridview
         // Được gọi khi vừa khởi tạo màn hình
         // hoặc khi button1_Click();
@@ -160,7 +121,6 @@ namespace QLPhongMachTu_DOAN_.GUI
         {
             // Reset dataGrid
             dataGridView1.Rows.Clear();
->>>>>>> 280ab2de26987c0a275201e8ff344fa5ab0ee6b5
             // List dữ liệu đổ vào datagridView
             var listOfLichKham = lichKhamBLL.GetByMaBenhNhan(benhNhan.MaSo);
 
