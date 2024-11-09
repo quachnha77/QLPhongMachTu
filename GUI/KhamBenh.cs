@@ -80,7 +80,6 @@ namespace QLPhongMachTu_DOAN_.GUI
             };
             var result = lichKhamBLL.TaoLichKham(lichKham);
 
-            // Cập nhật lại dữ liệu
             UpdateData();
         }
 

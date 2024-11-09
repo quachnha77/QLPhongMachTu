@@ -47,7 +47,6 @@ C:\Users\HUYKIEN\Desktop\SGU\C#\DoAN\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_
 C:\Users\HUYKIEN\Desktop\SGU\C#\DoAN\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.ToaThuoc.resources
 C:\Users\HUYKIEN\Desktop\SGU\C#\DoAN\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.ToaThuocDonThuoc.resources
 C:\Users\HUYKIEN\Desktop\SGU\C#\DoAN\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.ToaThuocDonThuoc_DS.resources
-C:\Users\HUYKIEN\Desktop\SGU\C#\DoAN\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.Migrations.InitialCreate.resources
 C:\Users\HUYKIEN\Desktop\SGU\C#\DoAN\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.Properties.Resources.resources
 C:\Users\HUYKIEN\Desktop\SGU\C#\DoAN\QLPhongMachTu\obj\Debug\QLPhongMachTu(DOAN).csproj.GenerateResource.cache
 C:\Users\HUYKIEN\Desktop\SGU\C#\DoAN\QLPhongMachTu\obj\Debug\QLPhongMachTu(DOAN).csproj.CoreCompileInputs.cache
@@ -61,6 +60,9 @@ C:\Users\HUYKIEN\Desktop\SGU\C#\DoAN\QLPhongMachTu\bin\Debug\EntityFramework.Sql
 C:\Users\HUYKIEN\Desktop\SGU\C#\DoAN\QLPhongMachTu\obj\Debug\QLPhongM.B43FB2E6.Up2Date
 C:\Users\HUYKIEN\Desktop\SGU\C#\DoAN\QLPhongMachTu\obj\Debug\QLPhongMachTu(DOAN).exe
 C:\Users\HUYKIEN\Desktop\SGU\C#\DoAN\QLPhongMachTu\obj\Debug\QLPhongMachTu(DOAN).pdb
+<<<<<<< HEAD
+C:\Users\HUYKIEN\Desktop\SGU\C#\DoAN\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.Migrations.InitialCreate.resources
+=======
 C:\Users\HUYKIEN\Desktop\SGU\C#\DoAN\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.Migrations.Update2th.resources
 C:\Users\HUYKIEN\Desktop\SGU\C#\DoAN\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.Migrations.Update3th.resources
 C:\Users\HUYKIEN\Desktop\QLPhongMachTu\bin\Debug\QLPhongMachTu(DOAN).exe.config
@@ -110,3 +112,7 @@ C:\Users\HUYKIEN\Desktop\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.Migrations.
 C:\Users\HUYKIEN\Desktop\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.Migrations.UpdateLichPhanCong.resources
 C:\Users\HUYKIEN\Desktop\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.Migrations.UpdateLichPhanCong2.resources
 C:\Users\HUYKIEN\Desktop\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.Migrations._2.resources
+>>>>>>> 280ab2de26987c0a275201e8ff344fa5ab0ee6b5
+C:\Users\HUYKIEN\Desktop\SGU\C#\DoAN\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.Migrations.Update3.resources
+C:\Users\HUYKIEN\Desktop\SGU\C#\DoAN\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.Migrations.Update4.resources
+>>>>>>> 4907f82affdcf3f3acbf2c5f0d2f29707aaa4aab
