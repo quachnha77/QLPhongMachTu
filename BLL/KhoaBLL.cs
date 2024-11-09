@@ -22,6 +22,11 @@ namespace QLPhongMachTu_DOAN_.BLL
             return dal.GetAll();
         }
 
+        public PhongKhoa GetById(long id)
+        {
+            return dal.GetById(id);
+        }
+
         public PhongKhoa GetByChuyenKhoa(string chuyenKhoa)
         {
             return dal.GetByChuyenKhoa(chuyenKhoa);

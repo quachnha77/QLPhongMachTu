@@ -77,6 +77,7 @@
             this.button2.TabIndex = 2;
             this.button2.Text = "Chỉnh sửa";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -151,6 +152,7 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(239, 24);
             this.comboBox1.TabIndex = 12;
+            this.comboBox1.TextUpdate += new System.EventHandler(this.comboBox1_DropDownClosed);
             // 
             // label6
             // 
@@ -208,7 +210,7 @@
             this.chuyenKhoaSlt.Name = "chuyenKhoaSlt";
             this.chuyenKhoaSlt.Size = new System.Drawing.Size(239, 24);
             this.chuyenKhoaSlt.TabIndex = 7;
-            this.chuyenKhoaSlt.DropDownClosed += new System.EventHandler(this.chuyenKhoaSlt_DropDownClosed);
+            this.chuyenKhoaSlt.SelectedIndexChanged += new System.EventHandler(this.chuyenKhoaSlt_DropDownClosed);
             // 
             // SDTTxt
             // 
@@ -276,6 +278,7 @@
             this.button5.TabIndex = 5;
             this.button5.Text = "Làm mới";
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button4
             // 
@@ -291,6 +294,7 @@
             this.button4.TabIndex = 4;
             this.button4.Text = "Hủy lịch hẹn";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // dataGridView1
             // 
@@ -310,7 +314,7 @@
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1019, 741);
+            this.dataGridView1.Size = new System.Drawing.Size(1019, 367);
             this.dataGridView1.TabIndex = 0;
             // 
             // Column1

@@ -61,6 +61,11 @@ namespace QLPhongMachTu_DOAN_.GUI
             }
 
             var user = LoginHandle(userName, matKhau);
+            if(user == null)
+            {
+                MessageBox.Show("Sai thông tin đăng nhập!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             var benhNhan = TimTheoUserID(user.MaUser);
             switch (user.MaPQ)
             {

@@ -22,7 +22,9 @@ namespace QLPhongMachTu_DOAN_.DTO
         public long MaBS { get; set; }
         public int gioBatDau { get; set; }
         public int gioKetThuc { get; set; }
-        public EWorkingDay workingDays { get; set; }
+        
+        public DateTime NgayPhanCong { get; set; }
+
         public string GhiChu { get; set; }
 
         public NhanVien NhanVien { get; set; }

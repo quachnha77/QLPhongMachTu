@@ -22,6 +22,11 @@ namespace QLPhongMachTu_DOAN_.BLL
             return dal.TaoLichKham(lk);
         }
 
+        public LichKham XoaLichKham(long id)
+        {
+            return dal.XoaLichKham(id);
+        }
+
         public List<LichKham> GetByMaBenhNhan(long id)
         {
             return dal.GetByMaBenhNhan(id);

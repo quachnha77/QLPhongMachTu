@@ -20,6 +20,7 @@ namespace QLPhongMachTu_DOAN_.DTO
         public long MaBN { get; set; }
         public DateTime NgayKham { get; set; } = new DateTime(1900, 1, 20);
         public string TrieuChung { get; set; }
+        public string TrangThai { get; set; }
         
         //[ForeignKey("NhanVien")]
         //public long MaNV { get; set; }

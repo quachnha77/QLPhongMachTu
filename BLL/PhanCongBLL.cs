@@ -5,7 +5,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Day = QLPhongMachTu_DOAN_.Enums.EWorkingDay;
 
 namespace QLPhongMachTu_DOAN_.BLL
 {
@@ -20,14 +19,19 @@ namespace QLPhongMachTu_DOAN_.BLL
 
         public LichPhanCong TaoLichPhanCong(LichPhanCong pc)
         {
-            //workingDays = 2 + 3 + 4 + 5;
-            pc.workingDays = Day.T2 | Day.T3 | Day.T4 | Day.T5;
+            ////workingDays = 2 + 3 + 4 + 5;
+            //pc.workingDays = Day.T2 | Day.T3 | Day.T4 | Day.T5;
             return dal.taoLichPhanCong(pc);
         }
 
         public List<LichPhanCong> GetAllPhanCongByMaBacSi(long MaBS)
         {
             return dal.GetAllByMaBacSi(MaBS);
+        }
+
+        public LichPhanCong GetById(long id)
+        {
+            return dal.GetById(id);
         }
     }
 }

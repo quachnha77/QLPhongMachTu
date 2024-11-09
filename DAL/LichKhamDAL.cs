@@ -19,11 +19,24 @@ namespace QLPhongMachTu_DOAN_.DAL
             }
         }
 
+        public LichKham XoaLichKham(long id)
+        {
+            using(var context = new ApplicationDbContext())
+            {
+                var lichKham = context.LichKham.Find(id);
+                var result = context.LichKham.Remove(lichKham);
+                context.SaveChanges();
+                return result;
+            }
+        }
+
         public List<LichKham> GetByMaBenhNhan(long id)
         {
             using(var context = new ApplicationDbContext())
             {
                 return context.LichKham
+                    .Include("BacSi")
+                    .Include("BacSi.PhongKhoa")
                     .Where(lk => lk.MaBN == id)
                     .ToList();
             }

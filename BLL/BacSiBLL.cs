@@ -21,5 +21,10 @@ namespace QLPhongMachTu_DOAN_.BLL
         {
             return dal.GetAllByChuyenKhoa(Makhoa);
         }
+
+        public BacSi GetById(long id)
+        {
+            return dal.GetById(id);
+        }
     }
 }

@@ -66,8 +66,10 @@ namespace QLPhongMachTu_DOAN_.DAL
 
         public User GetById(long id)
         {
-            var userList = this.GetAllUser();
-            return userList.FirstOrDefault(u => u.MaUser == id);
+            using(var context= new ApplicationDbContext())
+            {
+                return context.User.Find(id);
+            }
         }
     }
 }

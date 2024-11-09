@@ -25,5 +25,14 @@ namespace QLPhongMachTu_DOAN_.DAL
                     .FirstOrDefault(k => k.ChuyenKhoa == chuyenKhoa);
             }
         }
+
+        public PhongKhoa GetById(long id)
+        {
+            using (var context = new ApplicationDbContext())
+            {
+                return context.PhongKhoa
+                    .Find(id);
+            }
+        }
     }
 }

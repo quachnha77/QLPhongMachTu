@@ -25,9 +25,19 @@ namespace QLPhongMachTu_DOAN_.DAL
             using(var context = new ApplicationDbContext())
             {
                 return context.LichPhanCong
+                    .Include("BacSi")
+                    .Include("BacSi.PhongKhoa")
                     .Where(pc => pc.MaBS == MaBacSi)
                     .ToList();
             }
-        } 
+        }
+
+        public LichPhanCong GetById(long id)
+        {
+            using (var context = new ApplicationDbContext())
+            {
+                return context.LichPhanCong.Find(id);
+            }
+        }
     }
 }

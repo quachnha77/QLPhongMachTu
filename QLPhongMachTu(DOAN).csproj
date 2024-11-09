@@ -94,7 +94,6 @@
     <Compile Include="DTO\ToaThuoc.cs" />
     <Compile Include="DTO\User.cs" />
     <Compile Include="Enums\EQuyen.cs" />
-    <Compile Include="Enums\EWorkingDay.cs" />
     <Compile Include="GUI\HoaDonKhamBenh.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -265,6 +264,18 @@
     <Compile Include="Migrations\202411070859257_Update4.Designer.cs">
       <DependentUpon>202411070859257_Update4.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202411081000028_UpdateLichPhanCong.cs" />
+    <Compile Include="Migrations\202411081000028_UpdateLichPhanCong.Designer.cs">
+      <DependentUpon>202411081000028_UpdateLichPhanCong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202411081004399_UpdateLichPhanCong2.cs" />
+    <Compile Include="Migrations\202411081004399_UpdateLichPhanCong2.Designer.cs">
+      <DependentUpon>202411081004399_UpdateLichPhanCong2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202411081901107_2.cs" />
+    <Compile Include="Migrations\202411081901107_2.Designer.cs">
+      <DependentUpon>202411081901107_2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -357,6 +368,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202411070859257_Update4.resx">
       <DependentUpon>202411070859257_Update4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202411081000028_UpdateLichPhanCong.resx">
+      <DependentUpon>202411081000028_UpdateLichPhanCong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202411081004399_UpdateLichPhanCong2.resx">
+      <DependentUpon>202411081004399_UpdateLichPhanCong2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202411081901107_2.resx">
+      <DependentUpon>202411081901107_2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
