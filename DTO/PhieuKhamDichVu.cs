@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace QLPhongMachTu_DOAN_.DTO
 {
-    internal class PhieuKhamDichVu
+    public class PhieuKhamDichVu
     {
         [Key]
         [Column(Order = 0)]
@@ -18,6 +18,6 @@ namespace QLPhongMachTu_DOAN_.DTO
         [Column(Order = 1)]
         public long MaDV { get; set; }  // Mã dịch vụ, khóa ngoại
 
-        public double DonGia { get; set; }  // Đơn giá của dịch vụ tại thời điểm khám
+        public double Gia { get; set; }  // Đơn giá của dịch vụ tại thời điểm khám
     }
 }

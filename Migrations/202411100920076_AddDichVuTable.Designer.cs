@@ -7,13 +7,13 @@ namespace QLPhongMachTu_DOAN_.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.5.1")]
-    public sealed partial class RemoveIdentityFromMaPK : IMigrationMetadata
+    public sealed partial class AddDichVuTable : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(RemoveIdentityFromMaPK));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(AddDichVuTable));
         
         string IMigrationMetadata.Id
         {
-            get { return "202411051218426_RemoveIdentityFromMaPK"; }
+            get { return "202411100920076_AddDichVuTable"; }
         }
         
         string IMigrationMetadata.Source

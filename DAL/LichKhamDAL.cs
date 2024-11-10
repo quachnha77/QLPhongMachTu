@@ -26,5 +26,24 @@ namespace QLPhongMachTu_DOAN_.DAL
                 return context.LichKham.FirstOrDefault(lk => lk.MaLK == maLK);
             }
         }
+
+        public bool UpdateTrangThai(LichKham lichKham)
+        {
+            using (var context = new ApplicationDbContext())
+            {
+                // Tìm phiếu khám theo MaLK
+                var existingLichKham = context.LichKham.FirstOrDefault(lk => lk.MaLK == lichKham.MaLK);
+                if (existingLichKham != null)
+                {
+                    // Cập nhật trạng thái
+                    existingLichKham.TrangThai = lichKham.TrangThai;
+
+                    // Lưu thay đổi vào cơ sở dữ liệu
+                    context.SaveChanges();
+                    return true;
+                }
+                return false;
+            }
+        }
     }
 }

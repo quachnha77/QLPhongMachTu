@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace QLPhongMachTu_DOAN_.DTO
 {
-    internal class DichVu
+    public class DichVu
     {
         [Key]
         public long MaDV { get; set; }

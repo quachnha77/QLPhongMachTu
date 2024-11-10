@@ -26,7 +26,7 @@
                 {
                     MaPK = c.Long(nullable: false),
                     MaDV = c.Long(nullable: false),
-                    DonGia = c.Double(nullable: false),  // Lưu đơn giá tại thời điểm sử dụng dịch vụ
+                    Gia = c.Double(nullable: false),  // Lưu đơn giá tại thời điểm sử dụng dịch vụ
                 })
                 .PrimaryKey(t => new { t.MaPK, t.MaDV })
                 .ForeignKey("dbo.PhieuKhams", t => t.MaPK, cascadeDelete: true)
@@ -285,7 +285,6 @@
                         GiaNhap = c.Double(nullable: false),
                     })
                 .PrimaryKey(t => t.MaPN);
-            
         }
         
         public override void Down()

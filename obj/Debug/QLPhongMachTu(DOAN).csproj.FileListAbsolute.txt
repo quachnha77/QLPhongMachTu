@@ -189,4 +189,5 @@ C:\Users\2301\Downloads\QLPhongMachTu\QLPhongMachTu\obj\Debug\QLPhongMachTu(DOAN
 C:\Users\2301\Downloads\QLPhongMachTu\QLPhongMachTu\obj\Debug\QLPhongMachTu(DOAN).pdb
 C:\Users\2301\Downloads\QLPhongMachTu\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.Migrations.AddTrangThaiColumnToLichKhams.resources
 C:\Users\2301\Downloads\QLPhongMachTu\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.Migrations.AddTrangThaiColumnToLichKham.resources
-C:\Users\2301\Downloads\QLPhongMachTu\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.Migrations.RemoveIdentityFromMaPK.resources
+C:\Users\2301\Downloads\QLPhongMachTu\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.Migrations.SyncWithDatabase.resources
+C:\Users\2301\Downloads\QLPhongMachTu\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.Migrations.AddDichVuTable.resources

@@ -20,6 +20,8 @@ namespace QLPhongMachTu_DOAN_.GUI
         private LichKhamBLL lichKhamBLL;
         private BenhNhanBLL benhNhanBLL;
         private PhieuKhamBLL phieuKhamBLL;
+        private PhieuKhamDichVuBLL phieuKhamDVBLL;
+        private DichVuBLL dichVuBLL;
 
         public KhamBenh_BS()
         {
@@ -28,9 +30,10 @@ namespace QLPhongMachTu_DOAN_.GUI
             lichKhamBLL = new LichKhamBLL(); 
             benhNhanBLL = new BenhNhanBLL();
             phieuKhamBLL = new PhieuKhamBLL();
+            phieuKhamDVBLL = new PhieuKhamDichVuBLL();
+            dichVuBLL = new DichVuBLL();
 
             //// Tắt AutoGenerateColumns nếu bạn đã định nghĩa cột trong DataGridView
-            tableDanhSachKhamBenh.AutoGenerateColumns = false;
             tableDanhSachKhamBenh.AutoGenerateColumns = false;
 
             //// Ánh xạ cột trong DataGridView BenhNhan
@@ -124,10 +127,6 @@ namespace QLPhongMachTu_DOAN_.GUI
             tableDanhSachKhamBenh.DataSource = dataTable;
         }
 
-
-        private void CapNhatBang() { 
-        }
-
         private string trangThaiKhamBenh(string lk)
         {
             if (lk == "DaKham")
@@ -188,6 +187,9 @@ namespace QLPhongMachTu_DOAN_.GUI
                         txtTrieuChung.Text = phieuKham.TrieuChung;
                         txtTienSuBenhLy.Text = phieuKham.TieuSuBenhLy;
                         txtChuanDoan.Text = phieuKham.ChuanDoan;
+
+                        // Hiển thị các dịch vụ đã sử dụng cho phiếu khám
+                        HienThiDichVuDaSuDung(phieuKham.MaPK);
                     }
                 }
             }
@@ -207,7 +209,21 @@ namespace QLPhongMachTu_DOAN_.GUI
 
         private void KhamBenh_Click(object sender, EventArgs e)
         {
+            // Kiểm tra xem dòng đang chọn có hợp lệ không
+            if (tableDanhSachKhamBenh.SelectedRows.Count > 0)
+            {
+                DataGridViewRow selectedRow = tableDanhSachKhamBenh.SelectedRows[0];
 
+                // Cập nhật trạng thái trong DataGridView mà không lưu vào cơ sở dữ liệu
+                selectedRow.Cells["TrangThai"].Value = "Đã khám";
+
+                // Thông báo cho người dùng biết trạng thái đã thay đổi trong bảng
+                MessageBox.Show("Trạng thái đã được cập nhật trong bảng. Hãy nhấn 'Lưu thay đổi' để lưu lại trong cơ sở dữ liệu.");
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng chọn một bệnh nhân để cập nhật trạng thái.");
+            }
         }
 
         private void HoaDonKhamBenh_Click(object sender, EventArgs e)
@@ -312,7 +328,97 @@ namespace QLPhongMachTu_DOAN_.GUI
         }
 
 
+        private void HienThiDichVuDaSuDung(long maPK) // hiển thị Dịch vụ đã dùng
+        {
+            List<long> danhSachDichVuDaSuDung = phieuKhamDVBLL.GetDichVuByMaPK(maPK);
 
+            // Đánh dấu các CheckBox dựa trên danh sách dịch vụ đã sử dụng
+            cbKhamTongQuat.Checked = danhSachDichVuDaSuDung.Contains(1);
+            cbKhamChuyenKhoa.Checked = danhSachDichVuDaSuDung.Contains(2);
+            cbXetNghiemMau.Checked = danhSachDichVuDaSuDung.Contains(3);
+            cbXetNghiemNuocTieu.Checked = danhSachDichVuDaSuDung.Contains(4);
+            cbChuanDoanHinhAnh.Checked = danhSachDichVuDaSuDung.Contains(5);
+            cbKhamThai.Checked = danhSachDichVuDaSuDung.Contains(6);
+            cbTiemPhong.Checked = danhSachDichVuDaSuDung.Contains(7);
+            cbNhaKhoa.Checked = danhSachDichVuDaSuDung.Contains(8);
+        }
 
+        private void btnLuuThayDoi_Click(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow row in tableDanhSachKhamBenh.Rows)
+            {
+                // Kiểm tra nếu dòng này có giá trị MaLK hợp lệ
+                if (row.Cells["MaLK"].Value != null)
+                {
+                    long maLK = Convert.ToInt64(row.Cells["MaLK"].Value);
+
+                    // Kiểm tra trạng thái "Đã khám" trong DataGridView
+                    if (row.Cells["TrangThai"].Value?.ToString() == "Đã khám")
+                    {
+                        // Tạo đối tượng LichKham để cập nhật trạng thái trong cơ sở dữ liệu
+                        LichKham lichKham = new LichKham
+                        {
+                            MaLK = maLK,
+                            TrangThai = LichKham.TrangThaiKham.DaKham // Cập nhật trạng thái "Đã khám"
+                        };
+
+                        // Cập nhật thông tin trạng thái vào cơ sở dữ liệu
+                        bool success = lichKhamBLL.UpdateTrangThai(lichKham);
+                        if (success)
+                        {
+                            // Lưu các dịch vụ đã sử dụng
+                            LuuDichVuDaSuDung(maLK);
+                        }
+                    }
+                }
+            }
+
+            // Thông báo thành công khi lưu tất cả thay đổi vào cơ sở dữ liệu
+            MessageBox.Show("Đã lưu tất cả thay đổi vào cơ sở dữ liệu thành công!");
+
+            // Làm mới bảng sau khi lưu
+            LoadDataToGrid();
+        }
+
+        private void LuuDichVuDaSuDung(long maPK)
+        {
+            List<long> danhSachDichVu = new List<long>();
+
+            // Kiểm tra từng CheckBox và thêm mã dịch vụ tương ứng nếu được chọn
+            if (cbKhamTongQuat.Checked) danhSachDichVu.Add(1); // Giả sử mã dịch vụ là 1 cho "Khám tổng quát"
+            if (cbKhamChuyenKhoa.Checked) danhSachDichVu.Add(2); // Mã dịch vụ cho "Khám chuyên khoa"
+            if (cbXetNghiemMau.Checked) danhSachDichVu.Add(3); // Mã dịch vụ cho "Xét nghiệm máu"
+            if (cbXetNghiemNuocTieu.Checked) danhSachDichVu.Add(4); // Mã dịch vụ cho "Xét nghiệm nước tiểu"
+            if (cbChuanDoanHinhAnh.Checked) danhSachDichVu.Add(5); // Mã dịch vụ cho "Chuẩn đoán hình ảnh"
+            if (cbKhamThai.Checked) danhSachDichVu.Add(6); // Mã dịch vụ cho "Khám thai"
+            if (cbTiemPhong.Checked) danhSachDichVu.Add(7); // Mã dịch vụ cho "Tiêm phòng"
+            if (cbNhaKhoa.Checked) danhSachDichVu.Add(8); // Mã dịch vụ cho "Nha khoa"
+
+            // Lưu danh sách dịch vụ đã chọn vào cơ sở dữ liệu
+            foreach (var maDV in danhSachDichVu)
+            {
+                // Lấy đơn giá của dịch vụ
+                double giaDichVu = dichVuBLL.LayDonGiaDichVu(maDV);
+
+                // Kiểm tra nếu đơn giá hợp lệ (tránh trường hợp không tìm thấy dịch vụ)
+                if (giaDichVu > 0)
+                {
+                    PhieuKhamDichVu phieuKhamDichVu = new PhieuKhamDichVu
+                    {
+                        MaPK = maPK,
+                        MaDV = maDV,
+                        Gia = giaDichVu  // Lấy đơn giá dịch vụ tại thời điểm sử dụng
+                    };
+
+                    // Lưu vào cơ sở dữ liệu thông qua lớp BLL
+                    phieuKhamDVBLL.LuuDichVu(phieuKhamDichVu);
+                }
+                else
+                {
+                    // Xử lý nếu không tìm thấy dịch vụ hoặc dịch vụ không có đơn giá
+                    Console.WriteLine($"Dịch vụ với MaDV {maDV} không tìm thấy hoặc không có đơn giá hợp lệ.");
+                }
+            }
+        }
     }
 }

@@ -1,0 +1,44 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+using QLPhongMachTu_DOAN_.DAL;
+using QLPhongMachTu_DOAN_.DTO;
+
+namespace QLPhongMachTu_DOAN_.BLL
+{
+    public class PhieuKhamDichVuBLL
+    {
+        private readonly PhieuKhamDichVuDAL phieuKhamDVDAL = new PhieuKhamDichVuDAL();
+
+        public PhieuKhamDichVuBLL()
+        {
+            phieuKhamDVDAL = new PhieuKhamDichVuDAL();
+        }
+
+        // Lấy tất cả các lịch khám
+        public List<PhieuKhamDichVu> GetAll()
+        {
+            return phieuKhamDVDAL.GetAll();
+        }
+
+        public List<long> GetDichVuByMaPK(long maPK)
+        {
+            // Lấy danh sách PhieuKhamDichVu theo maPK
+            var phieuKhamDichVus = phieuKhamDVDAL.GetByMaPK(maPK);
+
+            // Trả về danh sách các mã dịch vụ
+            return phieuKhamDichVus.Select(pkdv => pkdv.MaDV).ToList();
+        }
+
+
+
+        public void LuuDichVu(PhieuKhamDichVu phieuKhamDichVu)
+        {
+            phieuKhamDVDAL.Add(phieuKhamDichVu);
+        }
+
+    }
+}

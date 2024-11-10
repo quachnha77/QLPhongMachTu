@@ -25,6 +25,10 @@ namespace QLPhongMachTu_DOAN_.DAL
 
         }
 
+
+        public DbSet<PhieuKhamDichVu> PhieuKhamDichVu { get; set; } //******
+        public DbSet<DichVu> DichVu { get; set; } //******
+
         public DbSet<BacSi> BacSi { get; set; }
         public DbSet<BenhNhan> BenhNhan { get; set; }
         public DbSet<ChiTietToaThuoc> ChiTietToaThuoc { get; set; }

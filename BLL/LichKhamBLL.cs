@@ -30,6 +30,12 @@ namespace QLPhongMachTu_DOAN_.BLL
             return lichKhamDAL.GetByMaLK(maLK);
         }
 
+
+        public bool UpdateTrangThai(LichKham lichKham)
+        {
+            return lichKhamDAL.UpdateTrangThai(lichKham);
+        }
+
         //// Tạo mới một lịch khám
         //public LichKham Create(LichKham newLichKham)
         //{

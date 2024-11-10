@@ -1,10 +1,10 @@
-﻿using QLPhongMachTu_DOAN_.DTO;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using QLPhongMachTu_DOAN_.DTO;
 namespace QLPhongMachTu_DOAN_.DAL
 {
     internal class PhieuKhamDAL
