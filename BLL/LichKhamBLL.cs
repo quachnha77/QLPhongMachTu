@@ -22,7 +22,12 @@ namespace QLPhongMachTu_DOAN_.BLL
             return dal.TaoLichKham(lk);
         }
 
-        public LichKham XoaLichKham(long id)
+        //public LichKham SuaLichKham(long maLk, DateTime ngayHen, string trieuChung)
+        //{
+        //    //return dal.suaLichKham(lk);
+        //}
+
+        public bool XoaLichKham(long id)
         {
             return dal.XoaLichKham(id);
         }
@@ -31,5 +36,20 @@ namespace QLPhongMachTu_DOAN_.BLL
         {
             return dal.GetByMaBenhNhan(id);
         }
+
+        public List<LichKham> GetAll()
+        {
+            return dal.GetAll();
+        }
+
+        public List<LichKham> GetByTrangThai(string trangThai)
+        {
+            return dal.GetByTrangThai(trangThai);
+        }
+
+        //public bool suaLichKham(long maLK, BenhNhan benhNhan, BacSi bs, DateTime ngayHen, string yeuCau)
+        //{
+        //    //return dal.suaLichKham(maLK, benhNhan, bs, ngayHen, yeuCau);
+        //}
     }
 }

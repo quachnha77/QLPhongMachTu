@@ -55,7 +55,7 @@ namespace QLPhongMachTu_DOAN_.GUI
             string matKhau = passwordTxt.Text;
             string email = emailTxt.Text;
             string hoTen = hoTenTxt.Text;
-            long cccd = long.Parse(CCCDTxt.Text);
+            string cccd = CCCDTxt.Text;
 
             var maQuyen = (long) EQuyen.BENHNHAN;
             //var quyen = phanQuyenBLL.GetByMaPQ(maQuyen);

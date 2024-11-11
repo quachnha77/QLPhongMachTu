@@ -18,12 +18,14 @@ namespace QLPhongMachTu_DOAN_.BLL
         }
 
         public BenhNhan Create(BenhNhan newBenhNhan)
-        {   /* Quả code chạy được là chính thôi nha :)))
-             * Có thể đề xuất chỉnh sửa
-             * Chứ tui cũng éo biết code vậy cô la ko :)))).
-             * */
+        {
             var benhNhan = dal.Create(newBenhNhan);
             return benhNhan;
+        }
+
+        public BenhNhan GetById(long id)
+        {
+            return dal.GetById(id);
         }
 
         public BenhNhan GetByUserID(long userID)

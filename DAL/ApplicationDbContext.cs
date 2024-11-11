@@ -12,7 +12,7 @@ namespace QLPhongMachTu_DOAN_.DAL
 {
     public class ApplicationDbContext : DbContext
     {
-        public ApplicationDbContext() : base("ApplicationDbContext")
+        public ApplicationDbContext() : base("MyDatabase")
         {
         }
 

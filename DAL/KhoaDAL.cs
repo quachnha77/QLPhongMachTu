@@ -1,38 +1,70 @@
 ﻿using QLPhongMachTu_DOAN_.DTO;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace QLPhongMachTu_DOAN_.DAL
 {
-    public class KhoaDAL
+    public class KhoaDAL : DatabaseHelper
     {
         public List<PhongKhoa> GetAll()
         {
-            using(var context = new ApplicationDbContext())
+            string query = "SELECT * FROM PhongKhoas";
+            DataTable dataTable = ExecuteQuery(query);
+
+            List<PhongKhoa> phongKhoaList = new List<PhongKhoa>();
+            foreach (DataRow row in dataTable.Rows)
             {
-                return context.PhongKhoa.ToList();
+                phongKhoaList.Add(new PhongKhoa
+                {
+                    MaPK = Convert.ToInt64(row["MaPK"]),
+                    ChuyenKhoa = row["ChuyenKhoa"].ToString(),
+                    // Add other properties as needed
+                });
             }
+
+            return phongKhoaList;
         }
 
         public PhongKhoa GetByChuyenKhoa(string chuyenKhoa)
         {
-            using (var context = new ApplicationDbContext())
+            string query = "SELECT * FROM PhongKhoas WHERE ChuyenKhoa = @ChuyenKhoa";
+            SqlParameter[] parameters = { new SqlParameter("@ChuyenKhoa", chuyenKhoa) };
+            DataTable dataTable = ExecuteQuery(query, parameters);
+
+            if (dataTable.Rows.Count > 0)
             {
-                return context.PhongKhoa
-                    .FirstOrDefault(k => k.ChuyenKhoa == chuyenKhoa);
+                DataRow row = dataTable.Rows[0];
+                return new PhongKhoa
+                {
+                    MaPK = Convert.ToInt64(row["MaPK"]),
+                    ChuyenKhoa = row["ChuyenKhoa"].ToString(),
+                    // Add other properties as needed
+                };
             }
+
+            return null;
         }
 
         public PhongKhoa GetById(long id)
         {
-            using (var context = new ApplicationDbContext())
+            string query = "SELECT * FROM PhongKhoas WHERE MaPK = @Id";
+            SqlParameter[] parameters = { new SqlParameter("@Id", id) };
+            DataTable dataTable = ExecuteQuery(query, parameters);
+
+            if (dataTable.Rows.Count > 0)
             {
-                return context.PhongKhoa
-                    .Find(id);
+                DataRow row = dataTable.Rows[0];
+                return new PhongKhoa
+                {
+                    MaPK = Convert.ToInt64(row["MaPK"]),
+                    ChuyenKhoa = row["ChuyenKhoa"].ToString(),
+                    // Add other properties as needed
+                };
             }
+
+            return null;
         }
     }
 }

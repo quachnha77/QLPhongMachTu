@@ -77,7 +77,7 @@
             this.button2.TabIndex = 2;
             this.button2.Text = "Chỉnh sửa";
             this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            //this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -210,7 +210,7 @@
             this.chuyenKhoaSlt.Name = "chuyenKhoaSlt";
             this.chuyenKhoaSlt.Size = new System.Drawing.Size(239, 24);
             this.chuyenKhoaSlt.TabIndex = 7;
-            this.chuyenKhoaSlt.SelectedIndexChanged += new System.EventHandler(this.chuyenKhoaSlt_DropDownClosed);
+            //this.chuyenKhoaSlt.SelectedIndexChanged += new System.EventHandler(this.chuyenKhoaSlt_DropDownClosed);
             // 
             // SDTTxt
             // 
@@ -316,6 +316,7 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(1019, 367);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
             // 
             // Column1
             // 

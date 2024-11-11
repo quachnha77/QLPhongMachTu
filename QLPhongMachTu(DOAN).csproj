@@ -71,6 +71,7 @@
     <Compile Include="DAL\ApplicationDbContext.cs" />
     <Compile Include="DAL\BacSiDAL.cs" />
     <Compile Include="DAL\BenhNhanDAL.cs" />
+    <Compile Include="DAL\DatabaseHelper.cs" />
     <Compile Include="DAL\KhoaDAL.cs" />
     <Compile Include="DAL\LichKhamDAL.cs" />
     <Compile Include="DAL\PhanCongDAL.cs" />
