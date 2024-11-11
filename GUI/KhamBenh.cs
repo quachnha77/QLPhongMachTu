@@ -2,8 +2,10 @@
 using QLPhongMachTu_DOAN_.DAL;
 using QLPhongMachTu_DOAN_.DTO;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace QLPhongMachTu_DOAN_.GUI
 {
@@ -25,7 +27,7 @@ namespace QLPhongMachTu_DOAN_.GUI
             InitializeComponent();
 
             InitializeUI();
-            LoadInitialData();
+            ShowInformation();
         }
 
         private void InitializeUI()
@@ -38,7 +40,7 @@ namespace QLPhongMachTu_DOAN_.GUI
             SDTTxt.Enabled = false;
         }
 
-        private void LoadInitialData()
+        private void ShowInformation()
         {
             LoadChuyenKhoaList();
             UpdateDataGrid();
@@ -73,14 +75,18 @@ namespace QLPhongMachTu_DOAN_.GUI
                 return;
             }
 
-            var confirmCancel = MessageBox.Show("Bạn chắc chắn hủy lịch hẹn này không?", "Xác nhận", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
-            if (confirmCancel != DialogResult.OK) return;
+            var xacNhan = MessageBox.Show("Bạn chắc chắn hủy lịch hẹn này không?", "Xác nhận", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (xacNhan != DialogResult.OK) return;
 
             long lichKhamId = (long)dataGridView1.SelectedRows[0].Tag;
-            var result = lichKhamBLL.XoaLichKham(lichKhamId);
+            bool result = lichKhamBLL.XoaLichKham(lichKhamId);
 
-            MessageBox.Show(result != null ? "Hủy lịch hẹn thành công." : "Hủy lịch hẹn thất bại.", "Thông báo");
-            UpdateDataGrid();
+            if (result)
+            {
+                MessageBox.Show("Hủy lịch hẹn thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                UpdateDataGrid();
+            }
+            else MessageBox.Show("Hủy lịch hẹn thất bại", "Thất bại", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -94,7 +100,7 @@ namespace QLPhongMachTu_DOAN_.GUI
         {
             List<PhongKhoa> chuyenKhoaList = khoaBLL.GetAll();
             chuyenKhoaSlt.DataSource = chuyenKhoaList;
-            chuyenKhoaSlt.DisplayMember = "TenPhongBan";
+            chuyenKhoaSlt.DisplayMember = "ChuyenKhoa";
             chuyenKhoaSlt.ValueMember = "MaPK";
             LoadDoctorsByChuyenKhoa((long)chuyenKhoaSlt.SelectedValue);
         }
@@ -102,14 +108,15 @@ namespace QLPhongMachTu_DOAN_.GUI
         private void LoadDoctorsByChuyenKhoa(long khoaId)
         {
             List<BacSi> bacSiList = bacSiBLL.GetAllByChuyenKhoa(khoaId);
-            comboBox1.DataSource = bacSiList.Count > 0 ? bacSiList : null;
-
             if (bacSiList.Count == 0)
             {
+                comboBox1.DataSource = null;
+                ngayHenCb.DataSource = null;
                 MessageBox.Show("Không có bác sĩ nào trong chuyên khoa này.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 
+            comboBox1.DataSource = bacSiList;
             comboBox1.DisplayMember = "HoTen";
             comboBox1.ValueMember = "MaSo";
             LoadPhanCongByDoctor((long)comboBox1.SelectedValue);
@@ -118,6 +125,13 @@ namespace QLPhongMachTu_DOAN_.GUI
         private void LoadPhanCongByDoctor(long bacSiId)
         {
             List<LichPhanCong> phanCongList = phanCongBLL.GetAllPhanCongByMaBacSi(bacSiId);
+            if (phanCongList.Count == 0)
+            {
+                ngayHenCb.DataSource = null;
+                MessageBox.Show("Bác sĩ này chưa được phân công lịch khám.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
             ngayHenCb.DataSource = phanCongList;
             ngayHenCb.DisplayMember = "NgayPhanCong";
             ngayHenCb.ValueMember = "MaLPC";
@@ -128,48 +142,42 @@ namespace QLPhongMachTu_DOAN_.GUI
             dataGridView1.Rows.Clear();
             List<LichKham> listOfLichKham = lichKhamBLL.GetByMaBenhNhan(benhNhan.MaSo);
 
-            int stt = 1;
-            foreach (var lichKham in listOfLichKham)
+            int STT = 1;
+            foreach (var lk in listOfLichKham)
             {
-                var bacSi = bacSiBLL.GetById(lichKham.MaBS);
-                var phongKhoa = khoaBLL.GetById(bacSi.MaKhoa);
+                var bacSi = bacSiBLL.GetById(lk.MaBS);
+                var khoa = khoaBLL.GetById(bacSi.MaKhoa);
+                var index = dataGridView1.Rows.Add();
 
-                var row = new object[] { stt, phongKhoa.ChuyenKhoa, lichKham.NgayKham, lichKham.TrieuChung, bacSi.HoTen };
-                dataGridView1.Rows.Add(row);
-                dataGridView1.Rows[stt - 1].Tag = lichKham.MaLK;
-                stt++;
+                dataGridView1.Rows[index].Cells[0].Value = STT;
+                dataGridView1.Rows[index].Cells[1].Value = khoa.ChuyenKhoa;
+                dataGridView1.Rows[index].Cells[2].Value = lk.BacSi.HoTen;
+                dataGridView1.Rows[index].Cells[3].Value = lk.NgayKham;
+                dataGridView1.Rows[index].Cells[4].Value = lk.TrieuChung;
+                dataGridView1.Rows[index].Cells[5].Value = lk.TrangThai;
+
+                dataGridView1.Rows[index].Cells[0].Tag = lk;
+                dataGridView1.Rows[index].Cells[1].Tag = khoa;
+                STT += 1;
             }
         }
 
+        private void chuyenKhoaSlt_DropDownClosed(object sender, EventArgs e)
+        {
+            var khoaId = chuyenKhoaSlt.SelectedValue;
 
-        #region UI Event Handlers
-
-        //private void chuyenKhoaSlt_DropDownClosed(object sender, EventArgs e)
-        //{
-        //    long khoaId = ((PhongKhoa)chuyenKhoaSlt.SelectedItem).MaPK;
-        //    LoadDoctorsByChuyenKhoa(khoaId);
-        //}
+            if (khoaId.GetType() != typeof(long)) return;
+            LoadDoctorsByChuyenKhoa(Convert.ToInt64(khoaId));
+        }
 
         private void comboBox1_DropDownClosed(object sender, EventArgs e)
         {
-            long bacSiId = (long)comboBox1.SelectedValue;
-            LoadPhanCongByDoctor(bacSiId);
+            var bacSiId = comboBox1.SelectedValue;
+
+            if (bacSiId == null) return;
+            if (bacSiId.GetType() != typeof(long)) return;
+            LoadPhanCongByDoctor(Convert.ToInt64(bacSiId));
         }
-
-        private void dataGridView1_SelectionChanged(object sender, EventArgs e)
-        {
-            if (dataGridView1.SelectedRows.Count == 0) return;
-
-            var selectedRow = dataGridView1.SelectedRows[0];
-            chuyenKhoaSlt.SelectedIndex = chuyenKhoaSlt.FindStringExact((string)selectedRow.Cells[1].Value);
-            ngayHenCb.SelectedIndex = ngayHenCb.FindStringExact(selectedRow.Cells[2].Value.ToString());
-            comboBox1.SelectedIndex = comboBox1.FindStringExact(selectedRow.Cells[4].Value.ToString());
-            trieuChungTxt.Text = (string)selectedRow.Cells[3].Value;
-        }
-
-        #endregion
-
-        #region Validation
 
         private bool ValidateFormData()
         {
@@ -193,7 +201,5 @@ namespace QLPhongMachTu_DOAN_.GUI
 
             return true;
         }
-
-        #endregion
     }
 }

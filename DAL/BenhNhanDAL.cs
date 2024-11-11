@@ -79,7 +79,7 @@ namespace QLPhongMachTu_DOAN_.DAL
 
         public BenhNhan GetById(long id)
         {
-            string query = "SELECT * FROM BenhNhans WHERE Id = @Id";
+            string query = "SELECT * FROM BenhNhans WHERE MaSo = @Id";
             SqlParameter[] parameters = {
                 new SqlParameter("@Id", id)
             };
@@ -92,7 +92,7 @@ namespace QLPhongMachTu_DOAN_.DAL
                 return new BenhNhan
                 {
                     MaSo = Convert.ToInt64(row[0]),
-                    CCCD = (string)row[1],
+                    CCCD = Convert.ToString(row[1]),
                     HoTen = (string)row[2],
                     NgaySinh = (DateTime)row[3],
                     GioiTinh = (string)row[4],

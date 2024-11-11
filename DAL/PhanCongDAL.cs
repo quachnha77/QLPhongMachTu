@@ -74,11 +74,11 @@ namespace QLPhongMachTu_DOAN_.DAL
         public LichPhanCong GetById(long id)
         {
             string query = @"
-                SELECT lp.*, bs.TenBacSi, pk.TenPhongKhoa
+                SELECT lp.*, bs.HoTen, pk.TenPhongBan
                 FROM LichPhanCongs lp
-                INNER JOIN BacSi bs ON lp.MaBS = bs.Id
-                INNER JOIN PhongKhoa pk ON bs.MaPK = pk.Id
-                WHERE lp.Id = @Id";
+                INNER JOIN BacSis bs ON lp.MaBS = bs.MaSo
+                INNER JOIN PhongKhoas pk ON bs.MaKhoa = pk.MaPK
+                WHERE lp.MaLPC = @Id";
 
             SqlParameter[] parameters = {
                 new SqlParameter("@Id", id)
@@ -91,12 +91,12 @@ namespace QLPhongMachTu_DOAN_.DAL
                 DataRow row = result.Rows[0];
                 return new LichPhanCong
                 {
-                    MaLPC = Convert.ToInt64(row[1]),
-                    MaNV = Convert.ToInt64(row[2]),
-                    MaBS = Convert.ToInt64(row[3]), // long 64 bit
-                    GhiChu = Convert.ToString(row[4]),
-                    gioBatDau = Convert.ToInt32(row[5]),
-                    gioKetThuc = Convert.ToInt32(row[6]),
+                    MaLPC = Convert.ToInt64(row[0]),
+                    MaNV = Convert.ToInt64(row[1]),
+                    MaBS = Convert.ToInt64(row[2]), // long 64 bit
+                    GhiChu = Convert.ToString(row[3]),
+                    gioBatDau = Convert.ToInt32(row[4]),
+                    gioKetThuc = Convert.ToInt32(row[5]),
                     NgayPhanCong = Convert.ToDateTime(row["NgayPhanCong"]),
                     //BacSi = new BacSi
                     //{

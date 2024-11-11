@@ -11,6 +11,7 @@ namespace QLPhongMachTu_DOAN_.BLL
     public class LichKhamBLL
     {
         private readonly LichKhamDAL dal;
+        private readonly PhanCongDAL pcdal;
 
         public LichKhamBLL()
         {
@@ -22,10 +23,14 @@ namespace QLPhongMachTu_DOAN_.BLL
             return dal.TaoLichKham(lk);
         }
 
-        //public LichKham SuaLichKham(long maLk, DateTime ngayHen, string trieuChung)
-        //{
-        //    //return dal.suaLichKham(lk);
-        //}
+        public bool SuaLichKham(long maLk, LichKham updateLichKham, long phanCongId)
+        {
+            LichPhanCong pc = pcdal.GetById(phanCongId);
+            if (pc == null)
+                return false;
+            updateLichKham.NgayKham = pc.NgayPhanCong;
+            return dal.SuaLichKham(maLk, updateLichKham);
+        }
 
         public bool XoaLichKham(long id)
         {

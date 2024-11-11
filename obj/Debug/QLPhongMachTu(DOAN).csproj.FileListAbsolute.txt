@@ -116,3 +116,4 @@ C:\Users\HUYKIEN\Desktop\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.Migrations.
 C:\Users\HUYKIEN\Desktop\SGU\C#\DoAN\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.Migrations.Update3.resources
 C:\Users\HUYKIEN\Desktop\SGU\C#\DoAN\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.Migrations.Update4.resources
 >>>>>>> 4907f82affdcf3f3acbf2c5f0d2f29707aaa4aab
+C:\Users\HUYKIEN\Desktop\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.KhamBenh_Edit_LT.resources

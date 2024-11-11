@@ -14,7 +14,6 @@ namespace QLPhongMachTu_DOAN_.GUI
         private BacSiBLL bacSiBll = new BacSiBLL();
         private KhoaBLL khoaBll = new KhoaBLL();
         private BenhNhanBLL benhNhanBll = new BenhNhanBLL();
-        private bool isClearingRows = false;
 
         public KhamBenh_LT()
         {
@@ -49,39 +48,18 @@ namespace QLPhongMachTu_DOAN_.GUI
                 var index = gridView.Rows.Add();
                 gridView.Rows[index].Cells[0].Value = STT;
                 gridView.Rows[index].Cells[1].Value = benhNhan.HoTen;
-                //gridView.Rows[index].Cells[2].Value = bacSi.HoTen;
+                gridView.Rows[index].Cells[3].Value = bacSi.HoTen;
                 gridView.Rows[index].Cells[2].Value = khoa.ChuyenKhoa; // khoa theo bac si
-                gridView.Rows[index].Cells[3].Value = lk.NgayKham;
-                gridView.Rows[index].Cells[4].Value = lk.TrieuChung;
-                gridView.Rows[index].Cells[5].Value = lk.TrangThai;
+                gridView.Rows[index].Cells[4].Value = lk.NgayKham;
+                gridView.Rows[index].Cells[5].Value = lk.TrieuChung;
+                gridView.Rows[index].Cells[6].Value = lk.TrangThai;
 
                 gridView.Rows[index].Cells[0].Tag = lk;
                 gridView.Rows[index].Cells[1].Tag = benhNhan;
                 gridView.Rows[index].Cells[2].Tag = khoa;
+                gridView.Rows[index].Cells[3].Tag = bacSi;
+                STT++;
             }
-        }
-
-        private void gridView_SelectionChanged(object sender, System.EventArgs e)
-        {
-            if (isClearingRows || gridView.SelectedRows.Count == 0) return;
-
-            var selectedRow = gridView.SelectedRows[0];
-
-            BenhNhan benhNhan = (BenhNhan)selectedRow.Cells[1].Tag;
-            PhongKhoa khoa = (PhongKhoa)selectedRow.Cells[2].Tag;
-
-            maBNTxt.Text = benhNhan.MaSo.ToString();
-            CCCDTxt.Text = benhNhan.CCCD.ToString();
-            hotTenTxt.Text = benhNhan.HoTen;
-            ngaySinhTxt.Text = benhNhan.NgaySinh.ToString("dd/MM/yyyy");
-            gioiTinhTxt.Text = benhNhan.GioiTinh;
-            diaChiTxt.Text = benhNhan.DiaChi;
-            sdtTxt.Text = benhNhan.SDT;
-            chuyenKhoaTxt.Text = khoa.ChuyenKhoa;
-            ngayHenTxt.Text = selectedRow.Cells[3].Value.ToString();
-            yeuCauTxt.Text = selectedRow.Cells[4].Value.ToString();
-
-
         }
 
         private void chinhSuaBtn_Click(object sender, System.EventArgs e)
@@ -91,27 +69,24 @@ namespace QLPhongMachTu_DOAN_.GUI
                 MessageBox.Show("Vui lòng chọn một dòng để chỉnh sửa.");
                 return;
             }
-
             var selectedRow = gridView.SelectedRows[0];
-            var lichKham = (LichKham)selectedRow.Cells[0].Tag; // Dữ liệu LichKham từ Tag
+            
+            LichKham lk = (LichKham)selectedRow.Cells[0].Tag;
+            BenhNhan benhNhan = (BenhNhan)selectedRow.Cells[1].Tag;
+            PhongKhoa khoa = (PhongKhoa)selectedRow.Cells[2].Tag;
+            BacSi bs = (BacSi)selectedRow.Cells[3].Tag;
+            // Mã số, ngày khám, triệu chứng, trạng thái, BN, BS
 
-            // Cập nhật thông tin lịch khám
-            lichKham.NgayKham = DateTime.TryParse(ngayHenTxt.Text, out DateTime ngayHen) ? ngayHen : lichKham.NgayKham;
-            lichKham.TrieuChung = yeuCauTxt.Text;
+            KhamBenh_Edit_LT chinhSuaPnl = new KhamBenh_Edit_LT(lk, benhNhan, bs);
+            var panelMain = this.FindForm();
+            panelMain.Controls.Clear();
+            chinhSuaPnl.Dock = DockStyle.Fill;
+            panelMain.Controls.Add(chinhSuaPnl);
+            panelMain.Refresh();
 
-            // Gọi phương thức cập nhật BLL để lưu dữ liệu
-            //lichKhamBll.SuaLichKham(lichKham.MaLK, );
-
-            MessageBox.Show("Thông tin đã được cập nhật.");
-
-            // Làm mới hiển thị dữ liệu trên lưới
-            isClearingRows = true;
-            gridView.Rows.Clear();
-            InsertAllDataGridView();
-            isClearingRows = false;
         }
 
-            private void InsertChuaKhamGridView()
+        private void InsertChuaKhamGridView()
         {
             List<LichKham> lkList = lichKhamBll.GetByTrangThai("Chưa khám");
             insertHelper(lkList);
@@ -125,41 +100,26 @@ namespace QLPhongMachTu_DOAN_.GUI
 
         private void chuaKhamRd_Click(object sender, System.EventArgs e)
         {
-            isClearingRows = true;
             gridView.Rows.Clear();
             InsertChuaKhamGridView();
-            isClearingRows = false;
         }
 
         private void daKhamRd_Click(object sender, System.EventArgs e)
         {
-            isClearingRows = true;
             gridView.Rows.Clear();
             InsertDaKhamGridView();
-            isClearingRows = false;
         }
 
         private void tatCaRd_Click(object sender, System.EventArgs e)
         {
-            isClearingRows = true;
             gridView.Rows.Clear();
             InsertAllDataGridView();
-            isClearingRows = false;
-            ClearData();
         }
 
-        private void ClearData()
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
-            maBNTxt.Text = "";
-            CCCDTxt.Text = "";
-            hotTenTxt.Text = "";
-            ngaySinhTxt.Text = "";
-            gioiTinhTxt.Text = "";
-            diaChiTxt.Text = "";
-            sdtTxt.Text = "";
-            chuyenKhoaTxt.Text = "";
-            ngayHenTxt.Text = "";
-            yeuCauTxt.Text = "";
+            MessageBox.Show("Hellow");
+            var result = dateTimePicker1.Value.ToString();
         }
     }
 }

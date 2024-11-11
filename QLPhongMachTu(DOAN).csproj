@@ -113,6 +113,12 @@
     <Compile Include="GUI\KhamBenh_BS.Designer.cs">
       <DependentUpon>KhamBenh_BS.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\KhamBenh_Edit_LT.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\KhamBenh_Edit_LT.Designer.cs">
+      <DependentUpon>KhamBenh_Edit_LT.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\KhamBenh_LT.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -280,6 +286,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\KhamBenh_BS.resx">
       <DependentUpon>KhamBenh_BS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\KhamBenh_Edit_LT.resx">
+      <DependentUpon>KhamBenh_Edit_LT.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\KhamBenh_LT.resx">
       <DependentUpon>KhamBenh_LT.cs</DependentUpon>

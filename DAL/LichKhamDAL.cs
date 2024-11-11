@@ -16,7 +16,7 @@ namespace QLPhongMachTu_DOAN_.DAL
                 new SqlParameter("@MaBN", lk.MaBN),
                 new SqlParameter("@NgayKham", lk.NgayKham),
                 new SqlParameter("@TrieuChung", lk.TrieuChung),
-                new SqlParameter("@TrangThai", lk.TrangThai)
+                new SqlParameter("@TrangThai", "Chưa khám")
             };
 
             using (DataTable result = ExecuteQuery(query, parameters))
@@ -54,10 +54,10 @@ namespace QLPhongMachTu_DOAN_.DAL
         public List<LichKham> GetAll()
         {
             string query = @"
-                SELECT lk.*, bs.TenBacSi, bn.TenBenhNhan
+                SELECT lk.*, bs.HoTen, bn.HoTen
                 FROM LichKhams lk
-                INNER JOIN BacSi bs ON lk.MaBS = bs.MaBS
-                INNER JOIN BenhNhan bn ON lk.MaBN = bn.MaBN";
+                INNER JOIN BacSis bs ON lk.MaBS = bs.MaSo
+                INNER JOIN BenhNhans bn ON lk.MaBN = bn.MaSo";
 
             DataTable result = ExecuteQuery(query);
             return MapLichKhamList(result);
@@ -66,10 +66,10 @@ namespace QLPhongMachTu_DOAN_.DAL
         public List<LichKham> GetByTrangThai(string trangThai)
         {
             string query = @"
-                SELECT lk.*, bs.TenBacSi, bn.TenBenhNhan
+                SELECT lk.*, bs.HoTen, bn.HoTen
                 FROM LichKhams lk
-                INNER JOIN BacSi bs ON lk.MaBS = bs.MaBS
-                INNER JOIN BenhNhan bn ON lk.MaBN = bn.MaBN
+                INNER JOIN BacSis bs ON lk.MaBS = bs.MaSo
+                INNER JOIN BenhNhans bn ON lk.MaBN = bn.MaSo
                 WHERE lk.TrangThai = @TrangThai";
             SqlParameter[] parameters = { new SqlParameter("@TrangThai", trangThai) };
 
@@ -77,12 +77,14 @@ namespace QLPhongMachTu_DOAN_.DAL
             return MapLichKhamList(result);
         }
 
-        public bool SuaLichKham(long maLK, DateTime ngayHen, string yeuCau)
+        public bool SuaLichKham(long maLK, LichKham updateLichKham)
         {
-            string query = "UPDATE LichKhams SET NgayKham = @NgayKham, TrieuChung = @TrieuChung WHERE MaLK = @MaLK";
+            string query = "UPDATE LichKhams SET MaBS = @MaBS, NgayKham = @NgayKham, TrieuChung = @TrieuChung" +
+                " WHERE MaLK = @MaLK";
             SqlParameter[] parameters = {
-                new SqlParameter("@NgayKham", ngayHen),
-                new SqlParameter("@TrieuChung", yeuCau),
+                new SqlParameter("@MaBS", updateLichKham.MaBS),
+                new SqlParameter("@NgayKham", updateLichKham.NgayKham),
+                new SqlParameter("@TrieuChung", updateLichKham.TrieuChung),
                 new SqlParameter("@MaLK", maLK)
             };
 
@@ -95,8 +97,8 @@ namespace QLPhongMachTu_DOAN_.DAL
             string query = @"
                 SELECT lk.*, bs.TenBacSi, bn.TenBenhNhan
                 FROM LichKhams lk
-                INNER JOIN BacSi bs ON lk.MaBS = bs.MaBS
-                INNER JOIN BenhNhan bn ON lk.MaBN = bn.MaBN
+                INNER JOIN BacSi bs ON lk.MaBS = bs.MaSo
+                INNER JOIN BenhNhan bn ON lk.MaBN = bn.MaSo
                 WHERE lk.MaLK = @MaLK";
             SqlParameter[] parameters = { new SqlParameter("@MaLK", maLK) };
 
@@ -104,6 +106,7 @@ namespace QLPhongMachTu_DOAN_.DAL
 
             if (result.Rows.Count > 0)
             {
+                // Trả về dòng đầu tiên
                 return MapLichKham(result.Rows[0]);
             }
             return null;
@@ -129,11 +132,11 @@ namespace QLPhongMachTu_DOAN_.DAL
                 NgayKham = Convert.ToDateTime(row["NgayKham"]),
                 TrieuChung = row["TrieuChung"].ToString(),
                 TrangThai = row["TrangThai"].ToString(),
-                //BacSi = new BacSi
-                //{
-                //    Id = Convert.ToInt64(row["MaBS"]),
-                //    TenBacSi = row["TenBacSi"].ToString()
-                //},
+                BacSi = new BacSi
+                {
+                    MaSo = Convert.ToInt64(row["MaBS"]),
+                    HoTen = row["HoTen"].ToString()
+                },
                 //BenhNhan = new BenhNhan
                 //{
                 //    Id = Convert.ToInt64(row["MaBN"]),

@@ -48,15 +48,16 @@
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.button6 = new System.Windows.Forms.Button();
             this.textBox5 = new System.Windows.Forms.TextBox();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -77,7 +78,6 @@
             this.button2.TabIndex = 2;
             this.button2.Text = "Chỉnh sửa";
             this.button2.UseVisualStyleBackColor = false;
-            //this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -152,7 +152,7 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(239, 24);
             this.comboBox1.TabIndex = 12;
-            this.comboBox1.TextUpdate += new System.EventHandler(this.comboBox1_DropDownClosed);
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_DropDownClosed);
             // 
             // label6
             // 
@@ -210,7 +210,7 @@
             this.chuyenKhoaSlt.Name = "chuyenKhoaSlt";
             this.chuyenKhoaSlt.Size = new System.Drawing.Size(239, 24);
             this.chuyenKhoaSlt.TabIndex = 7;
-            //this.chuyenKhoaSlt.SelectedIndexChanged += new System.EventHandler(this.chuyenKhoaSlt_DropDownClosed);
+            this.chuyenKhoaSlt.SelectedIndexChanged += new System.EventHandler(this.chuyenKhoaSlt_DropDownClosed);
             // 
             // SDTTxt
             // 
@@ -304,6 +304,7 @@
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
+            this.Column6,
             this.Column3,
             this.Column4,
             this.Column5});
@@ -314,50 +315,8 @@
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1019, 367);
+            this.dataGridView1.Size = new System.Drawing.Size(1019, 755);
             this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "STT";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Column1.Width = 50;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Chuyên khoa";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Width = 200;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Ngày hẹn";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Width = 150;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Triệu chứng";
-            this.Column4.MinimumWidth = 6;
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            this.Column4.Width = 220;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Trạng thái";
-            this.Column5.MinimumWidth = 6;
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            this.Column5.Width = 140;
             // 
             // groupBox3
             // 
@@ -405,6 +364,55 @@
             this.textBox5.Size = new System.Drawing.Size(237, 22);
             this.textBox5.TabIndex = 6;
             // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "STT";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Column1.Width = 50;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Chuyên khoa";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 200;
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Bác sĩ";
+            this.Column6.MinimumWidth = 6;
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            this.Column6.Width = 125;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Ngày hẹn";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Width = 150;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Triệu chứng";
+            this.Column4.MinimumWidth = 6;
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Width = 220;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Trạng thái";
+            this.Column5.MinimumWidth = 6;
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            this.Column5.Width = 140;
+            // 
             // KhamBenh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -448,13 +456,14 @@
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.ComboBox ngayHenCb;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
     }
 }

@@ -30,11 +30,18 @@
         {
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.button2 = new System.Windows.Forms.Button();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.tatCaRd = new System.Windows.Forms.RadioButton();
             this.daKhamRd = new System.Windows.Forms.RadioButton();
             this.chuaKhamRd = new System.Windows.Forms.RadioButton();
+            this.chinhSuaBtn = new System.Windows.Forms.Button();
             this.gridView = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.chuyenKhoaTxt = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -57,13 +64,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.chinhSuaBtn = new System.Windows.Forms.Button();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridView)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -101,14 +102,6 @@
             this.button2.TabIndex = 9;
             this.button2.Text = "Thêm bệnh nhân";
             this.button2.UseVisualStyleBackColor = false;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(609, 37);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(261, 22);
-            this.dateTimePicker1.TabIndex = 8;
             // 
             // tatCaRd
             // 
@@ -149,6 +142,22 @@
             this.chuaKhamRd.UseVisualStyleBackColor = true;
             this.chuaKhamRd.Click += new System.EventHandler(this.chuaKhamRd_Click);
             // 
+            // chinhSuaBtn
+            // 
+            this.chinhSuaBtn.BackColor = System.Drawing.Color.CadetBlue;
+            this.chinhSuaBtn.FlatAppearance.BorderSize = 0;
+            this.chinhSuaBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.chinhSuaBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chinhSuaBtn.ForeColor = System.Drawing.Color.White;
+            this.chinhSuaBtn.Location = new System.Drawing.Point(305, 789);
+            this.chinhSuaBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.chinhSuaBtn.Name = "chinhSuaBtn";
+            this.chinhSuaBtn.Size = new System.Drawing.Size(171, 37);
+            this.chinhSuaBtn.TabIndex = 4;
+            this.chinhSuaBtn.Text = "Chỉnh sửa";
+            this.chinhSuaBtn.UseVisualStyleBackColor = false;
+            this.chinhSuaBtn.Click += new System.EventHandler(this.chinhSuaBtn_Click);
+            // 
             // gridView
             // 
             this.gridView.AllowUserToAddRows = false;
@@ -158,6 +167,7 @@
             this.Column1,
             this.Column6,
             this.Column2,
+            this.Column7,
             this.Column3,
             this.Column4,
             this.Column5});
@@ -167,9 +177,59 @@
             this.gridView.RowHeadersVisible = false;
             this.gridView.RowHeadersWidth = 51;
             this.gridView.RowTemplate.Height = 24;
+            this.gridView.ShowCellErrors = false;
             this.gridView.Size = new System.Drawing.Size(1019, 690);
             this.gridView.TabIndex = 0;
-            this.gridView.SelectionChanged += new System.EventHandler(this.gridView_SelectionChanged);
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "STT";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Column1.Width = 50;
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Tên bệnh nhân";
+            this.Column6.MinimumWidth = 6;
+            this.Column6.Name = "Column6";
+            this.Column6.Width = 125;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Chuyên khoa";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 200;
+            // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "Bác sĩ";
+            this.Column7.MinimumWidth = 6;
+            this.Column7.Name = "Column7";
+            this.Column7.Width = 125;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Ngày hẹn";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 150;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Yêu cầu khám";
+            this.Column4.MinimumWidth = 6;
+            this.Column4.Name = "Column4";
+            this.Column4.Width = 220;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Trạng thái";
+            this.Column5.MinimumWidth = 6;
+            this.Column5.Name = "Column5";
+            this.Column5.Width = 140;
             // 
             // groupBox1
             // 
@@ -400,64 +460,14 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Họ và tên";
             // 
-            // Column1
+            // dateTimePicker1
             // 
-            this.Column1.HeaderText = "STT";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Column1.Width = 50;
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Tên bệnh nhân";
-            this.Column6.MinimumWidth = 6;
-            this.Column6.Name = "Column6";
-            this.Column6.Width = 125;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Chuyên khoa";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 200;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Ngày hẹn";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 150;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Yêu cầu khám";
-            this.Column4.MinimumWidth = 6;
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 220;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Trạng thái";
-            this.Column5.MinimumWidth = 6;
-            this.Column5.Name = "Column5";
-            this.Column5.Width = 140;
-            // 
-            // chinhSuaBtn
-            // 
-            this.chinhSuaBtn.BackColor = System.Drawing.Color.CadetBlue;
-            this.chinhSuaBtn.FlatAppearance.BorderSize = 0;
-            this.chinhSuaBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.chinhSuaBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chinhSuaBtn.ForeColor = System.Drawing.Color.White;
-            this.chinhSuaBtn.Location = new System.Drawing.Point(305, 789);
-            this.chinhSuaBtn.Margin = new System.Windows.Forms.Padding(4);
-            this.chinhSuaBtn.Name = "chinhSuaBtn";
-            this.chinhSuaBtn.Size = new System.Drawing.Size(171, 37);
-            this.chinhSuaBtn.TabIndex = 4;
-            this.chinhSuaBtn.Text = "Chỉnh sửa";
-            this.chinhSuaBtn.UseVisualStyleBackColor = false;
-            this.chinhSuaBtn.Click += new System.EventHandler(this.chinhSuaBtn_Click);
+            this.dateTimePicker1.Location = new System.Drawing.Point(609, 37);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(261, 22);
+            this.dateTimePicker1.TabIndex = 8;
+            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // KhamBenh_LT
             // 
@@ -481,7 +491,6 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.RadioButton tatCaRd;
         private System.Windows.Forms.RadioButton daKhamRd;
         private System.Windows.Forms.RadioButton chuaKhamRd;
@@ -509,12 +518,14 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox chuyenKhoaTxt;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Button chinhSuaBtn;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.Button chinhSuaBtn;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }
