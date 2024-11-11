@@ -1,87 +1,40 @@
-C:\Users\2301\Desktop\C#\QLPhongMachTu(DOAN)\QLPhongMachTu(DOAN)\bin\Debug\QLPhongMachTu(DOAN).exe.config
-C:\Users\2301\Desktop\C#\QLPhongMachTu(DOAN)\QLPhongMachTu(DOAN)\bin\Debug\QLPhongMachTu(DOAN).exe
-C:\Users\2301\Desktop\C#\QLPhongMachTu(DOAN)\QLPhongMachTu(DOAN)\bin\Debug\QLPhongMachTu(DOAN).pdb
-C:\Users\2301\Desktop\C#\QLPhongMachTu(DOAN)\QLPhongMachTu(DOAN)\obj\Debug\QLPhongMachTu(DOAN).csproj.AssemblyReference.cache
-C:\Users\2301\Desktop\C#\QLPhongMachTu(DOAN)\QLPhongMachTu(DOAN)\obj\Debug\QLPhongMachTu_DOAN_.Properties.Resources.resources
-C:\Users\2301\Desktop\C#\QLPhongMachTu(DOAN)\QLPhongMachTu(DOAN)\obj\Debug\QLPhongMachTu(DOAN).csproj.GenerateResource.cache
-C:\Users\2301\Desktop\C#\QLPhongMachTu(DOAN)\QLPhongMachTu(DOAN)\obj\Debug\QLPhongMachTu(DOAN).csproj.CoreCompileInputs.cache
-C:\Users\2301\Desktop\C#\QLPhongMachTu(DOAN)\QLPhongMachTu(DOAN)\obj\Debug\QLPhongMachTu(DOAN).exe
-C:\Users\2301\Desktop\C#\QLPhongMachTu(DOAN)\QLPhongMachTu(DOAN)\obj\Debug\QLPhongMachTu(DOAN).pdb
-C:\Users\2301\Desktop\C#\QLPhongMachTu(DOAN)\QLPhongMachTu(DOAN)\obj\Debug\QLPhongMachTu_DOAN_.GUI.Login.resources
-C:\Users\2301\Desktop\C#\QLPhongMachTu(DOAN)\QLPhongMachTu(DOAN)\obj\Debug\QLPhongMachTu_DOAN_.GUI.SignUp.resources
-C:\Users\2301\Desktop\C#\QLPhongMachTu(DOAN)\QLPhongMachTu(DOAN)\obj\Debug\QLPhongMachTu_DOAN_.GUI.Login1.resources
-C:\Users\2301\Desktop\C#\QLPhongMachTu(DOAN)\QLPhongMachTu(DOAN)\obj\Debug\QLPhongMachTu_DOAN_.GUI.TestControl.resources
-C:\Users\2301\Desktop\C#\QLPhongMachTu(DOAN)\QLPhongMachTu(DOAN)\obj\Debug\QLPhongMachTu_DOAN_.GUI.KhamBenh.resources
-C:\Users\2301\Desktop\C#\QLPhongMachTu(DOAN)\QLPhongMachTu(DOAN)\obj\Debug\QLPhongMachTu_DOAN_.GUI.ToaThuocDonThuoc.resources
-C:\Users\2301\Desktop\C#\QLPhongMachTu(DOAN)\QLPhongMachTu(DOAN)\obj\Debug\QLPhongMachTu_DOAN_.GUI.TaiKhoan.resources
-C:\Users\2301\Desktop\C#\QLPhongMachTu(DOAN)\QLPhongMachTu(DOAN)\obj\Debug\QLPhongMachTu_DOAN_.GUI.ThanhToan.resources
-C:\Users\2301\Desktop\C#\QLPhongMachTu(DOAN)\QLPhongMachTu(DOAN)\obj\Debug\QLPhongMachTu_DOAN_.NavbarBenhNhan.resources
-C:\Users\2301\Desktop\C#\QLPhongMachTu(DOAN)\QLPhongMachTu(DOAN)\obj\Debug\QLPhongMachTu_DOAN_.GUI.NavbarBacSi.resources
-C:\Users\2301\Desktop\C#\QLPhongMachTu(DOAN)\QLPhongMachTu(DOAN)\obj\Debug\QLPhongMachTu_DOAN_.GUI.NavbarDuocSi.resources
-C:\Users\2301\Desktop\C#\QLPhongMachTu(DOAN)\QLPhongMachTu(DOAN)\obj\Debug\QLPhongMachTu_DOAN_.GUI.NavbarLeTan.resources
-C:\Users\2301\Desktop\C#\QLPhongMachTu(DOAN)\QLPhongMachTu(DOAN)\obj\Debug\QLPhongMachTu_DOAN_.GUI.NavbarQuanLi.resources
-C:\Users\2301\Desktop\C#\QLPhongMachTu(DOAN)\QLPhongMachTu(DOAN)\obj\Debug\QLPhongMachTu_DOAN_.GUI.NavbarYTa.resources
-<<<<<<< HEAD
-<<<<<<< HEAD
-C:\Users\2301\Desktop\C#\QLPhongMachTu(DOAN)\QLPhongMachTu(DOAN)\obj\Debug\QLPhongMachTu_DOAN_.GUI.KhamBenh_BS.resources
-C:\Users\2301\Desktop\C#\QLPhongMachTu(DOAN)\QLPhongMachTu(DOAN)\obj\Debug\QLPhongMachTu_DOAN_.GUI.LichLamViec_BS.resources
-C:\Users\2301\Desktop\C#\QLPhongMachTu(DOAN)\QLPhongMachTu(DOAN)\obj\Debug\QLPhongMachTu_DOAN_.GUI.NhanVien.resources
-C:\Users\2301\Desktop\C#\QLPhongMachTu(DOAN)\QLPhongMachTu(DOAN)\obj\Debug\QLPhongMachTu_DOAN_.GUI.LichLamViec_QL.resources
-C:\Users\2301\Desktop\C#\QLPhongMachTu(DOAN)\QLPhongMachTu(DOAN)\obj\Debug\QLPhongMachTu_DOAN_.GUI.KhamBenh_LT.resources
-C:\Users\2301\Desktop\C#\QLPhongMachTu(DOAN)\QLPhongMachTu(DOAN)\obj\Debug\QLPhongMachTu_DOAN_.GUI.ToaThuoc.resources
-C:\Users\2301\Desktop\C#\QLPhongMachTu(DOAN)\QLPhongMachTu(DOAN)\obj\Debug\QLPhongMachTu_DOAN_.GUI.HoaDonKhamBenh.resources
-C:\Users\2301\Desktop\C#\QLPhongMachTu(DOAN)\QLPhongMachTu(DOAN)\obj\Debug\QLPhongMachTu_DOAN_.GUI.ThongKe.resources
-C:\Users\2301\Desktop\C#\QLPhongMachTu(DOAN)\QLPhongMachTu(DOAN)\obj\Debug\QLPhongMachTu_DOAN_.GUI.KhoThuoc.resources
-C:\Users\2301\Desktop\C#\QLPhongMachTu(DOAN)\QLPhongMachTu(DOAN)\obj\Debug\QLPhongMachTu_DOAN_.GUI.ToaThuocDonThuoc_DS.resources
-C:\Users\2301\Desktop\C#\QLPhongMachTu(DOAN)\QLPhongMachTu(DOAN)\obj\Debug\QLPhongMachTu_DOAN_.GUI.ThanhToan_DS.resources
-=======
-C:\Users\HUYKIEN\Desktop\SGU\C#\DoAN\QLPhongMachTu\bin\Debug\QLPhongMachTu(DOAN).exe.config
-C:\Users\HUYKIEN\Desktop\SGU\C#\DoAN\QLPhongMachTu\bin\Debug\QLPhongMachTu(DOAN).exe
-C:\Users\HUYKIEN\Desktop\SGU\C#\DoAN\QLPhongMachTu\bin\Debug\QLPhongMachTu(DOAN).pdb
-=======
->>>>>>> ConKienHuy
-C:\Users\HUYKIEN\Desktop\SGU\C#\DoAN\QLPhongMachTu\obj\Debug\QLPhongMachTu(DOAN).csproj.AssemblyReference.cache
-C:\Users\HUYKIEN\Desktop\SGU\C#\DoAN\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.HoaDonKhamBenh.resources
-C:\Users\HUYKIEN\Desktop\SGU\C#\DoAN\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.KhamBenh.resources
-C:\Users\HUYKIEN\Desktop\SGU\C#\DoAN\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.KhamBenh_BS.resources
-C:\Users\HUYKIEN\Desktop\SGU\C#\DoAN\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.KhamBenh_LT.resources
-C:\Users\HUYKIEN\Desktop\SGU\C#\DoAN\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.KhoThuoc.resources
-C:\Users\HUYKIEN\Desktop\SGU\C#\DoAN\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.LichLamViec_BS.resources
-C:\Users\HUYKIEN\Desktop\SGU\C#\DoAN\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.LichLamViec_QL.resources
-C:\Users\HUYKIEN\Desktop\SGU\C#\DoAN\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.Login.resources
-C:\Users\HUYKIEN\Desktop\SGU\C#\DoAN\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.Login1.resources
-C:\Users\HUYKIEN\Desktop\SGU\C#\DoAN\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.NavbarBacSi.resources
-C:\Users\HUYKIEN\Desktop\SGU\C#\DoAN\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.NavbarBenhNhan.resources
-C:\Users\HUYKIEN\Desktop\SGU\C#\DoAN\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.NavbarDuocSi.resources
-C:\Users\HUYKIEN\Desktop\SGU\C#\DoAN\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.NavbarLeTan.resources
-C:\Users\HUYKIEN\Desktop\SGU\C#\DoAN\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.NavbarQuanLi.resources
-C:\Users\HUYKIEN\Desktop\SGU\C#\DoAN\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.NavbarYTa.resources
-C:\Users\HUYKIEN\Desktop\SGU\C#\DoAN\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.NhanVien.resources
-C:\Users\HUYKIEN\Desktop\SGU\C#\DoAN\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.SignUp.resources
-C:\Users\HUYKIEN\Desktop\SGU\C#\DoAN\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.TaiKhoan.resources
-C:\Users\HUYKIEN\Desktop\SGU\C#\DoAN\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.TestControl.resources
-C:\Users\HUYKIEN\Desktop\SGU\C#\DoAN\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.ThanhToan.resources
-C:\Users\HUYKIEN\Desktop\SGU\C#\DoAN\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.ThanhToan_DS.resources
-C:\Users\HUYKIEN\Desktop\SGU\C#\DoAN\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.ThongKe.resources
-C:\Users\HUYKIEN\Desktop\SGU\C#\DoAN\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.ToaThuoc.resources
-C:\Users\HUYKIEN\Desktop\SGU\C#\DoAN\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.ToaThuocDonThuoc.resources
-C:\Users\HUYKIEN\Desktop\SGU\C#\DoAN\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.ToaThuocDonThuoc_DS.resources
-C:\Users\HUYKIEN\Desktop\SGU\C#\DoAN\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.Migrations.InitialCreate.resources
-C:\Users\HUYKIEN\Desktop\SGU\C#\DoAN\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.Properties.Resources.resources
-C:\Users\HUYKIEN\Desktop\SGU\C#\DoAN\QLPhongMachTu\obj\Debug\QLPhongMachTu(DOAN).csproj.GenerateResource.cache
-C:\Users\HUYKIEN\Desktop\SGU\C#\DoAN\QLPhongMachTu\obj\Debug\QLPhongMachTu(DOAN).csproj.CoreCompileInputs.cache
-C:\Users\HUYKIEN\Desktop\SGU\C#\DoAN\QLPhongMachTu\bin\Debug\QLPhongMachTu(DOAN).exe.config
-C:\Users\HUYKIEN\Desktop\SGU\C#\DoAN\QLPhongMachTu\bin\Debug\QLPhongMachTu(DOAN).exe
-C:\Users\HUYKIEN\Desktop\SGU\C#\DoAN\QLPhongMachTu\bin\Debug\QLPhongMachTu(DOAN).pdb
-C:\Users\HUYKIEN\Desktop\SGU\C#\DoAN\QLPhongMachTu\bin\Debug\EntityFramework.dll
-C:\Users\HUYKIEN\Desktop\SGU\C#\DoAN\QLPhongMachTu\bin\Debug\EntityFramework.SqlServer.dll
-C:\Users\HUYKIEN\Desktop\SGU\C#\DoAN\QLPhongMachTu\bin\Debug\EntityFramework.xml
-C:\Users\HUYKIEN\Desktop\SGU\C#\DoAN\QLPhongMachTu\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\HUYKIEN\Desktop\SGU\C#\DoAN\QLPhongMachTu\obj\Debug\QLPhongM.B43FB2E6.Up2Date
-<<<<<<< HEAD
-C:\Users\HUYKIEN\Desktop\SGU\C#\DoAN\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.Migrations.InitialCreate.resources
->>>>>>> ConKienHuy
-=======
-C:\Users\HUYKIEN\Desktop\SGU\C#\DoAN\QLPhongMachTu\obj\Debug\QLPhongMachTu(DOAN).exe
-C:\Users\HUYKIEN\Desktop\SGU\C#\DoAN\QLPhongMachTu\obj\Debug\QLPhongMachTu(DOAN).pdb
->>>>>>> ConKienHuy
+F:\SGU Projects\CSharp\QLPhongMachTu\bin\Debug\QLPhongMachTu(DOAN).exe.config
+F:\SGU Projects\CSharp\QLPhongMachTu\bin\Debug\QLPhongMachTu(DOAN).exe
+F:\SGU Projects\CSharp\QLPhongMachTu\bin\Debug\QLPhongMachTu(DOAN).pdb
+F:\SGU Projects\CSharp\QLPhongMachTu\bin\Debug\EntityFramework.dll
+F:\SGU Projects\CSharp\QLPhongMachTu\bin\Debug\EntityFramework.SqlServer.dll
+F:\SGU Projects\CSharp\QLPhongMachTu\bin\Debug\EntityFramework.xml
+F:\SGU Projects\CSharp\QLPhongMachTu\bin\Debug\EntityFramework.SqlServer.xml
+F:\SGU Projects\CSharp\QLPhongMachTu\obj\Debug\QLPhongMachTu(DOAN).csproj.AssemblyReference.cache
+F:\SGU Projects\CSharp\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.HoaDonKhamBenh.resources
+F:\SGU Projects\CSharp\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.KhamBenh.resources
+F:\SGU Projects\CSharp\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.KhamBenh_BS.resources
+F:\SGU Projects\CSharp\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.KhamBenh_LT.resources
+F:\SGU Projects\CSharp\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.KhoThuoc.resources
+F:\SGU Projects\CSharp\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.LichLamViec_BS.resources
+F:\SGU Projects\CSharp\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.LichLamViec_QL.resources
+F:\SGU Projects\CSharp\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.Login.resources
+F:\SGU Projects\CSharp\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.Login1.resources
+F:\SGU Projects\CSharp\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.NavbarBacSi.resources
+F:\SGU Projects\CSharp\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.NavbarBenhNhan.resources
+F:\SGU Projects\CSharp\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.NavbarDuocSi.resources
+F:\SGU Projects\CSharp\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.NavbarLeTan.resources
+F:\SGU Projects\CSharp\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.NavbarQuanLi.resources
+F:\SGU Projects\CSharp\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.NavbarYTa.resources
+F:\SGU Projects\CSharp\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.NhanVien.resources
+F:\SGU Projects\CSharp\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.SignUp.resources
+F:\SGU Projects\CSharp\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.TaiKhoan.resources
+F:\SGU Projects\CSharp\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.TestControl.resources
+F:\SGU Projects\CSharp\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.ThanhToan.resources
+F:\SGU Projects\CSharp\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.ThanhToan_DS.resources
+F:\SGU Projects\CSharp\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.ThongKe.resources
+F:\SGU Projects\CSharp\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.ToaThuoc.resources
+F:\SGU Projects\CSharp\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.ToaThuocDonThuoc.resources
+F:\SGU Projects\CSharp\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.ToaThuocDonThuoc_DS.resources
+F:\SGU Projects\CSharp\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.Migrations.InitialCreate.resources
+F:\SGU Projects\CSharp\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.Properties.Resources.resources
+F:\SGU Projects\CSharp\QLPhongMachTu\obj\Debug\QLPhongMachTu(DOAN).csproj.GenerateResource.cache
+F:\SGU Projects\CSharp\QLPhongMachTu\obj\Debug\QLPhongMachTu(DOAN).csproj.CoreCompileInputs.cache
+F:\SGU Projects\CSharp\QLPhongMachTu\obj\Debug\QLPhongM.B43FB2E6.Up2Date
+F:\SGU Projects\CSharp\QLPhongMachTu\obj\Debug\QLPhongMachTu(DOAN).exe
+F:\SGU Projects\CSharp\QLPhongMachTu\obj\Debug\QLPhongMachTu(DOAN).pdb
