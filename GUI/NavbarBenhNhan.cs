@@ -23,6 +23,11 @@ namespace QLPhongMachTu_DOAN_
             this.benhNhanLogin = benhNhanLogin;
         }
 
+        public NavbarBenhNhan()
+        {
+            InitializeComponent();
+        }
+
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
@@ -98,5 +103,6 @@ namespace QLPhongMachTu_DOAN_
         {
 
         }
+
     }
 }

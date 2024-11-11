@@ -55,7 +55,7 @@
             // 
             this.panelMain.BackColor = System.Drawing.Color.LightCyan;
             this.panelMain.Location = new System.Drawing.Point(220, 1);
-            this.panelMain.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelMain.Margin = new System.Windows.Forms.Padding(2);
             this.panelMain.Name = "panelMain";
             this.panelMain.Size = new System.Drawing.Size(1076, 725);
             this.panelMain.TabIndex = 0;
@@ -66,7 +66,7 @@
             this.pnToaThuocDonThuoc.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.pnToaThuocDonThuoc.Controls.Add(this.txtToaThuocDonThuoc);
             this.pnToaThuocDonThuoc.Location = new System.Drawing.Point(0, 302);
-            this.pnToaThuocDonThuoc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnToaThuocDonThuoc.Margin = new System.Windows.Forms.Padding(2);
             this.pnToaThuocDonThuoc.Name = "pnToaThuocDonThuoc";
             this.pnToaThuocDonThuoc.Size = new System.Drawing.Size(219, 54);
             this.pnToaThuocDonThuoc.TabIndex = 0;
@@ -90,7 +90,7 @@
             this.panel3.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.panel3.Controls.Add(this.txtThanhToan);
             this.panel3.Location = new System.Drawing.Point(0, 360);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(219, 54);
             this.panel3.TabIndex = 1;
@@ -114,7 +114,7 @@
             this.panel4.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.panel4.Controls.Add(this.txtDangXuat);
             this.panel4.Location = new System.Drawing.Point(0, 477);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(219, 54);
             this.panel4.TabIndex = 1;
@@ -136,7 +136,7 @@
             this.panel5.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.panel5.Controls.Add(this.txtTaiKhoan);
             this.panel5.Location = new System.Drawing.Point(0, 418);
-            this.panel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel5.Margin = new System.Windows.Forms.Padding(2);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(219, 54);
             this.panel5.TabIndex = 1;
@@ -160,7 +160,7 @@
             this.pnKhamBenh.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.pnKhamBenh.Controls.Add(this.txtKhamBenh);
             this.pnKhamBenh.Location = new System.Drawing.Point(0, 244);
-            this.pnKhamBenh.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnKhamBenh.Margin = new System.Windows.Forms.Padding(2);
             this.pnKhamBenh.Name = "pnKhamBenh";
             this.pnKhamBenh.Size = new System.Drawing.Size(219, 54);
             this.pnKhamBenh.TabIndex = 2;
@@ -191,7 +191,7 @@
             this.panel8.Controls.Add(this.panel4);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel8.Location = new System.Drawing.Point(0, 0);
-            this.panel8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel8.Margin = new System.Windows.Forms.Padding(2);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(219, 725);
             this.panel8.TabIndex = 1;
@@ -228,7 +228,7 @@
             this.ClientSize = new System.Drawing.Size(1296, 725);
             this.Controls.Add(this.panel8);
             this.Controls.Add(this.panelMain);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "NavbarBenhNhan";
             this.Text = "Quản lý phòng mạch tư";
             this.Load += new System.EventHandler(this.NavbarBenhNhan_Load);

@@ -30,10 +30,7 @@ namespace QLPhongMachTu_DOAN_
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new NavbarDuocSi());
-
-
-
+            Application.Run(new NavbarBenhNhan());
 
         }
     }

@@ -43,21 +43,12 @@
       <HintPath>packages\EntityFramework.6.5.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="System" />
-<<<<<<< HEAD
-    <Reference Include="System.Configuration" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Windows.Forms.DataVisualization" />
-=======
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
-<<<<<<< HEAD
->>>>>>> ConKienHuy
-=======
     <Reference Include="System.Windows.Forms.DataVisualization" />
->>>>>>> ConKienHuy
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -69,22 +60,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
-<<<<<<< HEAD
+    <Compile Include="BLL\BacSiBLL.cs" />
+    <Compile Include="BLL\ChiTietToaThuocBLL.cs" />
+    <Compile Include="BLL\HoaDonThuocBLL.cs" />
+    <Compile Include="BLL\ToaThuocBLL.cs" />
+    <Compile Include="DAL\BacSiDAL.cs" />
+    <Compile Include="DAL\ChiTietToaThuocDAL.cs" />
     <Compile Include="DAL\DatabaseConnection.cs" />
-=======
-=======
     <Compile Include="BLL\BenhNhanBLL.cs" />
     <Compile Include="BLL\PhanQuyenBLL.cs" />
     <Compile Include="BLL\PhieuKhamBLL.cs" />
->>>>>>> ConKienHuy
     <Compile Include="BLL\UserBLL.cs" />
     <Compile Include="DAL\ApplicationDbContext.cs" />
     <Compile Include="DAL\BenhNhanDAL.cs" />
+    <Compile Include="DAL\HoaDonThuocDAL.cs" />
     <Compile Include="DAL\PhanQuyenDAL.cs" />
     <Compile Include="DAL\PhieuKhamDAL.cs" />
+    <Compile Include="DAL\ToaThuocDAL.cs" />
     <Compile Include="DAL\UserDAL.cs" />
->>>>>>> ConKienHuy
     <Compile Include="DTO\BacSi.cs" />
     <Compile Include="DTO\BaseConNguoi.cs" />
     <Compile Include="DTO\BenhNhan.cs" />
@@ -100,12 +93,20 @@
     <Compile Include="DTO\PhongKhoa.cs" />
     <Compile Include="DTO\Thuoc.cs" />
     <Compile Include="DTO\ToaThuoc.cs" />
-<<<<<<< HEAD
-    <Compile Include="DTO\TaiKhoan.cs" />
-=======
     <Compile Include="DTO\User.cs" />
     <Compile Include="Enums\EQuyen.cs" />
->>>>>>> ConKienHuy
+    <Compile Include="GUI\ChiTietToaThuocGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ChiTietToaThuocGUI.Designer.cs">
+      <DependentUpon>ChiTietToaThuocGUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DanhSachDonThuocGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DanhSachDonThuocGUI.Designer.cs">
+      <DependentUpon>DanhSachDonThuocGUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\HoaDonKhamBenh.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -202,7 +203,6 @@
     <Compile Include="GUI\NhanVien.Designer.cs">
       <DependentUpon>NhanVien.cs</DependentUpon>
     </Compile>
-<<<<<<< HEAD
     <Compile Include="GUI\ThanhToan_DS.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -221,8 +221,6 @@
     <Compile Include="GUI\ToaThuoc.Designer.cs">
       <DependentUpon>ToaThuoc.cs</DependentUpon>
     </Compile>
-=======
->>>>>>> ConKienHuy
     <Compile Include="GUI\SignUp.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -271,28 +269,22 @@
     <Compile Include="GUI\ToaThuocDonThuoc.Designer.cs">
       <DependentUpon>ToaThuocDonThuoc.cs</DependentUpon>
     </Compile>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ConKienHuy
     <Compile Include="GUI\ToaThuocDonThuoc_DS.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="GUI\ToaThuocDonThuoc_DS.Designer.cs">
       <DependentUpon>ToaThuocDonThuoc_DS.cs</DependentUpon>
     </Compile>
-<<<<<<< HEAD
-=======
-=======
->>>>>>> ConKienHuy
     <Compile Include="Migrations\202410210600284_InitialCreate.cs" />
     <Compile Include="Migrations\202410210600284_InitialCreate.Designer.cs">
       <DependentUpon>202410210600284_InitialCreate.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
->>>>>>> ConKienHuy
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\DanhSachDonThuocGUI.resx">
+      <DependentUpon>DanhSachDonThuocGUI.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\HoaDonKhamBenh.resx">
       <DependentUpon>HoaDonKhamBenh.cs</DependentUpon>
     </EmbeddedResource>
@@ -365,19 +357,11 @@
     <EmbeddedResource Include="GUI\ToaThuocDonThuoc.resx">
       <DependentUpon>ToaThuocDonThuoc.cs</DependentUpon>
     </EmbeddedResource>
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <EmbeddedResource Include="GUI\ToaThuocDonThuoc_DS.resx">
-      <DependentUpon>ToaThuocDonThuoc_DS.cs</DependentUpon>
-=======
-=======
     <EmbeddedResource Include="GUI\ToaThuocDonThuoc_DS.resx">
       <DependentUpon>ToaThuocDonThuoc_DS.cs</DependentUpon>
     </EmbeddedResource>
->>>>>>> ConKienHuy
     <EmbeddedResource Include="Migrations\202410210600284_InitialCreate.resx">
       <DependentUpon>202410210600284_InitialCreate.cs</DependentUpon>
->>>>>>> ConKienHuy
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -407,13 +391,7 @@
     <Content Include="Image\Background.jpg" />
     <None Include="Image\duocthu.png" />
   </ItemGroup>
-<<<<<<< HEAD
-  <ItemGroup>
-    <Folder Include="BUS\" />
-  </ItemGroup>
-=======
   <ItemGroup />
->>>>>>> ConKienHuy
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

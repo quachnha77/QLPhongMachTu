@@ -23,5 +23,13 @@ namespace QLPhongMachTu_DOAN_.DAL
                 return result;
             }
         }
+
+        public PhieuKham GetByMaPK(long MaPK)
+        {
+            using (var context = new ApplicationDbContext())
+            {
+                return context.PhieuKham.FirstOrDefault(pk => pk.MaPK == MaPK);
+            }
+        }
     }
 }

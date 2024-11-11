@@ -24,6 +24,6 @@ namespace QLPhongMachTu_DOAN_.DTO
 
         [ForeignKey("User")]
         public long MaUser { get; set; }
-        public TaiKhoan User { get; set; }
+        public User User { get; set; }
     }
 }
