@@ -118,8 +118,19 @@ namespace QLPhongMachTu_DOAN_.GUI
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
-            MessageBox.Show("Hellow");
+            //MessageBox.Show("Hellow");
             var result = dateTimePicker1.Value.ToString();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        { // Tìm theo ngày
+            DateTime from = dateTimePicker1.Value;
+            DateTime to = dateTimePicker2.Value;
+
+            // Gọi BLL để tìm kiếm lịch khám
+            List<LichKham> resultList = lichKhamBll.TimKiemTheoNgay(from, to);
+            gridView.Rows.Clear();
+            insertHelper(resultList);
         }
     }
 }

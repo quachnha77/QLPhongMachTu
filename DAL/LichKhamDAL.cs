@@ -77,6 +77,21 @@ namespace QLPhongMachTu_DOAN_.DAL
             return MapLichKhamList(result);
         }
 
+        public List<LichKham> TimKiemTheoNgay(DateTime from, DateTime to)
+        {
+            string query = @"SELECT *
+                            FROM LichKhams lk
+                            INNER JOIN BacSis bs on bs.Maso = lk.MaBS
+                            WHERE NgayKham BETWEEN @FromDate AND @ToDate";
+            SqlParameter[] parameters = {
+                new SqlParameter("@FromDate", from),
+                new SqlParameter("@ToDate", to)
+            };
+
+            DataTable result = ExecuteQuery(query, parameters);
+            return MapLichKhamList(result);
+        }
+
         public bool SuaLichKham(long maLK, LichKham updateLichKham)
         {
             string query = "UPDATE LichKhams SET MaBS = @MaBS, NgayKham = @NgayKham, TrieuChung = @TrieuChung" +
@@ -109,6 +124,31 @@ namespace QLPhongMachTu_DOAN_.DAL
                 // Trả về dòng đầu tiên
                 return MapLichKham(result.Rows[0]);
             }
+            return null;
+        }
+
+        public List<LichKham> TimKiemTheoChuyenKhoa(string chuyenKhoa)
+        {
+            //    string query = @"SELECT * FROM LichKham lk
+            //                    INNER JOIN BacSis bs ON bs.MaSo = lk.MaBS
+            //                    INNER JOIN PhongKhoas pk ON bs.MaKhoa = lk.MaKhoa
+            //                    WHERE bs.MaKhoa = @";
+            string queryChuyenKhoa = @"SELECT * FROM PhongKhoas pk WHERE ChuyenKhoa = @ChuyenKhoa";
+            SqlParameter[] parametersCK = { new SqlParameter("@ChuyenKhoa", chuyenKhoa) };
+
+            DataTable chuyenKhoaTbl = ExecuteQuery(queryChuyenKhoa, parametersCK);
+            if(chuyenKhoaTbl.Rows.Count > 0)
+            {
+                long khoaId = Convert.ToInt64(chuyenKhoaTbl.Rows[0][0]);
+                string query = @"SELECT lk.*, bs.*
+                                FROM LichKhams lk
+                                INNER JOIN BacSis bs ON bs.MaSo = lk.MaBS
+                                WHERE bs.MaKhoa = @MaPK";
+                SqlParameter[] parameters = { new SqlParameter("@MaPK", khoaId) };
+                DataTable result = ExecuteQuery(query, parameters);
+                return MapLichKhamList(result);
+            }
+
             return null;
         }
 

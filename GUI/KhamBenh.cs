@@ -38,6 +38,10 @@ namespace QLPhongMachTu_DOAN_.GUI
             SDTTxt.Text = benhNhan.SDT ?? string.Empty;
             hoTenTxt.Enabled = false;
             SDTTxt.Enabled = false;
+
+            comboBox2.Items.Add("Chuyên khoa");
+            comboBox2.Items.Add("Bác sĩ");
+            comboBox2.Items.Add("Trạng thái");
         }
 
         private void ShowInformation()
@@ -71,7 +75,7 @@ namespace QLPhongMachTu_DOAN_.GUI
         {
             if (dataGridView1.SelectedRows.Count <= 0)
             {
-                MessageBox.Show("Vui lòng chọn một dòng để hủy", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Vui lòng chọn một lịch hẹn để hủy", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -96,6 +100,8 @@ namespace QLPhongMachTu_DOAN_.GUI
             dataGridView1.ClearSelection();
         }
 
+
+        /* Hàm ComBoBox Load */
         private void LoadChuyenKhoaList()
         {
             List<PhongKhoa> chuyenKhoaList = khoaBLL.GetAll();
@@ -136,10 +142,12 @@ namespace QLPhongMachTu_DOAN_.GUI
             ngayHenCb.DisplayMember = "NgayPhanCong";
             ngayHenCb.ValueMember = "MaLPC";
         }
+        /* Hàm ComBoBox Load */
 
         private void UpdateDataGrid()
         {
-            dataGridView1.Rows.Clear();
+            if(dataGridView1.Rows.Count > 0)
+                dataGridView1.Rows.Clear();
             List<LichKham> listOfLichKham = lichKhamBLL.GetByMaBenhNhan(benhNhan.MaSo);
 
             int STT = 1;
@@ -201,5 +209,32 @@ namespace QLPhongMachTu_DOAN_.GUI
 
             return true;
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            switch (comboBox2.SelectedIndex)
+            {
+                case 0:
+                    string chuoi = textBox5.Text;
+                    TimKiemTheoChuyenKhoa(chuoi);
+                    return;
+            }
+        }
+
+        // CHỨC NĂNG TÌM KIẾM
+        private void TimKiemTheoChuyenKhoa(string chuyenKhoa)
+        {
+            // Kiểm tra nếu dữ liệu trong textBox5 hợp lệ
+            if (string.IsNullOrEmpty(chuyenKhoa))
+            {
+                MessageBox.Show("Chưa nhập thông tin tìm kiếm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            List<LichKham> resultList = lichKhamBLL.TimKiemTheoChuyenKhoa(chuyenKhoa);
+
+            if (resultList.Count <= 0) MessageBox.Show("Không có kết quả phù hợp", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
     }
 }
