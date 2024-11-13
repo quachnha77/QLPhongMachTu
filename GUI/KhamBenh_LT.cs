@@ -116,12 +116,6 @@ namespace QLPhongMachTu_DOAN_.GUI
             InsertAllDataGridView();
         }
 
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
-        {
-            //MessageBox.Show("Hellow");
-            var result = dateTimePicker1.Value.ToString();
-        }
-
         private void button1_Click(object sender, EventArgs e)
         { // Tìm theo ngày
             DateTime from = dateTimePicker1.Value;
@@ -131,6 +125,28 @@ namespace QLPhongMachTu_DOAN_.GUI
             List<LichKham> resultList = lichKhamBll.TimKiemTheoNgay(from, to);
             gridView.Rows.Clear();
             insertHelper(resultList);
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            string str = textBox1.Text;
+            if (string.IsNullOrEmpty(str)) return;
+            var result = lichKhamBll.TimKiem(str);
+            gridView.Rows.Clear();
+            insertHelper(result);
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            // Tìm theo kết hợp
+            DateTime from = dateTimePicker1.Value;
+            DateTime to = dateTimePicker2.Value;
+            string str = textBox1.Text;
+            if (string.IsNullOrEmpty(str)) return;
+
+            List<LichKham> result = lichKhamBll.TimKiemTheoNgayVaText(from, to, str);
+            gridView.Rows.Clear();
+            insertHelper(result);
         }
     }
 }

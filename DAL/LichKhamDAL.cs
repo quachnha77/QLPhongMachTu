@@ -152,6 +152,22 @@ namespace QLPhongMachTu_DOAN_.DAL
             return null;
         }
 
+        public List<LichKham> TimKiem(string str)
+        {
+            string query = @"SELECT lk.*, bs.*
+                            FROM LichKhams lk
+                            INNER JOIN BacSis bs ON bs.MaSo = lk.MaBS
+                            INNER JOIN BenhNhans bn ON bn.Maso = lk.MaBN
+                            WHERE lk.TrieuChung LIKE '%' + @str + '%' 
+                            OR lk.TrangThai LIKE '%' + @str + '%' 
+                            OR bn.HoTen LIKE '%' + @str + '%'
+                            OR bs.HoTen LIKE '%' + @str + '%'";
+            SqlParameter[] parameters = { new SqlParameter("@str", str) };
+
+            DataTable result = ExecuteQuery(query, parameters);
+            return MapLichKhamList(result);
+        }
+
         private List<LichKham> MapLichKhamList(DataTable dataTable)
         {
             var list = new List<LichKham>();

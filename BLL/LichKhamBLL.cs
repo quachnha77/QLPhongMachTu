@@ -64,6 +64,22 @@ namespace QLPhongMachTu_DOAN_.BLL
             return result;
         }
 
+        public List<LichKham> TimKiem(string str)
+        {
+            List<LichKham> result = dal.TimKiem(str);
+            return result;
+        }
+
+        internal List<LichKham> TimKiemTheoNgayVaText(DateTime from, DateTime to, string str)
+        {
+            List<LichKham> rawList = TimKiem(str);
+            List<LichKham> result = rawList
+                .Where(lk => lk.NgayKham >= from && lk.NgayKham <= to)
+                .ToList();
+            return result;
+            
+        }
+
         //public bool suaLichKham(long maLK, BenhNhan benhNhan, BacSi bs, DateTime ngayHen, string yeuCau)
         //{
         //    //return dal.suaLichKham(maLK, benhNhan, bs, ngayHen, yeuCau);
