@@ -42,6 +42,7 @@ namespace QLPhongMachTu_DOAN_.GUI
             comboBox2.Items.Add("Chuyên khoa");
             comboBox2.Items.Add("Bác sĩ");
             comboBox2.Items.Add("Trạng thái");
+            comboBox2.SelectedIndex = 0;
         }
 
         private void ShowInformation()
@@ -170,6 +171,28 @@ namespace QLPhongMachTu_DOAN_.GUI
             }
         }
 
+        private void insertHelper(List<LichKham> lkList)
+        {
+            int STT = 1;
+            foreach (var lk in lkList)
+            { // Chuyen khoa, bac si, ngay hen, trieu chung, trang thái
+                var bacSi = bacSiBLL.GetById(lk.MaBS);
+                var khoa = khoaBLL.GetById(bacSi.MaKhoa);
+                //var benhNhan = benhNhanBll.GetById(lk.MaBN);
+                var index = dataGridView1.Rows.Add();
+                dataGridView1.Rows[index].Cells[0].Value = STT;
+                dataGridView1.Rows[index].Cells[1].Value = khoa.ChuyenKhoa;
+                dataGridView1.Rows[index].Cells[2].Value = bacSi.HoTen;
+                dataGridView1.Rows[index].Cells[3].Value = lk.NgayKham.ToShortDateString(); // khoa theo bac si
+                dataGridView1.Rows[index].Cells[4].Value = lk.TrieuChung;
+                dataGridView1.Rows[index].Cells[5].Value = lk.TrangThai;
+
+                dataGridView1.Rows[index].Cells[0].Tag = lk;
+                dataGridView1.Rows[index].Cells[1].Tag = khoa;
+                dataGridView1.Rows[index].Cells[2].Tag = bacSi;
+                STT++;
+            }
+        }
         private void chuyenKhoaSlt_DropDownClosed(object sender, EventArgs e)
         {
             var khoaId = chuyenKhoaSlt.SelectedValue;
@@ -232,6 +255,8 @@ namespace QLPhongMachTu_DOAN_.GUI
             }
 
             List<LichKham> resultList = lichKhamBLL.TimKiemTheoChuyenKhoa(chuyenKhoa);
+            dataGridView1.Rows.Clear();
+            insertHelper(resultList);
 
             if (resultList.Count <= 0) MessageBox.Show("Không có kết quả phù hợp", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }

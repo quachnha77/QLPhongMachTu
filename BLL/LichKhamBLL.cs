@@ -70,7 +70,7 @@ namespace QLPhongMachTu_DOAN_.BLL
             return result;
         }
 
-        internal List<LichKham> TimKiemTheoNgayVaText(DateTime from, DateTime to, string str)
+        public List<LichKham> TimKiemTheoNgayVaText(DateTime from, DateTime to, string str)
         {
             List<LichKham> rawList = TimKiem(str);
             List<LichKham> result = rawList
@@ -78,6 +78,16 @@ namespace QLPhongMachTu_DOAN_.BLL
                 .ToList();
             return result;
             
+        }
+
+        public List<LichKham> TimKiemTheoNgayVaTextVaTrangThai(DateTime from, DateTime to, string str, string trangThai)
+        {
+            List<LichKham> rawList = TimKiem(str);
+            List<LichKham> result = rawList
+                .Where(lk => lk.NgayKham >= from && lk.NgayKham <= to && lk.TrangThai == trangThai)
+                .ToList();
+            return result;
+
         }
 
         //public bool suaLichKham(long maLK, BenhNhan benhNhan, BacSi bs, DateTime ngayHen, string yeuCau)

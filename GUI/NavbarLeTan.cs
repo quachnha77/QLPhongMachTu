@@ -25,5 +25,14 @@ namespace QLPhongMachTu_DOAN_.GUI
             panelMain.Controls.Add(khamBenhLT);
             panelMain.Refresh();
         }
+
+        private void panel3_Click(object sender, EventArgs e)
+        {
+            panelMain.Controls.Clear();
+            ThanhToan thanhToanLT = new ThanhToan();
+            thanhToanLT.Dock = DockStyle.Fill;
+            panelMain.Controls.Add(thanhToanLT);
+            panelMain.Refresh();
+        }
     }
 }

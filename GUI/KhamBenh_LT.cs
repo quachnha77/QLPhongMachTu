@@ -50,7 +50,7 @@ namespace QLPhongMachTu_DOAN_.GUI
                 gridView.Rows[index].Cells[1].Value = benhNhan.HoTen;
                 gridView.Rows[index].Cells[3].Value = bacSi.HoTen;
                 gridView.Rows[index].Cells[2].Value = khoa.ChuyenKhoa; // khoa theo bac si
-                gridView.Rows[index].Cells[4].Value = lk.NgayKham;
+                gridView.Rows[index].Cells[4].Value = lk.NgayKham.ToShortDateString();
                 gridView.Rows[index].Cells[5].Value = lk.TrieuChung;
                 gridView.Rows[index].Cells[6].Value = lk.TrangThai;
 
@@ -145,6 +145,23 @@ namespace QLPhongMachTu_DOAN_.GUI
             if (string.IsNullOrEmpty(str)) return;
 
             List<LichKham> result = lichKhamBll.TimKiemTheoNgayVaText(from, to, str);
+            gridView.Rows.Clear();
+            insertHelper(result);
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            // Tìm theo kết hợp 2
+            DateTime from = dateTimePicker1.Value;
+            DateTime to = dateTimePicker2.Value;
+            string str = textBox1.Text;
+            if (string.IsNullOrEmpty(str)) return;
+
+            string check = "";
+            if (daKhamRd.Checked) check = "Đã khám";
+            if (chuaKhamRd.Checked) check = "Chưa khám";
+
+            List<LichKham> result = lichKhamBll.TimKiemTheoNgayVaTextVaTrangThai(from, to, str, check);
             gridView.Rows.Clear();
             insertHelper(result);
         }
