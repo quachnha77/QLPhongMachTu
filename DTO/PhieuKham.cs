@@ -31,6 +31,9 @@ namespace QLPhongMachTu_DOAN_.DTO
         [Required]
         public string ChuanDoan { get; set; }
 
+        // Thuộc tính mới cho "Lời dặn bác sĩ"
+        public string LoiDanBacSi { get; set; }
+
         public LichKham LichKham { get; set; }
         public BenhNhan BenhNhan { get; set; }
         public BacSi BacSi { get; set; }

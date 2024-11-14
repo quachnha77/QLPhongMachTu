@@ -1,4 +1,6 @@
 ﻿using QLPhongMachTu_DOAN_.BLL;
+using QLPhongMachTu_DOAN_.DTO;
+using QLPhongMachTu_DOAN_.Enums;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,9 +15,12 @@ namespace QLPhongMachTu_DOAN_.GUI
 {
     public partial class Login1 : UserControl
     {
-        private UserBLL userBLL = new UserBLL();
+        private readonly UserBLL userBLL;
+        private readonly BenhNhanBLL benhNhanBLL;
         public Login1()
         {
+            userBLL = new UserBLL();
+            benhNhanBLL = new BenhNhanBLL();
             InitializeComponent();
         }
 
@@ -37,11 +42,25 @@ namespace QLPhongMachTu_DOAN_.GUI
             panel1.Refresh();
         }
 
-        private void panel3_Click(object sender, EventArgs e)
+        private void dangnhapBtn_Click(object sender, EventArgs e)
+        {
+            DangNhap();
+        }
+
+        private void Login1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                // Gọi phương thức đăng nhập
+                DangNhap();
+            }
+        }
+
+        private void DangNhap()
         {
             // Loại bỏ khoảng trắng ở đầu và cuối trước khi kiểm tra
             string userName = userNameTxt.Text.Trim();
-            string matKhau = matKhauTxt.Text.Trim();
+            string matKhau = matkhauTxt.Text.Trim();
 
             if (string.IsNullOrEmpty(userName))
             {
@@ -55,18 +74,56 @@ namespace QLPhongMachTu_DOAN_.GUI
                 return;
             }
 
-            if (LoginHandle(userName, matKhau))
+            var user = LoginHandle(userName, matKhau);
+            if (user == null)
             {
-                MessageBox.Show("Đăng nhập thành công!");
-                // Phần show màn hình dựa trên phân quyền....
-
+                MessageBox.Show("Sai thông tin đăng nhập!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
             }
-            else MessageBox.Show("Đăng nhập thất bại!");
+            var benhNhan = TimTheoUserID(user.MaUser);
+            switch (user.MaPQ)
+            {
+                case (long)EQuyen.ADMIN:
+                    NavbarQuanLi navQuanLi = new NavbarQuanLi();
+                    navQuanLi.Show();
+                    this.Dispose();
+                    break;
+                case (long)EQuyen.BACSI:
+                    NavbarBacSi navBacSi = new NavbarBacSi();
+                    navBacSi.Show();
+                    this.Dispose();
+                    break;
+                case (long)EQuyen.DUOCSI:
+                    NavbarDuocSi naDuocSi = new NavbarDuocSi();
+                    naDuocSi.Show();
+                    this.Dispose();
+                    break;
+                case (long)EQuyen.LETAN:
+                    NavbarLeTan navLeTan = new NavbarLeTan();
+                    navLeTan.Show();
+                    this.Dispose();
+                    break;
+                case (long)EQuyen.BENHNHAN:
+                    NavbarBenhNhan navBenhNhan = new NavbarBenhNhan(user, benhNhan);
+                    navBenhNhan.Show();
+                    this.Dispose();
+                    break;
+                case -1:
+                default:
+                    MessageBox.Show("Đăng nhập thất bại", "Thất bại", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    break;
+            }
         }
-
-        private bool LoginHandle(string userName, string matKhau)
+        private User LoginHandle(string userName, string matKhau)
         {
             return userBLL.CheckLogin(userName, matKhau);
         }
+
+        private BenhNhan TimTheoUserID(long userId)
+        {
+            return benhNhanBLL.GetByUserID(userId);
+        }
+
+
     }
 }

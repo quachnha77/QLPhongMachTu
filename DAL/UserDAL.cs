@@ -1,76 +1,123 @@
 ﻿using QLPhongMachTu_DOAN_.DTO;
 using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace QLPhongMachTu_DOAN_.DAL
 {
-    public class UserDAL
+    public class UserDAL : DatabaseHelper
     {
-        public bool CheckLogin(string userName, string matKhau)
+        public User CheckLogin(string userName, string password)
         {
-            List<User> userList = GetAllUser();
-            foreach(var user in userList){
-                if(user.Username == userName && user.Password == matKhau)
-                    return true;
+            string query = "SELECT * FROM Users WHERE Username = @Username AND Password = @Password";
+            SqlParameter[] parameters = {
+                new SqlParameter("@Username", userName),
+                new SqlParameter("@Password", password)
+            };
+
+            DataTable result = ExecuteQuery(query, parameters);
+
+            if (result.Rows.Count > 0)
+            {
+                DataRow row = result.Rows[0];
+                return new User
+                {
+                    MaUser = Convert.ToInt64(row["MaUser"]),
+                    Username = row["Username"].ToString(),
+                    Password = row["Password"].ToString(),
+                    Email = row["Email"].ToString(),
+                    MaPQ = Convert.ToInt64(row["MaPQ"])
+                };
             }
-            return false;
+            return null;
         }
 
         public User CreateUser(User user)
         {
-            using(var context = new ApplicationDbContext())
+            string query = "INSERT INTO Users (Username, Password, Email, MaPQ) OUTPUT INSERTED.Id VALUES (@Username, @Password, @Email, @MaPQ)";
+            SqlParameter[] parameters = {
+                new SqlParameter("@Username", user.Username),
+                new SqlParameter("@Password", user.Password),
+                new SqlParameter("@Email", user.Email),
+                new SqlParameter("@MaPQ", user.MaPQ)
+            };
+
+            using (DataTable result = ExecuteQuery(query, parameters))
             {
-                var newUser = context.User.Add(user);
-                context.SaveChanges();
-                return newUser;
+                if (result.Rows.Count > 0)
+                {
+                    user.MaUser = Convert.ToInt64(result.Rows[0]["MaUser"]);
+                }
+                return user;
             }
         }
 
         public void UpdateUser(User updatedUser, long id)
         {
-            using(var context = new ApplicationDbContext())
-            {
-                var existedUser = context.User.Find(id);
-                context.User.Attach(existedUser);
-                if(existedUser != null)
-                {
-                    existedUser.Username = updatedUser.Username;
-                    existedUser.Password = updatedUser.Password;
-                    existedUser.Email = updatedUser.Email;
-                    existedUser.PhanQuyen = context.PhanQuyen.Find(updatedUser.MaPQ);
-                    existedUser.MaPQ = updatedUser.MaPQ;
-                }
-                context.SaveChanges();
-            }
+            string query = "UPDATE Users SET Username = @Username, Password = @Password, Email = @Email, MaPQ = @MaPQ WHERE MaUser = @Id";
+            SqlParameter[] parameters = {
+                new SqlParameter("@Username", updatedUser.Username),
+                new SqlParameter("@Password", updatedUser.Password),
+                new SqlParameter("@Email", updatedUser.Email),
+                new SqlParameter("@MaPQ", updatedUser.MaPQ),
+                new SqlParameter("@Id", id)
+            };
+
+            ExecuteNonQuery(query, parameters);
         }
 
         public void DeleteUser(long id)
         {
-            using(var context = new ApplicationDbContext())
-            {
-                var existedUser = context.User.Find(id);
-                Console.WriteLine("\n ==> Remove User with id " + id);
-                context.User.Attach(existedUser);
-                context.User.Remove(existedUser);
-                context.SaveChanges();
-            }
+            string query = "DELETE FROM Users WHERE MaUser = @Id";
+            SqlParameter[] parameters = {
+                new SqlParameter("@Id", id)
+            };
+
+            ExecuteNonQuery(query, parameters);
         }
 
         public List<User> GetAllUser()
         {
-            using(var context = new ApplicationDbContext())
-            {
-                return context.User.ToList();
-            }
+            string query = "SELECT * FROM Users";
+            DataTable result = ExecuteQuery(query);
+
+            return (from DataRow row in result.Rows
+                    select new User
+                    {
+                        MaUser = Convert.ToInt64(row["MaUser"]),
+                        Username = row["Username"].ToString(),
+                        Password = row["Password"].ToString(),
+                        Email = row["Email"].ToString(),
+                        MaPQ = Convert.ToInt64(row["MaPQ"])
+                    }).ToList();
         }
 
         public User GetById(long id)
         {
-            var userList = this.GetAllUser();
-            return userList.FirstOrDefault(u => u.MaUser == id);
+            string query = "SELECT * FROM Users WHERE MaUser = @Id";
+            SqlParameter[] parameters = {
+                new SqlParameter("@MaUser", id)
+            };
+
+            DataTable result = ExecuteQuery(query, parameters);
+
+            if (result.Rows.Count > 0)
+            {
+                DataRow row = result.Rows[0];
+                return new User
+                {
+                    MaUser = Convert.ToInt64(row["MaUser"]),
+                    Username = row["Username"].ToString(),
+                    Password = row["Password"].ToString(),
+                    Email = row["Email"].ToString(),
+                    MaPQ = Convert.ToInt64(row["MaPQ"])
+                };
+            }
+            return null;
         }
     }
 }

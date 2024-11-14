@@ -144,19 +144,31 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\BacSiBLL.cs" />
     <Compile Include="BLL\BenhNhanBLL.cs" />
+    <Compile Include="BLL\ChiTietToaThuocBLL.cs" />
     <Compile Include="BLL\DichVuBLL.cs" />
+    <Compile Include="BLL\KhoaBLL.cs" />
+    <Compile Include="BLL\KhoThuocBLL.cs" />
     <Compile Include="BLL\LichKhamBLL.cs" />
+    <Compile Include="BLL\PhanCongBLL.cs" />
     <Compile Include="BLL\PhieuKhamBLL.cs" />
     <Compile Include="BLL\PhieuKhamDichVuBLL.cs" />
+    <Compile Include="BLL\ToaThuocBLL.cs" />
     <Compile Include="BLL\UserBLL.cs" />
     <Compile Include="DAL\ApplicationDbContext.cs" />
+    <Compile Include="DAL\BacSiDAL.cs" />
     <Compile Include="DAL\BenhNhanDAL.cs" />
+    <Compile Include="DAL\ChiTietToaThuocDAL.cs" />
     <Compile Include="DAL\DatabaseHelper.cs" />
     <Compile Include="DAL\DichVuDAL.cs" />
+    <Compile Include="DAL\KhoaDAL.cs" />
+    <Compile Include="DAL\KhoThuocDAL.cs" />
     <Compile Include="DAL\LichKhamDAL.cs" />
+    <Compile Include="DAL\PhanCongDAL.cs" />
     <Compile Include="DAL\PhieuKhamDAL.cs" />
     <Compile Include="DAL\PhieuKhamDichVuDAL.cs" />
+    <Compile Include="DAL\ToaThuocDAL.cs" />
     <Compile Include="DAL\UserDAL.cs" />
     <Compile Include="DTO\BacSi.cs" />
     <Compile Include="DTO\BaseConNguoi.cs" />
@@ -165,6 +177,7 @@
     <Compile Include="DTO\DichVu.cs" />
     <Compile Include="DTO\HoaDonKhamBenh.cs" />
     <Compile Include="DTO\HoaDonThuoc.cs" />
+    <Compile Include="DTO\KhoThuoc.cs" />
     <Compile Include="DTO\LichKham.cs" />
     <Compile Include="DTO\LichPhanCong.cs" />
     <Compile Include="DTO\NhanVien.cs" />
@@ -173,9 +186,10 @@
     <Compile Include="DTO\PhieuKham.cs" />
     <Compile Include="DTO\PhieuKhamDichVu.cs" />
     <Compile Include="DTO\PhongKhoa.cs" />
-    <Compile Include="DTO\Thuoc.cs" />
     <Compile Include="DTO\ToaThuoc.cs" />
     <Compile Include="DTO\User.cs" />
+    <Compile Include="Enums\ETrangThaiKham.cs" />
+    <Compile Include="Enums\EQuyen.cs" />
     <Compile Include="GUI\HoaDonKhamBenh.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -194,17 +208,23 @@
     <Compile Include="GUI\KhamBenh_BS.Designer.cs">
       <DependentUpon>KhamBenh_BS.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\KhamBenh_Edit_LT.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\KhamBenh_Edit_LT.Designer.cs">
+      <DependentUpon>KhamBenh_Edit_LT.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\KhamBenh_LT.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="GUI\KhamBenh_LT.Designer.cs">
       <DependentUpon>KhamBenh_LT.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\KhoThuoc.cs">
+    <Compile Include="GUI\KhoThuocGUI.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="GUI\KhoThuoc.Designer.cs">
-      <DependentUpon>KhoThuoc.cs</DependentUpon>
+    <Compile Include="GUI\KhoThuocGUI.Designer.cs">
+      <DependentUpon>KhoThuocGUI.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\LichLamViec_BS.cs">
       <SubType>UserControl</SubType>
@@ -326,27 +346,6 @@
     <Compile Include="GUI\ToaThuocDonThuoc_DS.Designer.cs">
       <DependentUpon>ToaThuocDonThuoc_DS.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202410210600284_InitialCreate.cs" />
-    <Compile Include="Migrations\202410210600284_InitialCreate.Designer.cs">
-      <DependentUpon>202410210600284_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202411051147019_AddTrangThaiColumnToLichKhams.cs" />
-    <Compile Include="Migrations\202411051147019_AddTrangThaiColumnToLichKhams.Designer.cs">
-      <DependentUpon>202411051147019_AddTrangThaiColumnToLichKhams.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202411051203342_AddTrangThaiColumnToLichKham.cs" />
-    <Compile Include="Migrations\202411051203342_AddTrangThaiColumnToLichKham.Designer.cs">
-      <DependentUpon>202411051203342_AddTrangThaiColumnToLichKham.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202411100741134_SyncWithDatabase.cs" />
-    <Compile Include="Migrations\202411100741134_SyncWithDatabase.Designer.cs">
-      <DependentUpon>202411100741134_SyncWithDatabase.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202411100920076_AddDichVuTable.cs" />
-    <Compile Include="Migrations\202411100920076_AddDichVuTable.Designer.cs">
-      <DependentUpon>202411100920076_AddDichVuTable.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="GUI\HoaDonKhamBenh.resx">
@@ -358,11 +357,14 @@
     <EmbeddedResource Include="GUI\KhamBenh_BS.resx">
       <DependentUpon>KhamBenh_BS.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\KhamBenh_Edit_LT.resx">
+      <DependentUpon>KhamBenh_Edit_LT.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\KhamBenh_LT.resx">
       <DependentUpon>KhamBenh_LT.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\KhoThuoc.resx">
-      <DependentUpon>KhoThuoc.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\KhoThuocGUI.resx">
+      <DependentUpon>KhoThuocGUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\LichLamViec_BS.resx">
       <DependentUpon>LichLamViec_BS.cs</DependentUpon>
@@ -423,21 +425,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\ToaThuocDonThuoc_DS.resx">
       <DependentUpon>ToaThuocDonThuoc_DS.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202410210600284_InitialCreate.resx">
-      <DependentUpon>202410210600284_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202411051147019_AddTrangThaiColumnToLichKhams.resx">
-      <DependentUpon>202411051147019_AddTrangThaiColumnToLichKhams.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202411051203342_AddTrangThaiColumnToLichKham.resx">
-      <DependentUpon>202411051203342_AddTrangThaiColumnToLichKham.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202411100741134_SyncWithDatabase.resx">
-      <DependentUpon>202411100741134_SyncWithDatabase.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202411100920076_AddDichVuTable.resx">
-      <DependentUpon>202411100920076_AddDichVuTable.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

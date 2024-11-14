@@ -16,5 +16,14 @@ namespace QLPhongMachTu_DOAN_.GUI
         {
             InitializeComponent();
         }
+
+        private void pnKhamBenh_Click(object sender, EventArgs e)
+        {
+            panelMain.Controls.Clear();
+            KhamBenh_LT khamBenhLT = new KhamBenh_LT();
+            khamBenhLT.Dock = DockStyle.Fill;
+            panelMain.Controls.Add(khamBenhLT);
+            panelMain.Refresh();
+        }
     }
 }

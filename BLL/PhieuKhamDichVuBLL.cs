@@ -11,7 +11,7 @@ namespace QLPhongMachTu_DOAN_.BLL
 {
     public class PhieuKhamDichVuBLL
     {
-        private readonly PhieuKhamDichVuDAL phieuKhamDVDAL = new PhieuKhamDichVuDAL();
+        private readonly PhieuKhamDichVuDAL phieuKhamDVDAL;
 
         public PhieuKhamDichVuBLL()
         {
@@ -37,8 +37,10 @@ namespace QLPhongMachTu_DOAN_.BLL
 
         public void LuuDichVu(PhieuKhamDichVu phieuKhamDichVu)
         {
-            phieuKhamDVDAL.Add(phieuKhamDichVu);
+            var phieuKhamDichVuDAL = new PhieuKhamDichVuDAL();
+            phieuKhamDichVuDAL.Add(phieuKhamDichVu); // Thực hiện lưu vào cơ sở dữ liệu
         }
+
 
     }
 }

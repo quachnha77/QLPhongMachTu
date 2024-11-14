@@ -7,12 +7,15 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 using QLPhongMachTu_DOAN_.DAL;
 using QLPhongMachTu_DOAN_.DTO;
+using System.Windows.Forms;
+using QLPhongMachTu_DOAN_.Enums;
 
 namespace QLPhongMachTu_DOAN_.BLL
 {
     internal class LichKhamBLL
     {
-        private readonly LichKhamDAL lichKhamDAL = new LichKhamDAL();
+        private readonly LichKhamDAL lichKhamDAL;
+        private readonly PhanCongDAL phanCongDAL;
 
         public LichKhamBLL()
         {
@@ -25,9 +28,69 @@ namespace QLPhongMachTu_DOAN_.BLL
             return lichKhamDAL.GetAll();
         }
 
+        public LichKham TaoLichKham(LichKham lk)
+        {
+            return lichKhamDAL.TaoLichKham(lk);
+        }
+
+        public bool SuaLichKham(long maLk, LichKham updateLichKham, long phanCongId)
+        {
+            LichPhanCong pc = phanCongDAL.GetById(phanCongId);
+            if (pc == null)
+                return false;
+            updateLichKham.NgayKham = pc.NgayThucHien;
+            return lichKhamDAL.SuaLichKham(maLk, updateLichKham);
+        }
+
+        public bool XoaLichKham(long id)
+        {
+            return lichKhamDAL.XoaLichKham(id);
+        }
+
         public LichKham GetByMaLK(long maLK)
         {
             return lichKhamDAL.GetByMaLK(maLK);
+        }
+
+
+        public List<LichKham> GetByMaBenhNhan(long id)
+        {
+            return lichKhamDAL.GetByMaBenhNhan(id);
+        }
+
+        public List<LichKham> GetByTrangThai(ETrangThaiKham trangThai)
+        {
+            // Truyền giá trị int của enum vào câu truy vấn SQL
+            return lichKhamDAL.GetByTrangThai(trangThai);
+        }
+
+
+        public List<LichKham> TimKiemTheoNgay(DateTime from, DateTime to)
+        {
+            List<LichKham> result = lichKhamDAL.TimKiemTheoNgay(from, to);
+            return result;
+        }
+
+        public List<LichKham> TimKiemTheoChuyenKhoa(string chuyenKhoa)
+        {
+            List<LichKham> result = lichKhamDAL.TimKiemTheoChuyenKhoa(chuyenKhoa);
+            return result;
+        }
+
+        public List<LichKham> TimKiem(string str)
+        {
+            List<LichKham> result = lichKhamDAL.TimKiem(str);
+            return result;
+        }
+
+        internal List<LichKham> TimKiemTheoNgayVaText(DateTime from, DateTime to, string str)
+        {
+            List<LichKham> rawList = TimKiem(str);
+            List<LichKham> result = rawList
+                .Where(lk => lk.NgayKham >= from && lk.NgayKham <= to)
+                .ToList();
+            return result;
+
         }
 
 
@@ -35,47 +98,5 @@ namespace QLPhongMachTu_DOAN_.BLL
         {
             return lichKhamDAL.UpdateTrangThai(lichKham);
         }
-
-        //// Tạo mới một lịch khám
-        //public LichKham Create(LichKham newLichKham)
-        //{
-        //    // Kiểm tra các điều kiện hợp lệ của lịch khám nếu cần
-        //    if (newLichKham.NgayKham < System.DateTime.Now)
-        //    {
-        //        throw new System.ArgumentException("Ngày khám không được nhỏ hơn ngày hiện tại.");
-        //    }
-
-        //    return _lichKhamDAL.Create(newLichKham);
-        //}
-
-        //// Lấy thông tin lịch khám theo MaLK
-        //public LichKham GetByMaLK(long maLK)
-        //{
-        //    return _lichKhamDAL.GetByMaLK(maLK);
-        //}
-
-        //// Lấy danh sách lịch khám theo trạng thái
-        //public List<LichKham> GetByTrangThai(int trangThai)
-        //{
-        //    return _lichKhamDAL.GetByTrangThai(trangThai);
-        //}
-
-        //// Cập nhật một lịch khám
-        //public LichKham Update(LichKham updatedLichKham)
-        //{
-        //    // Kiểm tra điều kiện hợp lệ trước khi cập nhật
-        //    if (updatedLichKham.NgayKham < System.DateTime.Now)
-        //    {
-        //        throw new System.ArgumentException("Ngày khám không được nhỏ hơn ngày hiện tại.");
-        //    }
-
-        //    return _lichKhamDAL.Update(updatedLichKham);
-        //}
-
-        //// Xóa một lịch khám
-        //public bool Delete(long maLK)
-        //{
-        //    return _lichKhamDAL.Delete(maLK);
-        //}
     }
 }

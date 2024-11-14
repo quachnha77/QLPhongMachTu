@@ -83,6 +83,7 @@
             this.pnKhamBenh.Name = "pnKhamBenh";
             this.pnKhamBenh.Size = new System.Drawing.Size(219, 54);
             this.pnKhamBenh.TabIndex = 2;
+            this.pnKhamBenh.Click += new System.EventHandler(this.pnKhamBenh_Click);
             // 
             // txtKhamBenh
             // 
@@ -95,6 +96,7 @@
             this.txtKhamBenh.Size = new System.Drawing.Size(110, 23);
             this.txtKhamBenh.TabIndex = 0;
             this.txtKhamBenh.Text = "KHÁM BỆNH";
+            this.txtKhamBenh.Click += new System.EventHandler(this.pnKhamBenh_Click);
             // 
             // txtLogo
             // 
@@ -193,7 +195,7 @@
             this.ClientSize = new System.Drawing.Size(1296, 725);
             this.Controls.Add(this.panel8);
             this.Controls.Add(this.panelMain);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "NavbarLeTan";
             this.Text = "NavbarLeTan";
             this.panel8.ResumeLayout(false);

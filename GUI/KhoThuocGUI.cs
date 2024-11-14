@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace QLPhongMachTu_DOAN_.GUI
 {
-    public partial class KhoThuoc : UserControl
+    public partial class KhoThuocGUI : UserControl
     {
-        public KhoThuoc()
+        public KhoThuocGUI()
         {
             InitializeComponent();
         }

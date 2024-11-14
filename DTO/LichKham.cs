@@ -2,9 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using QLPhongMachTu_DOAN_.Enums;
 
 namespace QLPhongMachTu_DOAN_.DTO
 {
@@ -21,6 +19,9 @@ namespace QLPhongMachTu_DOAN_.DTO
 
         public DateTime NgayKham { get; set; }  // Ngày Khám
 
+        // Sử dụng enum ETrangThaiKham cho trạng thái
+        public ETrangThaiKham TrangThai { get; set; }
+
         [ForeignKey("NhanVien")]
         public long MaNV { get; set; }  // Mã Nhân Viên - Khóa ngoại liên kết với NhanVien
 
@@ -28,16 +29,5 @@ namespace QLPhongMachTu_DOAN_.DTO
         public BacSi BacSi { get; set; }
         public BenhNhan BenhNhan { get; set; }
         public NhanVien NhanVien { get; set; }
-
-        // Trạng thái của lịch khám
-        public enum TrangThaiKham
-        {
-            ChuaKham = 1,
-            DaKham = 2,
-            HuyKham = 3,
-        }
-
-        public TrangThaiKham TrangThai { get; set; }
-
     }
 }

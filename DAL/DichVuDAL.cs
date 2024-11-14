@@ -1,29 +1,43 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Data;
+using System.Data.SqlClient;
+using System.Configuration;
 
 namespace QLPhongMachTu_DOAN_.DAL
 {
     public class DichVuDAL
     {
+        private readonly string _connectionString;
+
+        public DichVuDAL()
+        {
+            // Lấy chuỗi kết nối từ app.config
+            _connectionString = ConfigurationManager.ConnectionStrings["MyDatabase"].ConnectionString;
+        }
+
+        // Phương thức để lấy đơn giá dịch vụ theo mã dịch vụ
         public double LayDonGiaDichVu(long maDV)
         {
-            using (var context = new ApplicationDbContext())
+            double donGia = 0;
+            string query = "SELECT DonGia FROM DichVus WHERE MaDV = @MaDV";
+
+            using (SqlConnection connection = new SqlConnection(_connectionString))
             {
-                // Tìm dịch vụ có mã dịch vụ tương ứng và lấy giá
-                var dichVu = context.DichVu.FirstOrDefault(dv => dv.MaDV == maDV);
-                if (dichVu != null)
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@MaDV", maDV);
+                connection.Open();
+
+                // Sử dụng SqlDataReader để lấy kết quả từ truy vấn
+                using (SqlDataReader reader = command.ExecuteReader())
                 {
-                    return dichVu.DonGia;
-                }
-                else
-                {
-                    // Nếu không tìm thấy dịch vụ, trả về 0 hoặc giá trị mặc định
-                    return 0;
+                    if (reader.Read())
+                    {
+                        donGia = Convert.ToDouble(reader["DonGia"]);
+                    }
                 }
             }
+
+            return donGia; // Trả về đơn giá hoặc 0 nếu không tìm thấy dịch vụ
         }
     }
 }

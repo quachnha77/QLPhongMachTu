@@ -19,23 +19,7 @@ namespace QLPhongMachTu_DOAN_
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new NavbarBacSi());
-
-
-            using (DatabaseHelper db = new DatabaseHelper())
-            {
-                bool isConnected = db.TestConnection();
-                if (isConnected)
-                {
-                    MessageBox.Show("Kết nối đến cơ sở dữ liệu thành công!");
-                }
-                else
-                {
-                    MessageBox.Show("Kết nối đến cơ sở dữ liệu thất bại.");
-                }
-            }
-
-
+            Application.Run(new Login());
         }
     }
 }

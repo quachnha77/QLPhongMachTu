@@ -1,6 +1,6 @@
 ﻿namespace QLPhongMachTu_DOAN_.GUI
 {
-    partial class KhoThuoc
+    partial class KhoThuocGUI
     {
         /// <summary> 
         /// Required designer variable.
