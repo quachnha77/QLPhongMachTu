@@ -62,6 +62,7 @@
   <ItemGroup>
     <Compile Include="BLL\BacSiBLL.cs" />
     <Compile Include="BLL\ChiTietToaThuocBLL.cs" />
+    <Compile Include="BLL\HoaDonKhamBenhBLL.cs" />
     <Compile Include="BLL\HoaDonThuocBLL.cs" />
     <Compile Include="BLL\ToaThuocBLL.cs" />
     <Compile Include="DAL\BacSiDAL.cs" />
@@ -73,6 +74,8 @@
     <Compile Include="BLL\UserBLL.cs" />
     <Compile Include="DAL\ApplicationDbContext.cs" />
     <Compile Include="DAL\BenhNhanDAL.cs" />
+    <Compile Include="DAL\DatabaseHelper.cs" />
+    <Compile Include="DAL\HoaDonKhamBenhDAL.cs" />
     <Compile Include="DAL\HoaDonThuocDAL.cs" />
     <Compile Include="DAL\PhanQuyenDAL.cs" />
     <Compile Include="DAL\PhieuKhamDAL.cs" />
