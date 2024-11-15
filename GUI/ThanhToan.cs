@@ -35,6 +35,7 @@ namespace QLPhongMachTu_DOAN_.GUI
 
         public void LoadData()
         {
+            // DataGridView
             List<DTO.HoaDonKhamBenh> DSHoaDonKhamBenh = hoaDonKhamBenhBLL.GetByMaBN(MaBN);
 
             int index = 1;
@@ -59,6 +60,21 @@ namespace QLPhongMachTu_DOAN_.GUI
                 ++index;
             }
 
+            // Tìm kiếm Combobox
+            // =================
+            // Search by...
+            cbTimKiem.Items.Add("Mã hóa đơn");
+            cbTimKiem.Items.Add("Mã phiếu khám");
+            // Trạng thái
+            cbTrangThai.Items.Add("Đã thanh toán");
+            cbTrangThai.Items.Add("Chưa thanh toán");
+            cbTrangThai.Items.Add("Cả hai");
+            cbTrangThai.SelectedIndex = 2;
+            // Loại hóa đơn
+            cbLoaiHoaDon.Items.Add("Hóa đơn khám bệnh");
+            cbLoaiHoaDon.Items.Add("Hóa đơn thuốc");
+            cbLoaiHoaDon.Items.Add("Cả hai");
+            cbLoaiHoaDon.SelectedIndex = 2;
         }
 
         public void AddRowToDataGridView(DTO.HoaDonKhamBenh hoaDon, int index)
@@ -83,6 +99,56 @@ namespace QLPhongMachTu_DOAN_.GUI
             dgvHoaDon.Rows[rowIndex].Cells["MaPK"].Value = toaThuocBLL.GetByMaTT(hoaDon.MaTT).MaPK.ToString();
             dgvHoaDon.Rows[rowIndex].Cells["TongTien"].Value = hoaDon.TongTien.ToString("N0");
             dgvHoaDon.Rows[rowIndex].Cells["TrangThai"].Value = (hoaDon.TrangThai == true) ? "Đã thanh toán" : "Chưa Thanh Toán";
+        }
+
+        private void btnTimKiemTT_Click(object sender, EventArgs e)
+        {
+            string searchStr = tbTimKiem.Text;
+            // 0: Mã hóa đơn, 1: Mã phiếu khám
+            int selectedSearchTerm = cbTimKiem.SelectedIndex;
+            // 0: Đã thanh toán, 1: Chưa thanh toán, 2: Cả hai (default)
+            int selectedTrangThai = cbTrangThai.SelectedIndex;
+            // 0: Hóa đơn khám bệnh, 1: Hóa đơn thuốc, 2: Cả hai (default)
+            int selectedLoaiHD = cbLoaiHoaDon.SelectedIndex;
+            // Ngày tạo
+            DateTime? ngayTao = dateTimePicker_NgayTao.Checked ? dateTimePicker_NgayTao.Value : (DateTime?)null;
+
+            List<DTO.HoaDonKhamBenh> hoaDonKhamBenhResult = new List<DTO.HoaDonKhamBenh>();
+            List<DTO.HoaDonThuoc> hoaDonThuocResult = new List<DTO.HoaDonThuoc>();
+            if (selectedLoaiHD == 0 || selectedLoaiHD == 2) 
+            {
+                hoaDonKhamBenhResult = hoaDonKhamBenhBLL.TimKiemHoaDon(MaBN, selectedSearchTerm, searchStr, selectedTrangThai, ngayTao);
+            }
+
+            if (selectedLoaiHD == 1 || selectedLoaiHD == 2) 
+            {
+                hoaDonThuocResult = hoaDonThuocBLL.TimKiemHoaDon(MaBN, selectedSearchTerm, searchStr, selectedTrangThai, ngayTao);
+            }
+
+            // Cập nhật DataGridView
+            List<object> results = new List<object>();
+            if (hoaDonKhamBenhResult.Any())
+            {
+                results.AddRange(hoaDonKhamBenhResult);
+            }
+            else if (hoaDonThuocResult.Any())
+            {
+                results.AddRange(hoaDonThuocResult);
+            }
+            
+            if(results.Any())
+            {
+                dgvHoaDon.DataSource = results;
+            }    
+            else
+            {
+                MessageBox.Show("Không có kết quả tìm kiếm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void dateTimePicker_NgayTao_ValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
