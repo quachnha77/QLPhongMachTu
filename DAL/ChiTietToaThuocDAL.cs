@@ -32,9 +32,9 @@ namespace QLPhongMachTu_DOAN_.DAL
                 using (var context = new ApplicationDbContext())
                 {
                     List<ChiTietToaThuoc> result = context.ChiTietToaThuoc.Where(ct => ct.MaTT == MaTT).OrderByDescending(ct => ct.MaThuoc).ToList();
-                    if (result == null || result.Count == 0)
+                    if (!result.Any())
                     {
-                        Console.WriteLine("Khong ton tai danh sach ChiTietToaThuoc voi MaTT " + MaTT.ToString() + ".");
+                        Console.WriteLine($"Khong ton tai danh sach ChiTietToaThuoc voi MaTT {MaTT}.");
                     }
                     return result;
                 }
