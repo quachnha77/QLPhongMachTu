@@ -24,6 +24,9 @@ namespace QLPhongMachTu_DOAN_.DTO
 
         public double TongTien { get; set; }
 
+        // Thêm trạng thái thanh toán
+        public bool TrangThai { get; set; }
+
         public BenhNhan BenhNhan { get; set; }
         public BacSi BacSi { get; set; }
         public PhieuKham PhieuKham { get; set; }

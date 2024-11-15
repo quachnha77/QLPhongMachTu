@@ -19,11 +19,6 @@ namespace QLPhongMachTu_DOAN_.BLL
             return dal.GetAll();
         }
 
-        public PhieuKham Create(PhieuKham newPhieuKham)
-        {
-            return dal.Create(newPhieuKham);
-        }
-
         public PhieuKham GetByMaPK(long MaPK)
         {
             return dal.GetByMaPK(MaPK);
