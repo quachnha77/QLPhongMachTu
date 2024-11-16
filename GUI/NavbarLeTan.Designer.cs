@@ -95,6 +95,7 @@
             this.txtKhamBenh.Size = new System.Drawing.Size(133, 28);
             this.txtKhamBenh.TabIndex = 0;
             this.txtKhamBenh.Text = "KHÁM BỆNH";
+            this.txtKhamBenh.Click += new System.EventHandler(this.pnKhamBenh_Click);
             // 
             // txtLogo
             // 
@@ -191,7 +192,7 @@
             this.ClientSize = new System.Drawing.Size(1728, 892);
             this.Controls.Add(this.panel8);
             this.Controls.Add(this.panelMain);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "NavbarLeTan";
             this.Text = "NavbarLeTan";
             this.panel8.ResumeLayout(false);

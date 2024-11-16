@@ -45,7 +45,7 @@ namespace QLPhongMachTu_DOAN_
 
         private void pnKhamBenh_Paint(object sender, PaintEventArgs e)
         {
-          
+
         }
 
         private void txtToaThuocDonThuoc_Click(object sender, EventArgs e)

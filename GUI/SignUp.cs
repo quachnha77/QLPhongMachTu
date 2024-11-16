@@ -1,7 +1,11 @@
-﻿using QLPhongMachTu_DOAN_.BLL;
-using QLPhongMachTu_DOAN_.DTO;
-using QLPhongMachTu_DOAN_.Enums;
-using System;
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace QLPhongMachTu_DOAN_.GUI
@@ -46,48 +50,6 @@ namespace QLPhongMachTu_DOAN_.GUI
         private void SignUp_Load(object sender, EventArgs e)
         {
 
-        }
-
-
-        private void dangKyBtn_Click(object sender, EventArgs e)
-        {
-            string userName = userNameTxt.Text;
-            string matKhau = passwordTxt.Text;
-            string email = emailTxt.Text;
-            string hoTen = hoTenTxt.Text;
-            string cccd = CCCDTxt.Text;
-
-            var maQuyen = (long) EQuyen.BENHNHAN;
-            //var quyen = phanQuyenBLL.GetByMaPQ(maQuyen);
-
-            User userTemp = new User()
-            {
-                Username = userName,
-                Password = matKhau,
-                Email = email,
-                MaPQ = maQuyen
-            };
-
-            var newUser = userBLL.CreateUser(userTemp);
-
-            BenhNhan benhNhan = new BenhNhan()
-            {
-                HoTen = hoTen,
-                CCCD = cccd,
-                MaUser = newUser.MaUser,
-            };
-
-            var result = benhNhanBLL.Create(benhNhan);
-            if(result != null)
-            { 
-                MessageBox.Show("Tạo User thành công", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.ShowLoginPanel();
-            }
-            else
-            {
-                MessageBox.Show("Tạo User thất bại", "Thất bại", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            
         }
     }
 }

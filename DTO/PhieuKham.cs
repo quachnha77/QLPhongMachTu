@@ -29,6 +29,9 @@ namespace QLPhongMachTu_DOAN_.DTO
         public string TieuSuBenhLy { get; set; }
         public string ChuanDoan { get; set; }
 
+        // Thuộc tính mới cho "Lời dặn bác sĩ"
+        public string LoiDanBacSi { get; set; }
+
         public LichKham LichKham { get; set; }
         public BenhNhan BenhNhan { get; set; }
         public BacSi BacSi { get; set; }

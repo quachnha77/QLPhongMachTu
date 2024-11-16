@@ -44,6 +44,20 @@ namespace QLPhongMachTu_DOAN_.GUI
 
         private void dangnhapBtn_Click(object sender, EventArgs e)
         {
+            DangNhap();
+        }
+
+        private void Login1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                // Gọi phương thức đăng nhập
+                DangNhap();
+            }
+        }
+
+        private void DangNhap()
+        {
             // Loại bỏ khoảng trắng ở đầu và cuối trước khi kiểm tra
             string userName = userNameTxt.Text.Trim();
             string matKhau = matkhauTxt.Text.Trim();
@@ -61,7 +75,7 @@ namespace QLPhongMachTu_DOAN_.GUI
             }
 
             var user = LoginHandle(userName, matKhau);
-            if(user == null)
+            if (user == null)
             {
                 MessageBox.Show("Sai thông tin đăng nhập!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -94,12 +108,12 @@ namespace QLPhongMachTu_DOAN_.GUI
                     navBenhNhan.Show();
                     this.Dispose();
                     break;
-                case -1: default:
+                case -1:
+                default:
                     MessageBox.Show("Đăng nhập thất bại", "Thất bại", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     break;
             }
         }
-
         private User LoginHandle(string userName, string matKhau)
         {
             return userBLL.CheckLogin(userName, matKhau);
@@ -109,5 +123,7 @@ namespace QLPhongMachTu_DOAN_.GUI
         {
             return benhNhanBLL.GetByUserID(userId);
         }
+
+
     }
 }

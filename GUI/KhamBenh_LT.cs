@@ -1,5 +1,6 @@
 ﻿using QLPhongMachTu_DOAN_.BLL;
 using QLPhongMachTu_DOAN_.DTO;
+using QLPhongMachTu_DOAN_.Enums;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -39,28 +40,32 @@ namespace QLPhongMachTu_DOAN_.GUI
 
         private void insertHelper(List<LichKham> lkList)
         {
-            int STT = 0;
+            int STT = 1; // Để STT bắt đầu từ 1
             foreach (var lk in lkList)
             {
                 var bacSi = bacSiBll.GetById(lk.MaBS);
                 var khoa = khoaBll.GetById(bacSi.MaKhoa);
                 var benhNhan = benhNhanBll.GetById(lk.MaBN);
                 var index = gridView.Rows.Add();
+
                 gridView.Rows[index].Cells[0].Value = STT;
                 gridView.Rows[index].Cells[1].Value = benhNhan.HoTen;
+                gridView.Rows[index].Cells[2].Value = khoa.ChuyenKhoa;
                 gridView.Rows[index].Cells[3].Value = bacSi.HoTen;
-                gridView.Rows[index].Cells[2].Value = khoa.ChuyenKhoa; // khoa theo bac si
-                gridView.Rows[index].Cells[4].Value = lk.NgayKham.ToShortDateString();
-                gridView.Rows[index].Cells[5].Value = lk.TrieuChung;
-                gridView.Rows[index].Cells[6].Value = lk.TrangThai;
+                gridView.Rows[index].Cells[4].Value = lk.NgayKham.ToString("dd/MM/yyyy");
+                //gridView.Rows[index].Cells[5].Value = lk.TrieuChung;
+                gridView.Rows[index].Cells[6].Value = lk.TrangThai.ToString(); // Hiển thị tên của enum
 
+                // Gán đối tượng vào Tag cho việc sử dụng sau này
                 gridView.Rows[index].Cells[0].Tag = lk;
                 gridView.Rows[index].Cells[1].Tag = benhNhan;
                 gridView.Rows[index].Cells[2].Tag = khoa;
                 gridView.Rows[index].Cells[3].Tag = bacSi;
+
                 STT++;
             }
         }
+
 
         private void chinhSuaBtn_Click(object sender, System.EventArgs e)
         {
@@ -88,13 +93,13 @@ namespace QLPhongMachTu_DOAN_.GUI
 
         private void InsertChuaKhamGridView()
         {
-            List<LichKham> lkList = lichKhamBll.GetByTrangThai("Chưa khám");
+            List<LichKham> lkList = lichKhamBll.GetByTrangThai(ETrangThaiKham.ChuaKham);
             insertHelper(lkList);
         }
 
         private void InsertDaKhamGridView()
         {
-            List<LichKham> lkList = lichKhamBll.GetByTrangThai("Đã khám");
+            List<LichKham> lkList = lichKhamBll.GetByTrangThai(ETrangThaiKham.DaKham);
             insertHelper(lkList);
         }
 
@@ -145,23 +150,6 @@ namespace QLPhongMachTu_DOAN_.GUI
             if (string.IsNullOrEmpty(str)) return;
 
             List<LichKham> result = lichKhamBll.TimKiemTheoNgayVaText(from, to, str);
-            gridView.Rows.Clear();
-            insertHelper(result);
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            // Tìm theo kết hợp 2
-            DateTime from = dateTimePicker1.Value;
-            DateTime to = dateTimePicker2.Value;
-            string str = textBox1.Text;
-            if (string.IsNullOrEmpty(str)) return;
-
-            string check = "";
-            if (daKhamRd.Checked) check = "Đã khám";
-            if (chuaKhamRd.Checked) check = "Chưa khám";
-
-            List<LichKham> result = lichKhamBll.TimKiemTheoNgayVaTextVaTrangThai(from, to, str, check);
             gridView.Rows.Clear();
             insertHelper(result);
         }

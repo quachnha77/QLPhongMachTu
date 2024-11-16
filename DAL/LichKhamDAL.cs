@@ -3,21 +3,28 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Configuration;
+using static QLPhongMachTu_DOAN_.DTO.LichKham;
+using QLPhongMachTu_DOAN_.Enums;
 
 namespace QLPhongMachTu_DOAN_.DAL
 {
     public class LichKhamDAL : DatabaseHelper
     {
+        private readonly string _connectionString;
+
+        ///****************** ConKienHuy <summary>
+
         public LichKham TaoLichKham(LichKham lk)
         {
             string query = "INSERT INTO LichKhams (MaBS, MaBN, NgayKham, TrieuChung, TrangThai) OUTPUT INSERTED.MaLK VALUES (@MaBS, @MaBN, @NgayKham, @TrieuChung, @TrangThai)";
             SqlParameter[] parameters = {
-                new SqlParameter("@MaBS", lk.MaBS),
-                new SqlParameter("@MaBN", lk.MaBN),
-                new SqlParameter("@NgayKham", lk.NgayKham),
-                new SqlParameter("@TrieuChung", lk.TrieuChung),
-                new SqlParameter("@TrangThai", "Chưa khám")
-            };
+        new SqlParameter("@MaBS", lk.MaBS),
+        new SqlParameter("@MaBN", lk.MaBN),
+        new SqlParameter("@NgayKham", lk.NgayKham),
+        //new SqlParameter("@TrieuChung", lk.TrieuChung),
+        new SqlParameter("@TrangThai", (int)ETrangThaiKham.ChuaKham) // Sử dụng giá trị số từ enum
+    };
 
             using (DataTable result = ExecuteQuery(query, parameters))
             {
@@ -28,6 +35,7 @@ namespace QLPhongMachTu_DOAN_.DAL
                 return lk;
             }
         }
+
 
         public bool XoaLichKham(long id)
         {
@@ -51,7 +59,7 @@ namespace QLPhongMachTu_DOAN_.DAL
             return MapLichKhamList(result);
         }
 
-        public List<LichKham> GetAll()
+        public List<LichKham> GetAll1() // Kiến Huy
         {
             string query = @"
                 SELECT lk.*, bs.HoTen, bn.HoTen
@@ -63,7 +71,7 @@ namespace QLPhongMachTu_DOAN_.DAL
             return MapLichKhamList(result);
         }
 
-        public List<LichKham> GetByTrangThai(string trangThai)
+        public List<LichKham> GetByTrangThai(ETrangThaiKham trangThai)
         {
             string query = @"
                 SELECT lk.*, bs.HoTen, bn.HoTen
@@ -71,11 +79,14 @@ namespace QLPhongMachTu_DOAN_.DAL
                 INNER JOIN BacSis bs ON lk.MaBS = bs.MaSo
                 INNER JOIN BenhNhans bn ON lk.MaBN = bn.MaSo
                 WHERE lk.TrangThai = @TrangThai";
-            SqlParameter[] parameters = { new SqlParameter("@TrangThai", trangThai) };
+
+            // Chuyển enum thành giá trị số
+            SqlParameter[] parameters = { new SqlParameter("@TrangThai", (int)trangThai) };
 
             DataTable result = ExecuteQuery(query, parameters);
             return MapLichKhamList(result);
         }
+
 
         public List<LichKham> TimKiemTheoNgay(DateTime from, DateTime to)
         {
@@ -99,7 +110,7 @@ namespace QLPhongMachTu_DOAN_.DAL
             SqlParameter[] parameters = {
                 new SqlParameter("@MaBS", updateLichKham.MaBS),
                 new SqlParameter("@NgayKham", updateLichKham.NgayKham),
-                new SqlParameter("@TrieuChung", updateLichKham.TrieuChung),
+                //new SqlParameter("@TrieuChung", updateLichKham.TrieuChung),
                 new SqlParameter("@MaLK", maLK)
             };
 
@@ -137,7 +148,7 @@ namespace QLPhongMachTu_DOAN_.DAL
             SqlParameter[] parametersCK = { new SqlParameter("@ChuyenKhoa", chuyenKhoa) };
 
             DataTable chuyenKhoaTbl = ExecuteQuery(queryChuyenKhoa, parametersCK);
-            if(chuyenKhoaTbl.Rows.Count > 0)
+            if (chuyenKhoaTbl.Rows.Count > 0)
             {
                 long khoaId = Convert.ToInt64(chuyenKhoaTbl.Rows[0][0]);
                 string query = @"SELECT lk.*, bs.*
@@ -186,19 +197,113 @@ namespace QLPhongMachTu_DOAN_.DAL
                 MaBS = Convert.ToInt64(row["MaBS"]),
                 MaBN = Convert.ToInt64(row["MaBN"]),
                 NgayKham = Convert.ToDateTime(row["NgayKham"]),
-                TrieuChung = row["TrieuChung"].ToString(),
-                TrangThai = row["TrangThai"].ToString(),
+                // TrieuChung = row["TrieuChung"].ToString(), // Bỏ ghi chú nếu cần lấy Triệu Chứng
+                TrangThai = (ETrangThaiKham)Convert.ToInt32(row["TrangThai"]), // Chuyển đổi từ số sang enum
+
+                // Đối tượng BacSi với bí danh BacSiHoTen
                 BacSi = new BacSi
                 {
                     MaSo = Convert.ToInt64(row["MaBS"]),
-                    HoTen = row["HoTen"].ToString()
+                    HoTen = row["HoTen"].ToString() // Sử dụng bí danh BacSiHoTen
                 },
-                //BenhNhan = new BenhNhan
-                //{
-                //    Id = Convert.ToInt64(row["MaBN"]),
-                //    TenBenhNhan = row["TenBenhNhan"].ToString()
-                //}
+
+                // Đối tượng BenhNhan với bí danh BenhNhanHoTen
+                BenhNhan = new BenhNhan
+                {
+                    MaSo = Convert.ToInt64(row["MaBN"]),
+                    HoTen = row["HoTen"].ToString() // Sử dụng bí danh BenhNhanHoTen
+                }
             };
         }
+
+
+
+        //******************************* QuachThanhNha
+        public LichKhamDAL()
+        {
+            // Lấy chuỗi kết nối từ app.config
+            _connectionString = ConfigurationManager.ConnectionStrings["MyDatabase"].ConnectionString;
+        }
+
+        // Phương thức để lấy tất cả các lịch khám
+        public List<LichKham> GetAll()
+        {
+            List<LichKham> lichKhamList = new List<LichKham>();
+            string query = "SELECT * FROM LichKhams"; // Truy vấn để lấy tất cả lịch khám
+
+            using (SqlConnection connection = new SqlConnection(_connectionString))
+            {
+                SqlCommand command = new SqlCommand(query, connection);
+                connection.Open();
+
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        LichKham lichKham = new LichKham
+                        {
+                            MaLK = Convert.ToInt64(reader["MaLK"]),
+                            MaBS = Convert.ToInt64(reader["MaBS"]),
+                            MaBN = Convert.ToInt64(reader["MaBN"]),
+                            NgayKham = Convert.ToDateTime(reader["NgayKham"]),
+                            MaNV = Convert.ToInt64(reader["MaNV"]),
+                            TrangThai = (ETrangThaiKham)Convert.ToInt32(reader["TrangThai"])
+                        };
+                        lichKhamList.Add(lichKham);
+                    }
+                }
+            }
+
+            return lichKhamList;
+        }
+
+        public LichKham GetByMaLK(long maLK)
+        {
+            LichKham lichKham = null;
+            string query = "SELECT * FROM LichKhams WHERE MaLK = @MaLK";
+
+            using (SqlConnection connection = new SqlConnection(_connectionString))
+            {
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@MaLK", maLK);
+                connection.Open();
+
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        lichKham = new LichKham
+                        {
+                            MaLK = Convert.ToInt64(reader["MaLK"]),
+                            MaBS = Convert.ToInt64(reader["MaBS"]),
+                            MaBN = Convert.ToInt64(reader["MaBN"]),
+                            NgayKham = Convert.ToDateTime(reader["NgayKham"]),
+                            MaNV = Convert.ToInt64(reader["MaNV"]),
+                            TrangThai = (ETrangThaiKham)Convert.ToInt32(reader["TrangThai"]) // Chuyển đổi từ số sang enum
+                        };
+                    }
+                }
+            }
+
+            return lichKham;
+        }
+
+
+        public bool UpdateTrangThai(LichKham lichKham)
+        {
+            string query = "UPDATE LichKhams SET TrangThai = @TrangThai WHERE MaLK = @MaLK";
+
+            using (SqlConnection connection = new SqlConnection(_connectionString))
+            {
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@TrangThai", (int)lichKham.TrangThai); // Sử dụng giá trị số từ enum
+                command.Parameters.AddWithValue("@MaLK", lichKham.MaLK);
+                connection.Open();
+
+                int rowsAffected = command.ExecuteNonQuery();
+                return rowsAffected > 0;
+            }
+        }
+
     }
 }

@@ -11,7 +11,7 @@ namespace QLPhongMachTu_DOAN_.Enums
         ADMIN = 0,
         BACSI = 1,
         DUOCSI = 2,
-        LETAN = 8,
+        LETAN = 9,
         BENHNHAN = 10
     }
 }

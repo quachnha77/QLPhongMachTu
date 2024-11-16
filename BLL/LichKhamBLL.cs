@@ -1,98 +1,102 @@
-﻿using QLPhongMachTu_DOAN_.DAL;
-using QLPhongMachTu_DOAN_.DTO;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+
+using QLPhongMachTu_DOAN_.DAL;
+using QLPhongMachTu_DOAN_.DTO;
+using System.Windows.Forms;
+using QLPhongMachTu_DOAN_.Enums;
 
 namespace QLPhongMachTu_DOAN_.BLL
 {
-    public class LichKhamBLL
+    internal class LichKhamBLL
     {
-        private readonly LichKhamDAL dal;
-        private readonly PhanCongDAL pcdal;
+        private readonly LichKhamDAL lichKhamDAL;
+        private readonly PhanCongDAL phanCongDAL;
 
         public LichKhamBLL()
         {
-            this.dal = new LichKhamDAL();
+            lichKhamDAL = new LichKhamDAL();
+        }
+
+        // Lấy tất cả các lịch khám
+        public List<LichKham> GetAll()
+        {
+            return lichKhamDAL.GetAll();
         }
 
         public LichKham TaoLichKham(LichKham lk)
         {
-            return dal.TaoLichKham(lk);
+            return lichKhamDAL.TaoLichKham(lk);
         }
 
         public bool SuaLichKham(long maLk, LichKham updateLichKham, long phanCongId)
         {
-            LichPhanCong pc = pcdal.GetById(phanCongId);
+            LichPhanCong pc = phanCongDAL.GetById(phanCongId);
             if (pc == null)
                 return false;
-            updateLichKham.NgayKham = pc.NgayPhanCong;
-            return dal.SuaLichKham(maLk, updateLichKham);
+            updateLichKham.NgayKham = pc.NgayThucHien;
+            return lichKhamDAL.SuaLichKham(maLk, updateLichKham);
         }
 
         public bool XoaLichKham(long id)
         {
-            return dal.XoaLichKham(id);
+            return lichKhamDAL.XoaLichKham(id);
         }
+
+        public LichKham GetByMaLK(long maLK)
+        {
+            return lichKhamDAL.GetByMaLK(maLK);
+        }
+
 
         public List<LichKham> GetByMaBenhNhan(long id)
         {
-            return dal.GetByMaBenhNhan(id);
+            return lichKhamDAL.GetByMaBenhNhan(id);
         }
 
-        public List<LichKham> GetAll()
+        public List<LichKham> GetByTrangThai(ETrangThaiKham trangThai)
         {
-            return dal.GetAll();
+            // Truyền giá trị int của enum vào câu truy vấn SQL
+            return lichKhamDAL.GetByTrangThai(trangThai);
         }
 
-        public List<LichKham> GetByTrangThai(string trangThai)
-        {
-            return dal.GetByTrangThai(trangThai);
-        }
 
         public List<LichKham> TimKiemTheoNgay(DateTime from, DateTime to)
         {
-            List<LichKham> result = dal.TimKiemTheoNgay(from, to);
+            List<LichKham> result = lichKhamDAL.TimKiemTheoNgay(from, to);
             return result;
         }
 
         public List<LichKham> TimKiemTheoChuyenKhoa(string chuyenKhoa)
         {
-            List<LichKham> result = dal.TimKiemTheoChuyenKhoa(chuyenKhoa);
+            List<LichKham> result = lichKhamDAL.TimKiemTheoChuyenKhoa(chuyenKhoa);
             return result;
         }
 
         public List<LichKham> TimKiem(string str)
         {
-            List<LichKham> result = dal.TimKiem(str);
+            List<LichKham> result = lichKhamDAL.TimKiem(str);
             return result;
         }
 
-        public List<LichKham> TimKiemTheoNgayVaText(DateTime from, DateTime to, string str)
+        internal List<LichKham> TimKiemTheoNgayVaText(DateTime from, DateTime to, string str)
         {
             List<LichKham> rawList = TimKiem(str);
             List<LichKham> result = rawList
                 .Where(lk => lk.NgayKham >= from && lk.NgayKham <= to)
                 .ToList();
             return result;
-            
+
         }
 
-        public List<LichKham> TimKiemTheoNgayVaTextVaTrangThai(DateTime from, DateTime to, string str, string trangThai)
+
+        public bool UpdateTrangThai(LichKham lichKham)
         {
-            List<LichKham> rawList = TimKiem(str);
-            List<LichKham> result = rawList
-                .Where(lk => lk.NgayKham >= from && lk.NgayKham <= to && lk.TrangThai == trangThai)
-                .ToList();
-            return result;
-
+            return lichKhamDAL.UpdateTrangThai(lichKham);
         }
-
-        //public bool suaLichKham(long maLK, BenhNhan benhNhan, BacSi bs, DateTime ngayHen, string yeuCau)
-        //{
-        //    //return dal.suaLichKham(maLK, benhNhan, bs, ngayHen, yeuCau);
-        //}
     }
 }

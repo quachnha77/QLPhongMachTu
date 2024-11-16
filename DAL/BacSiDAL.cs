@@ -23,19 +23,21 @@ namespace QLPhongMachTu_DOAN_.DAL
 
             DataTable result = ExecuteQuery(sql, parameters);
 
-            foreach(DataRow row in result.Rows) { 
-                BacSi bs = new BacSi{
+            foreach (DataRow row in result.Rows)
+            {
+                BacSi bs = new BacSi
+                {
                     MaSo = Convert.ToInt64(row[0]),
                     MaKhoa = Convert.ToInt64(row[1]),
-                    CCCD = Convert.ToString(row[2]),
+                    //CCCD = Convert.ToString(row[2]),
                     HoTen = Convert.ToString(row[3]),
                     NgaySinh = (DateTime)row[4],
                     GioiTinh = Convert.ToString(row[5]),
                     DiaChi = Convert.ToString(row[6]),
-                    SDT  = Convert.ToString(row[7]),
+                    SDT = Convert.ToString(row[7]),
                     MaUser = (long)row[8],
                 };
-             bacSiList.Add(bs);
+                bacSiList.Add(bs);
             }
 
             return bacSiList;

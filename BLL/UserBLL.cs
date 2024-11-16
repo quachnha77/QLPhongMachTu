@@ -40,7 +40,7 @@ namespace QLPhongMachTu_DOAN_.BLL
         }
 
         public User CheckLogin(string userName, string matKhau)
-        {   
+        {
             var user = dal.CheckLogin(userName, matKhau);
             return user;
         }

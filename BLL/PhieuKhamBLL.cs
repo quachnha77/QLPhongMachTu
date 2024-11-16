@@ -8,20 +8,35 @@ using System.Threading.Tasks;
 
 namespace QLPhongMachTu_DOAN_.BLL
 {
-    public class PhieuKhamBLL
+    internal class PhieuKhamBLL
     {
-        private readonly PhieuKhamDAL dal;
+        private readonly PhieuKhamDAL phieuKhamDAL;
 
-        public PhieuKhamBLL() => this.dal = new PhieuKhamDAL();
-        
-        public List<PhieuKham> GetAll()
+        public PhieuKhamBLL()
         {
-            return dal.GetAll();
+            phieuKhamDAL = new PhieuKhamDAL();
         }
 
-        public PhieuKham Create(PhieuKham newPhieuKham)
+        // Lấy tất cả các lịch khám
+        public List<PhieuKham> GetAll()
         {
-            return dal.Create(newPhieuKham);
+            return phieuKhamDAL.GetAll();
+        }
+
+        public PhieuKham GetByMaLK(long maLK)
+        {
+            return phieuKhamDAL.GetByMaLK(maLK);
+        }
+
+        public PhieuKham GetByMaBN(long maBN)
+        {
+            return phieuKhamDAL.GetByMaBN(maBN);
+        }
+
+        public bool CapNhatPhieuKham(PhieuKham phieuKham)
+        {
+            // Gọi hàm cập nhật từ lớp PhieuKhamDAL và trả về kết quả
+            return new PhieuKhamDAL().UpdatePhieuKham(phieuKham);
         }
     }
 }

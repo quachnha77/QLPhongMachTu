@@ -15,6 +15,21 @@
     <Deterministic>true</Deterministic>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -42,13 +57,82 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>packages\EntityFramework.6.5.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.EntityFrameworkCore.2.1.14\lib\netstandard2.0\Microsoft.EntityFrameworkCore.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.EntityFrameworkCore.Abstractions, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.EntityFrameworkCore.Abstractions.2.1.14\lib\netstandard2.0\Microsoft.EntityFrameworkCore.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Caching.Abstractions, Version=2.1.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.Caching.Abstractions.2.1.1\lib\netstandard2.0\Microsoft.Extensions.Caching.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Caching.Memory, Version=2.1.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.Caching.Memory.2.1.1\lib\netstandard2.0\Microsoft.Extensions.Caching.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration, Version=2.1.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.Configuration.2.1.1\lib\netstandard2.0\Microsoft.Extensions.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.Abstractions, Version=2.1.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.Configuration.Abstractions.2.1.1\lib\netstandard2.0\Microsoft.Extensions.Configuration.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.Binder, Version=2.1.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.Configuration.Binder.2.1.1\lib\netstandard2.0\Microsoft.Extensions.Configuration.Binder.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection, Version=2.1.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.DependencyInjection.2.1.1\lib\net461\Microsoft.Extensions.DependencyInjection.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=2.1.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.DependencyInjection.Abstractions.2.1.1\lib\netstandard2.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging, Version=2.1.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.Logging.2.1.1\lib\netstandard2.0\Microsoft.Extensions.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions, Version=2.1.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.Logging.Abstractions.2.1.1\lib\netstandard2.0\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Options, Version=2.1.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.Options.2.1.1\lib\netstandard2.0\Microsoft.Extensions.Options.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Primitives, Version=2.1.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.Primitives.2.1.1\lib\netstandard2.0\Microsoft.Extensions.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="Remotion.Linq, Version=2.2.0.0, Culture=neutral, PublicKeyToken=fee00910d6e5f53b, processorArchitecture=MSIL">
+      <HintPath>packages\Remotion.Linq.2.2.0\lib\net45\Remotion.Linq.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Buffers.4.4.0\lib\netstandard2.0\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections.Immutable, Version=1.2.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Collections.Immutable.1.5.0\lib\netstandard2.0\System.Collections.Immutable.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Annotations, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.ComponentModel.Annotations.4.5.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=4.0.3.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Diagnostics.DiagnosticSource.4.5.1\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Interactive.Async, Version=3.0.3000.0, Culture=neutral, PublicKeyToken=94bc3704cddfc263, processorArchitecture=MSIL">
+      <HintPath>packages\System.Interactive.Async.3.1.1\lib\net46\System.Interactive.Async.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Memory.4.5.1\lib\netstandard2.0\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Numerics.Vectors.4.4.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.CompilerServices.Unsafe.4.5.1\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Windows.Forms.DataVisualization.Design" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -62,38 +146,49 @@
   <ItemGroup>
     <Compile Include="BLL\BacSiBLL.cs" />
     <Compile Include="BLL\BenhNhanBLL.cs" />
+    <Compile Include="BLL\ChiTietToaThuocBLL.cs" />
+    <Compile Include="BLL\DichVuBLL.cs" />
     <Compile Include="BLL\KhoaBLL.cs" />
+    <Compile Include="BLL\KhoThuocBLL.cs" />
     <Compile Include="BLL\LichKhamBLL.cs" />
     <Compile Include="BLL\PhanCongBLL.cs" />
-    <Compile Include="BLL\PhanQuyenBLL.cs" />
     <Compile Include="BLL\PhieuKhamBLL.cs" />
+    <Compile Include="BLL\PhieuKhamDichVuBLL.cs" />
+    <Compile Include="BLL\ToaThuocBLL.cs" />
     <Compile Include="BLL\UserBLL.cs" />
     <Compile Include="DAL\ApplicationDbContext.cs" />
     <Compile Include="DAL\BacSiDAL.cs" />
     <Compile Include="DAL\BenhNhanDAL.cs" />
+    <Compile Include="DAL\ChiTietToaThuocDAL.cs" />
     <Compile Include="DAL\DatabaseHelper.cs" />
+    <Compile Include="DAL\DichVuDAL.cs" />
     <Compile Include="DAL\KhoaDAL.cs" />
+    <Compile Include="DAL\KhoThuocDAL.cs" />
     <Compile Include="DAL\LichKhamDAL.cs" />
     <Compile Include="DAL\PhanCongDAL.cs" />
-    <Compile Include="DAL\PhanQuyenDAL.cs" />
     <Compile Include="DAL\PhieuKhamDAL.cs" />
+    <Compile Include="DAL\PhieuKhamDichVuDAL.cs" />
+    <Compile Include="DAL\ToaThuocDAL.cs" />
     <Compile Include="DAL\UserDAL.cs" />
     <Compile Include="DTO\BacSi.cs" />
     <Compile Include="DTO\BaseConNguoi.cs" />
     <Compile Include="DTO\BenhNhan.cs" />
     <Compile Include="DTO\ChiTietToaThuoc.cs" />
+    <Compile Include="DTO\DichVu.cs" />
     <Compile Include="DTO\HoaDonKhamBenh.cs" />
     <Compile Include="DTO\HoaDonThuoc.cs" />
+    <Compile Include="DTO\KhoThuoc.cs" />
     <Compile Include="DTO\LichKham.cs" />
     <Compile Include="DTO\LichPhanCong.cs" />
     <Compile Include="DTO\NhanVien.cs" />
     <Compile Include="DTO\NhapThuoc.cs" />
     <Compile Include="DTO\PhanQuyen.cs" />
     <Compile Include="DTO\PhieuKham.cs" />
+    <Compile Include="DTO\PhieuKhamDichVu.cs" />
     <Compile Include="DTO\PhongKhoa.cs" />
-    <Compile Include="DTO\Thuoc.cs" />
     <Compile Include="DTO\ToaThuoc.cs" />
     <Compile Include="DTO\User.cs" />
+    <Compile Include="Enums\ETrangThaiKham.cs" />
     <Compile Include="Enums\EQuyen.cs" />
     <Compile Include="GUI\HoaDonKhamBenh.cs">
       <SubType>Form</SubType>
@@ -125,11 +220,11 @@
     <Compile Include="GUI\KhamBenh_LT.Designer.cs">
       <DependentUpon>KhamBenh_LT.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\KhoThuoc.cs">
+    <Compile Include="GUI\KhoThuocGUI.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="GUI\KhoThuoc.Designer.cs">
-      <DependentUpon>KhoThuoc.cs</DependentUpon>
+    <Compile Include="GUI\KhoThuocGUI.Designer.cs">
+      <DependentUpon>KhoThuocGUI.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\LichLamViec_BS.cs">
       <SubType>UserControl</SubType>
@@ -251,31 +346,6 @@
     <Compile Include="GUI\ToaThuocDonThuoc_DS.Designer.cs">
       <DependentUpon>ToaThuocDonThuoc_DS.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202411070841426_InitialCreate.cs" />
-    <Compile Include="Migrations\202411070841426_InitialCreate.Designer.cs">
-      <DependentUpon>202411070841426_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202411070857257_Update3.cs" />
-    <Compile Include="Migrations\202411070857257_Update3.Designer.cs">
-      <DependentUpon>202411070857257_Update3.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202411070859257_Update4.cs" />
-    <Compile Include="Migrations\202411070859257_Update4.Designer.cs">
-      <DependentUpon>202411070859257_Update4.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202411081000028_UpdateLichPhanCong.cs" />
-    <Compile Include="Migrations\202411081000028_UpdateLichPhanCong.Designer.cs">
-      <DependentUpon>202411081000028_UpdateLichPhanCong.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202411081004399_UpdateLichPhanCong2.cs" />
-    <Compile Include="Migrations\202411081004399_UpdateLichPhanCong2.Designer.cs">
-      <DependentUpon>202411081004399_UpdateLichPhanCong2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202411081901107_2.cs" />
-    <Compile Include="Migrations\202411081901107_2.Designer.cs">
-      <DependentUpon>202411081901107_2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="GUI\HoaDonKhamBenh.resx">
@@ -293,8 +363,8 @@
     <EmbeddedResource Include="GUI\KhamBenh_LT.resx">
       <DependentUpon>KhamBenh_LT.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\KhoThuoc.resx">
-      <DependentUpon>KhoThuoc.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\KhoThuocGUI.resx">
+      <DependentUpon>KhoThuocGUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\LichLamViec_BS.resx">
       <DependentUpon>LichLamViec_BS.cs</DependentUpon>
@@ -356,24 +426,6 @@
     <EmbeddedResource Include="GUI\ToaThuocDonThuoc_DS.resx">
       <DependentUpon>ToaThuocDonThuoc_DS.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202411070841426_InitialCreate.resx">
-      <DependentUpon>202411070841426_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202411070857257_Update3.resx">
-      <DependentUpon>202411070857257_Update3.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202411070859257_Update4.resx">
-      <DependentUpon>202411070859257_Update4.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202411081000028_UpdateLichPhanCong.resx">
-      <DependentUpon>202411081000028_UpdateLichPhanCong.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202411081004399_UpdateLichPhanCong2.resx">
-      <DependentUpon>202411081004399_UpdateLichPhanCong2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202411081901107_2.resx">
-      <DependentUpon>202411081901107_2.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -402,7 +454,18 @@
     <Content Include="Image\Background.jpg" />
     <None Include="Image\duocthu.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

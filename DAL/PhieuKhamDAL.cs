@@ -1,85 +1,152 @@
-﻿using QLPhongMachTu_DOAN_.DTO;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Configuration;
+using QLPhongMachTu_DOAN_.DTO;
 
 namespace QLPhongMachTu_DOAN_.DAL
 {
-    public class PhieuKhamDAL : DatabaseHelper
+    internal class PhieuKhamDAL
     {
+        private readonly string _connectionString;
+
+        public PhieuKhamDAL()
+        {
+            // Lấy chuỗi kết nối từ app.config
+            _connectionString = ConfigurationManager.ConnectionStrings["MyDatabase"].ConnectionString;
+        }
+
+        // Phương thức để lấy tất cả các phiếu khám
         public List<PhieuKham> GetAll()
         {
-            string query = @"
-                SELECT pk.*, lk.NgayKham AS NgayKhamLichKham, bn.TenBenhNhan, bs.TenBacSi
-                FROM PhieuKham pk
-                INNER JOIN LichKham lk ON pk.MaLK = lk.MaLK
-                INNER JOIN BenhNhan bn ON pk.MaBN = bn.MaBN
-                INNER JOIN BacSi bs ON pk.MaBS = bs.MaBS";
+            List<PhieuKham> phieuKhamList = new List<PhieuKham>();
+            string query = "SELECT * FROM PhieuKhams";
 
-            DataTable result = ExecuteQuery(query);
-            var list = new List<PhieuKham>();
-
-            foreach (DataRow row in result.Rows)
+            using (SqlConnection connection = new SqlConnection(_connectionString))
             {
-                list.Add(new PhieuKham
+                SqlCommand command = new SqlCommand(query, connection);
+                connection.Open();
+
+                using (SqlDataReader reader = command.ExecuteReader())
                 {
-                    MaPK = Convert.ToInt64(row[1]),
-                    MaLK = Convert.ToInt64(row[2]),
-                    MaBN = Convert.ToInt64(row[3]),
-                    MaBS = Convert.ToInt64(row[4]),
-                    NgayKham = Convert.ToDateTime(row[5]),
-                    SoThuTu = Convert.ToInt32(row[6]),
-                    TrieuChung = row[7].ToString(),
-                    TieuSuBenhLy = row[8]?.ToString(),
-                    ChuanDoan = row[9]?.ToString(),
-                    //LichKham = new LichKham
-                    //{
-                    //    MaLK = Convert.ToInt64(row["MaLK"]),
-                    //    NgayKham = Convert.ToDateTime(row["NgayKhamLichKham"]),
-                    //    // Map other LichKham properties if necessary
-                    //},
-                    //BenhNhan = new BenhNhan
-                    //{
-                    //    MaBN = Convert.ToInt64(row["MaBN"]),
-                    //    // Map other BenhNhan properties if necessary
-                    //},
-                    //BacSi = new BacSi
-                    //{
-                    //    Id = Convert.ToInt64(row["MaBS"]),
-                    //    // Map other BacSi properties if necessary
-                    //}
-                });
-            }
-            return list;
-        }
-
-        public PhieuKham Create(PhieuKham newPhieuKham)
-        {
-            string query = @"
-                INSERT INTO PhieuKham (MaLK, MaBN, MaBS, NgayKham, SoThuTu, TrieuChung, TieuSuBenhLy, ChuanDoan) 
-                OUTPUT INSERTED.MaPK
-                VALUES (@MaLK, @MaBN, @MaBS, @NgayKham, @SoThuTu, @TrieuChung, @TieuSuBenhLy, @ChuanDoan)";
-
-            SqlParameter[] parameters = {
-                new SqlParameter("@MaLK", newPhieuKham.MaLK),
-                new SqlParameter("@MaBN", newPhieuKham.MaBN),
-                new SqlParameter("@MaBS", newPhieuKham.MaBS),
-                new SqlParameter("@NgayKham", newPhieuKham.NgayKham),
-                new SqlParameter("@SoThuTu", newPhieuKham.SoThuTu),
-                new SqlParameter("@TrieuChung", newPhieuKham.TrieuChung),
-                new SqlParameter("@TieuSuBenhLy", newPhieuKham.TieuSuBenhLy ?? (object)DBNull.Value),
-                new SqlParameter("@ChuanDoan", newPhieuKham.ChuanDoan ?? (object)DBNull.Value)
-            };
-
-            using (DataTable result = ExecuteQuery(query, parameters))
-            {
-                if (result.Rows.Count > 0)
-                {
-                    newPhieuKham.MaPK = Convert.ToInt64(result.Rows[0]["MaPK"]);
+                    while (reader.Read())
+                    {
+                        PhieuKham phieuKham = new PhieuKham
+                        {
+                            MaPK = Convert.ToInt64(reader["MaPK"]),
+                            MaLK = Convert.ToInt64(reader["MaLK"]),
+                            MaBN = Convert.ToInt64(reader["MaBN"]),
+                            MaBS = Convert.ToInt64(reader["MaBS"]),
+                            NgayKham = Convert.ToDateTime(reader["NgayKham"]),
+                            SoThuTu = Convert.ToInt32(reader["SoThuTu"]),
+                            TrieuChung = reader["TrieuChung"].ToString(),
+                            TieuSuBenhLy = reader["TieuSuBenhLy"].ToString(),
+                            ChuanDoan = reader["ChuanDoan"].ToString(),
+                            LoiDanBacSi = reader["LoiDanBacSi"]?.ToString() // Lấy dữ liệu từ cột mới
+                        };
+                        phieuKhamList.Add(phieuKham);
+                    }
                 }
-                return newPhieuKham;
+            }
+
+            return phieuKhamList;
+        }
+
+        // Phương thức để lấy phiếu khám theo mã lịch khám (MaLK)
+        public PhieuKham GetByMaLK(long maLK)
+        {
+            PhieuKham phieuKham = null;
+            string query = "SELECT * FROM PhieuKhams WHERE MaLK = @MaLK";
+
+            using (SqlConnection connection = new SqlConnection(_connectionString))
+            {
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@MaLK", maLK);
+                connection.Open();
+
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        phieuKham = new PhieuKham
+                        {
+                            MaPK = Convert.ToInt64(reader["MaPK"]),
+                            MaLK = Convert.ToInt64(reader["MaLK"]),
+                            MaBN = Convert.ToInt64(reader["MaBN"]),
+                            MaBS = Convert.ToInt64(reader["MaBS"]),
+                            NgayKham = Convert.ToDateTime(reader["NgayKham"]),
+                            SoThuTu = Convert.ToInt32(reader["SoThuTu"]),
+                            TrieuChung = reader["TrieuChung"].ToString(),
+                            TieuSuBenhLy = reader["TieuSuBenhLy"].ToString(),
+                            ChuanDoan = reader["ChuanDoan"].ToString(),
+                            LoiDanBacSi = reader["LoiDanBacSi"]?.ToString() // Lấy dữ liệu từ cột mới
+                        };
+                    }
+                }
+            }
+
+            return phieuKham;
+        }
+
+        public PhieuKham GetByMaBN(long maBN) {
+            PhieuKham phieuKham = null;
+            string query = "SELECT * FROM PhieuKhams WHERE MaBN = @MaBN";
+
+            using (SqlConnection connection = new SqlConnection(_connectionString))
+            {
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@MaBN", maBN);
+                connection.Open();
+
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        phieuKham = new PhieuKham
+                        {
+                            MaPK = Convert.ToInt64(reader["MaPK"]),
+                            MaLK = Convert.ToInt64(reader["MaLK"]),
+                            MaBN = Convert.ToInt64(reader["MaBN"]),
+                            MaBS = Convert.ToInt64(reader["MaBS"]),
+                            NgayKham = Convert.ToDateTime(reader["NgayKham"]),
+                            SoThuTu = Convert.ToInt32(reader["SoThuTu"]),
+                            TrieuChung = reader["TrieuChung"].ToString(),
+                            TieuSuBenhLy = reader["TieuSuBenhLy"].ToString(),
+                            ChuanDoan = reader["ChuanDoan"].ToString(),
+                            LoiDanBacSi = reader["LoiDanBacSi"]?.ToString()
+                        };
+                    }
+                }
+            }
+            return phieuKham;
+        }
+
+
+        public bool UpdatePhieuKham(PhieuKham phieuKham)
+        {
+            string query = @"UPDATE PhieuKhams
+                             SET TrieuChung = @TrieuChung, 
+                                 TieuSuBenhLy = @TieuSuBenhLy, 
+                                 ChuanDoan = @ChuanDoan, 
+                                 LoiDanBacSi = @LoiDanBacSi 
+                             WHERE MaPK = @MaPK";
+
+            using (SqlConnection connection = new SqlConnection(_connectionString))
+            {
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@TrieuChung", phieuKham.TrieuChung);
+                command.Parameters.AddWithValue("@TieuSuBenhLy", phieuKham.TieuSuBenhLy);
+                command.Parameters.AddWithValue("@ChuanDoan", phieuKham.ChuanDoan);
+                command.Parameters.AddWithValue("@LoiDanBacSi", phieuKham.LoiDanBacSi ?? (object)DBNull.Value); // Null check
+                command.Parameters.AddWithValue("@MaPK", phieuKham.MaPK);
+
+                connection.Open();
+                int rowsAffected = command.ExecuteNonQuery();
+                return rowsAffected > 0; // Trả về true nếu cập nhật thành công
             }
         }
+
+
     }
 }

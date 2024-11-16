@@ -15,9 +15,9 @@ namespace QLPhongMachTu_DOAN_.DAL
                 new SqlParameter("@MaNV", lichPhanCong.MaNV),
                 new SqlParameter("@MaBS", lichPhanCong.MaBS),
                 new SqlParameter("@GhiChu", lichPhanCong.GhiChu),
-                new SqlParameter("@gioBatDau", lichPhanCong.gioBatDau),
-                new SqlParameter("@gioKetThuc", lichPhanCong.gioKetThuc),
-                new SqlParameter("@NgayPhanCong", lichPhanCong.NgayPhanCong),
+                //new SqlParameter("@gioBatDau", lichPhanCong.gioBatDau),
+                //new SqlParameter("@gioKetThuc", lichPhanCong.gioKetThuc),
+                //new SqlParameter("@NgayPhanCong", lichPhanCong.NgayPhanCong),
             };
 
             using (DataTable result = ExecuteQuery(query, parameters))
@@ -52,20 +52,11 @@ namespace QLPhongMachTu_DOAN_.DAL
                     MaNV = Convert.ToInt64(row[1]),
                     MaBS = Convert.ToInt64(row[2]), // long 64 bit
                     GhiChu = Convert.ToString(row[3]),
-                    gioBatDau = Convert.ToInt32(row[4]),
-                    gioKetThuc = Convert.ToInt32(row[5]),
-                    NgayPhanCong = Convert.ToDateTime(row["NgayPhanCong"]),
+                    //gioBatDau = Convert.ToInt32(row[4]),
+                    //gioKetThuc = Convert.ToInt32(row[5]),
+                    //NgayPhanCong = Convert.ToDateTime(row["NgayPhanCong"]),
+
                     
-                    //BacSi = new BacSi
-                    //{
-                    //    Ma = Convert.ToInt64(row["MaBS"]),
-                    //    TenBacSi = row["TenBacSi"].ToString(),
-                    //    PhongKhoa = new PhongKhoa
-                    //    {
-                    //        Id = Convert.ToInt64(row["MaPK"]),
-                    //        TenPhongKhoa = row["TenPhongKhoa"].ToString()
-                    //    }
-                    //}
                 });
             }
             return list;
@@ -95,19 +86,10 @@ namespace QLPhongMachTu_DOAN_.DAL
                     MaNV = Convert.ToInt64(row[1]),
                     MaBS = Convert.ToInt64(row[2]), // long 64 bit
                     GhiChu = Convert.ToString(row[3]),
-                    gioBatDau = Convert.ToInt32(row[4]),
-                    gioKetThuc = Convert.ToInt32(row[5]),
-                    NgayPhanCong = Convert.ToDateTime(row["NgayPhanCong"]),
-                    //BacSi = new BacSi
-                    //{
-                    //    MaBS = Convert.ToInt64(row["MaBS"]),
-                    //    TenBacSi = row["TenBacSi"].ToString(),
-                    //    PhongKhoa = new PhongKhoa
-                    //    {
-                    //        Id = Convert.ToInt64(row["MaPK"]),
-                    //        TenPhongKhoa = row["TenPhongKhoa"].ToString()
-                    //    }
-                    //}
+                    //gioBatDau = Convert.ToInt32(row[4]),
+                    //gioKetThuc = Convert.ToInt32(row[5]),
+                    //NgayPhanCong = Convert.ToDateTime(row["NgayPhanCong"]),
+                    
                 };
             }
             return null;

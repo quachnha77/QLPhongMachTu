@@ -20,7 +20,7 @@ namespace QLPhongMachTu_DOAN_.GUI
         private void KhoThuoc_Click(object sender, EventArgs e)
         {
             panelMain.Controls.Clear();
-            KhoThuoc khoThuoccontrol = new KhoThuoc();
+            KhoThuocGUI khoThuoccontrol = new KhoThuocGUI();
             khoThuoccontrol.Dock = DockStyle.Fill;
             panelMain.Controls.Add(khoThuoccontrol);
             panelMain.Refresh();

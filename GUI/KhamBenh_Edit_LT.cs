@@ -31,7 +31,7 @@ namespace QLPhongMachTu_DOAN_.GUI
             textBox2.Text = BenhNhan.DiaChi;
             textBox3.Text = BenhNhan.SDT;
             textBox4.Text = BenhNhan.GioiTinh;
-            textBox5.Text = LichKham.TrieuChung;
+            //textBox5.Text = LichKham.TrieuChung;
 
             // Selected Index Change
             List<PhongKhoa> khoaList = khoaBll.GetAll();
@@ -100,7 +100,7 @@ namespace QLPhongMachTu_DOAN_.GUI
             LichKham updateLichKham = new LichKham()
             {
                 MaBS = bacSiId,
-                TrieuChung = textBox5.Text
+                //TrieuChung = textBox5.Text
             };
 
             var result = lichKhamBll.SuaLichKham(maLK, updateLichKham, phanCongId);
