@@ -98,7 +98,7 @@ namespace QLPhongMachTu_DOAN_.DAL
 
         public User GetById(long id)
         {
-            string query = "SELECT * FROM Users WHERE MaUser = @Id";
+            string query = "SELECT * FROM Users WHERE MaUser = @MaUser";
             SqlParameter[] parameters = {
                 new SqlParameter("@MaUser", id)
             };

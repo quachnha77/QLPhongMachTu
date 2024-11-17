@@ -19,7 +19,7 @@ namespace QLPhongMachTu_DOAN_.BLL
 
         public PhanQuyen GetByMaPQ(long maPQ)
         {
-            return dal.GetByMaQP(maPQ);
+            return dal.GetByMaPQ(maPQ);
         }
     }
 }

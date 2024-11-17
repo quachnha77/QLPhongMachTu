@@ -152,6 +152,7 @@
     <Compile Include="BLL\KhoThuocBLL.cs" />
     <Compile Include="BLL\LichKhamBLL.cs" />
     <Compile Include="BLL\PhanCongBLL.cs" />
+    <Compile Include="BLL\PhanQuyenBLL.cs" />
     <Compile Include="BLL\PhieuKhamBLL.cs" />
     <Compile Include="BLL\PhieuKhamDichVuBLL.cs" />
     <Compile Include="BLL\ToaThuocBLL.cs" />
@@ -166,6 +167,7 @@
     <Compile Include="DAL\KhoThuocDAL.cs" />
     <Compile Include="DAL\LichKhamDAL.cs" />
     <Compile Include="DAL\PhanCongDAL.cs" />
+    <Compile Include="DAL\PhanQuyenDAL.cs" />
     <Compile Include="DAL\PhieuKhamDAL.cs" />
     <Compile Include="DAL\PhieuKhamDichVuDAL.cs" />
     <Compile Include="DAL\ToaThuocDAL.cs" />

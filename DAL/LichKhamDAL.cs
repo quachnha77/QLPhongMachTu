@@ -22,7 +22,7 @@ namespace QLPhongMachTu_DOAN_.DAL
         new SqlParameter("@MaBS", lk.MaBS),
         new SqlParameter("@MaBN", lk.MaBN),
         new SqlParameter("@NgayKham", lk.NgayKham),
-        //new SqlParameter("@TrieuChung", lk.TrieuChung),
+        new SqlParameter("@TrieuChung", lk.TrieuChung),
         new SqlParameter("@TrangThai", (int)ETrangThaiKham.ChuaKham) // Sử dụng giá trị số từ enum
     };
 
@@ -49,9 +49,10 @@ namespace QLPhongMachTu_DOAN_.DAL
         public List<LichKham> GetByMaBenhNhan(long maBN)
         {
             string query = @"
-                SELECT lk.*, bs.HoTen
+                SELECT lk.*, bs.*, bn.*
                 FROM LichKhams lk
                 INNER JOIN BacSis bs ON lk.MaBS = bs.MaSo
+                INNER JOIN BenhNhans bn ON lk.MaBN = bn.MaSo
                 WHERE lk.MaBN = @MaBN";
             SqlParameter[] parameters = { new SqlParameter("@MaBN", maBN) };
 
@@ -105,15 +106,16 @@ namespace QLPhongMachTu_DOAN_.DAL
 
         public bool SuaLichKham(long maLK, LichKham updateLichKham)
         {
-            string query = "UPDATE LichKhams SET MaBS = @MaBS, NgayKham = @NgayKham, TrieuChung = @TrieuChung" +
-                " WHERE MaLK = @MaLK";
+            string query = @"UPDATE LichKhams
+                            SET MaBS = @MaBS, NgayKham = @NgayKham, TrieuChung = @TrieuChung
+                            WHERE MaLK = @MaLK";
             SqlParameter[] parameters = {
                 new SqlParameter("@MaBS", updateLichKham.MaBS),
                 new SqlParameter("@NgayKham", updateLichKham.NgayKham),
-                //new SqlParameter("@TrieuChung", updateLichKham.TrieuChung),
+                new SqlParameter("@TrieuChung", updateLichKham.TrieuChung),
                 new SqlParameter("@MaLK", maLK)
-            };
-
+            }; /*  Không sửa mã bệnh nhân.
+                   Do mỗi lịch khám chỉ có 1 bệnh nhân */
             int rowsAffected = ExecuteNonQuery(query, parameters);
             return rowsAffected > 0;
         }
@@ -197,21 +199,22 @@ namespace QLPhongMachTu_DOAN_.DAL
                 MaBS = Convert.ToInt64(row["MaBS"]),
                 MaBN = Convert.ToInt64(row["MaBN"]),
                 NgayKham = Convert.ToDateTime(row["NgayKham"]),
-                // TrieuChung = row["TrieuChung"].ToString(), // Bỏ ghi chú nếu cần lấy Triệu Chứng
+                 TrieuChung = row["TrieuChung"].ToString(), // Bỏ ghi chú nếu cần lấy Triệu Chứng
                 TrangThai = (ETrangThaiKham)Convert.ToInt32(row["TrangThai"]), // Chuyển đổi từ số sang enum
 
-                // Đối tượng BacSi với bí danh BacSiHoTen
+                // Đối tượng BacSi
                 BacSi = new BacSi
                 {
                     MaSo = Convert.ToInt64(row["MaBS"]),
-                    HoTen = row["HoTen"].ToString() // Sử dụng bí danh BacSiHoTen
+                    HoTen = row["HoTen"].ToString(),
+                    MaKhoa = Convert.ToInt64(row["MaKhoa"])
                 },
 
-                // Đối tượng BenhNhan với bí danh BenhNhanHoTen
+                // Đối tượng BenhNhan
                 BenhNhan = new BenhNhan
                 {
                     MaSo = Convert.ToInt64(row["MaBN"]),
-                    HoTen = row["HoTen"].ToString() // Sử dụng bí danh BenhNhanHoTen
+                    HoTen = row["HoTen"].ToString() 
                 }
             };
         }
@@ -246,7 +249,8 @@ namespace QLPhongMachTu_DOAN_.DAL
                             MaBS = Convert.ToInt64(reader["MaBS"]),
                             MaBN = Convert.ToInt64(reader["MaBN"]),
                             NgayKham = Convert.ToDateTime(reader["NgayKham"]),
-                            MaNV = Convert.ToInt64(reader["MaNV"]),
+                            //MaNV = Convert.ToInt64(reader["MaNV"]),
+                            TrieuChung = Convert.ToString(reader["TrieuChung"]),
                             TrangThai = (ETrangThaiKham)Convert.ToInt32(reader["TrangThai"])
                         };
                         lichKhamList.Add(lichKham);

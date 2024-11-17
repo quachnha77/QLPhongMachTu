@@ -39,9 +39,12 @@ namespace QLPhongMachTu_DOAN_.GUI
             hoTenTxt.Enabled = false;
             SDTTxt.Enabled = false;
 
+            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
+
             comboBox2.Items.Add("Chuyên khoa");
             comboBox2.Items.Add("Bác sĩ");
             comboBox2.Items.Add("Trạng thái");
+            comboBox2.SelectedIndex = 0;
         }
 
         private void ShowInformation()
@@ -63,8 +66,8 @@ namespace QLPhongMachTu_DOAN_.GUI
             {
                 MaBN = benhNhan.MaSo,
                 MaBS = selectedBacSi.MaSo,
-                //TrieuChung = trieuChungTxt.Text,
-                NgayKham = selectedPhanCong.NgayThucHien,
+                TrieuChung = trieuChungTxt.Text,
+                NgayKham = selectedPhanCong.NgayPhanCong,
             };
 
             lichKhamBLL.TaoLichKham(lichKham);
@@ -150,24 +153,30 @@ namespace QLPhongMachTu_DOAN_.GUI
                 dataGridView1.Rows.Clear();
             List<LichKham> listOfLichKham = lichKhamBLL.GetByMaBenhNhan(benhNhan.MaSo);
 
+            insertHelper(listOfLichKham);
+        }
+
+        private void insertHelper(List<LichKham> listLichKham)
+        {
             int STT = 1;
-            foreach (var lk in listOfLichKham)
+            foreach (var lk in listLichKham)
             {
-                var bacSi = bacSiBLL.GetById(lk.MaBS);
-                var khoa = khoaBLL.GetById(bacSi.MaKhoa);
-                var index = dataGridView1.Rows.Add();
+                PhongKhoa khoa = khoaBLL.GetById(lk.BacSi.MaKhoa);
+                int index = dataGridView1.Rows.Add();
 
                 dataGridView1.Rows[index].Cells[0].Value = STT;
                 dataGridView1.Rows[index].Cells[1].Value = khoa.ChuyenKhoa;
                 dataGridView1.Rows[index].Cells[2].Value = lk.BacSi.HoTen;
                 dataGridView1.Rows[index].Cells[3].Value = lk.NgayKham;
-                //dataGridView1.Rows[index].Cells[4].Value = lk.TrieuChung;
+                dataGridView1.Rows[index].Cells[4].Value = lk.TrieuChung;
                 dataGridView1.Rows[index].Cells[5].Value = lk.TrangThai;
 
                 dataGridView1.Rows[index].Cells[0].Tag = lk;
                 dataGridView1.Rows[index].Cells[1].Tag = khoa;
+                dataGridView1.Rows[index].Cells[1].Tag = lk.BacSi;
                 STT += 1;
             }
+            dataGridView1.ClearSelection();
         }
 
         private void chuyenKhoaSlt_DropDownClosed(object sender, EventArgs e)
@@ -233,8 +242,36 @@ namespace QLPhongMachTu_DOAN_.GUI
 
             List<LichKham> resultList = lichKhamBLL.TimKiemTheoChuyenKhoa(chuyenKhoa);
 
-            if (resultList.Count <= 0) MessageBox.Show("Không có kết quả phù hợp", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            if (resultList == null)
+            {
+                MessageBox.Show("Không có kết quả phù hợp", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            dataGridView1.Rows.Clear();
+            insertHelper(resultList);
+
         }
 
-    }
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Vui lòng chọn lịch hẹn để chỉnh sửa.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            var selectedRow = dataGridView1.SelectedRows[0];
+
+            LichKham lk = (LichKham)selectedRow.Cells[0].Tag;
+            PhongKhoa khoa = (PhongKhoa)selectedRow.Cells[2].Tag;
+            //BacSi bs = (BacSi)selectedRow.Cells[3].Tag;
+
+            KhamBenh_Edit_LT chinhSuaPnl = new KhamBenh_Edit_LT(lk, benhNhan, lk.BacSi, 1);
+            var panelMain = this.FindForm();
+            panelMain.Controls.Clear();
+            chinhSuaPnl.Dock = DockStyle.Fill;
+            panelMain.Controls.Add(chinhSuaPnl);
+            panelMain.Refresh();
+        }
+    }    
 }

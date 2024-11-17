@@ -54,9 +54,9 @@ namespace QLPhongMachTu_DOAN_.DAL
                     GhiChu = Convert.ToString(row[3]),
                     //gioBatDau = Convert.ToInt32(row[4]),
                     //gioKetThuc = Convert.ToInt32(row[5]),
-                    //NgayPhanCong = Convert.ToDateTime(row["NgayPhanCong"]),
+                    NgayPhanCong = Convert.ToDateTime(row["NgayPhanCong"]),
 
-                    
+
                 });
             }
             return list;
@@ -88,8 +88,8 @@ namespace QLPhongMachTu_DOAN_.DAL
                     GhiChu = Convert.ToString(row[3]),
                     //gioBatDau = Convert.ToInt32(row[4]),
                     //gioKetThuc = Convert.ToInt32(row[5]),
-                    //NgayPhanCong = Convert.ToDateTime(row["NgayPhanCong"]),
-                    
+                    NgayPhanCong = Convert.ToDateTime(row["NgayPhanCong"]),
+
                 };
             }
             return null;

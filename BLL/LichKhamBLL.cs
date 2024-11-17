@@ -15,11 +15,12 @@ namespace QLPhongMachTu_DOAN_.BLL
     internal class LichKhamBLL
     {
         private readonly LichKhamDAL lichKhamDAL;
-        private readonly PhanCongDAL phanCongDAL;
+        private readonly PhanCongBLL phanCongBLL;
 
         public LichKhamBLL()
         {
             lichKhamDAL = new LichKhamDAL();
+            phanCongBLL = new PhanCongBLL();
         }
 
         // Lấy tất cả các lịch khám
@@ -35,10 +36,12 @@ namespace QLPhongMachTu_DOAN_.BLL
 
         public bool SuaLichKham(long maLk, LichKham updateLichKham, long phanCongId)
         {
-            LichPhanCong pc = phanCongDAL.GetById(phanCongId);
+            // Lấy Lịch khám bằng mã phân công
+            LichPhanCong pc = phanCongBLL.GetById(phanCongId);
             if (pc == null)
                 return false;
-            updateLichKham.NgayKham = pc.NgayThucHien;
+            // updateLichKham bằng pc.NgayPhanCong vừa lấy
+            updateLichKham.NgayKham = pc.NgayPhanCong;
             return lichKhamDAL.SuaLichKham(maLk, updateLichKham);
         }
 

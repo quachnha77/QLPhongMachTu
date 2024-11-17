@@ -130,7 +130,7 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(292, 66);
             this.panel3.TabIndex = 1;
-            this.panel3.Click += new System.EventHandler(this.panel3_Click);
+            //this.panel3.Click += new System.EventHandler(this.panel3_Click);
             // 
             // txtThanhToan
             // 

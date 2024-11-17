@@ -19,6 +19,8 @@ namespace QLPhongMachTu_DOAN_.DTO
 
         public DateTime NgayKham { get; set; }  // Ngày Khám
 
+        public string TrieuChung { get; set; } 
+
         // Sử dụng enum ETrangThaiKham cho trạng thái
         public ETrangThaiKham TrangThai { get; set; }
 

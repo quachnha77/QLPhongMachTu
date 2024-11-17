@@ -50,7 +50,8 @@ namespace QLPhongMachTu_DOAN_.DAL
                     NgaySinh = (DateTime)row[3],
                     GioiTinh = (string)row[4],
                     DiaChi = (string)row[5],
-                    MaUser = Convert.ToInt64(row[6]),
+                    SDT = Convert.ToString(row[6]),
+                    MaUser = Convert.ToInt64(row[7]),
                 };
                 return bn;
             }
@@ -77,14 +78,34 @@ namespace QLPhongMachTu_DOAN_.DAL
                     NgaySinh = (DateTime)row[3],
                     GioiTinh = (string)row[4],
                     DiaChi = (string)row[5],
-                    MaUser = Convert.ToInt64(row[6]),
+                    SDT = Convert.ToString(row[6]),
+                    MaUser = Convert.ToInt64(row[7]),
 
                 };
             }
             return null;
         }
 
+        public BenhNhan UpdateBenhNhan(long benhNhanId, BenhNhan updatedBenhNhan)
+        { // HoTen, DiaChi, SDT, GioiTinh
+            string query = @"UPDATE BenhNhans 
+                            SET HoTen = @HoTen, DiaChi = @DiaChi, SDT = @SDT, GioiTinh = @GioiTinh
+                            WHERE MaSo = @MaSo";
+            SqlParameter[] parameters = {
+                new SqlParameter("@HoTen", updatedBenhNhan.HoTen),
+                new SqlParameter("@DiaChi", updatedBenhNhan.DiaChi),
+                new SqlParameter("@SDT", updatedBenhNhan.SDT),
+                new SqlParameter("@GioiTinh", updatedBenhNhan.GioiTinh),
+                new SqlParameter("@MaSo", benhNhanId),
+            };
 
+            int rowAffected = ExecuteNonQuery(query, parameters);
+            if (rowAffected > 0)
+            {
+                return updatedBenhNhan;
+            }
+            return null;
+        }
 
         //*****QuachThanhNha
         private readonly string _connectionString;

@@ -53,7 +53,7 @@ namespace QLPhongMachTu_DOAN_.GUI
                 gridView.Rows[index].Cells[2].Value = khoa.ChuyenKhoa;
                 gridView.Rows[index].Cells[3].Value = bacSi.HoTen;
                 gridView.Rows[index].Cells[4].Value = lk.NgayKham.ToString("dd/MM/yyyy");
-                //gridView.Rows[index].Cells[5].Value = lk.TrieuChung;
+                gridView.Rows[index].Cells[5].Value = lk.TrieuChung;
                 gridView.Rows[index].Cells[6].Value = lk.TrangThai.ToString(); // Hiển thị tên của enum
 
                 // Gán đối tượng vào Tag cho việc sử dụng sau này
@@ -71,7 +71,7 @@ namespace QLPhongMachTu_DOAN_.GUI
         {
             if (gridView.SelectedRows.Count == 0)
             {
-                MessageBox.Show("Vui lòng chọn một dòng để chỉnh sửa.");
+                MessageBox.Show("Vui lòng chọn một dòng để chỉnh sửa.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             var selectedRow = gridView.SelectedRows[0];
@@ -82,7 +82,7 @@ namespace QLPhongMachTu_DOAN_.GUI
             BacSi bs = (BacSi)selectedRow.Cells[3].Tag;
             // Mã số, ngày khám, triệu chứng, trạng thái, BN, BS
 
-            KhamBenh_Edit_LT chinhSuaPnl = new KhamBenh_Edit_LT(lk, benhNhan, bs);
+            KhamBenh_Edit_LT chinhSuaPnl = new KhamBenh_Edit_LT(lk, benhNhan, bs, 2);
             var panelMain = this.FindForm();
             panelMain.Controls.Clear();
             chinhSuaPnl.Dock = DockStyle.Fill;

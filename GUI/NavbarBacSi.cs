@@ -65,23 +65,23 @@ namespace QLPhongMachTu_DOAN_.GUI
         }
 
 
-        private void KhamBenh_BS_Click(object sender, EventArgs e)
-        {
-            ShowControl(new KhamBenh_BS());
-            ChangePanelColor(pnKhamBenh, txtKhamBenh);
-        }
+        //private void KhamBenh_BS_Click(object sender, EventArgs e)
+        //{
+        //    ShowControl(new KhamBenh_BS());
+        //    ChangePanelColor(pnKhamBenh, txtKhamBenh);
+        //}
 
-        private void LichLamViec_BS_Click(object sender, EventArgs e)
-        {
-            ShowControl(new LichLamViec_BS());
-            ChangePanelColor(pnLichLamViec, txtLichLamViec);
-        }
+        //private void LichLamViec_BS_Click(object sender, EventArgs e)
+        //{
+        //    ShowControl(new LichLamViec_BS());
+        //    ChangePanelColor(pnLichLamViec, txtLichLamViec);
+        //}
 
-        private void TaiKhoan_Click(object sender, EventArgs e)
-        {
-            ShowControl(new TaiKhoan());
-            ChangePanelColor(pnTaiKhoan, txtTaiKhoan);
-        }
+        //private void TaiKhoan_Click(object sender, EventArgs e)
+        //{
+        //    ShowControl(new TaiKhoan());
+        //    ChangePanelColor(pnTaiKhoan, txtTaiKhoan);
+        //}
 
         private void DangXuat_Click(object sender, EventArgs e)
         {   
@@ -97,10 +97,10 @@ namespace QLPhongMachTu_DOAN_.GUI
             }
         }
 
-        private void NavbarBacSi_Load(object sender, EventArgs e)
-        {
+        //private void NavbarBacSi_Load(object sender, EventArgs e)
+        //{
 
-        }
+        //}
 
         private void KhamBenh_BS_Click(object sender, EventArgs e)
         {

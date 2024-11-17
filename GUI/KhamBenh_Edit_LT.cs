@@ -11,16 +11,20 @@ namespace QLPhongMachTu_DOAN_.GUI
         private LichKham LichKham = new LichKham();
         private BenhNhan BenhNhan = new BenhNhan();
         private BacSi BacSi = new BacSi();
+        private int controlNumber;
 
         private KhoaBLL khoaBll = new KhoaBLL();
         private BacSiBLL bacSiBll = new BacSiBLL();
+        private BenhNhanBLL benhNhanBll = new BenhNhanBLL();
         private PhanCongBLL phanCongBll = new PhanCongBLL();
         private LichKhamBLL lichKhamBll = new LichKhamBLL();
+        private UserBLL userBll = new UserBLL();
 
-        public KhamBenh_Edit_LT(LichKham lk, BenhNhan bn, BacSi bs)
+        public KhamBenh_Edit_LT(LichKham lk, BenhNhan bn, BacSi bs, int controlNumber)
         {
             InitializeComponent();
             LichKham = lk; BenhNhan = bn; BacSi = bs;
+            this.controlNumber = controlNumber;
             ShowInformation();
         }
 
@@ -31,7 +35,7 @@ namespace QLPhongMachTu_DOAN_.GUI
             textBox2.Text = BenhNhan.DiaChi;
             textBox3.Text = BenhNhan.SDT;
             textBox4.Text = BenhNhan.GioiTinh;
-            //textBox5.Text = LichKham.TrieuChung;
+            textBox5.Text = LichKham.TrieuChung;
 
             // Selected Index Change
             List<PhongKhoa> khoaList = khoaBll.GetAll();
@@ -83,12 +87,10 @@ namespace QLPhongMachTu_DOAN_.GUI
 
         private void button1_Click(object sender, EventArgs e)
         {// Trở về
-            KhamBenh_LT khamBenhLT = new KhamBenh_LT();
-            var mainForm = this.FindForm();
-            mainForm.Controls.Clear();
-            mainForm.Dock = DockStyle.Fill;
-            mainForm.Controls.Add(khamBenhLT);
-            mainForm.Refresh();
+            if (controlNumber == 1)
+                TroVeKhamBenh();
+            else 
+                TroVeKhamBenh_LT();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -100,22 +102,59 @@ namespace QLPhongMachTu_DOAN_.GUI
             LichKham updateLichKham = new LichKham()
             {
                 MaBS = bacSiId,
-                //TrieuChung = textBox5.Text
+                MaBN = BenhNhan.MaSo,
+                TrieuChung = textBox5.Text
             };
 
+            // Check người dùng có sửa thông tin bệnh nhân không.
+            bool ifBenhNhanUpdated = true;
+            if (textBox1.Text != BenhNhan.HoTen || textBox2.Text != BenhNhan.DiaChi 
+                || textBox3.Text != BenhNhan.SDT || textBox4.Text != BenhNhan.GioiTinh)
+            {
+                BenhNhan updateBenhNhan = new BenhNhan()
+                {
+                    HoTen = textBox1.Text,
+                    DiaChi = textBox2.Text,
+                    SDT = textBox3.Text,
+                    GioiTinh = textBox4.Text,
+                    //NgaySinh = textBox6.Text
+                };
+                ifBenhNhanUpdated = benhNhanBll.UpdateBenhNhan(BenhNhan.MaSo, updateBenhNhan);
+            }
+            
             var result = lichKhamBll.SuaLichKham(maLK, updateLichKham, phanCongId);
-            if (result)
+            if (result && ifBenhNhanUpdated)
             {
                 MessageBox.Show("Chỉnh sửa lịch khám thành công!");
-                KhamBenh_LT khamBenhLT = new KhamBenh_LT();
-                var mainForm = this.FindForm();
-                mainForm.Dock = DockStyle.Fill;
-                mainForm.Controls.Add(khamBenhLT);
-                mainForm.Refresh();
+                if (controlNumber == 1)
+                    TroVeKhamBenh();
+                else
+                    TroVeKhamBenh_LT();
             }
 
             else
                 MessageBox.Show("Có lỗi xảy ra!");
+        }
+
+        private void TroVeKhamBenh()
+        {
+            User user = userBll.GetById(BenhNhan.MaUser);
+            KhamBenh khamBenh = new KhamBenh(user, BenhNhan);
+            var mainForm = this.FindForm();
+            mainForm.Controls.Clear();
+            mainForm.Dock = DockStyle.Fill;
+            mainForm.Controls.Add(khamBenh);
+            mainForm.Refresh();
+        }
+
+        private void TroVeKhamBenh_LT()
+        {
+            KhamBenh_LT khamBenhLT = new KhamBenh_LT();
+            var mainForm = this.FindForm();
+            mainForm.Controls.Clear();
+            mainForm.Dock = DockStyle.Fill;
+            mainForm.Controls.Add(khamBenhLT);
+            mainForm.Refresh();
         }
     }
 }

@@ -44,5 +44,13 @@ namespace QLPhongMachTu_DOAN_.BLL
             var user = benhNhanDAL.GetByUserID(userID);
             return user;
         }
+
+        public bool UpdateBenhNhan(long benhNhanId, BenhNhan updatedBenhNhan)
+        {
+            BenhNhan result = benhNhanDAL.UpdateBenhNhan(benhNhanId, updatedBenhNhan);
+            if (result != null)
+                return true;
+            return false;
+        }
     }
 }
