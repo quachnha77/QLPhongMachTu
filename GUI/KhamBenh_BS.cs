@@ -15,7 +15,7 @@ using QLPhongMachTu_DOAN_.Enums;
 
 namespace QLPhongMachTu_DOAN_.GUI
 {
-    public partial class KhamBenh_BS : UserControl
+    public partial class KhamBenh_BS : Form
     {
         private LichKhamBLL lichKhamBLL;
         private BenhNhanBLL benhNhanBLL;

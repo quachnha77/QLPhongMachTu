@@ -8,6 +8,7 @@ namespace QLPhongMachTu_DOAN_.DAL
 {
     public class PhanCongDAL : DatabaseHelper
     {
+        private readonly string _connectionString;
         public LichPhanCong taoLichPhanCong(LichPhanCong lichPhanCong)
         {
             string query = "INSERT INTO LichPhanCongs (MaNV ,MaBS, GhiChu, gioBatDau, gioKetThuc, NgayPhanCong, CaLam) OUTPUT INSERTED.Id VALUES (@MaBS, @NgayPhanCong, @CaLam)";
@@ -61,6 +62,53 @@ namespace QLPhongMachTu_DOAN_.DAL
             }
             return list;
         }
+        public List<LichPhanCong> GetAll()
+        {
+            string query = "SELECT * FROM LichPhanCongs";
+
+            DataTable result = ExecuteQuery(query);
+            var list = new List<LichPhanCong>();
+
+            foreach (DataRow row in result.Rows)
+            {
+                list.Add(new LichPhanCong
+                {
+                    MaLPC = Convert.ToInt64(row[0]),
+                    MaLK = Convert.ToInt64(row[1]),
+                    MaNV = Convert.ToInt64(row[2]),
+                    MaBS = Convert.ToInt64(row[3]), 
+                    NgayThucHien = Convert.ToDateTime(row[4]),
+                    ThoiGian = Convert.ToDateTime(row[5]),
+                    GhiChu = Convert.ToString(row[6]),
+                });
+            }
+            return list;
+        }
+        //public List<LichPhanCong> GetAll()
+        //{
+        //    List<LichPhanCong> ds_lpc = new List<LichPhanCong>();
+        //    string query = "SELECT * FROM LichPhanCongs";
+
+        //    using (SqlConnection connection = new SqlConnection(_connectionString))
+        //    {
+        //        SqlCommand command = new SqlCommand(query, connection);
+        //        connection.Open();
+
+        //        using (SqlDataReader reader = command.ExecuteReader())
+        //        {
+        //            while (reader.Read())
+        //            {
+        //                LichPhanCong lpc = new LichPhanCong
+        //                {
+        //                    MaLPC = Convert.ToInt64(reader["MaLPC"]),
+        //                };
+        //                ds_lpc.Add(lpc);
+        //            }
+        //        }
+        //    }
+
+        //    return ds_lpc;
+        //}
 
         public LichPhanCong GetById(long id)
         {

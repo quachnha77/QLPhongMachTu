@@ -42,7 +42,56 @@ namespace QLPhongMachTu_DOAN_.DAL
 
             return bacSiList;
         }
+        public List<BacSi> GetAll()
+        {
 
+            //List<BacSi> bacSiList = new List<BacSi>();
+            //string sql = "SELECT * FROM BacSis";
+
+            //DataTable result = ExecuteQuery(sql);
+
+            //foreach (DataRow row in result.Rows)
+            //{
+            //    BacSi bs = new BacSi
+            //    {
+            //        MaSo = Convert.ToInt64(row[0]),
+            //        MaKhoa = Convert.ToInt64(row[1]),
+            //        CCCD = Convert.ToInt64(row[2]),
+            //        HoTen = Convert.ToString(row[3]),
+            //        NgaySinh = Convert.ToDateTime(row[4]),
+            //        GioiTinh = Convert.ToString(row[5]),
+            //        DiaChi = Convert.ToString(row[6]),
+            //        SDT = Convert.ToString(row[7]),
+            //        MaUser = Convert.ToInt64(row[8]),
+            //    };
+            //    bacSiList.Add(bs);
+            //}
+
+            //return bacSiList;
+
+
+            string query = "SELECT * FROM BacSis";
+            DataTable result = ExecuteQuery(query);
+            var list = new List<BacSi>();
+
+            foreach (DataRow row in result.Rows)
+            {
+                list.Add(new BacSi
+                {
+                    MaSo = Convert.ToInt64(row[0]),
+                    MaKhoa = Convert.ToInt64(row[1]),
+                    CCCD = Convert.ToInt64(row[2]),
+                    HoTen = Convert.ToString(row[3]),
+                    NgaySinh = Convert.ToDateTime(row[4]),
+                    GioiTinh = Convert.ToString(row[5]),
+                    DiaChi = Convert.ToString(row[6]),
+                    SDT = Convert.ToString(row[7]),
+                    MaUser = Convert.ToInt64(row[8]),
+                });
+            }
+            return list;
+
+        }
         public BacSi GetById(long id)
         {
             BacSi bacSi = null;

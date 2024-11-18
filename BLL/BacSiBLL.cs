@@ -16,7 +16,10 @@ namespace QLPhongMachTu_DOAN_.BLL
         {
             this.dal = new BacSiDAL();
         }
-
+        public List<BacSi> GetAll()
+        {
+            return dal.GetAll();
+        }
         public List<BacSi> GetAllByChuyenKhoa(long Makhoa)
         {
             return dal.GetAllByChuyenKhoa(Makhoa);

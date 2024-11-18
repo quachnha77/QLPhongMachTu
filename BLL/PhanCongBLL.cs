@@ -28,7 +28,10 @@ namespace QLPhongMachTu_DOAN_.BLL
         {
             return dal.GetAllByMaBacSi(MaBS);
         }
-
+        public List<LichPhanCong> GetAll()
+        {
+            return dal.GetAll();
+        }
         public LichPhanCong GetById(long id)
         {
             return dal.GetById(id);
