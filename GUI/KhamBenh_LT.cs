@@ -82,7 +82,7 @@ namespace QLPhongMachTu_DOAN_.GUI
             BacSi bs = (BacSi)selectedRow.Cells[3].Tag;
             // Mã số, ngày khám, triệu chứng, trạng thái, BN, BS
 
-            KhamBenh_Edit_LT chinhSuaPnl = new KhamBenh_Edit_LT(lk, benhNhan, bs, 2);
+            KhamBenh_Edit chinhSuaPnl = new KhamBenh_Edit(lk, benhNhan, bs, 2);
             var panelMain = this.FindForm();
             panelMain.Controls.Clear();
             chinhSuaPnl.Dock = DockStyle.Fill;

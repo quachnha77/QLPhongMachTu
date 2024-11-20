@@ -1,6 +1,6 @@
 ﻿namespace QLPhongMachTu_DOAN_.GUI
 {
-    partial class KhamBenh_Edit_LT
+    partial class KhamBenh_Edit
     {
         /// <summary> 
         /// Required designer variable.
@@ -278,7 +278,7 @@
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
-            // KhamBenh_Edit_LT
+            // KhamBenh_Edit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -287,7 +287,7 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button1);
-            this.Name = "KhamBenh_Edit_LT";
+            this.Name = "KhamBenh_Edit";
             this.Size = new System.Drawing.Size(1435, 892);
             this.groupBox1.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);

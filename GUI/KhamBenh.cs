@@ -1,10 +1,11 @@
-﻿using QLPhongMachTu_DOAN_.BLL;
+using QLPhongMachTu_DOAN_.BLL;
 using QLPhongMachTu_DOAN_.DAL;
 using QLPhongMachTu_DOAN_.DTO;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Windows.Forms;
+using QLPhongMachTu_DOAN_.Enums;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace QLPhongMachTu_DOAN_.GUI
@@ -167,7 +168,7 @@ namespace QLPhongMachTu_DOAN_.GUI
                 dataGridView1.Rows[index].Cells[0].Value = STT;
                 dataGridView1.Rows[index].Cells[1].Value = khoa.ChuyenKhoa;
                 dataGridView1.Rows[index].Cells[2].Value = lk.BacSi.HoTen;
-                dataGridView1.Rows[index].Cells[3].Value = lk.NgayKham;
+                dataGridView1.Rows[index].Cells[3].Value = lk.NgayKham.ToString("dd/MM/yyyy");
                 dataGridView1.Rows[index].Cells[4].Value = lk.TrieuChung;
                 dataGridView1.Rows[index].Cells[5].Value = lk.TrangThai;
 
@@ -214,6 +215,12 @@ namespace QLPhongMachTu_DOAN_.GUI
             {
                 MessageBox.Show("Vui lòng nhập Triệu chứng.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
+            }
+
+            if (string.IsNullOrEmpty(SDTTxt.Text))
+            {
+                MessageBox.Show("Vui lòng nhập điện thoại trước khi đăng ký lịch khám.", "Thông báo",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
             return true;
@@ -266,12 +273,41 @@ namespace QLPhongMachTu_DOAN_.GUI
             PhongKhoa khoa = (PhongKhoa)selectedRow.Cells[2].Tag;
             //BacSi bs = (BacSi)selectedRow.Cells[3].Tag;
 
-            KhamBenh_Edit_LT chinhSuaPnl = new KhamBenh_Edit_LT(lk, benhNhan, lk.BacSi, 1);
+            KhamBenh_Edit chinhSuaPnl = new KhamBenh_Edit(lk, benhNhan, lk.BacSi, 1);
             var panelMain = this.FindForm();
             panelMain.Controls.Clear();
             chinhSuaPnl.Dock = DockStyle.Fill;
             panelMain.Controls.Add(chinhSuaPnl);
             panelMain.Refresh();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {// Tạo phiếu khám
+            // Bệnh nhân có thể xem phiếu khám của những lịch khám đã khám
+            // Trạng thái lịch khám: Chưa khám, Đã khám, Đã hủy
+            if (dataGridView1.Rows.Count <= 0)
+            {
+                MessageBox.Show("Vui lòng chọn một lịch khám", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            
+            DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
+            LichKham lk = (LichKham)selectedRow.Cells[0].Tag;
+            // Chưa khám hoặc đã hủy khám
+            if (lk.TrangThai != ETrangThaiKham.DaKham)
+            {
+                MessageBox.Show("Bạn không thể xem các lịch khám với trạng thái chưa khám.", "Thông báo",
+                    MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                return;
+            }
+            
+            PhieuKham_Edit chinhSuaPnl = new PhieuKham_Edit(lk,benhNhan, user);
+            var panelMain = this.FindForm();
+            panelMain.Controls.Clear();
+            chinhSuaPnl.Dock = DockStyle.Fill;
+            panelMain.Controls.Add(chinhSuaPnl);
+            panelMain.Refresh();
+            
         }
     }    
 }

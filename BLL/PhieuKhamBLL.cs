@@ -33,6 +33,11 @@ namespace QLPhongMachTu_DOAN_.BLL
             return phieuKhamDAL.GetByMaBN(maBN);
         }
 
+        public List<PhieuKham> GetAllByMaBN(long maBN)
+        {
+            return phieuKhamDAL.GetAllByMaBN(maBN);
+        }
+
         public bool CapNhatPhieuKham(PhieuKham phieuKham)
         {
             // Gọi hàm cập nhật từ lớp PhieuKhamDAL và trả về kết quả

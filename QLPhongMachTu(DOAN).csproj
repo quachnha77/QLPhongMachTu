@@ -210,11 +210,11 @@
     <Compile Include="GUI\KhamBenh_BS.Designer.cs">
       <DependentUpon>KhamBenh_BS.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\KhamBenh_Edit_LT.cs">
+    <Compile Include="GUI\KhamBenh_Edit.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="GUI\KhamBenh_Edit_LT.Designer.cs">
-      <DependentUpon>KhamBenh_Edit_LT.cs</DependentUpon>
+    <Compile Include="GUI\KhamBenh_Edit.Designer.cs">
+      <DependentUpon>KhamBenh_Edit.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\KhamBenh_LT.cs">
       <SubType>UserControl</SubType>
@@ -294,6 +294,12 @@
     <Compile Include="GUI\NhanVien.Designer.cs">
       <DependentUpon>NhanVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\PhieuKham_Edit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\PhieuKham_Edit.Designer.cs">
+      <DependentUpon>PhieuKham_Edit.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\SignUp.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -359,8 +365,8 @@
     <EmbeddedResource Include="GUI\KhamBenh_BS.resx">
       <DependentUpon>KhamBenh_BS.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\KhamBenh_Edit_LT.resx">
-      <DependentUpon>KhamBenh_Edit_LT.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\KhamBenh_Edit.resx">
+      <DependentUpon>KhamBenh_Edit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\KhamBenh_LT.resx">
       <DependentUpon>KhamBenh_LT.cs</DependentUpon>
@@ -400,6 +406,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\NhanVien.resx">
       <DependentUpon>NhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\PhieuKham_Edit.resx">
+      <DependentUpon>PhieuKham_Edit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\SignUp.resx">
       <DependentUpon>SignUp.cs</DependentUpon>

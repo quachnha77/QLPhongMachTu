@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace QLPhongMachTu_DOAN_.GUI
 {
-    public partial class KhamBenh_Edit_LT : UserControl
+    public partial class KhamBenh_Edit : UserControl
     {
         private LichKham LichKham = new LichKham();
         private BenhNhan BenhNhan = new BenhNhan();
@@ -20,7 +20,7 @@ namespace QLPhongMachTu_DOAN_.GUI
         private LichKhamBLL lichKhamBll = new LichKhamBLL();
         private UserBLL userBll = new UserBLL();
 
-        public KhamBenh_Edit_LT(LichKham lk, BenhNhan bn, BacSi bs, int controlNumber)
+        public KhamBenh_Edit(LichKham lk, BenhNhan bn, BacSi bs, int controlNumber)
         {
             InitializeComponent();
             LichKham = lk; BenhNhan = bn; BacSi = bs;

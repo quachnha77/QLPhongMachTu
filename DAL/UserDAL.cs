@@ -11,11 +11,13 @@ namespace QLPhongMachTu_DOAN_.DAL
 {
     public class UserDAL : DatabaseHelper
     {
-        public User CheckLogin(string userName, string password)
+        public User CheckLogin(string nameOrEmail, string password)
         {
-            string query = "SELECT * FROM Users WHERE Username = @Username AND Password = @Password";
+            string query = @"SELECT * FROM Users
+                            WHERE Username = @nameOrEmail OR Email = @nameOrEmail
+                            AND Password = @Password";
             SqlParameter[] parameters = {
-                new SqlParameter("@Username", userName),
+                new SqlParameter("@nameOrEmail", nameOrEmail),
                 new SqlParameter("@Password", password)
             };
 

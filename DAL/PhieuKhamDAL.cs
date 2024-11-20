@@ -43,7 +43,7 @@ namespace QLPhongMachTu_DOAN_.DAL
                             TrieuChung = reader["TrieuChung"].ToString(),
                             TieuSuBenhLy = reader["TieuSuBenhLy"].ToString(),
                             ChuanDoan = reader["ChuanDoan"].ToString(),
-                            LoiDanBacSi = reader["LoiDanBacSi"]?.ToString() // Lấy dữ liệu từ cột mới
+                            // LoiDanBacSi = reader["LoiDanBacSi"]?.ToString() // Lấy dữ liệu từ cột mới
                         };
                         phieuKhamList.Add(phieuKham);
                     }
@@ -80,7 +80,7 @@ namespace QLPhongMachTu_DOAN_.DAL
                             TrieuChung = reader["TrieuChung"].ToString(),
                             TieuSuBenhLy = reader["TieuSuBenhLy"].ToString(),
                             ChuanDoan = reader["ChuanDoan"].ToString(),
-                            LoiDanBacSi = reader["LoiDanBacSi"]?.ToString() // Lấy dữ liệu từ cột mới
+                            // LoiDanBacSi = reader["LoiDanBacSi"]?.ToString() // Lấy dữ liệu từ cột mới
                         };
                     }
                 }
@@ -122,6 +122,40 @@ namespace QLPhongMachTu_DOAN_.DAL
             return phieuKham;
         }
 
+        public List<PhieuKham> GetAllByMaBN(long MaBN)
+        {
+            List<PhieuKham> phieuKhamList=new List<PhieuKham>();
+
+            using (SqlConnection connection = new SqlConnection(_connectionString))
+            {
+                string queryString = "SELECT * FROM PhieuKhams WHERE MaBN = @MaBN";
+                SqlCommand command = new SqlCommand(queryString, connection);
+                command.Parameters.AddWithValue("@MaBN", MaBN);
+                connection.Open();
+
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        PhieuKham phieuKham = new PhieuKham();
+                        phieuKham.MaPK = Convert.ToInt64(reader["MaPK"]);
+                        phieuKham.MaLK = Convert.ToInt64(reader["MaLK"]);
+                        phieuKham.MaBN = Convert.ToInt64(reader["MaBN"]);
+                        phieuKham.MaBS = Convert.ToInt64(reader["MaBS"]);
+                        phieuKham.NgayKham = Convert.ToDateTime(reader["NgayKham"]);
+                        phieuKham.SoThuTu = Convert.ToInt32(reader["SoThuTu"]);
+                        phieuKham.TrieuChung = reader["TrieuChung"].ToString();
+                        phieuKham.TieuSuBenhLy = reader["TieuSuBenhLy"].ToString();
+                        phieuKham.ChuanDoan = reader["ChuanDoan"].ToString();
+                        // phieuKham.LoiDanBacSi = reader["LoiDanBacSi"]?.ToString();
+                        
+                        phieuKhamList.Add(phieuKham);
+                    }
+                }
+            }
+
+            return phieuKhamList;
+        }
 
         public bool UpdatePhieuKham(PhieuKham phieuKham)
         {

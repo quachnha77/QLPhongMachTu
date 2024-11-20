@@ -85,7 +85,6 @@ C:\Users\HUYKIEN\Desktop\QLPhongMachTu\obj\Debug\QLPhongMachTu(DOAN).csproj.Asse
 C:\Users\HUYKIEN\Desktop\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.HoaDonKhamBenh.resources
 C:\Users\HUYKIEN\Desktop\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.KhamBenh.resources
 C:\Users\HUYKIEN\Desktop\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.KhamBenh_BS.resources
-C:\Users\HUYKIEN\Desktop\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.KhamBenh_Edit_LT.resources
 C:\Users\HUYKIEN\Desktop\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.KhamBenh_LT.resources
 C:\Users\HUYKIEN\Desktop\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.KhoThuocGUI.resources
 C:\Users\HUYKIEN\Desktop\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.LichLamViec_BS.resources
@@ -164,3 +163,5 @@ C:\Users\HUYKIEN\Desktop\QLPhongMachTu\bin\Debug\System.Memory.xml
 C:\Users\HUYKIEN\Desktop\QLPhongMachTu\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\HUYKIEN\Desktop\QLPhongMachTu\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\HUYKIEN\Desktop\QLPhongMachTu\obj\Debug\QLPhongM.B43FB2E6.Up2Date
+C:\Users\HUYKIEN\Desktop\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.KhamBenh_Edit.resources
+C:\Users\HUYKIEN\Desktop\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.PhieuKham_Edit.resources

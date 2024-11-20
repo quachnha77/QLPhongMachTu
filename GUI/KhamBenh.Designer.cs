@@ -22,8 +22,8 @@
 
         #region Component Designer generated code
 
-        /// <summary> 
-        /// Required method for Designer support - do not modify 
+        /// <summary>
+        /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
@@ -94,6 +94,7 @@
             this.button3.TabIndex = 3;
             this.button3.Text = "Phiếu Khám";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // dangKyBtn
             // 
@@ -117,7 +118,7 @@
             this.label2.Location = new System.Drawing.Point(15, 296);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(65, 16);
+            this.label2.Size = new System.Drawing.Size(69, 17);
             this.label2.TabIndex = 3;
             this.label2.Text = "Ngày hẹn";
             // 
@@ -161,7 +162,7 @@
             this.label6.Location = new System.Drawing.Point(15, 230);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(46, 16);
+            this.label6.Size = new System.Drawing.Size(46, 17);
             this.label6.TabIndex = 11;
             this.label6.Text = "Bác sĩ";
             // 
@@ -189,7 +190,7 @@
             this.label5.Location = new System.Drawing.Point(13, 391);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(77, 16);
+            this.label5.Size = new System.Drawing.Size(84, 17);
             this.label5.TabIndex = 9;
             this.label5.Text = "Triệu chứng";
             // 
@@ -199,7 +200,7 @@
             this.label4.Location = new System.Drawing.Point(15, 164);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(85, 16);
+            this.label4.Size = new System.Drawing.Size(91, 17);
             this.label4.TabIndex = 8;
             this.label4.Text = "Chuyên khoa";
             // 
@@ -235,7 +236,7 @@
             this.label3.Location = new System.Drawing.Point(15, 98);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(85, 16);
+            this.label3.Size = new System.Drawing.Size(91, 17);
             this.label3.TabIndex = 4;
             this.label3.Text = "Số điện thoại";
             // 
@@ -245,7 +246,7 @@
             this.label1.Location = new System.Drawing.Point(15, 32);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(130, 16);
+            this.label1.Size = new System.Drawing.Size(142, 17);
             this.label1.TabIndex = 2;
             this.label1.Text = "Họ và tên Bệnh nhân";
             // 
@@ -302,13 +303,7 @@
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column6,
-            this.Column3,
-            this.Column4,
-            this.Column5});
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { this.Column1, this.Column2, this.Column6, this.Column3, this.Column4, this.Column5 });
             this.dataGridView1.Location = new System.Drawing.Point(31, 26);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
@@ -334,7 +329,7 @@
             this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
-            this.Column2.Width = 200;
+            this.Column2.Width = 125;
             // 
             // Column6
             // 
@@ -350,7 +345,7 @@
             this.Column3.MinimumWidth = 6;
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
-            this.Column3.Width = 150;
+            this.Column3.Width = 125;
             // 
             // Column4
             // 
@@ -358,7 +353,7 @@
             this.Column4.MinimumWidth = 6;
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
-            this.Column4.Width = 220;
+            this.Column4.Width = 200;
             // 
             // Column5
             // 
@@ -366,7 +361,7 @@
             this.Column5.MinimumWidth = 6;
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
-            this.Column5.Width = 140;
+            this.Column5.Width = 150;
             // 
             // groupBox3
             // 
@@ -433,7 +428,6 @@
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
-
         }
 
         #endregion
