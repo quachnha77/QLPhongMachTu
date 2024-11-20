@@ -9,28 +9,37 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace QLPhongMachTu_DOAN_.GUI
 {
     public partial class LichLamViec_QL : Form // doi lai thanh usercontrol
     {
         private List<LichPhanCong> ds_lpc;
-        private PhanCongBLL phanCongBLL; 
+
+        private PhanCongBLL phanCongBLL;
         private BacSiBLL bacSiBLL;
+        private PhanQuyenBLL phanquyenBLL;
+        private KhoaBLL khoaBLL;
 
         public LichLamViec_QL()
         {
             InitializeComponent();
             phanCongBLL = new PhanCongBLL();
             bacSiBLL = new BacSiBLL();
-            LoadData();
+            phanquyenBLL = new PhanQuyenBLL();
+            khoaBLL = new KhoaBLL();
 
-            // Combobox chuc vu
-            comboBox1.Items.Add("Bác sĩ");
-            comboBox1.Items.Add("Dược sĩ");
-            comboBox1.Items.Add("Lễ tân");
-            comboBox1.Items.Add("Y Tá");
-            comboBox1.SelectedIndex = 0;
+            LoadData();
+            LoadComboBoxChucVu();
+            LoadComboBoxChuyenKhoa();
+            LoadComboBoxHoTen();
+
+            comboBox4.Items.Add("Sáng");
+            comboBox4.Items.Add("Chiều");
+            comboBox4.Items.Add("Tối");
+            comboBox4.Items.Add("Đêm");
+            comboBox4.SelectedIndex = 0;
         }
         public void LoadData()
         {
@@ -58,9 +67,29 @@ namespace QLPhongMachTu_DOAN_.GUI
             }
         }
 
-        public void LoadComboBox()
+        public void LoadComboBoxChucVu()
         {
-
+            foreach (var pq in phanquyenBLL.GetAllTenQuyen())
+            {
+                comboBox1.Items.Add(pq.TenQuyen);
+            }
+            comboBox1.SelectedIndex = 0;
+        }
+        public void LoadComboBoxChuyenKhoa()
+        {
+            foreach (var ck in khoaBLL.GetAll())
+            {
+                comboBox2.Items.Add(ck.ChuyenKhoa);
+            }
+            comboBox2.SelectedIndex = 0;
+        }
+        public void LoadComboBoxHoTen()
+        {
+            foreach (var bs in bacSiBLL.GetAll())
+            {
+                comboBox3.Items.Add(bs.HoTen);
+            }
+            comboBox3.SelectedIndex = 0;
         }
 
         private void groupBox2_Enter(object sender, EventArgs e)
@@ -70,12 +99,27 @@ namespace QLPhongMachTu_DOAN_.GUI
 
         private void button3_Click(object sender, EventArgs e) // them button
         {
-
+            
         }
 
         private void button1_Click(object sender, EventArgs e) // chinh sua button
         {
 
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e) // click vao 1 cell se click vao ca dong
+        {
+            if (dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null && e.RowIndex >= 0)
+            {
+                dataGridView1.CurrentRow.Selected = true;
+                comboBox3.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString(); // ho ten
+                textBox3.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString(); // ngay sinh
+                dateTimePicker1.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString(); // ngay thuc hien
+                comboBox4.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString(); // ca lam
+                comboBox2.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString(); // chuyen khoa
+                textBox1.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString(); // ghi chu
+            }
+            
         }
     }
 }

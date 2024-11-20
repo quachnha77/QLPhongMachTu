@@ -1,4 +1,5 @@
 ﻿using QLPhongMachTu_DOAN_.DTO;
+using QLPhongMachTu_DOAN_.GUI;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -11,6 +12,7 @@ namespace QLPhongMachTu_DOAN_.DAL
 {
     public class BacSiDAL : DatabaseHelper
     {
+        private readonly string _connectionString;
         public BacSiDAL() : base() { }
 
         public List<BacSi> GetAllByChuyenKhoa(long maKhoa)
@@ -44,32 +46,6 @@ namespace QLPhongMachTu_DOAN_.DAL
         }
         public List<BacSi> GetAll()
         {
-
-            //List<BacSi> bacSiList = new List<BacSi>();
-            //string sql = "SELECT * FROM BacSis";
-
-            //DataTable result = ExecuteQuery(sql);
-
-            //foreach (DataRow row in result.Rows)
-            //{
-            //    BacSi bs = new BacSi
-            //    {
-            //        MaSo = Convert.ToInt64(row[0]),
-            //        MaKhoa = Convert.ToInt64(row[1]),
-            //        CCCD = Convert.ToInt64(row[2]),
-            //        HoTen = Convert.ToString(row[3]),
-            //        NgaySinh = Convert.ToDateTime(row[4]),
-            //        GioiTinh = Convert.ToString(row[5]),
-            //        DiaChi = Convert.ToString(row[6]),
-            //        SDT = Convert.ToString(row[7]),
-            //        MaUser = Convert.ToInt64(row[8]),
-            //    };
-            //    bacSiList.Add(bs);
-            //}
-
-            //return bacSiList;
-
-
             string query = "SELECT * FROM BacSis";
             DataTable result = ExecuteQuery(query);
             var list = new List<BacSi>();
@@ -112,5 +88,27 @@ namespace QLPhongMachTu_DOAN_.DAL
 
             return bacSi;
         }
+        public bool ThemBacSi(BacSi bs)
+        {
+            string query = "INSERT INTO BacSis (MaBS, MaKhoa, CCCD, HoTen, NgaySinh, GioiTinh, DiaChi, SDT, MaUser) VALUES" +
+                " (@MaBS, @MaKhoa, @CCCD, @HoTen, @NgaySinh, @GioiTinh, @DiaChi, @SDT, @MaUser)";
+            using (SqlConnection connection = new SqlConnection(_connectionString))
+            {
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@MaKhoa", bs.MaKhoa);
+                command.Parameters.AddWithValue("@CCCD", bs.CCCD);
+                command.Parameters.AddWithValue("@HoTen", bs.HoTen);
+                command.Parameters.AddWithValue("@NgaySinh", bs.NgaySinh);
+                command.Parameters.AddWithValue("@GioiTinh", bs.GioiTinh);
+                command.Parameters.AddWithValue("@DiaChi", bs.DiaChi);
+                command.Parameters.AddWithValue("@SDT", bs.SDT);
+                command.Parameters.AddWithValue("@MaUser", bs.MaUser);
+
+                connection.Open();
+                int result = command.ExecuteNonQuery();
+                return result > 0;
+            }
+        }
+
     }
 }

@@ -29,5 +29,9 @@ namespace QLPhongMachTu_DOAN_.BLL
         {
             return dal.GetById(id);
         }
+        public bool ThemBacSi(BacSi bs)
+        {
+            return dal.ThemBacSi(bs);
+        }
     }
 }

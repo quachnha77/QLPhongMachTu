@@ -84,32 +84,6 @@ namespace QLPhongMachTu_DOAN_.DAL
             }
             return list;
         }
-        //public List<LichPhanCong> GetAll()
-        //{
-        //    List<LichPhanCong> ds_lpc = new List<LichPhanCong>();
-        //    string query = "SELECT * FROM LichPhanCongs";
-
-        //    using (SqlConnection connection = new SqlConnection(_connectionString))
-        //    {
-        //        SqlCommand command = new SqlCommand(query, connection);
-        //        connection.Open();
-
-        //        using (SqlDataReader reader = command.ExecuteReader())
-        //        {
-        //            while (reader.Read())
-        //            {
-        //                LichPhanCong lpc = new LichPhanCong
-        //                {
-        //                    MaLPC = Convert.ToInt64(reader["MaLPC"]),
-        //                };
-        //                ds_lpc.Add(lpc);
-        //            }
-        //        }
-        //    }
-
-        //    return ds_lpc;
-        //}
-
         public LichPhanCong GetById(long id)
         {
             string query = @"
