@@ -30,6 +30,34 @@ namespace QLPhongMachTu_DOAN_.DAL
                 return lichPhanCong;
             }
         }
+        public void CreateLichPhanCong(LichPhanCong lpc)
+        {
+            string query = "INSERT INTO LichPhanCongs (MaLK, MaNV, MaBS, NgayThucHien, ThoiGian, GhiChu) VALUES (@MaLK, @MaNV, @MaBS, @NgayThucHien, @ThoiGian, @GhiChu)";
+            SqlParameter[] parameters = {
+                new SqlParameter("@MaLK", lpc.MaLK),
+                new SqlParameter("@MaNV", lpc.MaNV),
+                new SqlParameter("@MaBS", lpc.MaBS),
+                new SqlParameter("@NgayThucHien", lpc.NgayThucHien),
+                new SqlParameter("@ThoiGian", lpc.ThoiGian),
+                new SqlParameter("@GhiChu", lpc.GhiChu),
+            };
+            ExecuteNonQuery(query, parameters);
+        }
+
+        public void EditLichPhanCong(LichPhanCong lpc)
+        {
+            string query = "UPDATE LichPhanCongs SET MaNV = @MaNV, MaBS = @MaBS, NgayThucHien = @NgayThucHien, ThoiGian = @ThoiGian, GhiChu = @GhiChu WHERE MaLPC = @MaLPC";
+            SqlParameter[] parameters = {
+                new SqlParameter("@MaNV", lpc.MaNV),
+                new SqlParameter("@MaBS", lpc.MaBS),
+                new SqlParameter("@NgayThucHien", lpc.NgayThucHien),
+                new SqlParameter("@ThoiGian", lpc.ThoiGian),
+                new SqlParameter("@GhiChu", lpc.GhiChu),
+                new SqlParameter("@MaLPC", lpc.MaLPC),
+            };
+
+            ExecuteNonQuery(query, parameters);
+        }
 
         public List<LichPhanCong> GetAllByMaBacSi(long maBacSi)
         {

@@ -97,14 +97,33 @@ namespace QLPhongMachTu_DOAN_.GUI
 
         }
 
-        private void button3_Click(object sender, EventArgs e) // them button
+        private void button3_Click(object sender, EventArgs e) // them button (tam hoat dong) (for now)
         {
+            LichPhanCong lpc = new LichPhanCong();
+            lpc.MaLK = 1;
+            lpc.MaNV = 1;
+            lpc.MaBS = 1;
             
+            lpc.NgayThucHien = DateTime.Parse(dateTimePicker1.Text);
+            lpc.ThoiGian = DateTime.Parse("00:00");
+            lpc.GhiChu = textBox1.Text;
+            phanCongBLL.CreateLichPhanCong(lpc);
+            MessageBox.Show("OK", "OK", MessageBoxButtons.OK);
+            LoadData();
         }
-
-        private void button1_Click(object sender, EventArgs e) // chinh sua button
+        private void button1_Click(object sender, EventArgs e) // chinh sua button (ko hoat dong) (chua biet cach tim MaLPC)
         {
+            LichPhanCong lpc = new LichPhanCong();
+            lpc.MaLK = 2;
+            lpc.MaNV = 2;
+            lpc.MaBS = 2;
 
+            lpc.NgayThucHien = DateTime.Parse(dateTimePicker1.Text);
+            lpc.ThoiGian = DateTime.Parse("06:00");
+            lpc.GhiChu = textBox1.Text;
+            phanCongBLL.EditLichPhanCong(lpc);
+            MessageBox.Show("Edit OK", "OK Edit", MessageBoxButtons.OK);
+            LoadData();
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e) // click vao 1 cell se click vao ca dong
@@ -123,3 +142,5 @@ namespace QLPhongMachTu_DOAN_.GUI
         }
     }
 }
+
+// TODO: redo the UI

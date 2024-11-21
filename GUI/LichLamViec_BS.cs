@@ -63,12 +63,22 @@ namespace QLPhongMachTu_DOAN_.GUI
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
-            LoadDataSelf();
+            //LoadDataSelf();
         }
 
         private void radioButton3_CheckedChanged(object sender, EventArgs e)
         {
             LoadDataAll();
+        }
+
+        private void button1_Click(object sender, EventArgs e) // Yeu Cau Huy Lich
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e) // Cham Cong
+        {
+
         }
     }
 }

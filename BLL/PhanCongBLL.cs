@@ -23,7 +23,14 @@ namespace QLPhongMachTu_DOAN_.BLL
             //pc.workingDays = Day.T2 | Day.T3 | Day.T4 | Day.T5;
             return dal.taoLichPhanCong(pc);
         }
-
+        public void CreateLichPhanCong(LichPhanCong lpc)
+        {
+            dal.CreateLichPhanCong(lpc);
+        }
+        public void EditLichPhanCong(LichPhanCong lpc)
+        {
+            dal.EditLichPhanCong(lpc);
+        }
         public List<LichPhanCong> GetAllPhanCongByMaBacSi(long MaBS)
         {
             return dal.GetAllByMaBacSi(MaBS);
