@@ -148,6 +148,7 @@
     <Compile Include="BLL\BenhNhanBLL.cs" />
     <Compile Include="BLL\ChiTietToaThuocBLL.cs" />
     <Compile Include="BLL\DichVuBLL.cs" />
+    <Compile Include="BLL\HoaDonKhamBenhBLL.cs" />
     <Compile Include="BLL\KhoaBLL.cs" />
     <Compile Include="BLL\KhoThuocBLL.cs" />
     <Compile Include="BLL\LichKhamBLL.cs" />
@@ -163,6 +164,7 @@
     <Compile Include="DAL\ChiTietToaThuocDAL.cs" />
     <Compile Include="DAL\DatabaseHelper.cs" />
     <Compile Include="DAL\DichVuDAL.cs" />
+    <Compile Include="DAL\HoaDonKhamBenhDAL.cs" />
     <Compile Include="DAL\KhoaDAL.cs" />
     <Compile Include="DAL\KhoThuocDAL.cs" />
     <Compile Include="DAL\LichKhamDAL.cs" />
@@ -192,6 +194,7 @@
     <Compile Include="DTO\User.cs" />
     <Compile Include="Enums\ETrangThaiKham.cs" />
     <Compile Include="Enums\EQuyen.cs" />
+    <Compile Include="Enums\ETrangThaiHoaDon.cs" />
     <Compile Include="GUI\HoaDonKhamBenh.cs">
       <SubType>Form</SubType>
     </Compile>

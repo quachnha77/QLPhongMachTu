@@ -79,7 +79,7 @@ namespace QLPhongMachTu_DOAN_
         private void ThanhToan_Click(object sender, EventArgs e)
         {
             panelMain.Controls.Clear();
-            ThanhToan thanhToanControl = new ThanhToan();
+            ThanhToan thanhToanControl = new ThanhToan(userLogin, benhNhanLogin);
             thanhToanControl.Dock = DockStyle.Fill;
             panelMain.Controls.Add(thanhToanControl);
             panelMain.Refresh();

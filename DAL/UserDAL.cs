@@ -14,7 +14,7 @@ namespace QLPhongMachTu_DOAN_.DAL
         public User CheckLogin(string nameOrEmail, string password)
         {
             string query = @"SELECT * FROM Users
-                            WHERE Username = @nameOrEmail OR Email = @nameOrEmail
+                            WHERE (Username = @nameOrEmail OR Email = @nameOrEmail)
                             AND Password = @Password";
             SqlParameter[] parameters = {
                 new SqlParameter("@nameOrEmail", nameOrEmail),

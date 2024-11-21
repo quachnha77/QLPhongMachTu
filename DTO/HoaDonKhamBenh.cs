@@ -5,6 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using QLPhongMachTu_DOAN_.Enums;
 
 namespace QLPhongMachTu_DOAN_.DTO
 {
@@ -21,6 +22,8 @@ namespace QLPhongMachTu_DOAN_.DTO
 
         [ForeignKey("PhieuKham")]
         public long MaPK { get; set; }
+        
+        public ETrangThaiHoaDon TrangThai { get; set; }
 
         public double TongTien { get; set; }
 
