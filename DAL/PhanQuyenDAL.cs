@@ -27,5 +27,24 @@ namespace QLPhongMachTu_DOAN_.DAL
             }
             return list;
         }
+        public List<PhanQuyen> GetAll()
+        {
+            string query = "SELECT * FROM PhanQuyens";
+
+            DataTable result = ExecuteQuery(query);
+            var list = new List<PhanQuyen>();
+
+            foreach (DataRow row in result.Rows)
+            {
+                list.Add(new PhanQuyen
+                {
+                    MaPQ = Convert.ToInt64(row[0]),
+                    TenQuyen = Convert.ToString(row[1]),
+                    ChucNang = Convert.ToString(row[2]),
+                    MoTa = Convert.ToString(row[3]),
+                });
+            }
+            return list;
+        }
     }
 }

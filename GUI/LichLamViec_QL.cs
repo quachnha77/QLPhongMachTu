@@ -18,10 +18,13 @@ namespace QLPhongMachTu_DOAN_.GUI
         private List<LichPhanCong> ds_lpc;
 
         private PhanCongBLL phanCongBLL;
-        private BacSiBLL bacSiBLL;
         private PhanQuyenBLL phanquyenBLL;
+        private PhongKhoaBLL phongKhoaBLL;
+        private BacSiBLL bacSiBLL;
         private KhoaBLL khoaBLL;
+        private UserBLL userBLL;
 
+        private long selectedMaLPC;
         public LichLamViec_QL()
         {
             InitializeComponent();
@@ -29,6 +32,8 @@ namespace QLPhongMachTu_DOAN_.GUI
             bacSiBLL = new BacSiBLL();
             phanquyenBLL = new PhanQuyenBLL();
             khoaBLL = new KhoaBLL();
+            userBLL = new UserBLL();
+            phongKhoaBLL = new PhongKhoaBLL();
 
             LoadData();
             LoadComboBoxChucVu();
@@ -46,22 +51,28 @@ namespace QLPhongMachTu_DOAN_.GUI
             dataGridView1.Rows.Clear();
             List<LichPhanCong> ds_lpc = phanCongBLL.GetAll();
             List<BacSi> ds_bs = bacSiBLL.GetAll();
+            List<User> ds_user = userBLL.GetAll();
+            List<PhanQuyen> ds_pq = phanquyenBLL.GetAll();
+            List<PhongKhoa> ds_pk = phongKhoaBLL.GetAll();
             int index = 1;
 
             foreach (var lpc in ds_lpc)
             {
-                var bs = ds_bs.FirstOrDefault(_bs => _bs.MaSo == lpc.MaBS);
-                if (bs != null)
+                var bs = ds_bs.FirstOrDefault(_bs => _bs.MaSo == lpc.MaBS); // bac si
+                var us = ds_user.FirstOrDefault(_us => _us.MaUser == bs.MaSo); // user
+                var pq = ds_pq.FirstOrDefault(_pq => _pq.MaPQ == bs.MaUser); // phan quyen
+                var pk = ds_pk.FirstOrDefault(_pk => _pk.MaPK == bs.MaKhoa); // phong khoa
+                if (bs != null && us != null)
                 {
                     int rowIndex = dataGridView1.Rows.Add();
-                    dataGridView1.Rows[rowIndex].Cells[0].Value = index;
+                    dataGridView1.Rows[rowIndex].Cells[0].Value = lpc.MaLPC;
                     dataGridView1.Rows[rowIndex].Cells[1].Value = bs.HoTen;
-                    dataGridView1.Rows[rowIndex].Cells[2].Value = bs.NgaySinh;
-                    dataGridView1.Rows[rowIndex].Cells[3].Value = lpc.NgayThucHien;
-                    dataGridView1.Rows[rowIndex].Cells[4].Value = lpc.ThoiGian; // CaLam
-                    dataGridView1.Rows[rowIndex].Cells[5].Value = bs.MaKhoa;    // ChuyenKhoa
+                    dataGridView1.Rows[rowIndex].Cells[2].Value = pq.TenQuyen;  // Chuc vu
+                    dataGridView1.Rows[rowIndex].Cells[3].Value = lpc.ThoiGian; // CaLam
+                    dataGridView1.Rows[rowIndex].Cells[4].Value = pk.ChuyenKhoa;    // ChuyenKhoa, doi thanh TenPhongBan neu muon
+                    dataGridView1.Rows[rowIndex].Cells[5].Value = lpc.NgayThucHien;
                     dataGridView1.Rows[rowIndex].Cells[6].Value = lpc.GhiChu;
-                    dataGridView1.Rows[rowIndex].Cells[7].Value = "Active";     // TrangThai
+                    dataGridView1.Rows[rowIndex].Cells[7].Value = "Working";     // TrangThai
                     index++;
                 }
             }
@@ -97,12 +108,14 @@ namespace QLPhongMachTu_DOAN_.GUI
 
         }
 
-        private void button3_Click(object sender, EventArgs e) // them button (tam hoat dong) (for now)
+        private void button3_Click(object sender, EventArgs e) // them button 
         {
             LichPhanCong lpc = new LichPhanCong();
-            lpc.MaLK = 1;
-            lpc.MaNV = 1;
-            lpc.MaBS = 1;
+            lpc.MaLK = 1; // ko biet lichkham o dau ra ca...
+            lpc.MaNV = 1; // what nhan vien
+
+            var bs = bacSiBLL.GetAll().FirstOrDefault(_bs => _bs.HoTen == comboBox3.Text);
+            lpc.MaBS = bs.MaSo;
             
             lpc.NgayThucHien = DateTime.Parse(dateTimePicker1.Text);
             lpc.ThoiGian = DateTime.Parse("00:00");
@@ -111,12 +124,15 @@ namespace QLPhongMachTu_DOAN_.GUI
             MessageBox.Show("OK", "OK", MessageBoxButtons.OK);
             LoadData();
         }
-        private void button1_Click(object sender, EventArgs e) // chinh sua button (ko hoat dong) (chua biet cach tim MaLPC)
+        private void button1_Click(object sender, EventArgs e) // chi chinh sua dc ghi chu/ngay thuc hien/ca lam
         {
             LichPhanCong lpc = new LichPhanCong();
             lpc.MaLK = 2;
             lpc.MaNV = 2;
-            lpc.MaBS = 2;
+            
+            var bs = bacSiBLL.GetAll().FirstOrDefault(_bs => _bs.HoTen == comboBox3.Text);
+            lpc.MaBS = bs.MaSo;
+            lpc.MaLPC = selectedMaLPC;
 
             lpc.NgayThucHien = DateTime.Parse(dateTimePicker1.Text);
             lpc.ThoiGian = DateTime.Parse("06:00");
@@ -132,13 +148,15 @@ namespace QLPhongMachTu_DOAN_.GUI
             {
                 dataGridView1.CurrentRow.Selected = true;
                 comboBox3.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString(); // ho ten
-                textBox3.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString(); // ngay sinh
-                dateTimePicker1.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString(); // ngay thuc hien
-                comboBox4.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString(); // ca lam
-                comboBox2.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString(); // chuyen khoa
+                comboBox1.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString(); // chuc vu
+                comboBox4.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString(); // ca lam
+                comboBox2.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString(); // chuyen khoa
+                dateTimePicker1.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString(); // ngay thuc hien
                 textBox1.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString(); // ghi chu
+
+                // Lay gia tri MaLPC
+                selectedMaLPC = Convert.ToInt64(dataGridView1.Rows[e.RowIndex].Cells[0].Value);
             }
-            
         }
     }
 }

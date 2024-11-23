@@ -19,5 +19,9 @@ namespace QLPhongMachTu_DOAN_.BLL
         {
             return this.dal.GetAllTenQuyen();
         }
+        public List<PhanQuyen> GetAll()
+        {
+            return dal.GetAll();
+        }
     }
 }

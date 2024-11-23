@@ -88,6 +88,26 @@ namespace QLPhongMachTu_DOAN_.DAL
 
             return bacSi;
         }
+        public BacSi GetByName(string name)
+        {
+            BacSi bacSi = null;
+            string query = "SELECT * FROM BacSis WHERE HoTen = @HoTen";
+            SqlParameter[] parameters = {
+                new SqlParameter("@HoTen", name)
+            };
+            DataTable result = ExecuteQuery(query, parameters);
+            if (result.Rows.Count > 0)
+            {
+                DataRow row = result.Rows[0];
+                bacSi = new BacSi
+                {
+                    MaSo = Convert.ToInt64(row["MaSo"]),
+                    HoTen = row["HoTen"].ToString(),
+                    MaKhoa = Convert.ToInt64(row["MaKhoa"]),
+                };
+            }
+            return bacSi;
+        }
         public bool ThemBacSi(BacSi bs)
         {
             string query = "INSERT INTO BacSis (MaBS, MaKhoa, CCCD, HoTen, NgaySinh, GioiTinh, DiaChi, SDT, MaUser) VALUES" +
