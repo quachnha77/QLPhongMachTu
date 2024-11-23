@@ -14,7 +14,9 @@ namespace QLPhongMachTu_DOAN_.GUI
 {
     public partial class ChiTietToaThuocGUI : Form
     {
+        private KhoThuocBLL khoThuocBLL = new KhoThuocBLL();
         private List<ChiTietToaThuoc> dsChiTietToaThuoc;
+
         public ChiTietToaThuocGUI()
         {
             InitializeComponent();
@@ -51,7 +53,7 @@ namespace QLPhongMachTu_DOAN_.GUI
 
             dgvChiTietToaThuoc.Rows[rowIndex].Cells["STT"].Value = index.ToString();
             dgvChiTietToaThuoc.Rows[rowIndex].Cells["MaTT"].Value = chiTietToaThuoc.MaTT.ToString();
-            dgvChiTietToaThuoc.Rows[rowIndex].Cells["TenThuoc"].Value = chiTietToaThuoc.Thuoc.TenThuoc;
+            dgvChiTietToaThuoc.Rows[rowIndex].Cells["TenThuoc"].Value = khoThuocBLL.GetByMaThuoc(chiTietToaThuoc.MaThuoc).TenThuoc;
             dgvChiTietToaThuoc.Rows[rowIndex].Cells["SoLuong"].Value = chiTietToaThuoc.SoLuong.ToString();
             dgvChiTietToaThuoc.Rows[rowIndex].Cells["CachDung"].Value = chiTietToaThuoc.CachDung;
 

@@ -32,14 +32,14 @@
             this.btnDSDonThuoc = new System.Windows.Forms.Button();
             this.btnLamMoi = new System.Windows.Forms.Button();
             this.dgvToaThuoc = new System.Windows.Forms.DataGridView();
+            this.btnChiTiet = new System.Windows.Forms.Button();
             this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaTT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BacSi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NgayKeToa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NgayKham = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ThoiGianDungThuoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LoiDan = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnChiTiet = new System.Windows.Forms.Button();
+            this.LoiDanBacSi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TongTienThuoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvToaThuoc)).BeginInit();
             this.SuspendLayout();
@@ -90,6 +90,8 @@
             // dgvToaThuoc
             // 
             this.dgvToaThuoc.AllowDrop = true;
+            this.dgvToaThuoc.AllowUserToAddRows = false;
+            this.dgvToaThuoc.AllowUserToDeleteRows = false;
             this.dgvToaThuoc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvToaThuoc.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.STT,
@@ -97,18 +99,35 @@
             this.BacSi,
             this.NgayKeToa,
             this.NgayKham,
-            this.ThoiGianDungThuoc,
-            this.LoiDan});
+            this.LoiDanBacSi,
+            this.TongTienThuoc});
             this.dgvToaThuoc.Location = new System.Drawing.Point(18, 30);
             this.dgvToaThuoc.Margin = new System.Windows.Forms.Padding(2);
             this.dgvToaThuoc.Name = "dgvToaThuoc";
+            this.dgvToaThuoc.ReadOnly = true;
             this.dgvToaThuoc.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.dgvToaThuoc.RowHeadersVisible = false;
             this.dgvToaThuoc.RowHeadersWidth = 51;
             this.dgvToaThuoc.RowTemplate.Height = 24;
+            this.dgvToaThuoc.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvToaThuoc.Size = new System.Drawing.Size(1007, 596);
             this.dgvToaThuoc.TabIndex = 0;
             this.dgvToaThuoc.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvToaThuoc_CellClick);
+            // 
+            // btnChiTiet
+            // 
+            this.btnChiTiet.BackColor = System.Drawing.Color.CadetBlue;
+            this.btnChiTiet.FlatAppearance.BorderSize = 0;
+            this.btnChiTiet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnChiTiet.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnChiTiet.ForeColor = System.Drawing.Color.White;
+            this.btnChiTiet.Location = new System.Drawing.Point(233, 642);
+            this.btnChiTiet.Name = "btnChiTiet";
+            this.btnChiTiet.Size = new System.Drawing.Size(109, 30);
+            this.btnChiTiet.TabIndex = 3;
+            this.btnChiTiet.Text = "Chi tiết";
+            this.btnChiTiet.UseVisualStyleBackColor = false;
+            this.btnChiTiet.Click += new System.EventHandler(this.btnChiTiet_Click);
             // 
             // STT
             // 
@@ -143,32 +162,17 @@
             this.NgayKham.Name = "NgayKham";
             this.NgayKham.Width = 140;
             // 
-            // ThoiGianDungThuoc
+            // LoiDanBacSi
             // 
-            this.ThoiGianDungThuoc.HeaderText = "Thời gian dùng thuốc";
-            this.ThoiGianDungThuoc.Name = "ThoiGianDungThuoc";
-            this.ThoiGianDungThuoc.Width = 150;
+            this.LoiDanBacSi.HeaderText = "Lời dặn của bác sĩ";
+            this.LoiDanBacSi.Name = "LoiDanBacSi";
+            this.LoiDanBacSi.Width = 218;
             // 
-            // LoiDan
+            // TongTienThuoc
             // 
-            this.LoiDan.HeaderText = "Lời dặn";
-            this.LoiDan.Name = "LoiDan";
-            this.LoiDan.Width = 218;
-            // 
-            // btnChiTiet
-            // 
-            this.btnChiTiet.BackColor = System.Drawing.Color.CadetBlue;
-            this.btnChiTiet.FlatAppearance.BorderSize = 0;
-            this.btnChiTiet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnChiTiet.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnChiTiet.ForeColor = System.Drawing.Color.White;
-            this.btnChiTiet.Location = new System.Drawing.Point(233, 642);
-            this.btnChiTiet.Name = "btnChiTiet";
-            this.btnChiTiet.Size = new System.Drawing.Size(109, 30);
-            this.btnChiTiet.TabIndex = 3;
-            this.btnChiTiet.Text = "Chi tiết";
-            this.btnChiTiet.UseVisualStyleBackColor = false;
-            this.btnChiTiet.Click += new System.EventHandler(this.btnChiTiet_Click);
+            this.TongTienThuoc.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.TongTienThuoc.HeaderText = "Tổng tiền thuốc";
+            this.TongTienThuoc.Name = "TongTienThuoc";
             // 
             // ToaThuocDonThuoc
             // 
@@ -196,7 +200,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn BacSi;
         private System.Windows.Forms.DataGridViewTextBoxColumn NgayKeToa;
         private System.Windows.Forms.DataGridViewTextBoxColumn NgayKham;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ThoiGianDungThuoc;
-        private System.Windows.Forms.DataGridViewTextBoxColumn LoiDan;
+        private System.Windows.Forms.DataGridViewTextBoxColumn LoiDanBacSi;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TongTienThuoc;
     }
 }

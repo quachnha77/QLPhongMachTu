@@ -5,18 +5,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace QLPhongMachTu_DOAN_.BLL
 {
     public class HoaDonKhamBenhBLL
     {        
         private readonly HoaDonKhamBenhDAL hoaDonKhamBenhDAL;
-        private readonly PhieuKhamBLL phieuKhamBLL; // để TimKiemHoaDon
 
         public HoaDonKhamBenhBLL()
         {
             hoaDonKhamBenhDAL = new HoaDonKhamBenhDAL();
-            phieuKhamBLL = new PhieuKhamBLL();
         }
 
         public List<HoaDonKhamBenh> GetAll()
@@ -28,49 +27,24 @@ namespace QLPhongMachTu_DOAN_.BLL
         {
             return hoaDonKhamBenhDAL.GetByMaBN(MaBN);
         }
-
-        public List<HoaDonKhamBenh> TimKiemHoaDon(long MaBN, int selectedSearchTerm, string searchStr, int selectedTrangThai, DateTime? ngayTao)
+        public HoaDonKhamBenh GetByMaHDKB(long MaHDKB)
         {
-            List<HoaDonKhamBenh> result = GetByMaBN(MaBN);
+            return hoaDonKhamBenhDAL.GetByMaHDKB(MaHDKB);
+        }
 
-            // Lọc theo Mã
-            if (!string.IsNullOrEmpty(searchStr))
-            {
-                result = result.Where(hd => hd.MaHDKB.ToString().Contains(searchStr)).ToList();
-            }
+        public List<HoaDonKhamBenh> GetByMaPK(long MaPK)
+        {
+            return hoaDonKhamBenhDAL.GetByMaPK(MaPK);
+        }
 
-            // Lọc theo Trạng thái (Đã thanh toán, Chưa thanh toán)
-            if (selectedTrangThai == 0) 
-            {
-                result = result.Where(hd => hd.TrangThai == true).ToList();
-            }
-            else if (selectedTrangThai == 1) 
-            {
-                result = result.Where(hd => hd.TrangThai == false).ToList();
-            }
+        public List<HoaDonKhamBenh> TimKiemThanhToan(long MaBN, string searchStr, string searchTerm, int TrangThai, DateTime? NgayTao)
+        {
+            return hoaDonKhamBenhDAL.TimKiemThanhToan(MaBN, searchStr, searchTerm, TrangThai, NgayTao);
+        }
 
-            // Lọc theo Ngày tạo
-            // Lấy đại NgayKham
-            if (ngayTao.HasValue)
-            {
-                List<PhieuKham> DSPhieuKham = new List<PhieuKham>();
-                foreach(var hoaDon in result)
-                {
-                    var phieuKham = phieuKhamBLL.GetByMaPK(hoaDon.MaPK);
-                    if (!DSPhieuKham.Any(pk => pk.MaPK == phieuKham.MaPK))
-                    {
-                        DSPhieuKham.Add(phieuKham);
-                    }
-                }
-
-                result = result.Where(hd =>
-                {
-                    var phieuKham = DSPhieuKham.FirstOrDefault(pk => pk.MaPK == hd.MaPK);
-                    return phieuKham != null && phieuKham.NgayKham.Date == ngayTao.Value.Date;
-                }).ToList();
-            }
-
-            return result;
+        public bool SetThanhToan(long MaHDKB, int TrangThai)
+        {
+            return hoaDonKhamBenhDAL.SetThanhToan(MaHDKB, TrangThai);
         }
     }
 }

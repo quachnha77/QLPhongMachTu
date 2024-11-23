@@ -25,42 +25,24 @@ namespace QLPhongMachTu_DOAN_.BLL
             return hoaDonThuocDAL.GetAll();
         }
 
+        public HoaDonThuoc GetByMaDT(long MaDT)
+        {
+            return hoaDonThuocDAL.GetByMaDT(MaDT);
+        }
+
         public List<HoaDonThuoc> GetByMaTT(long MaTT)
         {
             return hoaDonThuocDAL.GetByMaTT(MaTT);
         }
 
-        public List<HoaDonThuoc> TimKiemHoaDon(long MaBN, int selectedSearchTerm, string searchStr, int selectedTrangThai, DateTime? ngayTao)
+        public List<HoaDonThuoc> TimKiemThanhToan(string searchStr, string searchTerm, int TrangThai, DateTime? NgayTao)
         {
-            List<HoaDonThuoc> result = GetAll();
+            return hoaDonThuocDAL.TimKiemThanhToan(searchStr, searchTerm, TrangThai, NgayTao);
+        }
 
-            //result = result.Where(hd => hd.ToaThuoc != null && hd.ToaThuoc.BenhNhan.MaBN == MaBN).ToList();
-            List<long> DSMaTT = toaThuocBLL.GetAll().Where(tt => tt.MaBN == MaBN).Select(tt => tt.MaTT).ToList();
-            result = result.Where(hd => DSMaTT.Contains(hd.MaTT)).ToList();
-
-            // Lọc theo Mã 
-            if (!string.IsNullOrEmpty(searchStr))
-            {
-                result = result.Where(hd => hd.MaDT.ToString().Contains(searchStr)).ToList();
-            }
-
-            // Lọc theo Trạng thái (Đã thanh toán, Chưa thanh toán)
-            if (selectedTrangThai == 0)
-            {
-                result = result.Where(hd => hd.TrangThai == true).ToList();
-            }
-            else if (selectedTrangThai == 1)
-            {
-                result = result.Where(hd => hd.TrangThai == false).ToList();
-            }
-
-            // Lọc theo Ngày tạo
-            if (ngayTao.HasValue)
-            {
-                result = result.Where(hd => hd.NgayMua.Date == ngayTao.Value.Date).ToList();
-            }
-
-            return result;
+        public bool SetThanhToan(long MaDT, int TrangThai)
+        {
+            return hoaDonThuocDAL.SetThanhToan(MaDT, TrangThai);
         }
     }
 }

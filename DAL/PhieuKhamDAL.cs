@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Windows.Forms;
 
 namespace QLPhongMachTu_DOAN_.DAL
 {
@@ -13,7 +14,7 @@ namespace QLPhongMachTu_DOAN_.DAL
         {
             try
             {
-                string query = "SELECT * FROM PhieuKham";
+                string query = "SELECT * FROM PhieuKhams";
                 DataTable result = ExecuteQuery(query);
 
                 if (result.Rows.Count == 0)
@@ -53,7 +54,7 @@ namespace QLPhongMachTu_DOAN_.DAL
         {
             try
             {
-                string query = "SELECT * FROM PhieuKham WHERE MaPK = @MaPK";
+                string query = "SELECT * FROM PhieuKhams WHERE MaPK = @MaPK";
                 SqlParameter[] parameters = {
                     new SqlParameter("@MaPK", MaPK)
                 };
@@ -75,7 +76,7 @@ namespace QLPhongMachTu_DOAN_.DAL
                     NgayKham = Convert.ToDateTime(row["NgayKham"]),
                     SoThuTu = Convert.ToInt32(row["SoThuTu"]),
                     TrieuChung = Convert.ToString(row["TrieuChung"]),
-                    TieuSuBenhLy = Convert.ToString(row["TienSuBenhLy"]),
+                    TieuSuBenhLy = Convert.ToString(row["TieuSuBenhLy"]),
                     ChuanDoan = Convert.ToString(row["ChuanDoan"])
                 };
 
@@ -85,6 +86,7 @@ namespace QLPhongMachTu_DOAN_.DAL
             {
                 string errorMessage = $"ERROR::PhieuKhamDAL::GetByMaPK() - Không thể lấy PhieuKham bằng MaPK {MaPK}: {ex.Message}";
                 Console.WriteLine(errorMessage);
+                MessageBox.Show(errorMessage);
                 return null;
             }
         }

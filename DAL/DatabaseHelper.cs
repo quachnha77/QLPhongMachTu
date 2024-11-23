@@ -2,6 +2,7 @@
 using System.Data;
 using System.Data.SqlClient;
 using System.Configuration;
+using System.Windows.Forms;
 
 namespace QLPhongMachTu_DOAN_.DAL
 {
@@ -17,7 +18,9 @@ namespace QLPhongMachTu_DOAN_.DAL
         public void OpenConnection()
         {
             if (_connection.State == ConnectionState.Closed)
+            {
                 _connection.Open();
+            }
         }
 
         public void CloseConnection()

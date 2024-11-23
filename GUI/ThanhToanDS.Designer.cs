@@ -1,6 +1,6 @@
 ﻿namespace QLPhongMachTu_DOAN_.GUI
 {
-    partial class ThanhToan
+    partial class ThanhToanDS
     {
         /// <summary> 
         /// Required designer variable.
@@ -42,13 +42,13 @@
             this.btnLamMoi = new System.Windows.Forms.Button();
             this.btnXemChiTiet = new System.Windows.Forms.Button();
             this.dgvHoaDon = new System.Windows.Forms.DataGridView();
-            this.MaHD = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnThanhToan = new System.Windows.Forms.Button();
+            this.MaDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NgayTao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LoaiHD = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaPK = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaTT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TongTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TrangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnThanhToan = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHoaDon)).BeginInit();
@@ -66,7 +66,7 @@
             this.groupBox2.Size = new System.Drawing.Size(1042, 682);
             this.groupBox2.TabIndex = 8;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Danh sách hóa đơn";
+            this.groupBox2.Text = "Danh sách đơn thuốc";
             // 
             // groupBox1
             // 
@@ -212,10 +212,10 @@
             this.dgvHoaDon.AllowUserToDeleteRows = false;
             this.dgvHoaDon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvHoaDon.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.MaHD,
+            this.MaDT,
             this.NgayTao,
             this.LoaiHD,
-            this.MaPK,
+            this.MaTT,
             this.TongTien,
             this.TrangThai});
             this.dgvHoaDon.Location = new System.Drawing.Point(19, 31);
@@ -229,50 +229,6 @@
             this.dgvHoaDon.Size = new System.Drawing.Size(780, 588);
             this.dgvHoaDon.TabIndex = 0;
             this.dgvHoaDon.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHoaDon_CellClick);
-            // 
-            // MaHD
-            // 
-            this.MaHD.HeaderText = "Mã hóa đơn";
-            this.MaHD.MinimumWidth = 6;
-            this.MaHD.Name = "MaHD";
-            this.MaHD.ReadOnly = true;
-            this.MaHD.Width = 90;
-            // 
-            // NgayTao
-            // 
-            this.NgayTao.HeaderText = "Ngày tạo";
-            this.NgayTao.MinimumWidth = 6;
-            this.NgayTao.Name = "NgayTao";
-            this.NgayTao.ReadOnly = true;
-            this.NgayTao.Width = 125;
-            // 
-            // LoaiHD
-            // 
-            this.LoaiHD.HeaderText = "Loại hóa đơn";
-            this.LoaiHD.Name = "LoaiHD";
-            this.LoaiHD.ReadOnly = true;
-            this.LoaiHD.Width = 120;
-            // 
-            // MaPK
-            // 
-            this.MaPK.HeaderText = "Mã phiếu khám";
-            this.MaPK.Name = "MaPK";
-            this.MaPK.ReadOnly = true;
-            this.MaPK.Width = 150;
-            // 
-            // TongTien
-            // 
-            this.TongTien.HeaderText = "Tổng tiền";
-            this.TongTien.Name = "TongTien";
-            this.TongTien.ReadOnly = true;
-            this.TongTien.Width = 150;
-            // 
-            // TrangThai
-            // 
-            this.TrangThai.HeaderText = "Trạng thái";
-            this.TrangThai.Name = "TrangThai";
-            this.TrangThai.ReadOnly = true;
-            this.TrangThai.Width = 140;
             // 
             // btnThanhToan
             // 
@@ -289,13 +245,56 @@
             this.btnThanhToan.UseVisualStyleBackColor = false;
             this.btnThanhToan.Click += new System.EventHandler(this.btnThanhToan_Click);
             // 
-            // ThanhToan
+            // MaDT
+            // 
+            this.MaDT.HeaderText = "Mã đơn thuốc";
+            this.MaDT.MinimumWidth = 6;
+            this.MaDT.Name = "MaDT";
+            this.MaDT.ReadOnly = true;
+            // 
+            // NgayTao
+            // 
+            this.NgayTao.HeaderText = "Ngày mua";
+            this.NgayTao.MinimumWidth = 6;
+            this.NgayTao.Name = "NgayTao";
+            this.NgayTao.ReadOnly = true;
+            this.NgayTao.Width = 125;
+            // 
+            // LoaiHD
+            // 
+            this.LoaiHD.HeaderText = "Loại hóa đơn";
+            this.LoaiHD.Name = "LoaiHD";
+            this.LoaiHD.ReadOnly = true;
+            this.LoaiHD.Width = 120;
+            // 
+            // MaTT
+            // 
+            this.MaTT.HeaderText = "Mã toa thuốc";
+            this.MaTT.Name = "MaTT";
+            this.MaTT.ReadOnly = true;
+            this.MaTT.Width = 150;
+            // 
+            // TongTien
+            // 
+            this.TongTien.HeaderText = "Tổng tiền";
+            this.TongTien.Name = "TongTien";
+            this.TongTien.ReadOnly = true;
+            this.TongTien.Width = 150;
+            // 
+            // TrangThai
+            // 
+            this.TrangThai.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.TrangThai.HeaderText = "Trạng thái";
+            this.TrangThai.Name = "TrangThai";
+            this.TrangThai.ReadOnly = true;
+            // 
+            // ThanhToanDS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightCyan;
             this.Controls.Add(this.groupBox2);
-            this.Name = "ThanhToan";
+            this.Name = "ThanhToanDS";
             this.Size = new System.Drawing.Size(1076, 725);
             this.groupBox2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
@@ -316,17 +315,17 @@
         private System.Windows.Forms.ComboBox cbTimKiem;
         private System.Windows.Forms.Button btnTimKiemTT;
         private System.Windows.Forms.TextBox tbTimKiem;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaHD;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NgayTao;
-        private System.Windows.Forms.DataGridViewTextBoxColumn LoaiHD;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaPK;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TongTien;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TrangThai;
         private System.Windows.Forms.Label label_TrangThai;
         private System.Windows.Forms.DateTimePicker dateTimePicker_NgayTao;
         private System.Windows.Forms.Label label_NgayTao;
         private System.Windows.Forms.Label label_cbTimKiem;
         private System.Windows.Forms.ComboBox cbTrangThai;
         private System.Windows.Forms.Button btn_XoaTimKiem;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaDT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NgayTao;
+        private System.Windows.Forms.DataGridViewTextBoxColumn LoaiHD;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaTT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TongTien;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TrangThai;
     }
 }

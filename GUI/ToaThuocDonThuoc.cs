@@ -29,10 +29,12 @@ namespace QLPhongMachTu_DOAN_.GUI
             InitializeComponent();
             LoadData();
         }        
+
         public ToaThuocDonThuoc(User user, BenhNhan benhNhan)
         {
             InitializeComponent();
-            this.MaBN = benhNhan.MaBN;
+            //this.MaBN = benhNhan.MaBN;
+            this.MaBN = 1;
             LoadData();
         }
 
@@ -46,10 +48,6 @@ namespace QLPhongMachTu_DOAN_.GUI
                 AddRowToDataGridView(toaThuoc, index);
                 ++index;
             }
-
-            //AddRowToDataGridView_TEST(1, "ASD", "1/1/2024", "1/1/2024", "8:00", "asd");
-            //AddRowToDataGridView_TEST(2, "ASD", "1/1/2024", "1/1/2024", "8:00", "asd");
-            //AddRowToDataGridView_TEST(3, "ASD", "1/1/2024", "1/1/2024", "8:00", "asd");
         }
 
         private void AddRowToDataGridView(DTO.ToaThuoc toaThuoc, int index)
@@ -58,26 +56,13 @@ namespace QLPhongMachTu_DOAN_.GUI
 
             dgvToaThuoc.Rows[rowIndex].Cells["STT"].Value = index.ToString();
             dgvToaThuoc.Rows[rowIndex].Cells["MaTT"].Value = toaThuoc.MaTT.ToString();
-            dgvToaThuoc.Rows[rowIndex].Cells["BacSi"].Value = bacSiBLL.GetByMaBS(toaThuoc.MaBS).HoTen;
+            dgvToaThuoc.Rows[rowIndex].Cells["BacSi"].Value = bacSiBLL.GetById(toaThuoc.MaBS).HoTen;
             dgvToaThuoc.Rows[rowIndex].Cells["NgayKeToa"].Value = toaThuoc.NgayKeToa.ToString("dd/MM/yyyy"); ;
-            dgvToaThuoc.Rows[rowIndex].Cells["NgayKham"].Value = phieuKhamBLL.GetByMaPK(toaThuoc.MaPK).NgayKham.ToString("dd/MM/yyyy");
-            dgvToaThuoc.Rows[rowIndex].Cells["ThoiGianDungThuoc"].Value = "?";
-            dgvToaThuoc.Rows[rowIndex].Cells["LoiDan"].Value = "?";
+            dgvToaThuoc.Rows[rowIndex].Cells["NgayKham"].Value = phieuKhamBLL.GetByMaPK(toaThuoc.MaPK)?.NgayKham.ToString("dd/MM/yyyy") ?? "N/A";
+            dgvToaThuoc.Rows[rowIndex].Cells["LoiDanBacSi"].Value = toaThuoc.LoiDanBacSi;
+            dgvToaThuoc.Rows[rowIndex].Cells["TongTienThuoc"].Value = toaThuoc.TongTienThuoc.ToString();
 
         }
-        private void AddRowToDataGridView_TEST(long MaTT, string HoTen, string NgayKeToa, string NgayKham, string ThoiGian, string LoiDan)
-        {
-            int rowIndex = dgvToaThuoc.Rows.Add();
-
-            dgvToaThuoc.Rows[rowIndex].Cells["MaTT"].Value = MaTT.ToString();
-            dgvToaThuoc.Rows[rowIndex].Cells["BacSi"].Value = HoTen;
-            dgvToaThuoc.Rows[rowIndex].Cells["NgayKeToa"].Value = NgayKeToa;
-            dgvToaThuoc.Rows[rowIndex].Cells["NgayKham"].Value = NgayKham;
-            dgvToaThuoc.Rows[rowIndex].Cells["ThoiGianDungThuoc"].Value = ThoiGian;
-            dgvToaThuoc.Rows[rowIndex].Cells["LoiDan"].Value = LoiDan;
-
-        }
-
         private void btnLamMoi_Click(object sender, EventArgs e)
         {
             dgvToaThuoc.Rows.Clear();
@@ -142,7 +127,7 @@ namespace QLPhongMachTu_DOAN_.GUI
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                Console.WriteLine(ex.Message);
             }
         }
 
@@ -150,8 +135,11 @@ namespace QLPhongMachTu_DOAN_.GUI
         {
             if (e.RowIndex >= 0)
             {
-                string MaTT = dgvToaThuoc.Rows[e.RowIndex].Cells["MaTT"].Value.ToString();
-                selectedMaTT = MaTT;
+                var cellValue = dgvToaThuoc.Rows[e.RowIndex].Cells["MaTT"].Value;
+                if (cellValue != null)
+                    selectedMaTT = cellValue.ToString();
+                else
+                    selectedMaTT = string.Empty;
             }
         }
     }

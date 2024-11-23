@@ -13,32 +13,25 @@ using QLPhongMachTu_DOAN_.DAL;
 
 namespace QLPhongMachTu_DOAN_.GUI
 {
-    public partial class ThanhToan : UserControl
+    public partial class ThanhToanDS : UserControl
     {
-        public HoaDonKhamBenhBLL hoaDonKhamBenhBLL = new HoaDonKhamBenhBLL();
-        public ToaThuocBLL toaThuocBLL = new ToaThuocBLL();
-        public PhieuKhamBLL phieuKhamBLL = new PhieuKhamBLL();
-        private long MaBN;
+        private HoaDonThuocBLL hoaDonThuocBLL = new HoaDonThuocBLL();
+        private HoaDonKhamBenhBLL hoaDonKhamBenhBLL = new HoaDonKhamBenhBLL();
+        private ToaThuocBLL toaThuocBLL = new ToaThuocBLL();
+        private PhieuKhamBLL phieuKhamBLL = new PhieuKhamBLL();
         private string selectedMaHD;
         private int selectedTrangThai;
 
-        public ThanhToan()
+        public ThanhToanDS()
         {
             InitializeComponent();
-        }
-
-        public ThanhToan(User user, BenhNhan benhNhan)
-        {
-            InitializeComponent();
-            //this.MaBN = benhNhan.MaBN;
-            this.MaBN = 1;
             LoadData();
 
-            // Tìm kiếm 
-            // ---------
+            // Tìm kiếm Combobox
+            // =================
             // Search by...
-            cbTimKiem.Items.Add("Mã hóa đơn");
-            cbTimKiem.Items.Add("Mã phiếu khám");
+            cbTimKiem.Items.Add("Mã đơn thuốc");
+            cbTimKiem.Items.Add("Mã toa thuốc");
             // Trạng thái
             cbTrangThai.Items.Add("Chưa thanh toán");
             cbTrangThai.Items.Add("Đã thanh toán");
@@ -50,26 +43,31 @@ namespace QLPhongMachTu_DOAN_.GUI
 
         public void LoadData()
         {
-            List<DTO.HoaDonKhamBenh> DSHoaDonKhamBenh = hoaDonKhamBenhBLL.GetByMaBN(MaBN);
+            List<DTO.HoaDonThuoc> DSHoaDonThuoc = new List<DTO.HoaDonThuoc>();
+            //List<DTO.ToaThuoc> DSToaThuoc = toaThuocBLL.GetByMaBN(MaBN);
+            List<DTO.ToaThuoc> DSToaThuoc = toaThuocBLL.GetAll();
+            foreach(var toaThuoc in DSToaThuoc)
+            {
+                List<DTO.HoaDonThuoc> dsHoaDonThuoc = hoaDonThuocBLL.GetByMaTT(toaThuoc.MaTT);
+                DSHoaDonThuoc.AddRange(dsHoaDonThuoc);
+            }
 
             int index = 1;
-            foreach (var hoaDon in DSHoaDonKhamBenh)
+            foreach (var hoaDon in DSHoaDonThuoc)
             {
                 AddRowToDataGridView(hoaDon, index);
                 ++index;
             }
-
         }
 
-        public void AddRowToDataGridView(DTO.HoaDonKhamBenh hoaDon, int index)
+        public void AddRowToDataGridView(DTO.HoaDonThuoc hoaDon, int index)
         {
             int rowIndex = dgvHoaDon.Rows.Add();
 
-            dgvHoaDon.Rows[rowIndex].Cells["MaHD"].Value = hoaDon.MaHDKB.ToString();
-            // Lấy đại ngày khám
-            dgvHoaDon.Rows[rowIndex].Cells["NgayTao"].Value = phieuKhamBLL.GetByMaPK(hoaDon.MaPK).NgayKham.ToString("dd/MM/yyyy");
-            dgvHoaDon.Rows[rowIndex].Cells["LoaiHD"].Value = "Hóa đơn khám bệnh";
-            dgvHoaDon.Rows[rowIndex].Cells["MaPK"].Value = hoaDon.MaPK.ToString();
+            dgvHoaDon.Rows[rowIndex].Cells["MaDT"].Value = hoaDon.MaDT.ToString();
+            dgvHoaDon.Rows[rowIndex].Cells["NgayTao"].Value = hoaDon.NgayMua.ToString("dd/MM/yyyy");
+            dgvHoaDon.Rows[rowIndex].Cells["LoaiHD"].Value = "Hóa đơn thuốc";
+            dgvHoaDon.Rows[rowIndex].Cells["MaTT"].Value = toaThuocBLL.GetByMaTT(hoaDon.MaTT).MaPK.ToString();
             dgvHoaDon.Rows[rowIndex].Cells["TongTien"].Value = hoaDon.TongTien.ToString();
             dgvHoaDon.Rows[rowIndex].Cells["TrangThai"].Value = (hoaDon.TrangThai == 1) ? "Đã thanh toán" : "Chưa Thanh Toán";
         }
@@ -91,20 +89,20 @@ namespace QLPhongMachTu_DOAN_.GUI
                     return;
                 }
             }
-            if(string.IsNullOrEmpty(selectedSearchTerm) && !string.IsNullOrEmpty(searchStr))
+            if (string.IsNullOrEmpty(selectedSearchTerm) && !string.IsNullOrEmpty(searchStr))
             {
                 MessageBox.Show("Vui lòng chọn hình thức tìm kiếm.");
                 return;
             }
 
-            List<DTO.HoaDonKhamBenh> hoaDonKhamBenhResult = new List<DTO.HoaDonKhamBenh>();
-            hoaDonKhamBenhResult = hoaDonKhamBenhBLL.TimKiemThanhToan(MaBN, searchStr, selectedSearchTerm, selectedTrangThai, ngayTao);
+            List<DTO.HoaDonThuoc> hoaDonThuocResult = new List<DTO.HoaDonThuoc>();
+            hoaDonThuocResult = hoaDonThuocBLL.TimKiemThanhToan(searchStr, selectedSearchTerm, selectedTrangThai, ngayTao);
 
-            if(hoaDonKhamBenhResult.Any())
+            if(hoaDonThuocResult.Any())
             {
                 dgvHoaDon.Rows.Clear();
                 int index = 1;
-                foreach(var hoaDon in  hoaDonKhamBenhResult)
+                foreach(var hoaDon in hoaDonThuocResult)
                 {
                     AddRowToDataGridView(hoaDon, index);
                 }
@@ -133,8 +131,9 @@ namespace QLPhongMachTu_DOAN_.GUI
                 Console.WriteLine("Trạng thái dgv lỗi.");
                 return;
             }
+
             long selectedMaHDKB = Convert.ToInt64(selectedMaHD);
-            bool success = hoaDonKhamBenhBLL.SetThanhToan(selectedMaHDKB, 1);
+            bool success = hoaDonThuocBLL.SetThanhToan(selectedMaHDKB, 1);
             if(success)
                 MessageBox.Show("Thanh toán hóa đơn thành công!");
             else 
@@ -153,16 +152,17 @@ namespace QLPhongMachTu_DOAN_.GUI
                 return;
             }
 
-            long MaHDKB = Convert.ToInt64(selectedMaHD);
-            DTO.HoaDonKhamBenh hoaDonKhamBenh = hoaDonKhamBenhBLL.GetByMaHDKB(MaHDKB);
+            long MaDT = Convert.ToInt64(selectedMaHD);
+            DTO.HoaDonThuoc hoaDonThuoc = hoaDonThuocBLL.GetByMaDT(MaDT);
+            DTO.ToaThuoc toaThuoc = toaThuocBLL.GetByMaTT(hoaDonThuoc.MaTT);
 
             try
             {
-                using (HoaDonKhamBenhGUI hoaDonKhamBenhForm = new HoaDonKhamBenhGUI(hoaDonKhamBenh))
+                using (HoaDonThuocGUI hoaDonThuocForm = new HoaDonThuocGUI(toaThuoc.MaBN, hoaDonThuoc))
                 {
-                    hoaDonKhamBenhForm.Owner = this.FindForm();
-                    hoaDonKhamBenhForm.StartPosition = FormStartPosition.CenterParent;
-                    hoaDonKhamBenhForm.ShowDialog();
+                    hoaDonThuocForm.Owner = this.FindForm();
+                    hoaDonThuocForm.StartPosition = FormStartPosition.CenterParent;
+                    hoaDonThuocForm.ShowDialog();
                 }
             }
             catch (Exception ex)
@@ -181,7 +181,7 @@ namespace QLPhongMachTu_DOAN_.GUI
         {
             if (e.RowIndex >= 0)
             {
-                var cellValue = dgvHoaDon.Rows[e.RowIndex].Cells["MaHD"].Value;
+                var cellValue = dgvHoaDon.Rows[e.RowIndex].Cells["MaDT"].Value;
                 selectedMaHD = cellValue?.ToString() ?? string.Empty;
 
                 cellValue = dgvHoaDon.Rows[e.RowIndex].Cells["TrangThai"].Value;

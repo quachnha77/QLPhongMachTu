@@ -36,7 +36,7 @@ namespace QLPhongMachTu_DOAN_.GUI
 
         private void HoaDonKhamBenh_Click(object sender, EventArgs e)
         {
-            HoaDonKhamBenh hoaDonKBFrom = new HoaDonKhamBenh();
+            HoaDonKhamBenhGUI hoaDonKBFrom = new HoaDonKhamBenhGUI();
             hoaDonKBFrom.StartPosition = FormStartPosition.CenterScreen;
             hoaDonKBFrom.Show();
         }

@@ -17,7 +17,7 @@ namespace QLPhongMachTu_DOAN_.GUI
         public DanhSachDonThuocGUI()
         {
             InitializeComponent();
-            //LoadData();
+            LoadData();
         }
 
         public DanhSachDonThuocGUI(List<HoaDonThuoc> dsHoaDonThuoc)
@@ -37,13 +37,6 @@ namespace QLPhongMachTu_DOAN_.GUI
                 AddRowToDataGridView(hoaDonThuoc, index);
                 ++index;
             }
-
-            //AddRowToDataGridView_TEST(1, "1/11/1234", "123125", 1);
-            //AddRowToDataGridView_TEST(1, "1/11/1234", "123125", 1);
-            //AddRowToDataGridView_TEST(1, "1/11/1234", "123125", 1);
-            //AddRowToDataGridView_TEST(1, "1/11/1234", "123125", 1);
-            //AddRowToDataGridView_TEST(1, "1/11/1234", "123125", 1);
-
         }
 
         private void AddRowToDataGridView(HoaDonThuoc hoaDonThuoc, int index)
@@ -53,7 +46,8 @@ namespace QLPhongMachTu_DOAN_.GUI
             dgvHoaDonThuoc.Rows[rowIndex].Cells["STT"].Value = index.ToString();
             dgvHoaDonThuoc.Rows[rowIndex].Cells["MaDT"].Value = hoaDonThuoc.MaDT.ToString();
             dgvHoaDonThuoc.Rows[rowIndex].Cells["NgayMua"].Value = hoaDonThuoc.NgayMua.ToString("dd/MM/yyyy");
-            dgvHoaDonThuoc.Rows[rowIndex].Cells["TongTien"].Value = hoaDonThuoc.TongTien.ToString("C");
+            dgvHoaDonThuoc.Rows[rowIndex].Cells["TongTien"].Value = hoaDonThuoc.TongTien.ToString();
+            dgvHoaDonThuoc.Rows[rowIndex].Cells["TrangThai"].Value = (hoaDonThuoc.TrangThai == 1) ? "Đã thanh toán" : "Chưa Thanh Toán";
         }
 
         private void AddRowToDataGridView_TEST(long MaDT, string NgayMua, string TongTien, int index)

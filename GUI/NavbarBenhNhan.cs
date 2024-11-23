@@ -75,7 +75,7 @@ namespace QLPhongMachTu_DOAN_
         private void ToaThuocDonThuoc_Click_1(object sender, EventArgs e)
         {
             panelMain.Controls.Clear();
-            ToaThuocDonThuoc toaThuocDonThuocControl = new ToaThuocDonThuoc();
+            ToaThuocDonThuoc toaThuocDonThuocControl = new ToaThuocDonThuoc(userLogin, benhNhanLogin);
             toaThuocDonThuocControl.Dock = DockStyle.Fill;
             panelMain.Controls.Add(toaThuocDonThuocControl);
             panelMain.Refresh();
@@ -84,7 +84,7 @@ namespace QLPhongMachTu_DOAN_
         private void ThanhToan_Click(object sender, EventArgs e)
         {
             panelMain.Controls.Clear();
-            ThanhToan thanhToanControl = new ThanhToan();
+            ThanhToan thanhToanControl = new ThanhToan(userLogin, benhNhanLogin);
             thanhToanControl.Dock = DockStyle.Fill;
             panelMain.Controls.Add(thanhToanControl);
             panelMain.Refresh();

@@ -26,6 +26,8 @@ namespace QLPhongMachTu_DOAN_.DTO
         public long MaPK { get; set; }
         
         public DateTime NgayKeToa { get; set; }
+        public string LoiDanBacSi { get; set; }
+        public float TongTienThuoc { get; set; }
 
         public BenhNhan BenhNhan { get; set; }
         public BacSi BacSi { get; set; }

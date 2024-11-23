@@ -6,6 +6,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace QLPhongMachTu_DOAN_.DAL
 {
@@ -15,7 +16,7 @@ namespace QLPhongMachTu_DOAN_.DAL
         {
             try
             {
-                string query = "SELECT * FROM ToaThuoc";
+                string query = "SELECT * FROM ToaThuocs";
                 DataTable result = ExecuteQuery(query);
 
                 if (result.Rows.Count == 0)
@@ -34,7 +35,9 @@ namespace QLPhongMachTu_DOAN_.DAL
                         MaBS = Convert.ToInt64(row["MaBS"]),
                         MaLK = Convert.ToInt64(row["MaLK"]),
                         MaPK = Convert.ToInt64(row["MaPK"]),
-                        NgayKeToa = Convert.ToDateTime(row["NgayKeToa"])
+                        NgayKeToa = Convert.ToDateTime(row["NgayKeToa"]),
+                        LoiDanBacSi = Convert.ToString(row["LoiDanBacSi"]),
+                        TongTienThuoc = (float)Convert.ToDouble(row["TongTienThuoc"])
                     };
                     toaThuocList.Add(toaThuoc);
                 }
@@ -53,7 +56,7 @@ namespace QLPhongMachTu_DOAN_.DAL
         {
             try
             {
-                string query = "SELECT * FROM ToaThuoc WHERE MaTT = @MaTT";
+                string query = "SELECT * FROM ToaThuocs WHERE MaTT = @MaTT";
                 SqlParameter[] parameters = {
                     new SqlParameter("@MaTT", MaTT)
                 };
@@ -73,7 +76,9 @@ namespace QLPhongMachTu_DOAN_.DAL
                     MaBS = Convert.ToInt64(row["MaBS"]),
                     MaLK = Convert.ToInt64(row["MaLK"]),
                     MaPK = Convert.ToInt64(row["MaPK"]),
-                    NgayKeToa = Convert.ToDateTime(row["NgayKeToa"])
+                    NgayKeToa = Convert.ToDateTime(row["NgayKeToa"]),
+                    LoiDanBacSi = Convert.ToString(row["LoiDanBacSi"]),
+                    TongTienThuoc = (float)Convert.ToDouble(row["TongTienThuoc"])
                 };
 
                 return toaThuoc;
@@ -90,7 +95,7 @@ namespace QLPhongMachTu_DOAN_.DAL
         {
             try
             {
-                string query = "SELECT * FROM ToaThuoc WHERE MaBN = @MaBN";
+                string query = "SELECT * FROM ToaThuocs WHERE MaBN = @MaBN";
                 SqlParameter[] parameters = {
                     new SqlParameter("@MaBN", MaBN)
                 };
@@ -112,7 +117,9 @@ namespace QLPhongMachTu_DOAN_.DAL
                         MaBS = Convert.ToInt64(row["MaBS"]),
                         MaLK = Convert.ToInt64(row["MaLK"]),
                         MaPK = Convert.ToInt64(row["MaPK"]),
-                        NgayKeToa = Convert.ToDateTime(row["NgayKeToa"])
+                        NgayKeToa = Convert.ToDateTime(row["NgayKeToa"]),
+                        LoiDanBacSi = Convert.ToString(row["LoiDanBacSi"]),
+                        TongTienThuoc = (float)Convert.ToDouble(row["TongTienThuoc"])
                     };
                     toaThuocList.Add(toaThuoc);
                 }

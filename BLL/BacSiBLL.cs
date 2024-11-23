@@ -8,43 +8,21 @@ namespace QLPhongMachTu_DOAN_.BLL
 {
     public class BacSiBLL
     {
-        private BacSiDAL bsDAL;
+        private readonly BacSiDAL dal;
 
         public BacSiBLL()
         {
-            this.bsDAL = new BacSiDAL();
+            this.dal = new BacSiDAL();
         }
 
-        public List<BacSi> GetAllBacSi()
+        public List<BacSi> GetAllByChuyenKhoa(long Makhoa)
         {
-            return bsDAL.GetAllBacSi();
+            return dal.GetAllByChuyenKhoa(Makhoa);
         }
 
-        public bool AddBacSi(BacSi bs)
+        public BacSi GetById(long id)
         {
-            return bsDAL.AddBacSi(bs);
+            return dal.GetById(id);
         }
-
-        public BacSi GetByMaBS(long MaBS)
-        {
-            try
-            {
-                using (var context = new ApplicationDbContext())
-                {
-                    BacSi result = context.BacSi.FirstOrDefault(bs => bs.MaSo == MaBS);
-                    if (result == null)
-                    {
-                        Console.WriteLine("Khong ton tai BacSi voi MaBS " + MaBS.ToString() + ".\n");
-                    }
-                    return result;
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("ERROR - Khong the lay BacSi bang MaBS: " + ex.Message);
-                return null;
-            }
-        }
-
     }
 }

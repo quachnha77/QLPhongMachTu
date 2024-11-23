@@ -22,10 +22,10 @@ namespace QLPhongMachTu_DOAN_.DTO
         [ForeignKey("PhieuKham")]
         public long MaPK { get; set; }
 
-        public double TongTien { get; set; }
+        public float TongTien { get; set; }
 
         // Thêm trạng thái thanh toán
-        public bool TrangThai { get; set; }
+        public int TrangThai { get; set; }
 
         public BenhNhan BenhNhan { get; set; }
         public BacSi BacSi { get; set; }

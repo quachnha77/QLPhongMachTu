@@ -28,30 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.dgvChiTietToaThuoc = new System.Windows.Forms.DataGridView();
-            this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaTT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenThuoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CachDung = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.groupBox1.SuspendLayout();
+            this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenThuoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaTT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvChiTietToaThuoc)).BeginInit();
             this.SuspendLayout();
             // 
-            // groupBox1
+            // label1
             // 
-            this.groupBox1.Controls.Add(this.dgvChiTietToaThuoc);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(630, 439);
-            this.groupBox1.TabIndex = 2;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Chi tiết toa thuốc";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.DarkCyan;
+            this.label1.Location = new System.Drawing.Point(226, 42);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(189, 20);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "CHI TIẾT TOA THUỐC";
             // 
             // dgvChiTietToaThuoc
             // 
             this.dgvChiTietToaThuoc.AllowDrop = true;
+            this.dgvChiTietToaThuoc.AllowUserToAddRows = false;
+            this.dgvChiTietToaThuoc.AllowUserToDeleteRows = false;
             this.dgvChiTietToaThuoc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvChiTietToaThuoc.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.STT,
@@ -59,11 +61,40 @@
             this.TenThuoc,
             this.SoLuong,
             this.CachDung});
-            this.dgvChiTietToaThuoc.Location = new System.Drawing.Point(15, 19);
+            this.dgvChiTietToaThuoc.Location = new System.Drawing.Point(28, 103);
             this.dgvChiTietToaThuoc.Name = "dgvChiTietToaThuoc";
+            this.dgvChiTietToaThuoc.ReadOnly = true;
             this.dgvChiTietToaThuoc.RowHeadersVisible = false;
             this.dgvChiTietToaThuoc.Size = new System.Drawing.Size(600, 410);
             this.dgvChiTietToaThuoc.TabIndex = 2;
+            // 
+            // CachDung
+            // 
+            this.CachDung.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.CachDung.HeaderText = "Cách dùng";
+            this.CachDung.Name = "CachDung";
+            this.CachDung.ReadOnly = true;
+            // 
+            // SoLuong
+            // 
+            this.SoLuong.HeaderText = "Số lượng";
+            this.SoLuong.Name = "SoLuong";
+            this.SoLuong.ReadOnly = true;
+            this.SoLuong.Width = 75;
+            // 
+            // TenThuoc
+            // 
+            this.TenThuoc.HeaderText = "Tên thuốc";
+            this.TenThuoc.Name = "TenThuoc";
+            this.TenThuoc.ReadOnly = true;
+            this.TenThuoc.Width = 170;
+            // 
+            // MaTT
+            // 
+            this.MaTT.HeaderText = "Mã toa thuốc";
+            this.MaTT.MinimumWidth = 65;
+            this.MaTT.Name = "MaTT";
+            this.MaTT.ReadOnly = true;
             // 
             // STT
             // 
@@ -73,54 +104,27 @@
             this.STT.ReadOnly = true;
             this.STT.Width = 53;
             // 
-            // MaTT
-            // 
-            this.MaTT.HeaderText = "Mã toa thuốc";
-            this.MaTT.MinimumWidth = 65;
-            this.MaTT.Name = "MaTT";
-            this.MaTT.ReadOnly = true;
-            // 
-            // TenThuoc
-            // 
-            this.TenThuoc.HeaderText = "Tên thuốc";
-            this.TenThuoc.Name = "TenThuoc";
-            this.TenThuoc.ReadOnly = true;
-            this.TenThuoc.Width = 170;
-            // 
-            // SoLuong
-            // 
-            this.SoLuong.HeaderText = "Số lượng";
-            this.SoLuong.Name = "SoLuong";
-            this.SoLuong.ReadOnly = true;
-            this.SoLuong.Width = 75;
-            // 
-            // CachDung
-            // 
-            this.CachDung.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.CachDung.HeaderText = "Cách dùng";
-            this.CachDung.Name = "CachDung";
-            this.CachDung.ReadOnly = true;
-            // 
             // ChiTietToaThuocGUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightCyan;
-            this.ClientSize = new System.Drawing.Size(656, 462);
-            this.Controls.Add(this.groupBox1);
+            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.ClientSize = new System.Drawing.Size(654, 534);
+            this.Controls.Add(this.dgvChiTietToaThuoc);
+            this.Controls.Add(this.label1);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "ChiTietToaThuocGUI";
             this.Text = "Chi Tiết Toa Thuốc";
             this.TopMost = true;
-            this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvChiTietToaThuoc)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgvChiTietToaThuoc;
         private System.Windows.Forms.DataGridViewTextBoxColumn STT;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaTT;
