@@ -1,17 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace QLPhongMachTu_DOAN_.Enums
+﻿namespace QLPhongMachTu_DOAN_.Enums
 {
     public enum EQuyen
     {
-        ADMIN = 0,
-        BACSI = 1,
-        DUOCSI = 2,
-        LETAN = 3,
-        BENHNHAN = 10
+        ADMIN = 2,
+        BACSI = 3,
+        DUOCSI = 8,
+        LETAN = 9,
+        BENHNHAN = 4
     }
 }

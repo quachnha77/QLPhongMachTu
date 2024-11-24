@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 
 namespace QLPhongMachTu_DOAN_.DTO
 {
-    [Table("PhanQuyen")]
     public class PhanQuyen
     {
         [Key]

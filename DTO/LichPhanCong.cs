@@ -4,7 +4,6 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace QLPhongMachTu_DOAN_.DTO
 {
-    [Table("LichPhanCong")]
     public class LichPhanCong
     {
         [Key]

@@ -1,28 +1,13 @@
-﻿using System;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-
-namespace QLPhongMachTu_DOAN_.DTO
+﻿namespace QLPhongMachTu_DOAN_.DTO
 {
-    [Table("HoaDonKhamBenh")]
-    public class HoaDonKhamBenh
+    public class HoaDonKhamBenhDTO
     {
-        [Key]
-        public long MaHDKB { get; set; }
-
-        [ForeignKey("BenhNhan")]
-        public long MaBN { get; set; }
-
-        [ForeignKey("BacSi")]
-        public long MaBS { get; set; }
-
-        [ForeignKey("PhieuKham")]
-        public long MaPK { get; set; }
-
-        public double TongTien { get; set; }
-
-        public BenhNhan BenhNhan { get; set; }
-        public BacSi BacSi { get; set; }
-        public PhieuKham PhieuKham { get; set; }
+        public long MaHDKB { get; set; }    // Mã hóa đơn khám bệnh
+        public long MaBN { get; set; }      // Mã bệnh nhân
+        public long MaBS { get; set; }      // Mã bác sĩ
+        public long MaPK { get; set; }      // Mã phiếu khám
+        public decimal TongTien { get; set; } // Tổng tiền
+        public string TrangThai { get; set; }  // Trạng thái
     }
+
 }

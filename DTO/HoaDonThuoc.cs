@@ -4,7 +4,6 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace QLPhongMachTu_DOAN_.DTO
 {
-    [Table("HoaDonThuoc")]
     public class HoaDonThuoc
     {
         [Key]
@@ -18,7 +17,7 @@ namespace QLPhongMachTu_DOAN_.DTO
         public DateTime NgayMua { get; set; }
         public double TongTien { get; set; }
 
-        public ToaThuoc ToaThuoc { get; set; }
+        public ToaThuocDTO ToaThuoc { get; set; }
         public NhanVien NhanVien { get; set; }
 
     }

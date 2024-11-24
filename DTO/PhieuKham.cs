@@ -4,7 +4,6 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace QLPhongMachTu_DOAN_.DTO
 {
-    [Table("PhieuKham")]
     public class PhieuKham
     {
         [Key]
@@ -27,6 +26,9 @@ namespace QLPhongMachTu_DOAN_.DTO
         public string TieuSuBenhLy { get; set; }
         [Required]
         public string ChuanDoan { get; set; }
+
+        // Thuộc tính mới cho "Lời dặn bác sĩ"
+        public string LoiDanBacSi { get; set; }
 
         public LichKham LichKham { get; set; }
         public BenhNhan BenhNhan { get; set; }

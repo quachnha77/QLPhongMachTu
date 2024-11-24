@@ -1,6 +1,5 @@
 ﻿using QLPhongMachTu_DOAN_.DAL;
 using QLPhongMachTu_DOAN_.DTO;
-using System;
 using System.Collections.Generic;
 
 namespace QLPhongMachTu_DOAN_.BLL

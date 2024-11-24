@@ -1,10 +1,8 @@
-﻿using System;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace QLPhongMachTu_DOAN_.DTO
 {
-    [Table("User")]
     public class User
     {
         [Key]
@@ -15,8 +13,9 @@ namespace QLPhongMachTu_DOAN_.DTO
         public string Username { get; set; }
         public string Password { get; set; }
         public string Email { get; set; }
-        public bool TrangThai { get; set; } = true;
-        public virtual PhanQuyen PhanQuyen { get; set; }
 
+        public bool TrangThai { get; set; } = true;
+
+        public virtual PhanQuyen PhanQuyen { get; set; }
     }
 }
