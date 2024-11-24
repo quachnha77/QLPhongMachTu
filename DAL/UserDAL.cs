@@ -40,7 +40,9 @@ namespace QLPhongMachTu_DOAN_.DAL
 
         public User CreateUser(User user)
         {
-            string query = "INSERT INTO Users (Username, Password, Email, MaPQ) OUTPUT INSERTED.Id VALUES (@Username, @Password, @Email, @MaPQ)";
+            string query = "INSERT INTO Users (Username, Password, Email, MaPQ)" +
+                           "OUTPUT INSERTED.MaUser" +
+                           " VALUES (@Username, @Password, @Email, @MaPQ)";
             SqlParameter[] parameters = {
                 new SqlParameter("@Username", user.Username),
                 new SqlParameter("@Password", user.Password),

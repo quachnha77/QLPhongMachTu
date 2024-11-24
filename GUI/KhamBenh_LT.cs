@@ -4,6 +4,7 @@ using QLPhongMachTu_DOAN_.Enums;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
@@ -15,6 +16,9 @@ namespace QLPhongMachTu_DOAN_.GUI
         private BacSiBLL bacSiBll = new BacSiBLL();
         private KhoaBLL khoaBll = new KhoaBLL();
         private BenhNhanBLL benhNhanBll = new BenhNhanBLL();
+        private UserBLL userBll = new UserBLL();
+        private PhanCongBLL phanCongBll = new PhanCongBLL();
+        private bool check = false;
 
         public KhamBenh_LT()
         {
@@ -29,7 +33,8 @@ namespace QLPhongMachTu_DOAN_.GUI
             InsertAllDataGridView();
             gridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             gridView.MultiSelect = false;
-            
+
+            LoadChuyenKhoaList();
         }
 
         private void InsertAllDataGridView()
@@ -65,17 +70,78 @@ namespace QLPhongMachTu_DOAN_.GUI
                 STT++;
             }
         }
+        
+        /* Hàm ComBoBox Load */
+        private void LoadChuyenKhoaList()
+        {
+            List<PhongKhoa> chuyenKhoaList = khoaBll.GetAll();
+            comboBox1.DataSource = chuyenKhoaList;
+            comboBox1.DisplayMember = "ChuyenKhoa";
+            comboBox1.ValueMember = "MaPK";
+            LoadDoctorsByChuyenKhoa((long)comboBox1.SelectedValue);
+        }
 
+        private void LoadDoctorsByChuyenKhoa(long khoaId)
+        {
+            List<BacSi> bacSiList = bacSiBll.GetAllByChuyenKhoa(khoaId);
+            if (bacSiList.Count == 0)
+            {
+                comboBox2.DataSource = null;
+                comboBox3.DataSource = null;
+                MessageBox.Show("Không có bác sĩ nào trong chuyên khoa này.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            comboBox2.DataSource = bacSiList;
+            comboBox2.DisplayMember = "HoTen";
+            comboBox2.ValueMember = "MaSo";
+            LoadPhanCongByDoctor((long)comboBox2.SelectedValue);
+        }
+
+        private void LoadPhanCongByDoctor(long bacSiId)
+        {
+            List<LichPhanCong> phanCongList = phanCongBll.GetAllPhanCongByMaBacSi(bacSiId);
+            if (phanCongList.Count == 0)
+            {
+                comboBox3.DataSource = null;
+                MessageBox.Show("Bác sĩ này chưa được phân công lịch khám.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            comboBox3.DataSource = phanCongList;
+            comboBox3.DisplayMember = "NgayPhanCong";
+            comboBox3.ValueMember = "MaLPC";
+        }
+        /* Hàm ComBoBox Load */
+        
+        private void comboBox1_DropDownClosed(object sender, EventArgs e)
+        {
+            var khoaId = comboBox1.SelectedValue;
+
+            if (khoaId.GetType() != typeof(long)) return;
+            LoadDoctorsByChuyenKhoa(Convert.ToInt64(khoaId));
+        }
+
+        private void comboBox2_DropDownClosed(object sender, EventArgs e)
+        {
+            var bacSiId = comboBox2.SelectedValue;
+
+            if (bacSiId == null) return;
+            if (bacSiId.GetType() != typeof(long)) return;
+            LoadPhanCongByDoctor(Convert.ToInt64(bacSiId));
+        }
 
         private void chinhSuaBtn_Click(object sender, System.EventArgs e)
         {
             if (gridView.SelectedRows.Count == 0)
             {
-                MessageBox.Show("Vui lòng chọn một dòng để chỉnh sửa.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Vui lòng chọn một dòng để chỉnh sửa.", "Thông báo", MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
                 return;
             }
+
             var selectedRow = gridView.SelectedRows[0];
-            
+
             LichKham lk = (LichKham)selectedRow.Cells[0].Tag;
             BenhNhan benhNhan = (BenhNhan)selectedRow.Cells[1].Tag;
             PhongKhoa khoa = (PhongKhoa)selectedRow.Cells[2].Tag;
@@ -122,7 +188,8 @@ namespace QLPhongMachTu_DOAN_.GUI
         }
 
         private void button1_Click(object sender, EventArgs e)
-        { // Tìm theo ngày
+        {
+            // Tìm theo ngày
             DateTime from = dateTimePicker1.Value;
             DateTime to = dateTimePicker2.Value;
 
@@ -153,5 +220,56 @@ namespace QLPhongMachTu_DOAN_.GUI
             gridView.Rows.Clear();
             insertHelper(result);
         }
+
+        private void luuBtn_Click(object sender, EventArgs e)
+        {
+            // 
+            // MaBn, CCCD, HoTen, NgaySinh, GioiTinh, DiaChi, SDT, ChuyenKhoa, NgayHen, YeuCauKham
+            if (string.IsNullOrEmpty(CCCDTxt.Text) ||
+                string.IsNullOrEmpty(gioiTinhTxt.Text) || string.IsNullOrEmpty(diaChiTxt.Text) ||
+                string.IsNullOrEmpty(sdt2Txt.Text) || string.IsNullOrEmpty(yeuCauTxt.Text))
+            {
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin", "Thông báo", MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
+                return;
+            }
+
+            BenhNhan benhNhan = new BenhNhan();
+            benhNhan.MaSo = Convert.ToInt64(hoTenTxt.Text);
+            benhNhan.HoTen = hoTenTxt.Text;
+            benhNhan.CCCD = CCCDTxt.Text;
+            benhNhan.GioiTinh = gioiTinhTxt.Text;
+            benhNhan.DiaChi = diaChiTxt.Text;
+            benhNhan.SDT = sdtTxt.Text;
+            benhNhan.NgaySinh = dateTimePicker3.Value;
+
+            User userBenhNhanTemp = new User();
+            userBenhNhanTemp.Username = benhNhan.HoTen;
+            userBenhNhanTemp.Email = benhNhan.HoTen + "@gmail.com";
+            userBenhNhanTemp.Password = "123";
+            userBenhNhanTemp.MaPQ = Convert.ToInt64(Enums.EQuyen.BENHNHAN);
+
+            User newUser = userBll.CreateUser(userBenhNhanTemp);
+            benhNhan.MaUser = newUser.MaUser;
+
+            BenhNhan newBenhNhan = benhNhanBll.Create(benhNhan);
+
+            BacSi bacSi = bacSiBll.GetById(Convert.ToInt64(comboBox2.SelectedValue));
+            LichKham lichKham = new LichKham();
+            lichKham.TrieuChung = yeuCauTxt.Text;
+            lichKham.TrangThai = ETrangThaiKham.ChuaKham;
+            lichKham.NgayKham = dateTimePicker3.Value;
+            lichKham.MaBN = benhNhan.MaSo;
+            lichKham.MaBS = bacSi.MaSo;
+
+            var result = lichKhamBll.TaoLichKham(lichKham);
+            if (result != null)
+            {
+                MessageBox.Show("Tạo lịch khám thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            MessageBox.Show("Thất bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
+
     }
 }
