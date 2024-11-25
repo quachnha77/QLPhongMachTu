@@ -7,17 +7,20 @@ using DTO;
 
 namespace DAL
 {
-    internal class ToaThuocDAL
+    public class ToaThuocDAL
     {
         private readonly string _connectionString;
 
         public ToaThuocDAL()
         {
-            // Lấy chuỗi kết nối từ file cấu hình
-            _connectionString = ConfigurationManager.ConnectionStrings["MyDatabase"].ConnectionString;
+            var builder = new ConfigurationBuilder()
+                .SetBasePath(Directory.GetCurrentDirectory())
+                .AddJsonFile("appsettings.json");
+
+            var configuration = builder.Build();
+            _connectionString = configuration.GetConnectionString("MyDatabase");
         }
 
-        // Lấy tất cả các toa thuốc
         public List<ToaThuoc> GetAll()
         {
             List<ToaThuoc> toaThuocList = new List<ToaThuoc>();
@@ -49,37 +52,6 @@ namespace DAL
             return toaThuocList;
         }
 
-        // Lấy toa thuốc theo mã
-        public ToaThuoc GetToaThuocById(long maTT)
-        {
-            ToaThuoc toaThuoc = null;
-            string query = "SELECT * FROM ToaThuocs WHERE MaTT = @MaTT";
-
-            using (SqlConnection connection = new SqlConnection(_connectionString))
-            {
-                SqlCommand command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@MaTT", maTT);
-                connection.Open();
-
-                using (SqlDataReader reader = command.ExecuteReader())
-                {
-                    if (reader.Read())
-                    {
-                        toaThuoc = new ToaThuoc
-                        {
-                            MaTT = Convert.ToInt64(reader["MaTT"]),
-                            MaBN = Convert.ToInt64(reader["MaBN"]),
-                            MaBS = Convert.ToInt64(reader["MaBS"]),
-                            MaLK = Convert.ToInt64(reader["MaLK"]),
-                            MaPK = Convert.ToInt64(reader["MaPK"]),
-                            NgayKeToa = Convert.ToDateTime(reader["NgayKeToa"])
-                        };
-                    }
-                }
-            }
-
-            return toaThuoc;
-        }
 
         // Thêm toa thuốc
         public bool AddToaThuoc(ToaThuoc toaThuoc)
@@ -96,8 +68,7 @@ namespace DAL
                 command.Parameters.AddWithValue("@NgayKeToa", toaThuoc.NgayKeToa);
 
                 connection.Open();
-                int result = command.ExecuteNonQuery();
-                return result > 0;
+                return command.ExecuteNonQuery() > 0;
             }
         }
 
@@ -117,8 +88,8 @@ namespace DAL
                 command.Parameters.AddWithValue("@MaTT", toaThuoc.MaTT);
 
                 connection.Open();
-                int result = command.ExecuteNonQuery();
-                return result > 0;
+                return command.ExecuteNonQuery() > 0;
+
             }
         }
 
@@ -137,5 +108,105 @@ namespace DAL
                 return result > 0;
             }
         }
+
+        // Cập nhật trạng thái toa thuốc
+        public bool UpdateTrangThaiToaThuoc(long maToaThuoc, string trangThai)
+        {
+            using (SqlConnection connection = new SqlConnection(_connectionString))
+            {
+                string query = "UPDATE ToaThuocs SET TrangThai = 'Đã phát' WHERE MaTT = @MaTT";
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@MaTT", maToaThuoc);
+
+                    connection.Open();
+                    int rowsAffected = command.ExecuteNonQuery();
+                    return rowsAffected > 0;
+                }
+            }
+        }
+
+        // Cập nhật thanh toán bệnh nhân
+        public bool UpdateThanhToanBenhNhan(long maBenhNhan, decimal tongTien)
+        {
+            using (SqlConnection connection = new SqlConnection(_connectionString))
+            {
+                string query = "UPDATE ToaThuocs SET TrangThai = 'Đã thanh toán', TongTien = @TongTien WHERE MaBN = @MaBN";
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@MaBN", maBenhNhan);
+                    command.Parameters.AddWithValue("@TongTien", tongTien);
+
+                    connection.Open();
+                    int rowsAffected = command.ExecuteNonQuery();
+                    return rowsAffected > 0;
+                }
+            }
+        }
+
+        // Lấy toa thuốc theo mã
+        public List<ToaThuoc> SearchToaThuoc(string keyword)
+        {
+            List<ToaThuoc> toaThuocList = new List<ToaThuoc>();
+            string query = "SELECT * FROM ToaThuocs WHERE MaTT LIKE @Keyword OR MaBN LIKE @Keyword OR MaBS LIKE @Keyword";
+
+            using (SqlConnection connection = new SqlConnection(_connectionString))
+            {
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@Keyword", "%" + keyword + "%"); // Tìm kiếm theo từ khóa (sử dụng dấu % cho LIKE)
+                connection.Open();
+
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        ToaThuoc toaThuoc = new ToaThuoc
+                        {
+                            MaTT = Convert.ToInt64(reader["MaTT"]),
+                            MaBN = Convert.ToInt64(reader["MaBN"]),
+                            MaBS = Convert.ToInt64(reader["MaBS"]),
+                            MaLK = Convert.ToInt64(reader["MaLK"]),
+                            MaPK = Convert.ToInt64(reader["MaPK"]),
+                            NgayKeToa = Convert.ToDateTime(reader["NgayKeToa"])
+                        };
+                        toaThuocList.Add(toaThuoc);
+                    }
+                }
+            }
+            return toaThuocList;
+        }
+        public ToaThuoc GetToaThuocById(long maToa)
+        {
+            ToaThuoc toaThuoc = null;
+
+            using (SqlConnection connection = new SqlConnection(_connectionString))
+            {
+                string query = "SELECT * FROM ToaThuoc WHERE MaTT = @MaTT";
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@MaTT", maToa);
+
+                    connection.Open();
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            toaThuoc = new ToaThuoc
+                            {
+                                MaTT = Convert.ToInt64(reader["MaTT"]),
+                                MaBN = Convert.ToInt64(reader["MaBN"]),
+                                MaBS = Convert.ToInt64(reader["MaBS"]),
+                                MaLK = Convert.ToInt64(reader["MaLK"]),
+                                MaPK = Convert.ToInt64(reader["MaPK"]),
+                                NgayKeToa = Convert.ToDateTime(reader["NgayKeToa"])
+                            };
+                        }
+                    }
+                }
+            }
+
+            return toaThuoc;
+        }
+
     }
 }
