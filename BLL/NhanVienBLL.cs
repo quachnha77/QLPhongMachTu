@@ -1,6 +1,8 @@
 ﻿using QLPhongMachTu_DOAN_.DAL;
 using QLPhongMachTu_DOAN_.DTO;
+using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 
 namespace QLPhongMachTu_DOAN_.BLL
 {
@@ -22,6 +24,35 @@ namespace QLPhongMachTu_DOAN_.BLL
         public bool AddNhanVien(NhanVien nv)
         {
             return nvdal.AddNhanVien(nv);
+        }
+
+
+
+        //BichNhung
+
+        public NhanVien GetNhanVienByMa(long ma)
+        {
+            return nvdal.GetNhanVienByMa(ma);
+        }
+
+        public bool UpdateNhanVien(NhanVien nv)
+        {
+            return nvdal.UpdateNhanVien(nv);
+        }
+
+        public (bool, long) IsCCCDExistAndGetMaUser(long cccd)
+        {
+           return nvdal.IsCCCDExistAndGetMaUser(cccd);
+        }
+
+        public bool UpdateNhanVienByCCCD(NhanVien nv)
+        {
+            return nvdal.UpdateNhanVienByCCCD(nv);
+        }
+
+        public bool DeleteNhanVien(long ma)
+        {
+            return nvdal.DeleteNhanVien(ma);
         }
     }
 }

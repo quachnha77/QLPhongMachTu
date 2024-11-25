@@ -27,5 +27,17 @@ namespace QLPhongMachTu_DOAN_.BLL
         {
             return dal.GetByChuyenKhoa(chuyenKhoa);
         }
+
+
+        //BichNhung
+        public List<string> GetName()
+        {
+            return dal.GetName();
+        }
+
+        public long GetMaKhoaByName(string name)
+        {
+            return dal.GetMaKhoaByName(name);
+        }
     }
 }

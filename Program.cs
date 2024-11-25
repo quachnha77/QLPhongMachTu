@@ -1,8 +1,5 @@
 ﻿using QLPhongMachTu_DOAN_.GUI;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace QLPhongMachTu_DOAN_
@@ -17,7 +14,7 @@ namespace QLPhongMachTu_DOAN_
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Login());
+            Application.Run(new NavbarQuanLi());
         }
     }
 }

@@ -17,7 +17,7 @@ namespace QLPhongMachTu_DOAN_.DAL
 
             try
             {
-                string query = "SELECT * FROM PhanQuyen WHERE MaPQ = @MaPQ";
+                string query = "SELECT * FROM PhanQuyens WHERE MaPQ = @MaPQ";
                 SqlParameter[] parameters = { new SqlParameter("@MaPQ", MaQP) };
 
                 DataTable result = ExecuteQuery(query, parameters);
@@ -41,54 +41,37 @@ namespace QLPhongMachTu_DOAN_.DAL
             return phanQuyen;
         }
 
-        // Lấy danh sách tên các phân quyền (ngoại trừ "Bệnh nhân")
+        // Lấy danh sách tên các phân quyền (ngoại trừ "Bệnh nhân", "Admin" và "Vô hiệu hóa")
         public List<string> GetPhanQuyenByName()
         {
-            List<string> phanQuyenList = new List<string>();
+            var phanQuyenNames = new List<string>();
+            string query = "SELECT TenQuyen FROM PhanQuyens WHERE TenQuyen NOT IN (N'Bệnh nhân', 'Admin', N'Vô hiệu hóa')";
 
-            try
+            DataTable dataTable = ExecuteQuery(query);
+
+            foreach (DataRow row in dataTable.Rows)
             {
-                string query = "SELECT TenQuyen FROM PhanQuyen WHERE TenQuyen != @ExcludedRole";
-                SqlParameter[] parameters = { new SqlParameter("@ExcludedRole", "Bệnh nhân") };
-
-                DataTable result = ExecuteQuery(query, parameters);
-
-                foreach (DataRow row in result.Rows)
-                {
-                    phanQuyenList.Add(row["TenQuyen"].ToString());
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Lỗi khi lấy danh sách phân quyền: {ex.Message}");
+                phanQuyenNames.Add(row["TenQuyen"].ToString());
             }
 
-            return phanQuyenList;
+            return phanQuyenNames;
         }
 
         // Lấy mã phân quyền theo tên phân quyền
         public long GetMaPQByName(string name)
         {
-            long maPQ = 0;
+            string query = "SELECT MaPQ FROM PhanQuyens WHERE TenQuyen = @TenQuyen";
 
-            try
-            {
-                string query = "SELECT MaPQ FROM PhanQuyen WHERE TenQuyen = @TenQuyen";
-                SqlParameter[] parameters = { new SqlParameter("@TenQuyen", name) };
-
-                DataTable result = ExecuteQuery(query, parameters);
-
-                if (result.Rows.Count > 0)
+            SqlParameter[] parameters = {
+                new SqlParameter("@TenQuyen", SqlDbType.NVarChar)
                 {
-                    maPQ = Convert.ToInt64(result.Rows[0]["MaPQ"]);
+                    Value = name
                 }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Lỗi khi lấy mã phân quyền theo tên: {ex.Message}");
-            }
+            };
 
-            return maPQ;
+            object result = ExecuteScalar(query, parameters);
+
+            return result != null ? Convert.ToInt64(result) : 0;
         }
     }
 }

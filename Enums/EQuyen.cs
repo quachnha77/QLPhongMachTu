@@ -6,6 +6,6 @@
         BACSI = 3,
         DUOCSI = 8,
         LETAN = 9,
-        BENHNHAN = 4
+        BENHNHAN = 4,
     }
 }

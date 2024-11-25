@@ -66,5 +66,40 @@ namespace QLPhongMachTu_DOAN_.DAL
 
             return null;
         }
+
+
+        //BichNhung
+
+        // Lấy tên phòng ban
+        public List<string> GetName()
+        {
+            List<string> names = new List<string>();
+
+            string query = "SELECT TenPhongBan FROM PhongKhoas";
+            DataTable dataTable = ExecuteQuery(query);
+
+            foreach (DataRow row in dataTable.Rows)
+            {
+                names.Add(row["TenPhongBan"].ToString());
+            }
+            return names;
+        }
+
+        //Lấy mã khoa theo tên phòng ban
+        public long GetMaKhoaByName(string name)
+        {
+            string query = "SELECT MaPK FROM PhongKhoas WHERE TenPhongBan = @name";
+            SqlParameter[] parameters = { new SqlParameter("@name", name) };
+
+            DataTable dataTable = ExecuteQuery(query, parameters);
+
+            if (dataTable.Rows.Count > 0)
+            {
+                DataRow row = dataTable.Rows[0];
+                return Convert.ToInt64(row["MaPK"]);
+            }
+
+            return 0;
+        }
     }
 }

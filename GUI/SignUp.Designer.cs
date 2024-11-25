@@ -220,7 +220,6 @@
             this.dangKyBtn.Name = "dangKyBtn";
             this.dangKyBtn.Size = new System.Drawing.Size(327, 47);
             this.dangKyBtn.TabIndex = 7;
-            this.dangKyBtn.Click += new System.EventHandler(this.dangKyBtn_Click);
             // 
             // label5
             // 

@@ -88,7 +88,6 @@
             this.pnKhamBenh.Size = new System.Drawing.Size(219, 54);
             this.pnKhamBenh.TabIndex = 2;
             this.pnKhamBenh.Click += new System.EventHandler(this.NhanVien_Click);
-            this.pnKhamBenh.Paint += new System.Windows.Forms.PaintEventHandler(this.pnKhamBenh_Paint);
             // 
             // txtKhamBenh
             // 

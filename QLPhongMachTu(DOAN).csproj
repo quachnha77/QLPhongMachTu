@@ -135,12 +135,6 @@
     <Compile Include="DTO\User.cs" />
     <Compile Include="Enums\EQuyen.cs" />
     <Compile Include="Enums\ETrangThaiKham.cs" />
-    <Compile Include="GUI\AddNhanVien.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\AddNhanVien.Designer.cs">
-      <DependentUpon>AddNhanVien.cs</DependentUpon>
-    </Compile>
     <Compile Include="GUI\KhamBenh_Edit_LT.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -243,6 +237,18 @@
     <Compile Include="GUI\NhanVienGUI.Designer.cs">
       <DependentUpon>NhanVienGUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\NhanVien_Add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\NhanVien_Add.Designer.cs">
+      <DependentUpon>NhanVien_Add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\NhanVien_Edit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\NhanVien_Edit.Designer.cs">
+      <DependentUpon>NhanVien_Edit.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\SignUp.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -303,11 +309,6 @@
     <Compile Include="GUI\XemToaThuoc.Designer.cs">
       <DependentUpon>XemToaThuoc.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202410210600284_InitialCreate.cs" />
-    <Compile Include="Migrations\202410210600284_InitialCreate.Designer.cs">
-      <DependentUpon>202410210600284_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="GUI\HoaDonKhamBenh.resx">
@@ -358,6 +359,9 @@
     <EmbeddedResource Include="GUI\NhanVienGUI.resx">
       <DependentUpon>NhanVienGUI.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\NhanVien_Edit.resx">
+      <DependentUpon>NhanVien_Edit.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\SignUp.resx">
       <DependentUpon>SignUp.cs</DependentUpon>
     </EmbeddedResource>
@@ -384,9 +388,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\ToaThuocDonThuoc_DS.resx">
       <DependentUpon>ToaThuocDonThuoc_DS.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202410210600284_InitialCreate.resx">
-      <DependentUpon>202410210600284_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
