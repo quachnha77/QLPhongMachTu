@@ -23,12 +23,23 @@ namespace GUI
         {
             try
             {
-                var danhSachThuoc = khoThuocBLL.GetAll();
-                dataGridViewKhoThuoc.DataSource = danhSachThuoc;
+                var thuocs = khoThuocBLL.GetAll();
+                dataGridViewKhoThuoc.DataSource = thuocs.Select(t => new
+                {
+                    t.MaThuoc,
+                    t.TenThuoc,
+                    t.DonGia,
+                    t.DonVi,
+                    t.NhaCungCap,
+                    t.NgayNhap,
+                    t.HSD,
+                    t.SoLuongTon,
+                    TrangThai = t.IsExpired() ? "Hết hạn" : "Còn hạn"
+                }).ToList();
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"L?i khi t?i danh s�ch thu?c: {ex.Message}");
+                MessageBox.Show($"Lỗi: {ex.Message}", "Lỗi tải dữ liệu", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -73,17 +84,17 @@ namespace GUI
 
                 if (khoThuocBLL.AddOrUpdateThuoc(thuoc))
                 {
-                    MessageBox.Show("Th�m ho?c c?p nh?t thu?c th�nh c�ng!");
+                    MessageBox.Show("Thêm hoặc cập nhập thành công!");
                     LoadThuoc();
                 }
                 else
                 {
-                    MessageBox.Show("Kh�ng th? th�m ho?c c?p nh?t thu?c.");
+                    MessageBox.Show("Lỗi thêm thuốc.");
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"L?i khi th�m/c?p nh?t thu?c: {ex.Message}");
+                MessageBox.Show($"Lỗi cập nhập: {ex.Message}");
             }
         }
 
@@ -97,7 +108,7 @@ namespace GUI
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"L?i khi t�m ki?m thu?c: {ex.Message}");
+                MessageBox.Show($"Lỗi tìm kiếm: {ex.Message}");
             }
         }
 
@@ -116,6 +127,10 @@ namespace GUI
                 txtSoLuong.Text = selectedRow.Cells["SoLuongTon"].Value.ToString();
             }
         }
+
+    }
+
+}
 
     }
 
