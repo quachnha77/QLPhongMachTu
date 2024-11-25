@@ -10,14 +10,13 @@ namespace BLL
 {
     public class ToaThuocBLL
     {
-        private ToaThuocDAL toaThuocDAL;
+        private readonly ToaThuocDAL toaThuocDAL;
 
         public ToaThuocBLL()
         {
             toaThuocDAL = new ToaThuocDAL();
         }
 
-        // Phương thức để lấy tất cả các toa thuốc (nếu cần sử dụng trong giao diện)
         public List<ToaThuoc> GetAll()
         {
             try
@@ -31,20 +30,58 @@ namespace BLL
             }
         }
 
-        // Phương thức để lưu toa thuốc vào cơ sở dữ liệu
-        public bool LuuToaThuoc(ToaThuoc toaThuoc)
+        public bool AddOrUpdateToaThuoc(ToaThuoc toaThuoc)
         {
             try
             {
-                // Gọi phương thức lưu toa thuốc trong DAL
-                return toaThuocDAL.UpdateToaThuoc(toaThuoc);
+                if (toaThuoc.MaTT > 0)
+                {
+                    return toaThuocDAL.UpdateToaThuoc(toaThuoc);
+                }
+                else
+                {
+                    return toaThuocDAL.AddToaThuoc(toaThuoc);
+                }
             }
             catch (Exception ex)
             {
-                // Xử lý ngoại lệ nếu có lỗi xảy ra
-                Console.WriteLine($"Lỗi khi lưu toa thuốc: {ex.Message}");
+                Console.WriteLine($"Lỗi khi thêm hoặc cập nhật toa thuốc: {ex.Message}");
                 return false;
             }
+        }
+
+        public List<ToaThuoc> SearchToaThuoc(string keyword)
+        {
+            var allToaThuoc = toaThuocDAL.GetAll();
+
+            return allToaThuoc
+                .Where(tt =>
+                    tt.MaTT.ToString().Contains(keyword, StringComparison.OrdinalIgnoreCase) || // Chuyển đổi MaTT sang string
+                    tt.MaBN.ToString().Contains(keyword, StringComparison.OrdinalIgnoreCase))   // Chuyển đổi MaBN sang string
+                .ToList();
+        }
+
+        public bool ThanhToan(long maBenhNhan, decimal tongTien)
+        {
+            return toaThuocDAL.UpdateThanhToanBenhNhan(maBenhNhan, tongTien);
+        }
+
+        public bool PhatThuoc(long maToaThuoc)
+        {
+            return toaThuocDAL.UpdateTrangThaiToaThuoc(maToaThuoc, "Đã phát");
+        }
+
+        public ToaThuoc GetByMaToa(long maToa)
+        {
+            ToaThuoc toaThuoc = toaThuocDAL.GetToaThuocById(maToa);
+
+            if (toaThuoc == null)
+            {
+                Console.WriteLine($"Không tìm thấy toa thuốc với mã: {maToa}");
+                return null; 
+            }
+
+            return toaThuoc;
         }
 
     }
