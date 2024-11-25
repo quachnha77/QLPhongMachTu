@@ -1,4 +1,4 @@
-﻿namespace GUI
+namespace GUI
 {
     partial class DuocSi_KhoThuoc
     {
@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DuocSi_KhoThuoc));
             panel1 = new Panel();
             dateTimePickerHSD = new DateTimePicker();
             dateTimePickerNgayNhap = new DateTimePicker();
@@ -118,10 +119,11 @@
             // 
             ChinhSua_button.BackColor = Color.CadetBlue;
             ChinhSua_button.FlatStyle = FlatStyle.Flat;
+            ChinhSua_button.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             ChinhSua_button.ForeColor = SystemColors.ControlLightLight;
             ChinhSua_button.Location = new Point(899, 158);
             ChinhSua_button.Name = "ChinhSua_button";
-            ChinhSua_button.Size = new Size(141, 33);
+            ChinhSua_button.Size = new Size(158, 41);
             ChinhSua_button.TabIndex = 18;
             ChinhSua_button.Text = "Chỉnh sửa";
             ChinhSua_button.UseVisualStyleBackColor = false;
@@ -130,10 +132,11 @@
             // 
             Nhap_button.BackColor = Color.CadetBlue;
             Nhap_button.FlatStyle = FlatStyle.Flat;
+            Nhap_button.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Nhap_button.ForeColor = SystemColors.ControlLightLight;
             Nhap_button.Location = new Point(899, 90);
             Nhap_button.Name = "Nhap_button";
-            Nhap_button.Size = new Size(141, 33);
+            Nhap_button.Size = new Size(158, 39);
             Nhap_button.TabIndex = 17;
             Nhap_button.Text = "Nhập thuốc";
             Nhap_button.UseVisualStyleBackColor = false;
@@ -439,6 +442,7 @@
             // 
             // pictureBox1
             // 
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
             pictureBox1.Location = new Point(53, 106);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(131, 119);
