@@ -2,14 +2,15 @@
 using QLPhongMachTu_DOAN_.DTO;
 using System;
 using System.Collections.Generic;
-using System.Data.SqlClient;
 using System.Data;
+using System.Data.SqlClient;
 
 namespace QLPhongMachTu_DOAN_.BLL
 { // Quản lý logic nghiệp vụ
     public class UserBLL
     {
         private UserDAL dal;
+        public long CurrentUserID { get; set; }
 
         public UserBLL() => this.dal = new UserDAL();
 
@@ -41,12 +42,17 @@ namespace QLPhongMachTu_DOAN_.BLL
         public User CheckLogin(string userName, string matKhau)
         {
             var user = dal.CheckLogin(userName, matKhau);
+            if (user != null)
+            {
+                CurrentUserID = user.MaUser;
+            }
             return user;
         }
 
 
-
         //BichNhung
+
+
 
         public string GetEmailByMa(long ma, string type)
         {
@@ -78,16 +84,44 @@ namespace QLPhongMachTu_DOAN_.BLL
             return dal.AddUserAndGetId(user);
         }
 
-        //Kiểm tra tồn tại CCCD trong NhanViens và BacSis
         public bool IsCCCDExist(long cccd)
         {
             return dal.IsCCCDExist(cccd);
         }
 
-        //Kiểm tra Email tồn tại trong NhanViens và BacSis 
         public bool IsEmailExist(string email)
         {
             return dal.IsEmailExist(email);
         }
 
+        public bool IsUsernameExists(string newUsername)
+        {
+            return dal.IsUsernameExists(newUsername);
+        }
+
+        public bool UpdateUsernameByOldUsername(string oldUsername, string newUsername)
+        {
+            return dal.UpdateUsernameByOldUsername(oldUsername, newUsername);
+        }
+
+        public bool CheckOldPassword(long maUser, string oldPassword)
+        {
+            return dal.CheckOldPassword(maUser, oldPassword);
+        }
+
+        public bool UpdatePassword(string username, string newPassword)
+        {
+            return dal.UpdatePassword(username, newPassword);
+        }
+
+        public DataTable GetUserDetails(long maUser)
+        {
+            return dal.GetUserDetails(maUser);
+        }
+
+        public bool UpdateUserInfo(long maUser, string username, string hoTen, string gioiTinh, string cccd, DateTime ngaySinh, string sdt, string diaChi, string email)
+        {
+            return dal.UpdateUserInfo(maUser, username, hoTen, gioiTinh, cccd, ngaySinh, sdt, diaChi, email);
+        }
+    }
 }

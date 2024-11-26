@@ -297,8 +297,7 @@ namespace QLPhongMachTu_DOAN_.DAL
             string query = @"SELECT COUNT(*) 
                 FROM Users u
                 INNER JOIN PhanQuyens pq ON u.MaPQ = pq.MaPQ
-                WHERE u.Email = @Email AND pq.TenQuyen != 'Bệnh nhân';
-    ";
+                WHERE u.Email = @Email AND pq.TenQuyen != 'Bệnh nhân';";
 
             SqlParameter[] parameters = {
                 new SqlParameter("@Email", email)
@@ -307,5 +306,157 @@ namespace QLPhongMachTu_DOAN_.DAL
             object result = ExecuteScalar(query, parameters);
             return result != null && Convert.ToInt32(result) > 0; // Trả về true nếu Email đã tồn tại trong NhanViens hoặc BacSis, false nếu không
         }
+
+        // Kiểm tra tồn tại username
+        public bool IsUsernameExists(string newUsername)
+        {
+            string query = "SELECT COUNT(*) FROM Users WHERE Username = @Username";
+
+            SqlParameter[] parameters = new SqlParameter[]
+            {
+                new SqlParameter("@Username", newUsername)
+            };
+
+            // Sử dụng ExecuteScalar để nhận giá trị đầu ra
+            int count = (int)ExecuteScalar(query, parameters);
+            return count > 0; // Nếu count > 0, username đã tồn tại
+        }
+
+
+        public bool UpdateUsernameByOldUsername(string oldUsername, string newUsername)
+        {
+            string query = "UPDATE Users SET Username = @NewUsername WHERE Username = @OldUsername";
+
+            SqlParameter[] parameters = new SqlParameter[]
+            {
+                new SqlParameter("@OldUsername", oldUsername),
+                new SqlParameter("@NewUsername", newUsername)
+            };
+
+            return ExecuteNonQuery(query, parameters) > 0;
+        }
+
+        public bool CheckOldPassword(long maUser, string oldPassword)
+        {
+            string query = "SELECT COUNT(*) FROM Users WHERE MaUser = @MaUser AND Password = @Password";
+
+            SqlParameter[] parameter = new SqlParameter[]
+               {
+                    new SqlParameter("@MaUser", maUser),
+                    new SqlParameter("@Password", oldPassword)
+               };
+
+            return ExecuteNonQuery(query, parameter) > 0;
+        }
+
+        public bool UpdatePassword(string username, string newPassword)
+        {
+            string query = "UPDATE [User] SET Password = @NewPassword WHERE Username = @Username" +
+                "";
+
+            SqlParameter[] parameter = new SqlParameter[]
+              {
+                    new SqlParameter("@Username", username),
+                    new SqlParameter("@Password", newPassword)
+              };
+
+            return ExecuteNonQuery(query, parameter) > 0;
+        }
+
+        public DataTable GetUserDetails(long maUser)
+        {
+            string query =
+                "SELECT u.MaUser, u.Username, u.PassWord, u.Email, " +
+                    "ISNULL(nv.CCCD, bs.CCCD) AS CCCD, " +
+                    "ISNULL(nv.HoTen, bs.HoTen) AS HoTen, " +
+                    "ISNULL(nv.NgaySinh, bs.NgaySinh) AS NgaySinh, " +
+                    "ISNULL(nv.GioiTinh, bs.GioiTinh) AS GioiTinh, " +
+                    "ISNULL(nv.DiaChi, bs.DiaChi) AS DiaChi, " +
+                    "ISNULL(nv.SDT, bs.SDT) AS SDT " +
+                "FROM Users u " +
+                "LEFT JOIN NhanViens nv ON u.MaUser = nv.MaUser " +
+                "LEFT JOIN BacSis bs ON u.MaUser = nv.MaUser " +
+                "WHERE u.MaUser = @MaUser";
+
+            SqlParameter[] parameter = {
+                new SqlParameter("MaUser", maUser),
+            };
+
+            return ExecuteQuery(query, parameter);
+        }
+
+        //Update thông tin người dùng
+        public bool UpdateUserInfo(long maUser, string username, string hoTen, string gioiTinh, string cccd, DateTime ngaySinh, string sdt, string diaChi, string email)
+        {
+            string query = " SELECT ISNULL(nv.ChucVu, 'Bác sĩ') AS ChucVu, " +
+                "FROM Users u " +
+                "LEFT JOIN NhanViens nv ON u.MaUser = nv.MaUser " +
+                "LEFT JOIN BacSis bs ON u.MaUser = bs.MaUser " +
+                "WHERE u.MaUser = @MaUser";
+
+            SqlParameter[] parameterCV = {
+                    new SqlParameter("MaUser", maUser),
+                };
+
+            string chucVu = ExecuteScalar(query, parameterCV).ToString();
+
+            // Cập nhật thông tin trong bảng User(email)
+            string queryUpdateUser = "UPDATE Users SET Email = @Email WHERE Username = @Username";
+
+            SqlParameter[] paramUpdateUser = {
+                new SqlParameter("@Email", email),
+                new SqlParameter("@Username", username)
+            };
+
+            // Thực thi cập nhật email trong bảng User
+            bool isUserUpdated = ExecuteNonQuery(queryUpdateUser, paramUpdateUser) > 0;
+
+            // Cập nhật thông tin trong bảng NhanVien hoặc BacSi
+            string queryUpdate;
+            SqlParameter[] parameters;
+
+            if (chucVu == "Bác sĩ") // Nếu là bác sĩ
+            {
+                queryUpdate = "UPDATE BacSis " +
+                    "SET HoTen = @HoTen, GioiTinh = @GioiTinh, CCCD = @CCCD, NgaySinh = @NgaySinh,  SDT = @SDT, DiaChi = @DiaChi " +
+                    "WHERE Username = @Username";
+
+                parameters = new SqlParameter[]
+                {
+                    new SqlParameter("@HoTen", hoTen),
+                    new SqlParameter("@GioiTinh", gioiTinh),
+                    new SqlParameter("@CCCD", cccd),
+                    new SqlParameter("@NgaySinh", ngaySinh),
+                    new SqlParameter("@SDT", sdt),
+                    new SqlParameter("@DiaChi", diaChi),
+                    new SqlParameter("@Username", username)
+                };
+            }
+            else // Nếu là nhân viên
+            {
+                queryUpdate = "UPDATE NhanVien " +
+                    "SET HoTen = @HoTen, GioiTinh = @GioiTinh, CCCD = @CCCD, NgaySinh = @NgaySinh, SDT = @SDT, DiaChi = @DiaChi " +
+                    "WHERE Username = @Username";
+
+                parameters = new SqlParameter[]
+                {
+                    new SqlParameter("@HoTen", hoTen),
+                    new SqlParameter("@GioiTinh", gioiTinh),
+                    new SqlParameter("@CCCD", cccd),
+                    new SqlParameter("@NgaySinh", ngaySinh),
+                    new SqlParameter("@SDT", sdt),
+                    new SqlParameter("@DiaChi", diaChi),
+                    new SqlParameter("@Username", username)
+                };
+            }
+
+            // Thực thi câu lệnh cập nhật thông tin nhân viên hoặc bác sĩ
+            bool isInfoUpdated = ExecuteNonQuery(queryUpdate, parameters) > 0;
+
+            // Trả về kết quả của cả hai cập nhật
+            return isUserUpdated && isInfoUpdated;
+        }
+
+
     }
 }

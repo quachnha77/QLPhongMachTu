@@ -33,7 +33,7 @@ namespace QLPhongMachTu_DOAN_.GUI
         private void panel5_Click(object sender, EventArgs e)
         {
             panelMain.Controls.Clear();
-            TaiKhoan taiKhoancControl = new TaiKhoan();
+            TaiKhoanGUI taiKhoancControl = new TaiKhoanGUI();
             taiKhoancControl.Dock = DockStyle.Fill;
             panelMain.Controls.Add(taiKhoancControl);
             panelMain.Refresh();

@@ -2,13 +2,6 @@
 using QLPhongMachTu_DOAN_.DTO;
 using QLPhongMachTu_DOAN_.Enums;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace QLPhongMachTu_DOAN_.GUI
@@ -61,6 +54,7 @@ namespace QLPhongMachTu_DOAN_.GUI
             }
 
             var user = LoginHandle(userName, matKhau);
+            LoginSession.MaUser = user.MaUser;
             var benhNhan = TimTheoUserID(user.MaUser);
             switch (user.MaPQ)
             {
@@ -89,7 +83,8 @@ namespace QLPhongMachTu_DOAN_.GUI
                     navBenhNhan.Show();
                     this.Dispose();
                     break;
-                case -1: default:
+                case -1:
+                default:
                     MessageBox.Show("Đăng nhập thất bại", "Thất bại", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     break;
             }
@@ -104,5 +99,10 @@ namespace QLPhongMachTu_DOAN_.GUI
         {
             return benhNhanBLL.GetByUserID(userId);
         }
+    }
+
+    public static class LoginSession
+    {
+        public static long MaUser { get; set; }
     }
 }

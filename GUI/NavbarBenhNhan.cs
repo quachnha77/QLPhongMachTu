@@ -88,7 +88,7 @@ namespace QLPhongMachTu_DOAN_
         private void TaiKhoan_Click(object sender, EventArgs e)
         {
             panelMain.Controls.Clear();
-            TaiKhoan taiKhoanControl = new TaiKhoan();
+            TaiKhoanGUI taiKhoanControl = new TaiKhoanGUI();
             taiKhoanControl.Dock = DockStyle.Fill;
             panelMain.Controls.Add(taiKhoanControl);
             panelMain.Refresh();
