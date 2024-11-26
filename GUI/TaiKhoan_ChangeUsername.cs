@@ -50,7 +50,6 @@ namespace QLPhongMachTu_DOAN_.GUI
         public void SetData(string username)
         {
             olderusername = username;
-            txt
         }
     }
 }

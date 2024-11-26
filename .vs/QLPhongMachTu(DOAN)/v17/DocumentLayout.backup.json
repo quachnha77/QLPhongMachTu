@@ -3,32 +3,8 @@
   "WorkspaceRootPath": "E:\\QLPhongMachTu\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1AD6BEAF-FBE1-45C1-A861-C4C1B16E90E7}|QLPhongMachTu(DOAN).csproj|e:\\qlphongmachtu\\gui\\login1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1AD6BEAF-FBE1-45C1-A861-C4C1B16E90E7}|QLPhongMachTu(DOAN).csproj|solutionrelative:gui\\login1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1AD6BEAF-FBE1-45C1-A861-C4C1B16E90E7}|QLPhongMachTu(DOAN).csproj|e:\\qlphongmachtu\\dal\\userdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1AD6BEAF-FBE1-45C1-A861-C4C1B16E90E7}|QLPhongMachTu(DOAN).csproj|solutionrelative:dal\\userdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1AD6BEAF-FBE1-45C1-A861-C4C1B16E90E7}|QLPhongMachTu(DOAN).csproj|e:\\qlphongmachtu\\gui\\taikhoan_changeusername.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1AD6BEAF-FBE1-45C1-A861-C4C1B16E90E7}|QLPhongMachTu(DOAN).csproj|solutionrelative:gui\\taikhoan_changeusername.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1AD6BEAF-FBE1-45C1-A861-C4C1B16E90E7}|QLPhongMachTu(DOAN).csproj|e:\\qlphongmachtu\\bll\\userbll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1AD6BEAF-FBE1-45C1-A861-C4C1B16E90E7}|QLPhongMachTu(DOAN).csproj|solutionrelative:bll\\userbll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1AD6BEAF-FBE1-45C1-A861-C4C1B16E90E7}|QLPhongMachTu(DOAN).csproj|e:\\qlphongmachtu\\gui\\taikhoan_changeusername.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{1AD6BEAF-FBE1-45C1-A861-C4C1B16E90E7}|QLPhongMachTu(DOAN).csproj|solutionrelative:gui\\taikhoan_changeusername.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1AD6BEAF-FBE1-45C1-A861-C4C1B16E90E7}|QLPhongMachTu(DOAN).csproj|e:\\qlphongmachtu\\gui\\taikhoangui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1AD6BEAF-FBE1-45C1-A861-C4C1B16E90E7}|QLPhongMachTu(DOAN).csproj|solutionrelative:gui\\taikhoangui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1AD6BEAF-FBE1-45C1-A861-C4C1B16E90E7}|QLPhongMachTu(DOAN).csproj|e:\\qlphongmachtu\\gui\\taikhoangui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{1AD6BEAF-FBE1-45C1-A861-C4C1B16E90E7}|QLPhongMachTu(DOAN).csproj|solutionrelative:gui\\taikhoangui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{1AD6BEAF-FBE1-45C1-A861-C4C1B16E90E7}|QLPhongMachTu(DOAN).csproj|e:\\qlphongmachtu\\gui\\thongke.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AD6BEAF-FBE1-45C1-A861-C4C1B16E90E7}|QLPhongMachTu(DOAN).csproj|solutionrelative:gui\\thongke.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,7 +14,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 48,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -62,92 +38,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "UserDAL.cs",
-              "DocumentMoniker": "E:\\QLPhongMachTu\\DAL\\UserDAL.cs",
-              "RelativeDocumentMoniker": "DAL\\UserDAL.cs",
-              "ToolTip": "E:\\QLPhongMachTu\\DAL\\UserDAL.cs",
-              "RelativeToolTip": "DAL\\UserDAL.cs",
-              "ViewState": "AgIAABsBAAAAAAAAAADwvzEBAAA9AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T13:43:01.639Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "TaiKhoan_ChangeUsername.cs [Design]",
-              "DocumentMoniker": "E:\\QLPhongMachTu\\GUI\\TaiKhoan_ChangeUsername.cs",
-              "RelativeDocumentMoniker": "GUI\\TaiKhoan_ChangeUsername.cs",
-              "ToolTip": "E:\\QLPhongMachTu\\GUI\\TaiKhoan_ChangeUsername.cs [Design]",
-              "RelativeToolTip": "GUI\\TaiKhoan_ChangeUsername.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T13:48:20.067Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Login1.cs",
-              "DocumentMoniker": "E:\\QLPhongMachTu\\GUI\\Login1.cs",
-              "RelativeDocumentMoniker": "GUI\\Login1.cs",
-              "ToolTip": "E:\\QLPhongMachTu\\GUI\\Login1.cs",
-              "RelativeToolTip": "GUI\\Login1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACkAAAA0AAAAAAAAAA==",
+              "Title": "ThongKe.cs",
+              "DocumentMoniker": "E:\\QLPhongMachTu\\GUI\\ThongKe.cs",
+              "RelativeDocumentMoniker": "GUI\\ThongKe.cs",
+              "ToolTip": "E:\\QLPhongMachTu\\GUI\\ThongKe.cs",
+              "RelativeToolTip": "GUI\\ThongKe.cs",
+              "ViewState": "AgIAADcBAAAAAAAAAAAkwHwBAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T13:33:19.419Z",
+              "WhenOpened": "2024-11-26T14:07:40.187Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "TaiKhoan_ChangeUsername.cs",
-              "DocumentMoniker": "E:\\QLPhongMachTu\\GUI\\TaiKhoan_ChangeUsername.cs",
-              "RelativeDocumentMoniker": "GUI\\TaiKhoan_ChangeUsername.cs",
-              "ToolTip": "E:\\QLPhongMachTu\\GUI\\TaiKhoan_ChangeUsername.cs",
-              "RelativeToolTip": "GUI\\TaiKhoan_ChangeUsername.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAA1wDQAAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T13:39:35.216Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "UserBLL.cs",
-              "DocumentMoniker": "E:\\QLPhongMachTu\\BLL\\UserBLL.cs",
-              "RelativeDocumentMoniker": "BLL\\UserBLL.cs",
-              "ToolTip": "E:\\QLPhongMachTu\\BLL\\UserBLL.cs",
-              "RelativeToolTip": "BLL\\UserBLL.cs",
-              "ViewState": "AgIAADwAAAAAAAAAAAAmwFsAAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T13:09:28.069Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "TaiKhoanGUI.cs",
-              "DocumentMoniker": "E:\\QLPhongMachTu\\GUI\\TaiKhoanGUI.cs",
-              "RelativeDocumentMoniker": "GUI\\TaiKhoanGUI.cs",
-              "ToolTip": "E:\\QLPhongMachTu\\GUI\\TaiKhoanGUI.cs",
-              "RelativeToolTip": "GUI\\TaiKhoanGUI.cs",
-              "ViewState": "AgIAAEgAAAAAAAAAAAAjwGIAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T13:15:20.211Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "TaiKhoanGUI.cs [Design]",
-              "DocumentMoniker": "E:\\QLPhongMachTu\\GUI\\TaiKhoanGUI.cs",
-              "RelativeDocumentMoniker": "GUI\\TaiKhoanGUI.cs",
-              "ToolTip": "E:\\QLPhongMachTu\\GUI\\TaiKhoanGUI.cs [Design]",
-              "RelativeToolTip": "GUI\\TaiKhoanGUI.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T13:15:17.457Z",
-              "EditorCaption": " [Design]"
             }
           ]
         },
