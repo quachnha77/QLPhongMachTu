@@ -15,16 +15,19 @@ namespace QLPhongMachTu_DOAN_.GUI
 {
     public partial class LichLamViec_BS : Form
     {
+        private BacSi bacSi;
+
         private List<LichPhanCong> ds_lpc;
         private PhanCongBLL phanCongBLL;
         private BacSiBLL bacSiBLL;
         private PhongKhoaBLL phongKhoaBLL;
 
-        public LichLamViec_BS()
+        public LichLamViec_BS(BacSi bacSi)
         {
             phanCongBLL = new PhanCongBLL();
             bacSiBLL = new BacSiBLL();
             phongKhoaBLL = new PhongKhoaBLL();
+            this.bacSi = bacSi;
 
             InitializeComponent();
             radioButton2.Checked = true;
@@ -61,16 +64,16 @@ namespace QLPhongMachTu_DOAN_.GUI
         {
             dataGridView1.Rows.Clear();
             List<LichPhanCong> ds_lpc = phanCongBLL.GetAllPhanCongByMaBacSi(LoggedInUser.CurrentUser.MaUser); // get all LPC = MaUser cua bs
-            BacSi bs = bacSiBLL.GetById(LoggedInUser.CurrentUser.MaUser); // get all thong tin cua User (bacsi)
+            //BacSi bs = bacSiBLL.GetById(LoggedInUser.CurrentUser.MaUser); // get all thong tin cua User (bacsi)
             int index = 1;
 
             foreach (var lpc in ds_lpc)
             {
                 int rowIndex = dataGridView1.Rows.Add();
                 dataGridView1.Rows[rowIndex].Cells[0].Value = index;
-                dataGridView1.Rows[rowIndex].Cells[1].Value = lpc.NgayThucHien;
+                dataGridView1.Rows[rowIndex].Cells[1].Value = lpc.NgayThucHien.ToString("dd/MM/yyyy");
                 dataGridView1.Rows[rowIndex].Cells[2].Value = lpc.ThoiGian.ToString("HH:mm"); // CaLam
-                dataGridView1.Rows[rowIndex].Cells[3].Value = bs.MaKhoa; // ChuyenKhoa
+                dataGridView1.Rows[rowIndex].Cells[3].Value = bacSi.MaKhoa; // ChuyenKhoa, bacSi duoc truyen tu constructor vao
                 dataGridView1.Rows[rowIndex].Cells[4].Value = lpc.GhiChu;
                 dataGridView1.Rows[rowIndex].Cells[5].Value = "Active";     // TrangThai
                 index++;
@@ -79,11 +82,10 @@ namespace QLPhongMachTu_DOAN_.GUI
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
-            //if (radioButton2.Checked)
-            //{
-            //    LoadDataSelf();
-            //}
-            dataGridView1.Rows.Clear();
+            if (radioButton2.Checked)
+            {
+                LoadDataSelf();
+            }
         }
 
         private void radioButton3_CheckedChanged(object sender, EventArgs e)
