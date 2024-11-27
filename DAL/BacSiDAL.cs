@@ -70,7 +70,19 @@ namespace QLPhongMachTu_DOAN_.DAL
 
             try
             {
-                string sql = "SELECT * FROM BacSis";
+                //string sql = "SELECT * FROM BacSis";
+                string sql = @"
+                    SELECT 
+                        BS.MaSo, BS.MaKhoa, BS.CCCD, BS.HoTen, BS.NgaySinh, BS.GioiTinh, 
+                        BS.DiaChi, BS.SDT, BS.MaUser
+                    FROM 
+                        BacSis BS
+                    JOIN 
+                        Users U ON BS.MaUser = U.MaUser
+                    JOIN 
+                        PhanQuyens PQ ON U.MaPQ = PQ.MaPQ
+                    WHERE 
+                        PQ.TenQuyen NOT IN ('Admin', 'Vô hiệu hóa')";
                 DataTable result = ExecuteQuery(sql);
 
                 foreach (DataRow row in result.Rows)

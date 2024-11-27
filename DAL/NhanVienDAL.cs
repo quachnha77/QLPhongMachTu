@@ -15,7 +15,18 @@ namespace QLPhongMachTu_DOAN_.DAL
 
             try
             {
-                string query = "SELECT * FROM NhanViens WHERE ChucVu <> 'Admin'";
+                string query = @"
+                    SELECT 
+                        NV.MaSo, NV.CCCD, NV.HoTen, NV.ChucVu, NV.NgaySinh, NV.GioiTinh, 
+                        NV.DiaChi, NV.SDT, NV.MaUser
+                    FROM 
+                        NhanViens NV
+                    JOIN 
+                        Users U ON NV.MaUser = U.MaUser
+                    JOIN 
+                        PhanQuyens PQ ON U.MaPQ = PQ.MaPQ
+                    WHERE 
+                        PQ.TenQuyen NOT IN ('Admin', 'Vô hiệu hóa')";
                 DataTable result = ExecuteQuery(query);
 
                 foreach (DataRow row in result.Rows)
