@@ -74,7 +74,7 @@ namespace QLPhongMachTu_DOAN_.GUI
                     dataGridView1.Rows[rowIndex].Cells[2].Value = pq.TenQuyen;  // Chuc vu
                     dataGridView1.Rows[rowIndex].Cells[3].Value = lpc.ThoiGian.ToString("HH:mm"); // CaLam
                     dataGridView1.Rows[rowIndex].Cells[4].Value = pk.ChuyenKhoa;    // ChuyenKhoa, doi thanh TenPhongBan neu muon
-                    dataGridView1.Rows[rowIndex].Cells[5].Value = lpc.NgayThucHien;
+                    dataGridView1.Rows[rowIndex].Cells[5].Value = lpc.NgayThucHien.ToString("dd-MM-yyyy");
                     dataGridView1.Rows[rowIndex].Cells[6].Value = lpc.GhiChu;
                     dataGridView1.Rows[rowIndex].Cells[7].Value = "Working";     // TrangThai
                     index++;
@@ -175,8 +175,6 @@ namespace QLPhongMachTu_DOAN_.GUI
         }
         private void TimChucVuChuyenKhoaCuaHoTen(object sender, EventArgs e)
         {
-            //var pq = phanquyenBLL.GetAll().FirstOrDefault(_cv => _cv.TenQuyen == comboBox3.Text);
-            //var ck = khoaBLL.GetAll().FirstOrDefault(_ck => _ck.ChuyenKhoa == comboBox3.Text);
             var bs = bacSiBLL.GetAll().FirstOrDefault(_bs => _bs.HoTen == comboBox3.Text);
             var user = userBLL.GetAll().FirstOrDefault(_user => _user.MaUser == bs.MaSo);
             var pk = phongKhoaBLL.GetAll().FirstOrDefault(_pk => _pk.MaPK == bs.MaKhoa);
@@ -202,6 +200,13 @@ namespace QLPhongMachTu_DOAN_.GUI
                 // Lay gia tri MaLPC
                 selectedMaLPC = Convert.ToInt64(dataGridView1.Rows[e.RowIndex].Cells[0].Value);
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e) // xoa button
+        {
+            phanCongBLL.DeleteLichPhanCong((int)selectedMaLPC);
+            MessageBox.Show("Delete OK", "OK Delete", MessageBoxButtons.OK);
+            LoadData();
         }
     }
 }

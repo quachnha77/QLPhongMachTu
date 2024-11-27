@@ -59,6 +59,15 @@ namespace QLPhongMachTu_DOAN_.DAL
             ExecuteNonQuery(query, parameters);
         }
 
+        public void DeleteLichPhanCong(int ma_lpc)
+        {
+            string query = "DELETE FROM LichPhanCongs WHERE MaLPC = @MaLPC";
+            SqlParameter[] parameters = {
+                new SqlParameter("@MaLPC", ma_lpc)
+            };
+
+            ExecuteNonQuery(query, parameters);
+        }
         public List<LichPhanCong> GetAllByMaBacSi(long maBacSi)
         {
             string query = @"

@@ -31,6 +31,10 @@ namespace QLPhongMachTu_DOAN_.BLL
         {
             dal.EditLichPhanCong(lpc);
         }
+        public void DeleteLichPhanCong(int ma_lpc)
+        {
+            dal.DeleteLichPhanCong(ma_lpc);
+        }
         public List<LichPhanCong> GetAllPhanCongByMaBacSi(long MaBS)
         {
             return dal.GetAllByMaBacSi(MaBS);
