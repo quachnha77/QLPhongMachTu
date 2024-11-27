@@ -23,6 +23,8 @@ namespace QLPhongMachTu_DOAN_.GUI
         private BacSiBLL bacSiBLL;
         private KhoaBLL khoaBLL;
         private UserBLL userBLL;
+        private LichKhamBLL lichkhamBLL;
+        private NhanVienBLL nhanvienBLL;
 
         private long selectedMaLPC;
         public LichLamViec_QL()
@@ -34,16 +36,16 @@ namespace QLPhongMachTu_DOAN_.GUI
             khoaBLL = new KhoaBLL();
             userBLL = new UserBLL();
             phongKhoaBLL = new PhongKhoaBLL();
+            lichkhamBLL = new LichKhamBLL();
+            nhanvienBLL = new NhanVienBLL();
 
             LoadData();
             LoadComboBoxChucVu();
             LoadComboBoxChuyenKhoa();
             LoadComboBoxHoTen();
+            LoadComboBoxLichKham();
+            LoadComboBoxNhanVien();
 
-            comboBox4.Items.Add("Sáng");
-            comboBox4.Items.Add("Chiều");
-            comboBox4.Items.Add("Tối");
-            comboBox4.Items.Add("Đêm");
             comboBox4.SelectedIndex = 0;
         }
         public void LoadData()
@@ -54,6 +56,8 @@ namespace QLPhongMachTu_DOAN_.GUI
             List<User> ds_user = userBLL.GetAll();
             List<PhanQuyen> ds_pq = phanquyenBLL.GetAll();
             List<PhongKhoa> ds_pk = phongKhoaBLL.GetAll();
+            //List<LichKham> ds_lk = lichkhamBLL.GetAll();
+            //List<NhanVien> ds_nv = nhanvienBLL.GetAll();
             int index = 1;
 
             foreach (var lpc in ds_lpc)
@@ -68,7 +72,7 @@ namespace QLPhongMachTu_DOAN_.GUI
                     dataGridView1.Rows[rowIndex].Cells[0].Value = lpc.MaLPC;
                     dataGridView1.Rows[rowIndex].Cells[1].Value = bs.HoTen;
                     dataGridView1.Rows[rowIndex].Cells[2].Value = pq.TenQuyen;  // Chuc vu
-                    dataGridView1.Rows[rowIndex].Cells[3].Value = lpc.ThoiGian; // CaLam
+                    dataGridView1.Rows[rowIndex].Cells[3].Value = lpc.ThoiGian.ToString("HH:mm"); // CaLam
                     dataGridView1.Rows[rowIndex].Cells[4].Value = pk.ChuyenKhoa;    // ChuyenKhoa, doi thanh TenPhongBan neu muon
                     dataGridView1.Rows[rowIndex].Cells[5].Value = lpc.NgayThucHien;
                     dataGridView1.Rows[rowIndex].Cells[6].Value = lpc.GhiChu;
@@ -103,6 +107,23 @@ namespace QLPhongMachTu_DOAN_.GUI
             comboBox3.SelectedIndex = 0;
         }
 
+        public void LoadComboBoxLichKham()
+        {
+            foreach (var lk in lichkhamBLL.GetAll())
+            {
+                comboBox5.Items.Add(lk.MaLK);
+            }
+            comboBox5.SelectedIndex = 0;
+        }
+        public void LoadComboBoxNhanVien()
+        {
+            foreach (var nv in nhanvienBLL.GetAll())
+            {
+                comboBox6.Items.Add(nv.HoTen);
+            }
+            comboBox6.SelectedIndex = 0;
+        }
+
         private void groupBox2_Enter(object sender, EventArgs e)
         {
 
@@ -111,14 +132,21 @@ namespace QLPhongMachTu_DOAN_.GUI
         private void button3_Click(object sender, EventArgs e) // them button 
         {
             LichPhanCong lpc = new LichPhanCong();
-            lpc.MaLK = 1; // ko biet lichkham o dau ra ca...
-            lpc.MaNV = 1; // what nhan vien
+            //lpc.MaLK = 1; // ko biet lichkham o dau ra ca...
+            //lpc.MaNV = 1; // what nhan vien
 
             var bs = bacSiBLL.GetAll().FirstOrDefault(_bs => _bs.HoTen == comboBox3.Text);
             lpc.MaBS = bs.MaSo;
-            
+
+            var lk = lichkhamBLL.GetAll().FirstOrDefault(_lk => _lk.MaLK == Convert.ToInt64(comboBox5.Text));
+            lpc.MaLK = lk.MaLK;
+
+            var nv = nhanvienBLL.GetAll().FirstOrDefault(_nv => _nv.HoTen == comboBox6.Text);
+            lpc.MaNV = nv.MaSo;
+
+
             lpc.NgayThucHien = DateTime.Parse(dateTimePicker1.Text);
-            lpc.ThoiGian = DateTime.Parse("00:00");
+            lpc.ThoiGian = DateTime.Parse(comboBox4.Text);
             lpc.GhiChu = textBox1.Text;
             phanCongBLL.CreateLichPhanCong(lpc);
             MessageBox.Show("OK", "OK", MessageBoxButtons.OK);
@@ -127,20 +155,37 @@ namespace QLPhongMachTu_DOAN_.GUI
         private void button1_Click(object sender, EventArgs e) // chi chinh sua dc ghi chu/ngay thuc hien/ca lam
         {
             LichPhanCong lpc = new LichPhanCong();
-            lpc.MaLK = 2;
-            lpc.MaNV = 2;
-            
+            var lk = lichkhamBLL.GetAll().FirstOrDefault(_lk => _lk.MaLK == Convert.ToInt64(comboBox5.Text));
+            lpc.MaLK = lk.MaLK;
+
             var bs = bacSiBLL.GetAll().FirstOrDefault(_bs => _bs.HoTen == comboBox3.Text);
             lpc.MaBS = bs.MaSo;
+
+            var nv = nhanvienBLL.GetAll().FirstOrDefault(_nv => _nv.HoTen == comboBox6.Text);
+            lpc.MaNV = nv.MaSo;
+
             lpc.MaLPC = selectedMaLPC;
 
             lpc.NgayThucHien = DateTime.Parse(dateTimePicker1.Text);
-            lpc.ThoiGian = DateTime.Parse("06:00");
+            lpc.ThoiGian = DateTime.Parse(comboBox4.Text);
             lpc.GhiChu = textBox1.Text;
             phanCongBLL.EditLichPhanCong(lpc);
             MessageBox.Show("Edit OK", "OK Edit", MessageBoxButtons.OK);
             LoadData();
         }
+        private void TimChucVuChuyenKhoaCuaHoTen(object sender, EventArgs e)
+        {
+            //var pq = phanquyenBLL.GetAll().FirstOrDefault(_cv => _cv.TenQuyen == comboBox3.Text);
+            //var ck = khoaBLL.GetAll().FirstOrDefault(_ck => _ck.ChuyenKhoa == comboBox3.Text);
+            var bs = bacSiBLL.GetAll().FirstOrDefault(_bs => _bs.HoTen == comboBox3.Text);
+            var user = userBLL.GetAll().FirstOrDefault(_user => _user.MaUser == bs.MaSo);
+            var pk = phongKhoaBLL.GetAll().FirstOrDefault(_pk => _pk.MaPK == bs.MaKhoa);
+            var cv = phanquyenBLL.GetAll().FirstOrDefault(_cv => _cv.MaPQ == user.MaUser);
+
+            comboBox1.Text = cv.TenQuyen;
+            comboBox2.Text = pk.TenPhongBan;
+        }
+
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e) // click vao 1 cell se click vao ca dong
         {

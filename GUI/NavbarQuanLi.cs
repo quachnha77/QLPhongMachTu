@@ -20,7 +20,7 @@ namespace QLPhongMachTu_DOAN_.GUI
         private void NhanVien_Click(object sender, EventArgs e)
         {
             panelMain.Controls.Clear();
-            NhanVien nhanVienControl = new NhanVien();
+            NhanVienGUI nhanVienControl = new NhanVienGUI();
             nhanVienControl.Dock = DockStyle.Fill;
             panelMain.Controls.Add(nhanVienControl);
             panelMain.Refresh();
