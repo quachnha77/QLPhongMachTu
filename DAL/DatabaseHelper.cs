@@ -56,6 +56,20 @@ namespace QLPhongMachTu_DOAN_.DAL
             }
         }
 
+        public object ExecuteScalar(string query, SqlParameter[] parameters = null)
+        {
+            using (SqlCommand command = new SqlCommand(query, _connection))
+            {
+                if (parameters != null)
+                    command.Parameters.AddRange(parameters);
+
+                OpenConnection();
+                object result = command.ExecuteScalar();
+                CloseConnection();
+                return result;
+            }
+        }
+
         public void Dispose()
         {
             CloseConnection();

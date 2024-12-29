@@ -1,6 +1,8 @@
 ﻿using QLPhongMachTu_DOAN_.BLL;
+using QLPhongMachTu_DOAN_.DAL;
 using QLPhongMachTu_DOAN_.DTO;
 using QLPhongMachTu_DOAN_.Enums;
+using QLPhongMachTu_DOAN_.Session;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,10 +19,13 @@ namespace QLPhongMachTu_DOAN_.GUI
     {
         private readonly UserBLL userBLL;
         private readonly BenhNhanBLL benhNhanBLL;
+        private readonly BacSiBLL bacSiBLL;
+
         public Login1()
         {
             userBLL = new UserBLL();
             benhNhanBLL = new BenhNhanBLL();
+            bacSiBLL = new BacSiBLL();
             InitializeComponent();
         }
 
@@ -40,11 +45,6 @@ namespace QLPhongMachTu_DOAN_.GUI
 
             // Optionally refresh the panel to ensure everything is rendered
             panel1.Refresh();
-        }
-
-        private void dangnhapBtn_Click(object sender, EventArgs e)
-        {
-            DangNhap();
         }
 
         private void Login1_KeyDown(object sender, KeyEventArgs e)
@@ -75,11 +75,13 @@ namespace QLPhongMachTu_DOAN_.GUI
             }
 
             var user = LoginHandle(userName, matKhau);
+
             if (user == null)
             {
                 MessageBox.Show("Sai thông tin đăng nhập!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+            LoginSession.MaUser = user.MaUser;
             var benhNhan = TimTheoUserID(user.MaUser);
             switch (user.MaPQ)
             {
@@ -89,7 +91,8 @@ namespace QLPhongMachTu_DOAN_.GUI
                     this.Dispose();
                     break;
                 case (long)EQuyen.BACSI:
-                    NavbarBacSi navBacSi = new NavbarBacSi();
+                    BacSi bacSi = bacSiBLL.GetByUserId(user.MaUser);
+                    NavbarBacSi navBacSi = new NavbarBacSi(bacSi);
                     navBacSi.Show();
                     this.Dispose();
                     break;
@@ -124,6 +127,9 @@ namespace QLPhongMachTu_DOAN_.GUI
             return benhNhanBLL.GetByUserID(userId);
         }
 
-
+        private void dangNhapbtn_Click(object sender, EventArgs e)
+        {
+            DangNhap();
+        }
     }
 }

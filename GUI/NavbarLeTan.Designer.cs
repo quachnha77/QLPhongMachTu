@@ -131,6 +131,7 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(219, 54);
             this.panel3.TabIndex = 1;
+            this.panel3.Click += new System.EventHandler(this.panel3_Click);
             // 
             // txtThanhToan
             // 
@@ -143,6 +144,7 @@
             this.txtThanhToan.Size = new System.Drawing.Size(118, 23);
             this.txtThanhToan.TabIndex = 3;
             this.txtThanhToan.Text = "THANH TOÁN";
+            this.txtThanhToan.Click += new System.EventHandler(this.panel3_Click);
             // 
             // panel5
             // 
@@ -153,6 +155,7 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(219, 54);
             this.panel5.TabIndex = 1;
+            this.panel5.Click += new System.EventHandler(this.panel5_Click);
             // 
             // txtTaiKhoan
             // 
@@ -165,6 +168,7 @@
             this.txtTaiKhoan.Size = new System.Drawing.Size(99, 23);
             this.txtTaiKhoan.TabIndex = 4;
             this.txtTaiKhoan.Text = "TÀI KHOẢN";
+            this.txtTaiKhoan.Click += new System.EventHandler(this.panel5_Click);
             // 
             // panel4
             // 
@@ -175,6 +179,7 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(219, 54);
             this.panel4.TabIndex = 1;
+            this.panel4.Click += new System.EventHandler(this.panel4_Click_1);
             // 
             // txtDangXuat
             // 
@@ -187,6 +192,7 @@
             this.txtDangXuat.Size = new System.Drawing.Size(104, 23);
             this.txtDangXuat.TabIndex = 5;
             this.txtDangXuat.Text = "ĐĂNG XUẤT";
+            this.txtDangXuat.Click += new System.EventHandler(this.panel4_Click_1);
             // 
             // NavbarLeTan
             // 

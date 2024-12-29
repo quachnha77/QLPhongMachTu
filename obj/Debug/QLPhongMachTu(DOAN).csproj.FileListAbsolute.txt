@@ -64,14 +64,11 @@ C:\Users\2301\Downloads\QLPhongMachTu\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN
 C:\Users\2301\Downloads\QLPhongMachTu\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.NavbarLeTan.resources
 C:\Users\2301\Downloads\QLPhongMachTu\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.NavbarQuanLi.resources
 C:\Users\2301\Downloads\QLPhongMachTu\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.NavbarYTa.resources
-C:\Users\2301\Downloads\QLPhongMachTu\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.NhanVien.resources
 C:\Users\2301\Downloads\QLPhongMachTu\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.SignUp.resources
 C:\Users\2301\Downloads\QLPhongMachTu\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.TaiKhoan.resources
 C:\Users\2301\Downloads\QLPhongMachTu\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.TestControl.resources
 C:\Users\2301\Downloads\QLPhongMachTu\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.ThanhToan.resources
-C:\Users\2301\Downloads\QLPhongMachTu\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.ThanhToan_DS.resources
 C:\Users\2301\Downloads\QLPhongMachTu\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.ThongKe.resources
-C:\Users\2301\Downloads\QLPhongMachTu\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.ToaThuoc.resources
 C:\Users\2301\Downloads\QLPhongMachTu\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.ToaThuocDonThuoc.resources
 C:\Users\2301\Downloads\QLPhongMachTu\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.ToaThuocDonThuoc_DS.resources
 C:\Users\2301\Downloads\QLPhongMachTu\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.Properties.Resources.resources
@@ -81,3 +78,863 @@ C:\Users\2301\Downloads\QLPhongMachTu\QLPhongMachTu\obj\Debug\QLPhongM.B43FB2E6.
 C:\Users\2301\Downloads\QLPhongMachTu\QLPhongMachTu\obj\Debug\QLPhongMachTu(DOAN).exe
 C:\Users\2301\Downloads\QLPhongMachTu\QLPhongMachTu\obj\Debug\QLPhongMachTu(DOAN).pdb
 C:\Users\2301\Downloads\QLPhongMachTu\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.KhamBenh_Edit_LT.resources
+C:\Users\2301\Downloads\QLPhongMachTu\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.XemToaThuoc.resources
+C:\Users\2301\Downloads\QLPhongMachTu\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.NhanVienGUI.resources
+C:\Users\2301\Downloads\QLPhongMachTu\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.AddNhanVien.resources
+C:\Users\2301\Downloads\QLPhongMachTu\QLPhongMachTu\bin\Debug\BouncyCastle.Cryptography.dll
+C:\Users\2301\Downloads\QLPhongMachTu\QLPhongMachTu\bin\Debug\itextsharp.dll
+C:\Users\2301\Downloads\QLPhongMachTu\QLPhongMachTu\bin\Debug\BouncyCastle.Cryptography.xml
+C:\Users\2301\Downloads\QLPhongMachTu\QLPhongMachTu\bin\Debug\itextsharp.xml
+C:\Users\2301\Downloads\QLPhongMachTu\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.ChiTietToaThuocGUI.resources
+C:\Users\2301\Downloads\QLPhongMachTu\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.DanhSachDonThuocGUI.resources
+C:\Users\2301\Downloads\QLPhongMachTu\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.HoaDonKhamBenh_BN.resources
+C:\Users\2301\Downloads\QLPhongMachTu\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.HoaDonThuocGUI.resources
+C:\Users\2301\Downloads\QLPhongMachTu\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.ThanhToanDS.resources
+C:\Users\2301\Downloads\QLPhongMachTu\QLPhongMachTu\obj\Debug\GUI.DuocSi_ToaDon.resources
+C:\Users\2301\Downloads\QLPhongMachTu\QLPhongMachTu\bin\Debug\ClosedXML.dll
+C:\Users\2301\Downloads\QLPhongMachTu\QLPhongMachTu\bin\Debug\ClosedXML.Parser.dll
+C:\Users\2301\Downloads\QLPhongMachTu\QLPhongMachTu\bin\Debug\DocumentFormat.OpenXml.dll
+C:\Users\2301\Downloads\QLPhongMachTu\QLPhongMachTu\bin\Debug\DocumentFormat.OpenXml.Framework.dll
+C:\Users\2301\Downloads\QLPhongMachTu\QLPhongMachTu\bin\Debug\ExcelNumberFormat.dll
+C:\Users\2301\Downloads\QLPhongMachTu\QLPhongMachTu\bin\Debug\Microsoft.Bcl.HashCode.dll
+C:\Users\2301\Downloads\QLPhongMachTu\QLPhongMachTu\bin\Debug\RBush.dll
+C:\Users\2301\Downloads\QLPhongMachTu\QLPhongMachTu\bin\Debug\SixLabors.Fonts.dll
+C:\Users\2301\Downloads\QLPhongMachTu\QLPhongMachTu\bin\Debug\ClosedXML.pdb
+C:\Users\2301\Downloads\QLPhongMachTu\QLPhongMachTu\bin\Debug\ClosedXML.xml
+C:\Users\2301\Downloads\QLPhongMachTu\QLPhongMachTu\bin\Debug\ClosedXML.Parser.xml
+C:\Users\2301\Downloads\QLPhongMachTu\QLPhongMachTu\bin\Debug\DocumentFormat.OpenXml.xml
+C:\Users\2301\Downloads\QLPhongMachTu\QLPhongMachTu\bin\Debug\DocumentFormat.OpenXml.Framework.xml
+C:\Users\2301\Downloads\QLPhongMachTu\QLPhongMachTu\bin\Debug\ExcelNumberFormat.xml
+C:\Users\2301\Downloads\QLPhongMachTu\QLPhongMachTu\bin\Debug\Microsoft.Bcl.HashCode.xml
+C:\Users\2301\Downloads\QLPhongMachTu\QLPhongMachTu\bin\Debug\RBush.xml
+C:\Users\2301\Downloads\QLPhongMachTu\QLPhongMachTu\bin\Debug\SixLabors.Fonts.xml
+C:\Users\2301\Downloads\QLPhongMachTu\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.SignUpGUI.resources
+C:\Users\2301\Downloads\QLPhongMachTu\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.KhamBenh_Edit.resources
+C:\Users\2301\Downloads\QLPhongMachTu\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.PhieuKham_Edit.resources
+C:\Users\HUYKIEN\Downloads\QLPhongMachTu\QLPhongMachTu\bin\Debug\QLPhongMachTu(DOAN).exe.config
+C:\Users\HUYKIEN\Downloads\QLPhongMachTu\QLPhongMachTu\bin\Debug\QLPhongMachTu(DOAN).exe
+C:\Users\HUYKIEN\Downloads\QLPhongMachTu\QLPhongMachTu\bin\Debug\QLPhongMachTu(DOAN).pdb
+C:\Users\HUYKIEN\Downloads\QLPhongMachTu\QLPhongMachTu\bin\Debug\BouncyCastle.Cryptography.dll
+C:\Users\HUYKIEN\Downloads\QLPhongMachTu\QLPhongMachTu\bin\Debug\ClosedXML.dll
+C:\Users\HUYKIEN\Downloads\QLPhongMachTu\QLPhongMachTu\bin\Debug\ClosedXML.Parser.dll
+C:\Users\HUYKIEN\Downloads\QLPhongMachTu\QLPhongMachTu\bin\Debug\DocumentFormat.OpenXml.dll
+C:\Users\HUYKIEN\Downloads\QLPhongMachTu\QLPhongMachTu\bin\Debug\DocumentFormat.OpenXml.Framework.dll
+C:\Users\HUYKIEN\Downloads\QLPhongMachTu\QLPhongMachTu\bin\Debug\EntityFramework.dll
+C:\Users\HUYKIEN\Downloads\QLPhongMachTu\QLPhongMachTu\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\HUYKIEN\Downloads\QLPhongMachTu\QLPhongMachTu\bin\Debug\ExcelNumberFormat.dll
+C:\Users\HUYKIEN\Downloads\QLPhongMachTu\QLPhongMachTu\bin\Debug\itextsharp.dll
+C:\Users\HUYKIEN\Downloads\QLPhongMachTu\QLPhongMachTu\bin\Debug\Microsoft.Bcl.HashCode.dll
+C:\Users\HUYKIEN\Downloads\QLPhongMachTu\QLPhongMachTu\bin\Debug\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\HUYKIEN\Downloads\QLPhongMachTu\QLPhongMachTu\bin\Debug\Microsoft.EntityFrameworkCore.dll
+C:\Users\HUYKIEN\Downloads\QLPhongMachTu\QLPhongMachTu\bin\Debug\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\HUYKIEN\Downloads\QLPhongMachTu\QLPhongMachTu\bin\Debug\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\HUYKIEN\Downloads\QLPhongMachTu\QLPhongMachTu\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\HUYKIEN\Downloads\QLPhongMachTu\QLPhongMachTu\bin\Debug\Microsoft.Extensions.Configuration.Binder.dll
+C:\Users\HUYKIEN\Downloads\QLPhongMachTu\QLPhongMachTu\bin\Debug\Microsoft.Extensions.Configuration.dll
+C:\Users\HUYKIEN\Downloads\QLPhongMachTu\QLPhongMachTu\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\HUYKIEN\Downloads\QLPhongMachTu\QLPhongMachTu\bin\Debug\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\HUYKIEN\Downloads\QLPhongMachTu\QLPhongMachTu\bin\Debug\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\HUYKIEN\Downloads\QLPhongMachTu\QLPhongMachTu\bin\Debug\Microsoft.Extensions.Logging.dll
+C:\Users\HUYKIEN\Downloads\QLPhongMachTu\QLPhongMachTu\bin\Debug\Microsoft.Extensions.Options.dll
+C:\Users\HUYKIEN\Downloads\QLPhongMachTu\QLPhongMachTu\bin\Debug\Microsoft.Extensions.Primitives.dll
+C:\Users\HUYKIEN\Downloads\QLPhongMachTu\QLPhongMachTu\bin\Debug\RBush.dll
+C:\Users\HUYKIEN\Downloads\QLPhongMachTu\QLPhongMachTu\bin\Debug\Remotion.Linq.dll
+C:\Users\HUYKIEN\Downloads\QLPhongMachTu\QLPhongMachTu\bin\Debug\SixLabors.Fonts.dll
+C:\Users\HUYKIEN\Downloads\QLPhongMachTu\QLPhongMachTu\bin\Debug\System.Buffers.dll
+C:\Users\HUYKIEN\Downloads\QLPhongMachTu\QLPhongMachTu\bin\Debug\System.Collections.Immutable.dll
+C:\Users\HUYKIEN\Downloads\QLPhongMachTu\QLPhongMachTu\bin\Debug\System.ComponentModel.Annotations.dll
+C:\Users\HUYKIEN\Downloads\QLPhongMachTu\QLPhongMachTu\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+C:\Users\HUYKIEN\Downloads\QLPhongMachTu\QLPhongMachTu\bin\Debug\System.Interactive.Async.dll
+C:\Users\HUYKIEN\Downloads\QLPhongMachTu\QLPhongMachTu\bin\Debug\System.Memory.dll
+C:\Users\HUYKIEN\Downloads\QLPhongMachTu\QLPhongMachTu\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\HUYKIEN\Downloads\QLPhongMachTu\QLPhongMachTu\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\HUYKIEN\Downloads\QLPhongMachTu\QLPhongMachTu\bin\Debug\BouncyCastle.Cryptography.xml
+C:\Users\HUYKIEN\Downloads\QLPhongMachTu\QLPhongMachTu\bin\Debug\ClosedXML.pdb
+C:\Users\HUYKIEN\Downloads\QLPhongMachTu\QLPhongMachTu\bin\Debug\ClosedXML.xml
+C:\Users\HUYKIEN\Downloads\QLPhongMachTu\QLPhongMachTu\bin\Debug\ClosedXML.Parser.xml
+C:\Users\HUYKIEN\Downloads\QLPhongMachTu\QLPhongMachTu\bin\Debug\DocumentFormat.OpenXml.xml
+C:\Users\HUYKIEN\Downloads\QLPhongMachTu\QLPhongMachTu\bin\Debug\DocumentFormat.OpenXml.Framework.xml
+C:\Users\HUYKIEN\Downloads\QLPhongMachTu\QLPhongMachTu\bin\Debug\EntityFramework.xml
+C:\Users\HUYKIEN\Downloads\QLPhongMachTu\QLPhongMachTu\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\HUYKIEN\Downloads\QLPhongMachTu\QLPhongMachTu\bin\Debug\ExcelNumberFormat.xml
+C:\Users\HUYKIEN\Downloads\QLPhongMachTu\QLPhongMachTu\bin\Debug\itextsharp.xml
+C:\Users\HUYKIEN\Downloads\QLPhongMachTu\QLPhongMachTu\bin\Debug\Microsoft.Bcl.HashCode.xml
+C:\Users\HUYKIEN\Downloads\QLPhongMachTu\QLPhongMachTu\bin\Debug\Microsoft.EntityFrameworkCore.xml
+C:\Users\HUYKIEN\Downloads\QLPhongMachTu\QLPhongMachTu\bin\Debug\Microsoft.EntityFrameworkCore.Abstractions.xml
+C:\Users\HUYKIEN\Downloads\QLPhongMachTu\QLPhongMachTu\bin\Debug\Microsoft.Extensions.Caching.Abstractions.xml
+C:\Users\HUYKIEN\Downloads\QLPhongMachTu\QLPhongMachTu\bin\Debug\Microsoft.Extensions.Caching.Memory.xml
+C:\Users\HUYKIEN\Downloads\QLPhongMachTu\QLPhongMachTu\bin\Debug\Microsoft.Extensions.Configuration.xml
+C:\Users\HUYKIEN\Downloads\QLPhongMachTu\QLPhongMachTu\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.xml
+C:\Users\HUYKIEN\Downloads\QLPhongMachTu\QLPhongMachTu\bin\Debug\Microsoft.Extensions.Configuration.Binder.xml
+C:\Users\HUYKIEN\Downloads\QLPhongMachTu\QLPhongMachTu\bin\Debug\Microsoft.Extensions.DependencyInjection.xml
+C:\Users\HUYKIEN\Downloads\QLPhongMachTu\QLPhongMachTu\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+C:\Users\HUYKIEN\Downloads\QLPhongMachTu\QLPhongMachTu\bin\Debug\Microsoft.Extensions.Logging.xml
+C:\Users\HUYKIEN\Downloads\QLPhongMachTu\QLPhongMachTu\bin\Debug\Microsoft.Extensions.Logging.Abstractions.xml
+C:\Users\HUYKIEN\Downloads\QLPhongMachTu\QLPhongMachTu\bin\Debug\Microsoft.Extensions.Options.xml
+C:\Users\HUYKIEN\Downloads\QLPhongMachTu\QLPhongMachTu\bin\Debug\Microsoft.Extensions.Primitives.xml
+C:\Users\HUYKIEN\Downloads\QLPhongMachTu\QLPhongMachTu\bin\Debug\RBush.xml
+C:\Users\HUYKIEN\Downloads\QLPhongMachTu\QLPhongMachTu\bin\Debug\Remotion.Linq.xml
+C:\Users\HUYKIEN\Downloads\QLPhongMachTu\QLPhongMachTu\bin\Debug\SixLabors.Fonts.xml
+C:\Users\HUYKIEN\Downloads\QLPhongMachTu\QLPhongMachTu\bin\Debug\System.Buffers.xml
+C:\Users\HUYKIEN\Downloads\QLPhongMachTu\QLPhongMachTu\bin\Debug\System.Collections.Immutable.xml
+C:\Users\HUYKIEN\Downloads\QLPhongMachTu\QLPhongMachTu\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+C:\Users\HUYKIEN\Downloads\QLPhongMachTu\QLPhongMachTu\bin\Debug\System.Interactive.Async.xml
+C:\Users\HUYKIEN\Downloads\QLPhongMachTu\QLPhongMachTu\bin\Debug\System.Memory.xml
+C:\Users\HUYKIEN\Downloads\QLPhongMachTu\QLPhongMachTu\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\HUYKIEN\Downloads\QLPhongMachTu\QLPhongMachTu\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\HUYKIEN\Downloads\QLPhongMachTu\QLPhongMachTu\obj\Debug\QLPhongMachTu(DOAN).csproj.AssemblyReference.cache
+C:\Users\HUYKIEN\Downloads\QLPhongMachTu\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.AddNhanVien.resources
+C:\Users\HUYKIEN\Downloads\QLPhongMachTu\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.ChiTietToaThuocGUI.resources
+C:\Users\HUYKIEN\Downloads\QLPhongMachTu\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.DanhSachDonThuocGUI.resources
+C:\Users\HUYKIEN\Downloads\QLPhongMachTu\QLPhongMachTu\obj\Debug\GUI.DuocSi_ToaDon.resources
+C:\Users\HUYKIEN\Downloads\QLPhongMachTu\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.HoaDonKhamBenh.resources
+C:\Users\HUYKIEN\Downloads\QLPhongMachTu\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.HoaDonKhamBenh_BN.resources
+C:\Users\HUYKIEN\Downloads\QLPhongMachTu\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.HoaDonThuocGUI.resources
+C:\Users\HUYKIEN\Downloads\QLPhongMachTu\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.KhamBenh.resources
+C:\Users\HUYKIEN\Downloads\QLPhongMachTu\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.KhamBenh_BS.resources
+C:\Users\HUYKIEN\Downloads\QLPhongMachTu\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.KhamBenh_Edit.resources
+C:\Users\HUYKIEN\Downloads\QLPhongMachTu\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.KhamBenh_Edit_LT.resources
+C:\Users\HUYKIEN\Downloads\QLPhongMachTu\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.KhamBenh_LT.resources
+C:\Users\HUYKIEN\Downloads\QLPhongMachTu\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.KhoThuocGUI.resources
+C:\Users\HUYKIEN\Downloads\QLPhongMachTu\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.LichLamViec_BS.resources
+C:\Users\HUYKIEN\Downloads\QLPhongMachTu\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.LichLamViec_QL.resources
+C:\Users\HUYKIEN\Downloads\QLPhongMachTu\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.Login.resources
+C:\Users\HUYKIEN\Downloads\QLPhongMachTu\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.Login1.resources
+C:\Users\HUYKIEN\Downloads\QLPhongMachTu\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.NavbarBacSi.resources
+C:\Users\HUYKIEN\Downloads\QLPhongMachTu\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.NavbarBenhNhan.resources
+C:\Users\HUYKIEN\Downloads\QLPhongMachTu\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.NavbarDuocSi.resources
+C:\Users\HUYKIEN\Downloads\QLPhongMachTu\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.NavbarLeTan.resources
+C:\Users\HUYKIEN\Downloads\QLPhongMachTu\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.NavbarQuanLi.resources
+C:\Users\HUYKIEN\Downloads\QLPhongMachTu\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.NavbarYTa.resources
+C:\Users\HUYKIEN\Downloads\QLPhongMachTu\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.NhanVienGUI.resources
+C:\Users\HUYKIEN\Downloads\QLPhongMachTu\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.PhieuKham_Edit.resources
+C:\Users\HUYKIEN\Downloads\QLPhongMachTu\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.SignUp.resources
+C:\Users\HUYKIEN\Downloads\QLPhongMachTu\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.SignUpGUI.resources
+C:\Users\HUYKIEN\Downloads\QLPhongMachTu\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.TaiKhoan.resources
+C:\Users\HUYKIEN\Downloads\QLPhongMachTu\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.TestControl.resources
+C:\Users\HUYKIEN\Downloads\QLPhongMachTu\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.ThanhToan.resources
+C:\Users\HUYKIEN\Downloads\QLPhongMachTu\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.ThanhToanDS.resources
+C:\Users\HUYKIEN\Downloads\QLPhongMachTu\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.ThongKe.resources
+C:\Users\HUYKIEN\Downloads\QLPhongMachTu\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.XemToaThuoc.resources
+C:\Users\HUYKIEN\Downloads\QLPhongMachTu\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.ToaThuocDonThuoc.resources
+C:\Users\HUYKIEN\Downloads\QLPhongMachTu\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.ToaThuocDonThuoc_DS.resources
+C:\Users\HUYKIEN\Downloads\QLPhongMachTu\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.Properties.Resources.resources
+C:\Users\HUYKIEN\Downloads\QLPhongMachTu\QLPhongMachTu\obj\Debug\QLPhongMachTu(DOAN).csproj.GenerateResource.cache
+C:\Users\HUYKIEN\Downloads\QLPhongMachTu\QLPhongMachTu\obj\Debug\QLPhongMachTu(DOAN).csproj.CoreCompileInputs.cache
+C:\Users\HUYKIEN\Downloads\QLPhongMachTu\QLPhongMachTu\obj\Debug\QLPhongM.B43FB2E6.Up2Date
+C:\Users\HUYKIEN\Downloads\QLPhongMachTu\QLPhongMachTu\obj\Debug\QLPhongMachTu(DOAN).exe
+C:\Users\HUYKIEN\Downloads\QLPhongMachTu\QLPhongMachTu\obj\Debug\QLPhongMachTu(DOAN).pdb
+F:\QLPhongMachTu (1)\QLPhongMachTu\obj\Debug\QLPhongMachTu(DOAN).csproj.AssemblyReference.cache
+F:\QLPhongMachTu (1)\QLPhongMachTu\obj\Debug\QLPhongMachTu(DOAN).exe
+F:\QLPhongMachTu (1)\QLPhongMachTu\obj\Debug\QLPhongMachTu(DOAN).pdb
+F:\QLPhongMachTu (1)\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.AddNhanVien.resources
+F:\QLPhongMachTu (1)\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.ChiTietToaThuocGUI.resources
+F:\QLPhongMachTu (1)\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.DanhSachDonThuocGUI.resources
+F:\QLPhongMachTu (1)\QLPhongMachTu\obj\Debug\GUI.DuocSi_ToaDon.resources
+F:\QLPhongMachTu (1)\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.HoaDonKhamBenh.resources
+F:\QLPhongMachTu (1)\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.HoaDonKhamBenh_BN.resources
+F:\QLPhongMachTu (1)\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.HoaDonThuocGUI.resources
+F:\QLPhongMachTu (1)\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.KeToaThuocGUI.resources
+F:\QLPhongMachTu (1)\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.KhamBenh.resources
+F:\QLPhongMachTu (1)\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.KhamBenh_BS.resources
+F:\QLPhongMachTu (1)\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.KhamBenh_Edit.resources
+F:\QLPhongMachTu (1)\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.KhamBenh_Edit_LT.resources
+F:\QLPhongMachTu (1)\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.KhamBenh_LT.resources
+F:\QLPhongMachTu (1)\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.KhoThuocGUI.resources
+F:\QLPhongMachTu (1)\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.LichLamViec_BS.resources
+F:\QLPhongMachTu (1)\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.LichLamViec_QL.resources
+F:\QLPhongMachTu (1)\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.Login.resources
+F:\QLPhongMachTu (1)\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.Login1.resources
+F:\QLPhongMachTu (1)\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.NavbarBacSi.resources
+F:\QLPhongMachTu (1)\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.NavbarBenhNhan.resources
+F:\QLPhongMachTu (1)\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.NavbarDuocSi.resources
+F:\QLPhongMachTu (1)\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.NavbarLeTan.resources
+F:\QLPhongMachTu (1)\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.NavbarQuanLi.resources
+F:\QLPhongMachTu (1)\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.NavbarYTa.resources
+F:\QLPhongMachTu (1)\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.NhanVienGUI.resources
+F:\QLPhongMachTu (1)\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.PhieuKham_Edit.resources
+F:\QLPhongMachTu (1)\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.SignUp.resources
+F:\QLPhongMachTu (1)\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.SignUpGUI.resources
+F:\QLPhongMachTu (1)\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.TaiKhoan.resources
+F:\QLPhongMachTu (1)\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.TestControl.resources
+F:\QLPhongMachTu (1)\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.ThanhToan.resources
+F:\QLPhongMachTu (1)\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.ThanhToanDS.resources
+F:\QLPhongMachTu (1)\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.ThongKe.resources
+F:\QLPhongMachTu (1)\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.ToaThuocDonThuoc.resources
+F:\QLPhongMachTu (1)\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.ToaThuocDonThuoc_DS.resources
+F:\QLPhongMachTu (1)\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.XemToaThuocGUI.resources
+F:\QLPhongMachTu (1)\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.Properties.Resources.resources
+F:\QLPhongMachTu (1)\QLPhongMachTu\obj\Debug\QLPhongMachTu(DOAN).csproj.GenerateResource.cache
+F:\QLPhongMachTu (1)\QLPhongMachTu\obj\Debug\QLPhongMachTu(DOAN).csproj.CoreCompileInputs.cache
+F:\QLPhongMachTu (1)\QLPhongMachTu\bin\Debug\QLPhongMachTu(DOAN).exe.config
+F:\QLPhongMachTu (1)\QLPhongMachTu\bin\Debug\QLPhongMachTu(DOAN).exe
+F:\QLPhongMachTu (1)\QLPhongMachTu\bin\Debug\QLPhongMachTu(DOAN).pdb
+F:\QLPhongMachTu (1)\QLPhongMachTu\bin\Debug\BouncyCastle.Cryptography.dll
+F:\QLPhongMachTu (1)\QLPhongMachTu\bin\Debug\ClosedXML.dll
+F:\QLPhongMachTu (1)\QLPhongMachTu\bin\Debug\ClosedXML.Parser.dll
+F:\QLPhongMachTu (1)\QLPhongMachTu\bin\Debug\DocumentFormat.OpenXml.dll
+F:\QLPhongMachTu (1)\QLPhongMachTu\bin\Debug\DocumentFormat.OpenXml.Framework.dll
+F:\QLPhongMachTu (1)\QLPhongMachTu\bin\Debug\EntityFramework.dll
+F:\QLPhongMachTu (1)\QLPhongMachTu\bin\Debug\EntityFramework.SqlServer.dll
+F:\QLPhongMachTu (1)\QLPhongMachTu\bin\Debug\ExcelNumberFormat.dll
+F:\QLPhongMachTu (1)\QLPhongMachTu\bin\Debug\itextsharp.dll
+F:\QLPhongMachTu (1)\QLPhongMachTu\bin\Debug\Microsoft.Bcl.HashCode.dll
+F:\QLPhongMachTu (1)\QLPhongMachTu\bin\Debug\Microsoft.EntityFrameworkCore.Abstractions.dll
+F:\QLPhongMachTu (1)\QLPhongMachTu\bin\Debug\Microsoft.EntityFrameworkCore.dll
+F:\QLPhongMachTu (1)\QLPhongMachTu\bin\Debug\Microsoft.Extensions.Caching.Abstractions.dll
+F:\QLPhongMachTu (1)\QLPhongMachTu\bin\Debug\Microsoft.Extensions.Caching.Memory.dll
+F:\QLPhongMachTu (1)\QLPhongMachTu\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.dll
+F:\QLPhongMachTu (1)\QLPhongMachTu\bin\Debug\Microsoft.Extensions.Configuration.Binder.dll
+F:\QLPhongMachTu (1)\QLPhongMachTu\bin\Debug\Microsoft.Extensions.Configuration.dll
+F:\QLPhongMachTu (1)\QLPhongMachTu\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+F:\QLPhongMachTu (1)\QLPhongMachTu\bin\Debug\Microsoft.Extensions.DependencyInjection.dll
+F:\QLPhongMachTu (1)\QLPhongMachTu\bin\Debug\Microsoft.Extensions.Logging.Abstractions.dll
+F:\QLPhongMachTu (1)\QLPhongMachTu\bin\Debug\Microsoft.Extensions.Logging.dll
+F:\QLPhongMachTu (1)\QLPhongMachTu\bin\Debug\Microsoft.Extensions.Options.dll
+F:\QLPhongMachTu (1)\QLPhongMachTu\bin\Debug\Microsoft.Extensions.Primitives.dll
+F:\QLPhongMachTu (1)\QLPhongMachTu\bin\Debug\RBush.dll
+F:\QLPhongMachTu (1)\QLPhongMachTu\bin\Debug\Remotion.Linq.dll
+F:\QLPhongMachTu (1)\QLPhongMachTu\bin\Debug\SixLabors.Fonts.dll
+F:\QLPhongMachTu (1)\QLPhongMachTu\bin\Debug\System.Buffers.dll
+F:\QLPhongMachTu (1)\QLPhongMachTu\bin\Debug\System.Collections.Immutable.dll
+F:\QLPhongMachTu (1)\QLPhongMachTu\bin\Debug\System.ComponentModel.Annotations.dll
+F:\QLPhongMachTu (1)\QLPhongMachTu\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+F:\QLPhongMachTu (1)\QLPhongMachTu\bin\Debug\System.Interactive.Async.dll
+F:\QLPhongMachTu (1)\QLPhongMachTu\bin\Debug\System.Memory.dll
+F:\QLPhongMachTu (1)\QLPhongMachTu\bin\Debug\System.Numerics.Vectors.dll
+F:\QLPhongMachTu (1)\QLPhongMachTu\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+F:\QLPhongMachTu (1)\QLPhongMachTu\bin\Debug\BouncyCastle.Cryptography.xml
+F:\QLPhongMachTu (1)\QLPhongMachTu\bin\Debug\ClosedXML.pdb
+F:\QLPhongMachTu (1)\QLPhongMachTu\bin\Debug\ClosedXML.xml
+F:\QLPhongMachTu (1)\QLPhongMachTu\bin\Debug\ClosedXML.Parser.xml
+F:\QLPhongMachTu (1)\QLPhongMachTu\bin\Debug\DocumentFormat.OpenXml.xml
+F:\QLPhongMachTu (1)\QLPhongMachTu\bin\Debug\DocumentFormat.OpenXml.Framework.xml
+F:\QLPhongMachTu (1)\QLPhongMachTu\bin\Debug\EntityFramework.xml
+F:\QLPhongMachTu (1)\QLPhongMachTu\bin\Debug\EntityFramework.SqlServer.xml
+F:\QLPhongMachTu (1)\QLPhongMachTu\bin\Debug\ExcelNumberFormat.xml
+F:\QLPhongMachTu (1)\QLPhongMachTu\bin\Debug\itextsharp.xml
+F:\QLPhongMachTu (1)\QLPhongMachTu\bin\Debug\Microsoft.Bcl.HashCode.xml
+F:\QLPhongMachTu (1)\QLPhongMachTu\bin\Debug\Microsoft.EntityFrameworkCore.xml
+F:\QLPhongMachTu (1)\QLPhongMachTu\bin\Debug\Microsoft.EntityFrameworkCore.Abstractions.xml
+F:\QLPhongMachTu (1)\QLPhongMachTu\bin\Debug\Microsoft.Extensions.Caching.Abstractions.xml
+F:\QLPhongMachTu (1)\QLPhongMachTu\bin\Debug\Microsoft.Extensions.Caching.Memory.xml
+F:\QLPhongMachTu (1)\QLPhongMachTu\bin\Debug\Microsoft.Extensions.Configuration.xml
+F:\QLPhongMachTu (1)\QLPhongMachTu\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.xml
+F:\QLPhongMachTu (1)\QLPhongMachTu\bin\Debug\Microsoft.Extensions.Configuration.Binder.xml
+F:\QLPhongMachTu (1)\QLPhongMachTu\bin\Debug\Microsoft.Extensions.DependencyInjection.xml
+F:\QLPhongMachTu (1)\QLPhongMachTu\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+F:\QLPhongMachTu (1)\QLPhongMachTu\bin\Debug\Microsoft.Extensions.Logging.xml
+F:\QLPhongMachTu (1)\QLPhongMachTu\bin\Debug\Microsoft.Extensions.Logging.Abstractions.xml
+F:\QLPhongMachTu (1)\QLPhongMachTu\bin\Debug\Microsoft.Extensions.Options.xml
+F:\QLPhongMachTu (1)\QLPhongMachTu\bin\Debug\Microsoft.Extensions.Primitives.xml
+F:\QLPhongMachTu (1)\QLPhongMachTu\bin\Debug\RBush.xml
+F:\QLPhongMachTu (1)\QLPhongMachTu\bin\Debug\Remotion.Linq.xml
+F:\QLPhongMachTu (1)\QLPhongMachTu\bin\Debug\SixLabors.Fonts.xml
+F:\QLPhongMachTu (1)\QLPhongMachTu\bin\Debug\System.Buffers.xml
+F:\QLPhongMachTu (1)\QLPhongMachTu\bin\Debug\System.Collections.Immutable.xml
+F:\QLPhongMachTu (1)\QLPhongMachTu\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+F:\QLPhongMachTu (1)\QLPhongMachTu\bin\Debug\System.Interactive.Async.xml
+F:\QLPhongMachTu (1)\QLPhongMachTu\bin\Debug\System.Memory.xml
+F:\QLPhongMachTu (1)\QLPhongMachTu\bin\Debug\System.Numerics.Vectors.xml
+F:\QLPhongMachTu (1)\QLPhongMachTu\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+F:\QLPhongMachTu (1)\QLPhongMachTu\obj\Debug\QLPhongM.B43FB2E6.Up2Date
+E:\C#\QLPhongMachTu\bin\Debug\QLPhongMachTu(DOAN).exe.config
+E:\C#\QLPhongMachTu\bin\Debug\QLPhongMachTu(DOAN).exe
+E:\C#\QLPhongMachTu\bin\Debug\QLPhongMachTu(DOAN).pdb
+E:\C#\QLPhongMachTu\bin\Debug\BouncyCastle.Cryptography.dll
+E:\C#\QLPhongMachTu\bin\Debug\ClosedXML.dll
+E:\C#\QLPhongMachTu\bin\Debug\ClosedXML.Parser.dll
+E:\C#\QLPhongMachTu\bin\Debug\DocumentFormat.OpenXml.dll
+E:\C#\QLPhongMachTu\bin\Debug\DocumentFormat.OpenXml.Framework.dll
+E:\C#\QLPhongMachTu\bin\Debug\EntityFramework.dll
+E:\C#\QLPhongMachTu\bin\Debug\EntityFramework.SqlServer.dll
+E:\C#\QLPhongMachTu\bin\Debug\ExcelNumberFormat.dll
+E:\C#\QLPhongMachTu\bin\Debug\itextsharp.dll
+E:\C#\QLPhongMachTu\bin\Debug\Microsoft.Bcl.HashCode.dll
+E:\C#\QLPhongMachTu\bin\Debug\Microsoft.EntityFrameworkCore.Abstractions.dll
+E:\C#\QLPhongMachTu\bin\Debug\Microsoft.EntityFrameworkCore.dll
+E:\C#\QLPhongMachTu\bin\Debug\Microsoft.Extensions.Caching.Abstractions.dll
+E:\C#\QLPhongMachTu\bin\Debug\Microsoft.Extensions.Caching.Memory.dll
+E:\C#\QLPhongMachTu\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.dll
+E:\C#\QLPhongMachTu\bin\Debug\Microsoft.Extensions.Configuration.Binder.dll
+E:\C#\QLPhongMachTu\bin\Debug\Microsoft.Extensions.Configuration.dll
+E:\C#\QLPhongMachTu\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+E:\C#\QLPhongMachTu\bin\Debug\Microsoft.Extensions.DependencyInjection.dll
+E:\C#\QLPhongMachTu\bin\Debug\Microsoft.Extensions.Logging.Abstractions.dll
+E:\C#\QLPhongMachTu\bin\Debug\Microsoft.Extensions.Logging.dll
+E:\C#\QLPhongMachTu\bin\Debug\Microsoft.Extensions.Options.dll
+E:\C#\QLPhongMachTu\bin\Debug\Microsoft.Extensions.Primitives.dll
+E:\C#\QLPhongMachTu\bin\Debug\RBush.dll
+E:\C#\QLPhongMachTu\bin\Debug\Remotion.Linq.dll
+E:\C#\QLPhongMachTu\bin\Debug\SixLabors.Fonts.dll
+E:\C#\QLPhongMachTu\bin\Debug\System.Buffers.dll
+E:\C#\QLPhongMachTu\bin\Debug\System.Collections.Immutable.dll
+E:\C#\QLPhongMachTu\bin\Debug\System.ComponentModel.Annotations.dll
+E:\C#\QLPhongMachTu\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+E:\C#\QLPhongMachTu\bin\Debug\System.Interactive.Async.dll
+E:\C#\QLPhongMachTu\bin\Debug\System.Memory.dll
+E:\C#\QLPhongMachTu\bin\Debug\System.Numerics.Vectors.dll
+E:\C#\QLPhongMachTu\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+E:\C#\QLPhongMachTu\bin\Debug\BouncyCastle.Cryptography.xml
+E:\C#\QLPhongMachTu\bin\Debug\ClosedXML.pdb
+E:\C#\QLPhongMachTu\bin\Debug\ClosedXML.xml
+E:\C#\QLPhongMachTu\bin\Debug\ClosedXML.Parser.xml
+E:\C#\QLPhongMachTu\bin\Debug\DocumentFormat.OpenXml.xml
+E:\C#\QLPhongMachTu\bin\Debug\DocumentFormat.OpenXml.Framework.xml
+E:\C#\QLPhongMachTu\bin\Debug\EntityFramework.xml
+E:\C#\QLPhongMachTu\bin\Debug\EntityFramework.SqlServer.xml
+E:\C#\QLPhongMachTu\bin\Debug\ExcelNumberFormat.xml
+E:\C#\QLPhongMachTu\bin\Debug\itextsharp.xml
+E:\C#\QLPhongMachTu\bin\Debug\Microsoft.Bcl.HashCode.xml
+E:\C#\QLPhongMachTu\bin\Debug\Microsoft.EntityFrameworkCore.xml
+E:\C#\QLPhongMachTu\bin\Debug\Microsoft.EntityFrameworkCore.Abstractions.xml
+E:\C#\QLPhongMachTu\bin\Debug\Microsoft.Extensions.Caching.Abstractions.xml
+E:\C#\QLPhongMachTu\bin\Debug\Microsoft.Extensions.Caching.Memory.xml
+E:\C#\QLPhongMachTu\bin\Debug\Microsoft.Extensions.Configuration.xml
+E:\C#\QLPhongMachTu\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.xml
+E:\C#\QLPhongMachTu\bin\Debug\Microsoft.Extensions.Configuration.Binder.xml
+E:\C#\QLPhongMachTu\bin\Debug\Microsoft.Extensions.DependencyInjection.xml
+E:\C#\QLPhongMachTu\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+E:\C#\QLPhongMachTu\bin\Debug\Microsoft.Extensions.Logging.xml
+E:\C#\QLPhongMachTu\bin\Debug\Microsoft.Extensions.Logging.Abstractions.xml
+E:\C#\QLPhongMachTu\bin\Debug\Microsoft.Extensions.Options.xml
+E:\C#\QLPhongMachTu\bin\Debug\Microsoft.Extensions.Primitives.xml
+E:\C#\QLPhongMachTu\bin\Debug\RBush.xml
+E:\C#\QLPhongMachTu\bin\Debug\Remotion.Linq.xml
+E:\C#\QLPhongMachTu\bin\Debug\SixLabors.Fonts.xml
+E:\C#\QLPhongMachTu\bin\Debug\System.Buffers.xml
+E:\C#\QLPhongMachTu\bin\Debug\System.Collections.Immutable.xml
+E:\C#\QLPhongMachTu\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+E:\C#\QLPhongMachTu\bin\Debug\System.Interactive.Async.xml
+E:\C#\QLPhongMachTu\bin\Debug\System.Memory.xml
+E:\C#\QLPhongMachTu\bin\Debug\System.Numerics.Vectors.xml
+E:\C#\QLPhongMachTu\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+E:\C#\QLPhongMachTu\obj\Debug\QLPhongMachTu(DOAN).csproj.AssemblyReference.cache
+E:\C#\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.ChiTietToaThuocGUI.resources
+E:\C#\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.DanhSachDonThuocGUI.resources
+E:\C#\QLPhongMachTu\obj\Debug\GUI.DuocSi_ToaDon.resources
+E:\C#\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.HoaDonKhamBenh.resources
+E:\C#\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.HoaDonKhamBenh_BN.resources
+E:\C#\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.HoaDonThuocGUI.resources
+E:\C#\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.KeToaThuocGUI.resources
+E:\C#\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.KhamBenh.resources
+E:\C#\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.KhamBenh_BS.resources
+E:\C#\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.KhamBenh_Edit.resources
+E:\C#\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.KhamBenh_Edit_LT.resources
+E:\C#\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.KhamBenh_LT.resources
+E:\C#\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.KhoThuocGUI.resources
+E:\C#\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.LichLamViec_BS.resources
+E:\C#\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.LichLamViec_QL.resources
+E:\C#\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.Login.resources
+E:\C#\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.Login1.resources
+E:\C#\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.NavbarBacSi.resources
+E:\C#\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.NavbarBenhNhan.resources
+E:\C#\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.NavbarDuocSi.resources
+E:\C#\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.NavbarLeTan.resources
+E:\C#\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.NavbarQuanLi.resources
+E:\C#\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.NavbarYTa.resources
+E:\C#\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.NhanVienGUI.resources
+E:\C#\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.PhieuKham_Edit.resources
+E:\C#\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.SignUp.resources
+E:\C#\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.SignUpGUI.resources
+E:\C#\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.TestControl.resources
+E:\C#\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.ThanhToan.resources
+E:\C#\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.ThanhToanDS.resources
+E:\C#\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.ThongKe.resources
+E:\C#\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.ToaThuocDonThuoc.resources
+E:\C#\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.ToaThuocDonThuoc_DS.resources
+E:\C#\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.XemToaThuocGUI.resources
+E:\C#\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.Properties.Resources.resources
+E:\C#\QLPhongMachTu\obj\Debug\QLPhongMachTu(DOAN).csproj.GenerateResource.cache
+E:\C#\QLPhongMachTu\obj\Debug\QLPhongMachTu(DOAN).csproj.CoreCompileInputs.cache
+E:\C#\QLPhongMachTu\obj\Debug\QLPhongM.B43FB2E6.Up2Date
+E:\C#\QLPhongMachTu\obj\Debug\QLPhongMachTu(DOAN).exe
+E:\C#\QLPhongMachTu\obj\Debug\QLPhongMachTu(DOAN).pdb
+E:\C#\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.TaiKhoanGUI.resources
+C:\Users\MINHTHANG\Desktop\QLPhongMachTu\bin\Debug\QLPhongMachTu(DOAN).exe.config
+C:\Users\MINHTHANG\Desktop\QLPhongMachTu\bin\Debug\QLPhongMachTu(DOAN).exe
+C:\Users\MINHTHANG\Desktop\QLPhongMachTu\bin\Debug\QLPhongMachTu(DOAN).pdb
+C:\Users\MINHTHANG\Desktop\QLPhongMachTu\bin\Debug\BouncyCastle.Cryptography.dll
+C:\Users\MINHTHANG\Desktop\QLPhongMachTu\bin\Debug\ClosedXML.dll
+C:\Users\MINHTHANG\Desktop\QLPhongMachTu\bin\Debug\ClosedXML.Parser.dll
+C:\Users\MINHTHANG\Desktop\QLPhongMachTu\bin\Debug\DocumentFormat.OpenXml.dll
+C:\Users\MINHTHANG\Desktop\QLPhongMachTu\bin\Debug\DocumentFormat.OpenXml.Framework.dll
+C:\Users\MINHTHANG\Desktop\QLPhongMachTu\bin\Debug\EntityFramework.dll
+C:\Users\MINHTHANG\Desktop\QLPhongMachTu\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\MINHTHANG\Desktop\QLPhongMachTu\bin\Debug\ExcelNumberFormat.dll
+C:\Users\MINHTHANG\Desktop\QLPhongMachTu\bin\Debug\itextsharp.dll
+C:\Users\MINHTHANG\Desktop\QLPhongMachTu\bin\Debug\Microsoft.Bcl.HashCode.dll
+C:\Users\MINHTHANG\Desktop\QLPhongMachTu\bin\Debug\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\MINHTHANG\Desktop\QLPhongMachTu\bin\Debug\Microsoft.EntityFrameworkCore.dll
+C:\Users\MINHTHANG\Desktop\QLPhongMachTu\bin\Debug\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\MINHTHANG\Desktop\QLPhongMachTu\bin\Debug\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\MINHTHANG\Desktop\QLPhongMachTu\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\MINHTHANG\Desktop\QLPhongMachTu\bin\Debug\Microsoft.Extensions.Configuration.Binder.dll
+C:\Users\MINHTHANG\Desktop\QLPhongMachTu\bin\Debug\Microsoft.Extensions.Configuration.dll
+C:\Users\MINHTHANG\Desktop\QLPhongMachTu\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\MINHTHANG\Desktop\QLPhongMachTu\bin\Debug\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\MINHTHANG\Desktop\QLPhongMachTu\bin\Debug\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\MINHTHANG\Desktop\QLPhongMachTu\bin\Debug\Microsoft.Extensions.Logging.dll
+C:\Users\MINHTHANG\Desktop\QLPhongMachTu\bin\Debug\Microsoft.Extensions.Options.dll
+C:\Users\MINHTHANG\Desktop\QLPhongMachTu\bin\Debug\Microsoft.Extensions.Primitives.dll
+C:\Users\MINHTHANG\Desktop\QLPhongMachTu\bin\Debug\RBush.dll
+C:\Users\MINHTHANG\Desktop\QLPhongMachTu\bin\Debug\Remotion.Linq.dll
+C:\Users\MINHTHANG\Desktop\QLPhongMachTu\bin\Debug\SixLabors.Fonts.dll
+C:\Users\MINHTHANG\Desktop\QLPhongMachTu\bin\Debug\System.Buffers.dll
+C:\Users\MINHTHANG\Desktop\QLPhongMachTu\bin\Debug\System.Collections.Immutable.dll
+C:\Users\MINHTHANG\Desktop\QLPhongMachTu\bin\Debug\System.ComponentModel.Annotations.dll
+C:\Users\MINHTHANG\Desktop\QLPhongMachTu\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+C:\Users\MINHTHANG\Desktop\QLPhongMachTu\bin\Debug\System.Interactive.Async.dll
+C:\Users\MINHTHANG\Desktop\QLPhongMachTu\bin\Debug\System.Memory.dll
+C:\Users\MINHTHANG\Desktop\QLPhongMachTu\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\MINHTHANG\Desktop\QLPhongMachTu\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\MINHTHANG\Desktop\QLPhongMachTu\bin\Debug\BouncyCastle.Cryptography.xml
+C:\Users\MINHTHANG\Desktop\QLPhongMachTu\bin\Debug\ClosedXML.pdb
+C:\Users\MINHTHANG\Desktop\QLPhongMachTu\bin\Debug\ClosedXML.xml
+C:\Users\MINHTHANG\Desktop\QLPhongMachTu\bin\Debug\ClosedXML.Parser.xml
+C:\Users\MINHTHANG\Desktop\QLPhongMachTu\bin\Debug\DocumentFormat.OpenXml.xml
+C:\Users\MINHTHANG\Desktop\QLPhongMachTu\bin\Debug\DocumentFormat.OpenXml.Framework.xml
+C:\Users\MINHTHANG\Desktop\QLPhongMachTu\bin\Debug\EntityFramework.xml
+C:\Users\MINHTHANG\Desktop\QLPhongMachTu\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\MINHTHANG\Desktop\QLPhongMachTu\bin\Debug\ExcelNumberFormat.xml
+C:\Users\MINHTHANG\Desktop\QLPhongMachTu\bin\Debug\itextsharp.xml
+C:\Users\MINHTHANG\Desktop\QLPhongMachTu\bin\Debug\Microsoft.Bcl.HashCode.xml
+C:\Users\MINHTHANG\Desktop\QLPhongMachTu\bin\Debug\Microsoft.EntityFrameworkCore.xml
+C:\Users\MINHTHANG\Desktop\QLPhongMachTu\bin\Debug\Microsoft.EntityFrameworkCore.Abstractions.xml
+C:\Users\MINHTHANG\Desktop\QLPhongMachTu\bin\Debug\Microsoft.Extensions.Caching.Abstractions.xml
+C:\Users\MINHTHANG\Desktop\QLPhongMachTu\bin\Debug\Microsoft.Extensions.Caching.Memory.xml
+C:\Users\MINHTHANG\Desktop\QLPhongMachTu\bin\Debug\Microsoft.Extensions.Configuration.xml
+C:\Users\MINHTHANG\Desktop\QLPhongMachTu\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.xml
+C:\Users\MINHTHANG\Desktop\QLPhongMachTu\bin\Debug\Microsoft.Extensions.Configuration.Binder.xml
+C:\Users\MINHTHANG\Desktop\QLPhongMachTu\bin\Debug\Microsoft.Extensions.DependencyInjection.xml
+C:\Users\MINHTHANG\Desktop\QLPhongMachTu\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+C:\Users\MINHTHANG\Desktop\QLPhongMachTu\bin\Debug\Microsoft.Extensions.Logging.xml
+C:\Users\MINHTHANG\Desktop\QLPhongMachTu\bin\Debug\Microsoft.Extensions.Logging.Abstractions.xml
+C:\Users\MINHTHANG\Desktop\QLPhongMachTu\bin\Debug\Microsoft.Extensions.Options.xml
+C:\Users\MINHTHANG\Desktop\QLPhongMachTu\bin\Debug\Microsoft.Extensions.Primitives.xml
+C:\Users\MINHTHANG\Desktop\QLPhongMachTu\bin\Debug\RBush.xml
+C:\Users\MINHTHANG\Desktop\QLPhongMachTu\bin\Debug\Remotion.Linq.xml
+C:\Users\MINHTHANG\Desktop\QLPhongMachTu\bin\Debug\SixLabors.Fonts.xml
+C:\Users\MINHTHANG\Desktop\QLPhongMachTu\bin\Debug\System.Buffers.xml
+C:\Users\MINHTHANG\Desktop\QLPhongMachTu\bin\Debug\System.Collections.Immutable.xml
+C:\Users\MINHTHANG\Desktop\QLPhongMachTu\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+C:\Users\MINHTHANG\Desktop\QLPhongMachTu\bin\Debug\System.Interactive.Async.xml
+C:\Users\MINHTHANG\Desktop\QLPhongMachTu\bin\Debug\System.Memory.xml
+C:\Users\MINHTHANG\Desktop\QLPhongMachTu\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\MINHTHANG\Desktop\QLPhongMachTu\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\MINHTHANG\Desktop\QLPhongMachTu\obj\Debug\QLPhongMachTu(DOAN).csproj.AssemblyReference.cache
+C:\Users\MINHTHANG\Desktop\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.ChiTietToaThuocGUI.resources
+C:\Users\MINHTHANG\Desktop\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.DanhSachDonThuocGUI.resources
+C:\Users\MINHTHANG\Desktop\QLPhongMachTu\obj\Debug\GUI.DuocSi_ToaDon.resources
+C:\Users\MINHTHANG\Desktop\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.HoaDonKhamBenh.resources
+C:\Users\MINHTHANG\Desktop\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.HoaDonKhamBenh_BN.resources
+C:\Users\MINHTHANG\Desktop\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.HoaDonThuocGUI.resources
+C:\Users\MINHTHANG\Desktop\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.KeToaThuocGUI.resources
+C:\Users\MINHTHANG\Desktop\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.KhamBenh.resources
+C:\Users\MINHTHANG\Desktop\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.KhamBenh_BS.resources
+C:\Users\MINHTHANG\Desktop\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.KhamBenh_Edit.resources
+C:\Users\MINHTHANG\Desktop\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.KhamBenh_Edit_LT.resources
+C:\Users\MINHTHANG\Desktop\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.KhamBenh_LT.resources
+C:\Users\MINHTHANG\Desktop\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.KhoThuocGUI.resources
+C:\Users\MINHTHANG\Desktop\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.LichLamViec_BS.resources
+C:\Users\MINHTHANG\Desktop\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.LichLamViec_QL.resources
+C:\Users\MINHTHANG\Desktop\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.Login.resources
+C:\Users\MINHTHANG\Desktop\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.Login1.resources
+C:\Users\MINHTHANG\Desktop\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.NavbarBacSi.resources
+C:\Users\MINHTHANG\Desktop\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.NavbarBenhNhan.resources
+C:\Users\MINHTHANG\Desktop\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.NavbarDuocSi.resources
+C:\Users\MINHTHANG\Desktop\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.NavbarLeTan.resources
+C:\Users\MINHTHANG\Desktop\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.NavbarQuanLi.resources
+C:\Users\MINHTHANG\Desktop\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.NavbarYTa.resources
+C:\Users\MINHTHANG\Desktop\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.NhanVienGUI.resources
+C:\Users\MINHTHANG\Desktop\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.PhieuKham_Edit.resources
+C:\Users\MINHTHANG\Desktop\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.SignUp.resources
+C:\Users\MINHTHANG\Desktop\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.SignUpGUI.resources
+C:\Users\MINHTHANG\Desktop\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.TaiKhoanGUI.resources
+C:\Users\MINHTHANG\Desktop\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.TestControl.resources
+C:\Users\MINHTHANG\Desktop\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.ThanhToan.resources
+C:\Users\MINHTHANG\Desktop\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.ThanhToanDS.resources
+C:\Users\MINHTHANG\Desktop\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.ThongKe.resources
+C:\Users\MINHTHANG\Desktop\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.ToaThuocDonThuoc.resources
+C:\Users\MINHTHANG\Desktop\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.ToaThuocDonThuoc_DS.resources
+C:\Users\MINHTHANG\Desktop\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.XemToaThuocGUI.resources
+C:\Users\MINHTHANG\Desktop\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.Properties.Resources.resources
+C:\Users\MINHTHANG\Desktop\QLPhongMachTu\obj\Debug\QLPhongMachTu(DOAN).csproj.GenerateResource.cache
+C:\Users\MINHTHANG\Desktop\QLPhongMachTu\obj\Debug\QLPhongMachTu(DOAN).csproj.CoreCompileInputs.cache
+C:\Users\MINHTHANG\Desktop\QLPhongMachTu\obj\Debug\QLPhongM.B43FB2E6.Up2Date
+C:\Users\MINHTHANG\Desktop\QLPhongMachTu\obj\Debug\QLPhongMachTu(DOAN).exe
+C:\Users\MINHTHANG\Desktop\QLPhongMachTu\obj\Debug\QLPhongMachTu(DOAN).pdb
+G:\QLPhongMachTu(30_11)\QLPhongMachTu\bin\Debug\QLPhongMachTu(DOAN).exe.config
+G:\QLPhongMachTu(30_11)\QLPhongMachTu\bin\Debug\QLPhongMachTu(DOAN).exe
+G:\QLPhongMachTu(30_11)\QLPhongMachTu\bin\Debug\QLPhongMachTu(DOAN).pdb
+G:\QLPhongMachTu(30_11)\QLPhongMachTu\bin\Debug\BouncyCastle.Cryptography.dll
+G:\QLPhongMachTu(30_11)\QLPhongMachTu\bin\Debug\ClosedXML.dll
+G:\QLPhongMachTu(30_11)\QLPhongMachTu\bin\Debug\ClosedXML.Parser.dll
+G:\QLPhongMachTu(30_11)\QLPhongMachTu\bin\Debug\DocumentFormat.OpenXml.dll
+G:\QLPhongMachTu(30_11)\QLPhongMachTu\bin\Debug\DocumentFormat.OpenXml.Framework.dll
+G:\QLPhongMachTu(30_11)\QLPhongMachTu\bin\Debug\EntityFramework.dll
+G:\QLPhongMachTu(30_11)\QLPhongMachTu\bin\Debug\EntityFramework.SqlServer.dll
+G:\QLPhongMachTu(30_11)\QLPhongMachTu\bin\Debug\ExcelNumberFormat.dll
+G:\QLPhongMachTu(30_11)\QLPhongMachTu\bin\Debug\itextsharp.dll
+G:\QLPhongMachTu(30_11)\QLPhongMachTu\bin\Debug\Microsoft.Bcl.HashCode.dll
+G:\QLPhongMachTu(30_11)\QLPhongMachTu\bin\Debug\Microsoft.EntityFrameworkCore.Abstractions.dll
+G:\QLPhongMachTu(30_11)\QLPhongMachTu\bin\Debug\Microsoft.EntityFrameworkCore.dll
+G:\QLPhongMachTu(30_11)\QLPhongMachTu\bin\Debug\Microsoft.Extensions.Caching.Abstractions.dll
+G:\QLPhongMachTu(30_11)\QLPhongMachTu\bin\Debug\Microsoft.Extensions.Caching.Memory.dll
+G:\QLPhongMachTu(30_11)\QLPhongMachTu\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.dll
+G:\QLPhongMachTu(30_11)\QLPhongMachTu\bin\Debug\Microsoft.Extensions.Configuration.Binder.dll
+G:\QLPhongMachTu(30_11)\QLPhongMachTu\bin\Debug\Microsoft.Extensions.Configuration.dll
+G:\QLPhongMachTu(30_11)\QLPhongMachTu\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+G:\QLPhongMachTu(30_11)\QLPhongMachTu\bin\Debug\Microsoft.Extensions.DependencyInjection.dll
+G:\QLPhongMachTu(30_11)\QLPhongMachTu\bin\Debug\Microsoft.Extensions.Logging.Abstractions.dll
+G:\QLPhongMachTu(30_11)\QLPhongMachTu\bin\Debug\Microsoft.Extensions.Logging.dll
+G:\QLPhongMachTu(30_11)\QLPhongMachTu\bin\Debug\Microsoft.Extensions.Options.dll
+G:\QLPhongMachTu(30_11)\QLPhongMachTu\bin\Debug\Microsoft.Extensions.Primitives.dll
+G:\QLPhongMachTu(30_11)\QLPhongMachTu\bin\Debug\RBush.dll
+G:\QLPhongMachTu(30_11)\QLPhongMachTu\bin\Debug\Remotion.Linq.dll
+G:\QLPhongMachTu(30_11)\QLPhongMachTu\bin\Debug\SixLabors.Fonts.dll
+G:\QLPhongMachTu(30_11)\QLPhongMachTu\bin\Debug\System.Buffers.dll
+G:\QLPhongMachTu(30_11)\QLPhongMachTu\bin\Debug\System.Collections.Immutable.dll
+G:\QLPhongMachTu(30_11)\QLPhongMachTu\bin\Debug\System.ComponentModel.Annotations.dll
+G:\QLPhongMachTu(30_11)\QLPhongMachTu\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+G:\QLPhongMachTu(30_11)\QLPhongMachTu\bin\Debug\System.Interactive.Async.dll
+G:\QLPhongMachTu(30_11)\QLPhongMachTu\bin\Debug\System.Memory.dll
+G:\QLPhongMachTu(30_11)\QLPhongMachTu\bin\Debug\System.Numerics.Vectors.dll
+G:\QLPhongMachTu(30_11)\QLPhongMachTu\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+G:\QLPhongMachTu(30_11)\QLPhongMachTu\bin\Debug\BouncyCastle.Cryptography.xml
+G:\QLPhongMachTu(30_11)\QLPhongMachTu\bin\Debug\ClosedXML.pdb
+G:\QLPhongMachTu(30_11)\QLPhongMachTu\bin\Debug\ClosedXML.xml
+G:\QLPhongMachTu(30_11)\QLPhongMachTu\bin\Debug\ClosedXML.Parser.xml
+G:\QLPhongMachTu(30_11)\QLPhongMachTu\bin\Debug\DocumentFormat.OpenXml.xml
+G:\QLPhongMachTu(30_11)\QLPhongMachTu\bin\Debug\DocumentFormat.OpenXml.Framework.xml
+G:\QLPhongMachTu(30_11)\QLPhongMachTu\bin\Debug\EntityFramework.xml
+G:\QLPhongMachTu(30_11)\QLPhongMachTu\bin\Debug\EntityFramework.SqlServer.xml
+G:\QLPhongMachTu(30_11)\QLPhongMachTu\bin\Debug\ExcelNumberFormat.xml
+G:\QLPhongMachTu(30_11)\QLPhongMachTu\bin\Debug\itextsharp.xml
+G:\QLPhongMachTu(30_11)\QLPhongMachTu\bin\Debug\Microsoft.Bcl.HashCode.xml
+G:\QLPhongMachTu(30_11)\QLPhongMachTu\bin\Debug\Microsoft.EntityFrameworkCore.xml
+G:\QLPhongMachTu(30_11)\QLPhongMachTu\bin\Debug\Microsoft.EntityFrameworkCore.Abstractions.xml
+G:\QLPhongMachTu(30_11)\QLPhongMachTu\bin\Debug\Microsoft.Extensions.Caching.Abstractions.xml
+G:\QLPhongMachTu(30_11)\QLPhongMachTu\bin\Debug\Microsoft.Extensions.Caching.Memory.xml
+G:\QLPhongMachTu(30_11)\QLPhongMachTu\bin\Debug\Microsoft.Extensions.Configuration.xml
+G:\QLPhongMachTu(30_11)\QLPhongMachTu\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.xml
+G:\QLPhongMachTu(30_11)\QLPhongMachTu\bin\Debug\Microsoft.Extensions.Configuration.Binder.xml
+G:\QLPhongMachTu(30_11)\QLPhongMachTu\bin\Debug\Microsoft.Extensions.DependencyInjection.xml
+G:\QLPhongMachTu(30_11)\QLPhongMachTu\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+G:\QLPhongMachTu(30_11)\QLPhongMachTu\bin\Debug\Microsoft.Extensions.Logging.xml
+G:\QLPhongMachTu(30_11)\QLPhongMachTu\bin\Debug\Microsoft.Extensions.Logging.Abstractions.xml
+G:\QLPhongMachTu(30_11)\QLPhongMachTu\bin\Debug\Microsoft.Extensions.Options.xml
+G:\QLPhongMachTu(30_11)\QLPhongMachTu\bin\Debug\Microsoft.Extensions.Primitives.xml
+G:\QLPhongMachTu(30_11)\QLPhongMachTu\bin\Debug\RBush.xml
+G:\QLPhongMachTu(30_11)\QLPhongMachTu\bin\Debug\Remotion.Linq.xml
+G:\QLPhongMachTu(30_11)\QLPhongMachTu\bin\Debug\SixLabors.Fonts.xml
+G:\QLPhongMachTu(30_11)\QLPhongMachTu\bin\Debug\System.Buffers.xml
+G:\QLPhongMachTu(30_11)\QLPhongMachTu\bin\Debug\System.Collections.Immutable.xml
+G:\QLPhongMachTu(30_11)\QLPhongMachTu\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+G:\QLPhongMachTu(30_11)\QLPhongMachTu\bin\Debug\System.Interactive.Async.xml
+G:\QLPhongMachTu(30_11)\QLPhongMachTu\bin\Debug\System.Memory.xml
+G:\QLPhongMachTu(30_11)\QLPhongMachTu\bin\Debug\System.Numerics.Vectors.xml
+G:\QLPhongMachTu(30_11)\QLPhongMachTu\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+G:\QLPhongMachTu(30_11)\QLPhongMachTu\obj\Debug\QLPhongMachTu(DOAN).csproj.AssemblyReference.cache
+G:\QLPhongMachTu(30_11)\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.ChiTietToaThuocGUI.resources
+G:\QLPhongMachTu(30_11)\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.DanhSachDonThuocGUI.resources
+G:\QLPhongMachTu(30_11)\QLPhongMachTu\obj\Debug\GUI.DuocSi_ToaDon.resources
+G:\QLPhongMachTu(30_11)\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.HoaDonKhamBenh.resources
+G:\QLPhongMachTu(30_11)\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.HoaDonKhamBenh_BN.resources
+G:\QLPhongMachTu(30_11)\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.HoaDonThuocGUI.resources
+G:\QLPhongMachTu(30_11)\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.KeToaThuocGUI.resources
+G:\QLPhongMachTu(30_11)\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.KhamBenh.resources
+G:\QLPhongMachTu(30_11)\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.KhamBenh_BS.resources
+G:\QLPhongMachTu(30_11)\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.KhamBenh_Edit.resources
+G:\QLPhongMachTu(30_11)\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.KhamBenh_Edit_LT.resources
+G:\QLPhongMachTu(30_11)\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.KhamBenh_LT.resources
+G:\QLPhongMachTu(30_11)\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.KhoThuocGUI.resources
+G:\QLPhongMachTu(30_11)\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.LichLamViec_BS.resources
+G:\QLPhongMachTu(30_11)\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.LichLamViec_QL.resources
+G:\QLPhongMachTu(30_11)\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.Login.resources
+G:\QLPhongMachTu(30_11)\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.NavbarBacSi.resources
+G:\QLPhongMachTu(30_11)\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.NavbarBenhNhan.resources
+G:\QLPhongMachTu(30_11)\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.NavbarDuocSi.resources
+G:\QLPhongMachTu(30_11)\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.NavbarLeTan.resources
+G:\QLPhongMachTu(30_11)\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.NavbarQuanLi.resources
+G:\QLPhongMachTu(30_11)\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.NavbarYTa.resources
+G:\QLPhongMachTu(30_11)\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.NhanVienGUI.resources
+G:\QLPhongMachTu(30_11)\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.PhieuKham_Edit.resources
+G:\QLPhongMachTu(30_11)\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.SignUpGUI.resources
+G:\QLPhongMachTu(30_11)\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.TaiKhoanGUI.resources
+G:\QLPhongMachTu(30_11)\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.TestControl.resources
+G:\QLPhongMachTu(30_11)\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.ThanhToan.resources
+G:\QLPhongMachTu(30_11)\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.ThanhToanDS.resources
+G:\QLPhongMachTu(30_11)\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.ThongKe.resources
+G:\QLPhongMachTu(30_11)\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.ToaThuocDonThuoc.resources
+G:\QLPhongMachTu(30_11)\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.ToaThuocDonThuoc_DS.resources
+G:\QLPhongMachTu(30_11)\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.XemToaThuocGUI.resources
+G:\QLPhongMachTu(30_11)\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.Properties.Resources.resources
+G:\QLPhongMachTu(30_11)\QLPhongMachTu\obj\Debug\QLPhongMachTu(DOAN).csproj.GenerateResource.cache
+G:\QLPhongMachTu(30_11)\QLPhongMachTu\obj\Debug\QLPhongMachTu(DOAN).csproj.CoreCompileInputs.cache
+G:\QLPhongMachTu(30_11)\QLPhongMachTu\obj\Debug\QLPhongM.B43FB2E6.Up2Date
+G:\QLPhongMachTu(30_11)\QLPhongMachTu\obj\Debug\QLPhongMachTu(DOAN).exe
+G:\QLPhongMachTu(30_11)\QLPhongMachTu\obj\Debug\QLPhongMachTu(DOAN).pdb
+E:\C#\QuanLyPhongMachTu_QuachThanhNha_ConKienHuy_BuiLeBichNhung_TrinhMinhThang_TranDangKhoa_TranHoangKhanh\QLPhongMachTu\obj\Debug\QLPhongMachTu(DOAN).exe
+E:\C#\QuanLyPhongMachTu_QuachThanhNha_ConKienHuy_BuiLeBichNhung_TrinhMinhThang_TranDangKhoa_TranHoangKhanh\QLPhongMachTu\obj\Debug\QLPhongMachTu(DOAN).pdb
+E:\DoAn\QLPhongMachTu\obj\Debug\QLPhongMachTu(DOAN).csproj.AssemblyReference.cache
+E:\DoAn\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.ChiTietToaThuocGUI.resources
+E:\DoAn\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.DanhSachDonThuocGUI.resources
+E:\DoAn\QLPhongMachTu\obj\Debug\GUI.DuocSi_ToaDon.resources
+E:\DoAn\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.HoaDonKhamBenh.resources
+E:\DoAn\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.HoaDonKhamBenh_BN.resources
+E:\DoAn\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.HoaDonThuocGUI.resources
+E:\DoAn\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.KeToaThuocGUI.resources
+E:\DoAn\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.KhamBenh.resources
+E:\DoAn\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.KhamBenh_BS.resources
+E:\DoAn\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.KhamBenh_Edit.resources
+E:\DoAn\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.KhamBenh_Edit_LT.resources
+E:\DoAn\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.KhamBenh_LT.resources
+E:\DoAn\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.KhoThuocGUI.resources
+E:\DoAn\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.LichLamViec_BS.resources
+E:\DoAn\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.Login.resources
+E:\DoAn\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.NavbarBacSi.resources
+E:\DoAn\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.NavbarBenhNhan.resources
+E:\DoAn\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.NavbarDuocSi.resources
+E:\DoAn\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.NavbarLeTan.resources
+E:\DoAn\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.NavbarQuanLi.resources
+E:\DoAn\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.NavbarYTa.resources
+E:\DoAn\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.NhanVienGUI.resources
+E:\DoAn\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.PhieuKham_Edit.resources
+E:\DoAn\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.SignUpGUI.resources
+E:\DoAn\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.TaiKhoanGUI.resources
+E:\DoAn\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.TestControl.resources
+E:\DoAn\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.ThanhToan.resources
+E:\DoAn\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.ThanhToanDS.resources
+E:\DoAn\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.ThongKe.resources
+E:\DoAn\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.ToaThuocDonThuoc.resources
+E:\DoAn\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.ToaThuocDonThuoc_DS.resources
+E:\DoAn\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.XemToaThuocGUI.resources
+E:\DoAn\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.Properties.Resources.resources
+E:\DoAn\QLPhongMachTu\obj\Debug\QLPhongMachTu(DOAN).csproj.GenerateResource.cache
+E:\DoAn\QLPhongMachTu\obj\Debug\QLPhongMachTu(DOAN).csproj.CoreCompileInputs.cache
+E:\DoAn\QLPhongMachTu\obj\Debug\QLPhongMachTu(DOAN).exe
+E:\DoAn\QLPhongMachTu\obj\Debug\QLPhongMachTu(DOAN).pdb
+E:\DoAn\QLPhongMachTu\bin\Debug\QLPhongMachTu(DOAN).exe.config
+E:\DoAn\QLPhongMachTu\bin\Debug\QLPhongMachTu(DOAN).exe
+E:\DoAn\QLPhongMachTu\bin\Debug\QLPhongMachTu(DOAN).pdb
+E:\DoAn\QLPhongMachTu\bin\Debug\BouncyCastle.Cryptography.dll
+E:\DoAn\QLPhongMachTu\bin\Debug\ClosedXML.dll
+E:\DoAn\QLPhongMachTu\bin\Debug\ClosedXML.Parser.dll
+E:\DoAn\QLPhongMachTu\bin\Debug\DocumentFormat.OpenXml.dll
+E:\DoAn\QLPhongMachTu\bin\Debug\DocumentFormat.OpenXml.Framework.dll
+E:\DoAn\QLPhongMachTu\bin\Debug\EntityFramework.dll
+E:\DoAn\QLPhongMachTu\bin\Debug\EntityFramework.SqlServer.dll
+E:\DoAn\QLPhongMachTu\bin\Debug\ExcelNumberFormat.dll
+E:\DoAn\QLPhongMachTu\bin\Debug\itextsharp.dll
+E:\DoAn\QLPhongMachTu\bin\Debug\Microsoft.Bcl.HashCode.dll
+E:\DoAn\QLPhongMachTu\bin\Debug\Microsoft.EntityFrameworkCore.Abstractions.dll
+E:\DoAn\QLPhongMachTu\bin\Debug\Microsoft.EntityFrameworkCore.dll
+E:\DoAn\QLPhongMachTu\bin\Debug\Microsoft.Extensions.Caching.Abstractions.dll
+E:\DoAn\QLPhongMachTu\bin\Debug\Microsoft.Extensions.Caching.Memory.dll
+E:\DoAn\QLPhongMachTu\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.dll
+E:\DoAn\QLPhongMachTu\bin\Debug\Microsoft.Extensions.Configuration.Binder.dll
+E:\DoAn\QLPhongMachTu\bin\Debug\Microsoft.Extensions.Configuration.dll
+E:\DoAn\QLPhongMachTu\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+E:\DoAn\QLPhongMachTu\bin\Debug\Microsoft.Extensions.DependencyInjection.dll
+E:\DoAn\QLPhongMachTu\bin\Debug\Microsoft.Extensions.Logging.Abstractions.dll
+E:\DoAn\QLPhongMachTu\bin\Debug\Microsoft.Extensions.Logging.dll
+E:\DoAn\QLPhongMachTu\bin\Debug\Microsoft.Extensions.Options.dll
+E:\DoAn\QLPhongMachTu\bin\Debug\Microsoft.Extensions.Primitives.dll
+E:\DoAn\QLPhongMachTu\bin\Debug\RBush.dll
+E:\DoAn\QLPhongMachTu\bin\Debug\Remotion.Linq.dll
+E:\DoAn\QLPhongMachTu\bin\Debug\SixLabors.Fonts.dll
+E:\DoAn\QLPhongMachTu\bin\Debug\System.Buffers.dll
+E:\DoAn\QLPhongMachTu\bin\Debug\System.Collections.Immutable.dll
+E:\DoAn\QLPhongMachTu\bin\Debug\System.ComponentModel.Annotations.dll
+E:\DoAn\QLPhongMachTu\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+E:\DoAn\QLPhongMachTu\bin\Debug\System.Interactive.Async.dll
+E:\DoAn\QLPhongMachTu\bin\Debug\System.Memory.dll
+E:\DoAn\QLPhongMachTu\bin\Debug\System.Numerics.Vectors.dll
+E:\DoAn\QLPhongMachTu\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+E:\DoAn\QLPhongMachTu\bin\Debug\BouncyCastle.Cryptography.xml
+E:\DoAn\QLPhongMachTu\bin\Debug\ClosedXML.pdb
+E:\DoAn\QLPhongMachTu\bin\Debug\ClosedXML.xml
+E:\DoAn\QLPhongMachTu\bin\Debug\ClosedXML.Parser.xml
+E:\DoAn\QLPhongMachTu\bin\Debug\DocumentFormat.OpenXml.xml
+E:\DoAn\QLPhongMachTu\bin\Debug\DocumentFormat.OpenXml.Framework.xml
+E:\DoAn\QLPhongMachTu\bin\Debug\EntityFramework.xml
+E:\DoAn\QLPhongMachTu\bin\Debug\EntityFramework.SqlServer.xml
+E:\DoAn\QLPhongMachTu\bin\Debug\ExcelNumberFormat.xml
+E:\DoAn\QLPhongMachTu\bin\Debug\itextsharp.xml
+E:\DoAn\QLPhongMachTu\bin\Debug\Microsoft.Bcl.HashCode.xml
+E:\DoAn\QLPhongMachTu\bin\Debug\Microsoft.EntityFrameworkCore.xml
+E:\DoAn\QLPhongMachTu\bin\Debug\Microsoft.EntityFrameworkCore.Abstractions.xml
+E:\DoAn\QLPhongMachTu\bin\Debug\Microsoft.Extensions.Caching.Abstractions.xml
+E:\DoAn\QLPhongMachTu\bin\Debug\Microsoft.Extensions.Caching.Memory.xml
+E:\DoAn\QLPhongMachTu\bin\Debug\Microsoft.Extensions.Configuration.xml
+E:\DoAn\QLPhongMachTu\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.xml
+E:\DoAn\QLPhongMachTu\bin\Debug\Microsoft.Extensions.Configuration.Binder.xml
+E:\DoAn\QLPhongMachTu\bin\Debug\Microsoft.Extensions.DependencyInjection.xml
+E:\DoAn\QLPhongMachTu\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+E:\DoAn\QLPhongMachTu\bin\Debug\Microsoft.Extensions.Logging.xml
+E:\DoAn\QLPhongMachTu\bin\Debug\Microsoft.Extensions.Logging.Abstractions.xml
+E:\DoAn\QLPhongMachTu\bin\Debug\Microsoft.Extensions.Options.xml
+E:\DoAn\QLPhongMachTu\bin\Debug\Microsoft.Extensions.Primitives.xml
+E:\DoAn\QLPhongMachTu\bin\Debug\RBush.xml
+E:\DoAn\QLPhongMachTu\bin\Debug\Remotion.Linq.xml
+E:\DoAn\QLPhongMachTu\bin\Debug\SixLabors.Fonts.xml
+E:\DoAn\QLPhongMachTu\bin\Debug\System.Buffers.xml
+E:\DoAn\QLPhongMachTu\bin\Debug\System.Collections.Immutable.xml
+E:\DoAn\QLPhongMachTu\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+E:\DoAn\QLPhongMachTu\bin\Debug\System.Interactive.Async.xml
+E:\DoAn\QLPhongMachTu\bin\Debug\System.Memory.xml
+E:\DoAn\QLPhongMachTu\bin\Debug\System.Numerics.Vectors.xml
+E:\DoAn\QLPhongMachTu\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+E:\DoAn\QLPhongMachTu\obj\Debug\QLPhongM.B43FB2E6.Up2Date
+G:\QuanLyPhongMachTu_QuachThanhNha_ConKienHuy_BuiLeBichNhung_TrinhMinhThang_TranDangKhoa_TranHoangKhanh\QuanLyPhongMachTu_QuachThanhNha_ConKienHuy_BuiLeBichNhung_TrinhMinhThang_TranDangKhoa_TranHoangKhanh\QLPhongMachTu\QLPhongMachTu\obj\Debug\QLPhongMachTu(DOAN).csproj.AssemblyReference.cache
+G:\QuanLyPhongMachTu_QuachThanhNha_ConKienHuy_BuiLeBichNhung_TrinhMinhThang_TranDangKhoa_TranHoangKhanh\QuanLyPhongMachTu_QuachThanhNha_ConKienHuy_BuiLeBichNhung_TrinhMinhThang_TranDangKhoa_TranHoangKhanh\QLPhongMachTu\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.ChiTietToaThuocGUI.resources
+G:\QuanLyPhongMachTu_QuachThanhNha_ConKienHuy_BuiLeBichNhung_TrinhMinhThang_TranDangKhoa_TranHoangKhanh\QuanLyPhongMachTu_QuachThanhNha_ConKienHuy_BuiLeBichNhung_TrinhMinhThang_TranDangKhoa_TranHoangKhanh\QLPhongMachTu\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.DanhSachDonThuocGUI.resources
+G:\QuanLyPhongMachTu_QuachThanhNha_ConKienHuy_BuiLeBichNhung_TrinhMinhThang_TranDangKhoa_TranHoangKhanh\QuanLyPhongMachTu_QuachThanhNha_ConKienHuy_BuiLeBichNhung_TrinhMinhThang_TranDangKhoa_TranHoangKhanh\QLPhongMachTu\QLPhongMachTu\obj\Debug\GUI.DuocSi_ToaDon.resources
+G:\QuanLyPhongMachTu_QuachThanhNha_ConKienHuy_BuiLeBichNhung_TrinhMinhThang_TranDangKhoa_TranHoangKhanh\QuanLyPhongMachTu_QuachThanhNha_ConKienHuy_BuiLeBichNhung_TrinhMinhThang_TranDangKhoa_TranHoangKhanh\QLPhongMachTu\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.HoaDonKhamBenh.resources
+G:\QuanLyPhongMachTu_QuachThanhNha_ConKienHuy_BuiLeBichNhung_TrinhMinhThang_TranDangKhoa_TranHoangKhanh\QuanLyPhongMachTu_QuachThanhNha_ConKienHuy_BuiLeBichNhung_TrinhMinhThang_TranDangKhoa_TranHoangKhanh\QLPhongMachTu\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.HoaDonKhamBenh_BN.resources
+G:\QuanLyPhongMachTu_QuachThanhNha_ConKienHuy_BuiLeBichNhung_TrinhMinhThang_TranDangKhoa_TranHoangKhanh\QuanLyPhongMachTu_QuachThanhNha_ConKienHuy_BuiLeBichNhung_TrinhMinhThang_TranDangKhoa_TranHoangKhanh\QLPhongMachTu\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.HoaDonThuocGUI.resources
+G:\QuanLyPhongMachTu_QuachThanhNha_ConKienHuy_BuiLeBichNhung_TrinhMinhThang_TranDangKhoa_TranHoangKhanh\QuanLyPhongMachTu_QuachThanhNha_ConKienHuy_BuiLeBichNhung_TrinhMinhThang_TranDangKhoa_TranHoangKhanh\QLPhongMachTu\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.KeToaThuocGUI.resources
+G:\QuanLyPhongMachTu_QuachThanhNha_ConKienHuy_BuiLeBichNhung_TrinhMinhThang_TranDangKhoa_TranHoangKhanh\QuanLyPhongMachTu_QuachThanhNha_ConKienHuy_BuiLeBichNhung_TrinhMinhThang_TranDangKhoa_TranHoangKhanh\QLPhongMachTu\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.KhamBenh.resources
+G:\QuanLyPhongMachTu_QuachThanhNha_ConKienHuy_BuiLeBichNhung_TrinhMinhThang_TranDangKhoa_TranHoangKhanh\QuanLyPhongMachTu_QuachThanhNha_ConKienHuy_BuiLeBichNhung_TrinhMinhThang_TranDangKhoa_TranHoangKhanh\QLPhongMachTu\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.KhamBenh_BS.resources
+G:\QuanLyPhongMachTu_QuachThanhNha_ConKienHuy_BuiLeBichNhung_TrinhMinhThang_TranDangKhoa_TranHoangKhanh\QuanLyPhongMachTu_QuachThanhNha_ConKienHuy_BuiLeBichNhung_TrinhMinhThang_TranDangKhoa_TranHoangKhanh\QLPhongMachTu\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.KhamBenh_Edit.resources
+G:\QuanLyPhongMachTu_QuachThanhNha_ConKienHuy_BuiLeBichNhung_TrinhMinhThang_TranDangKhoa_TranHoangKhanh\QuanLyPhongMachTu_QuachThanhNha_ConKienHuy_BuiLeBichNhung_TrinhMinhThang_TranDangKhoa_TranHoangKhanh\QLPhongMachTu\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.KhamBenh_Edit_LT.resources
+G:\QuanLyPhongMachTu_QuachThanhNha_ConKienHuy_BuiLeBichNhung_TrinhMinhThang_TranDangKhoa_TranHoangKhanh\QuanLyPhongMachTu_QuachThanhNha_ConKienHuy_BuiLeBichNhung_TrinhMinhThang_TranDangKhoa_TranHoangKhanh\QLPhongMachTu\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.KhamBenh_LT.resources
+G:\QuanLyPhongMachTu_QuachThanhNha_ConKienHuy_BuiLeBichNhung_TrinhMinhThang_TranDangKhoa_TranHoangKhanh\QuanLyPhongMachTu_QuachThanhNha_ConKienHuy_BuiLeBichNhung_TrinhMinhThang_TranDangKhoa_TranHoangKhanh\QLPhongMachTu\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.KhoThuocGUI.resources
+G:\QuanLyPhongMachTu_QuachThanhNha_ConKienHuy_BuiLeBichNhung_TrinhMinhThang_TranDangKhoa_TranHoangKhanh\QuanLyPhongMachTu_QuachThanhNha_ConKienHuy_BuiLeBichNhung_TrinhMinhThang_TranDangKhoa_TranHoangKhanh\QLPhongMachTu\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.LichLamViec_BS.resources
+G:\QuanLyPhongMachTu_QuachThanhNha_ConKienHuy_BuiLeBichNhung_TrinhMinhThang_TranDangKhoa_TranHoangKhanh\QuanLyPhongMachTu_QuachThanhNha_ConKienHuy_BuiLeBichNhung_TrinhMinhThang_TranDangKhoa_TranHoangKhanh\QLPhongMachTu\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.Login.resources
+G:\QuanLyPhongMachTu_QuachThanhNha_ConKienHuy_BuiLeBichNhung_TrinhMinhThang_TranDangKhoa_TranHoangKhanh\QuanLyPhongMachTu_QuachThanhNha_ConKienHuy_BuiLeBichNhung_TrinhMinhThang_TranDangKhoa_TranHoangKhanh\QLPhongMachTu\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.NavbarBacSi.resources
+G:\QuanLyPhongMachTu_QuachThanhNha_ConKienHuy_BuiLeBichNhung_TrinhMinhThang_TranDangKhoa_TranHoangKhanh\QuanLyPhongMachTu_QuachThanhNha_ConKienHuy_BuiLeBichNhung_TrinhMinhThang_TranDangKhoa_TranHoangKhanh\QLPhongMachTu\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.NavbarBenhNhan.resources
+G:\QuanLyPhongMachTu_QuachThanhNha_ConKienHuy_BuiLeBichNhung_TrinhMinhThang_TranDangKhoa_TranHoangKhanh\QuanLyPhongMachTu_QuachThanhNha_ConKienHuy_BuiLeBichNhung_TrinhMinhThang_TranDangKhoa_TranHoangKhanh\QLPhongMachTu\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.NavbarDuocSi.resources
+G:\QuanLyPhongMachTu_QuachThanhNha_ConKienHuy_BuiLeBichNhung_TrinhMinhThang_TranDangKhoa_TranHoangKhanh\QuanLyPhongMachTu_QuachThanhNha_ConKienHuy_BuiLeBichNhung_TrinhMinhThang_TranDangKhoa_TranHoangKhanh\QLPhongMachTu\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.NavbarLeTan.resources
+G:\QuanLyPhongMachTu_QuachThanhNha_ConKienHuy_BuiLeBichNhung_TrinhMinhThang_TranDangKhoa_TranHoangKhanh\QuanLyPhongMachTu_QuachThanhNha_ConKienHuy_BuiLeBichNhung_TrinhMinhThang_TranDangKhoa_TranHoangKhanh\QLPhongMachTu\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.NavbarQuanLi.resources
+G:\QuanLyPhongMachTu_QuachThanhNha_ConKienHuy_BuiLeBichNhung_TrinhMinhThang_TranDangKhoa_TranHoangKhanh\QuanLyPhongMachTu_QuachThanhNha_ConKienHuy_BuiLeBichNhung_TrinhMinhThang_TranDangKhoa_TranHoangKhanh\QLPhongMachTu\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.NavbarYTa.resources
+G:\QuanLyPhongMachTu_QuachThanhNha_ConKienHuy_BuiLeBichNhung_TrinhMinhThang_TranDangKhoa_TranHoangKhanh\QuanLyPhongMachTu_QuachThanhNha_ConKienHuy_BuiLeBichNhung_TrinhMinhThang_TranDangKhoa_TranHoangKhanh\QLPhongMachTu\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.NhanVienGUI.resources
+G:\QuanLyPhongMachTu_QuachThanhNha_ConKienHuy_BuiLeBichNhung_TrinhMinhThang_TranDangKhoa_TranHoangKhanh\QuanLyPhongMachTu_QuachThanhNha_ConKienHuy_BuiLeBichNhung_TrinhMinhThang_TranDangKhoa_TranHoangKhanh\QLPhongMachTu\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.PhieuKham_Edit.resources
+G:\QuanLyPhongMachTu_QuachThanhNha_ConKienHuy_BuiLeBichNhung_TrinhMinhThang_TranDangKhoa_TranHoangKhanh\QuanLyPhongMachTu_QuachThanhNha_ConKienHuy_BuiLeBichNhung_TrinhMinhThang_TranDangKhoa_TranHoangKhanh\QLPhongMachTu\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.SignUpGUI.resources
+G:\QuanLyPhongMachTu_QuachThanhNha_ConKienHuy_BuiLeBichNhung_TrinhMinhThang_TranDangKhoa_TranHoangKhanh\QuanLyPhongMachTu_QuachThanhNha_ConKienHuy_BuiLeBichNhung_TrinhMinhThang_TranDangKhoa_TranHoangKhanh\QLPhongMachTu\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.TaiKhoanGUI.resources
+G:\QuanLyPhongMachTu_QuachThanhNha_ConKienHuy_BuiLeBichNhung_TrinhMinhThang_TranDangKhoa_TranHoangKhanh\QuanLyPhongMachTu_QuachThanhNha_ConKienHuy_BuiLeBichNhung_TrinhMinhThang_TranDangKhoa_TranHoangKhanh\QLPhongMachTu\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.TestControl.resources
+G:\QuanLyPhongMachTu_QuachThanhNha_ConKienHuy_BuiLeBichNhung_TrinhMinhThang_TranDangKhoa_TranHoangKhanh\QuanLyPhongMachTu_QuachThanhNha_ConKienHuy_BuiLeBichNhung_TrinhMinhThang_TranDangKhoa_TranHoangKhanh\QLPhongMachTu\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.ThanhToan.resources
+G:\QuanLyPhongMachTu_QuachThanhNha_ConKienHuy_BuiLeBichNhung_TrinhMinhThang_TranDangKhoa_TranHoangKhanh\QuanLyPhongMachTu_QuachThanhNha_ConKienHuy_BuiLeBichNhung_TrinhMinhThang_TranDangKhoa_TranHoangKhanh\QLPhongMachTu\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.ThanhToanDS.resources
+G:\QuanLyPhongMachTu_QuachThanhNha_ConKienHuy_BuiLeBichNhung_TrinhMinhThang_TranDangKhoa_TranHoangKhanh\QuanLyPhongMachTu_QuachThanhNha_ConKienHuy_BuiLeBichNhung_TrinhMinhThang_TranDangKhoa_TranHoangKhanh\QLPhongMachTu\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.ThongKe.resources
+G:\QuanLyPhongMachTu_QuachThanhNha_ConKienHuy_BuiLeBichNhung_TrinhMinhThang_TranDangKhoa_TranHoangKhanh\QuanLyPhongMachTu_QuachThanhNha_ConKienHuy_BuiLeBichNhung_TrinhMinhThang_TranDangKhoa_TranHoangKhanh\QLPhongMachTu\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.ToaThuocDonThuoc.resources
+G:\QuanLyPhongMachTu_QuachThanhNha_ConKienHuy_BuiLeBichNhung_TrinhMinhThang_TranDangKhoa_TranHoangKhanh\QuanLyPhongMachTu_QuachThanhNha_ConKienHuy_BuiLeBichNhung_TrinhMinhThang_TranDangKhoa_TranHoangKhanh\QLPhongMachTu\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.ToaThuocDonThuoc_DS.resources
+G:\QuanLyPhongMachTu_QuachThanhNha_ConKienHuy_BuiLeBichNhung_TrinhMinhThang_TranDangKhoa_TranHoangKhanh\QuanLyPhongMachTu_QuachThanhNha_ConKienHuy_BuiLeBichNhung_TrinhMinhThang_TranDangKhoa_TranHoangKhanh\QLPhongMachTu\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.XemToaThuocGUI.resources
+G:\QuanLyPhongMachTu_QuachThanhNha_ConKienHuy_BuiLeBichNhung_TrinhMinhThang_TranDangKhoa_TranHoangKhanh\QuanLyPhongMachTu_QuachThanhNha_ConKienHuy_BuiLeBichNhung_TrinhMinhThang_TranDangKhoa_TranHoangKhanh\QLPhongMachTu\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.Properties.Resources.resources
+G:\QuanLyPhongMachTu_QuachThanhNha_ConKienHuy_BuiLeBichNhung_TrinhMinhThang_TranDangKhoa_TranHoangKhanh\QuanLyPhongMachTu_QuachThanhNha_ConKienHuy_BuiLeBichNhung_TrinhMinhThang_TranDangKhoa_TranHoangKhanh\QLPhongMachTu\QLPhongMachTu\obj\Debug\QLPhongMachTu(DOAN).csproj.GenerateResource.cache
+G:\QuanLyPhongMachTu_QuachThanhNha_ConKienHuy_BuiLeBichNhung_TrinhMinhThang_TranDangKhoa_TranHoangKhanh\QuanLyPhongMachTu_QuachThanhNha_ConKienHuy_BuiLeBichNhung_TrinhMinhThang_TranDangKhoa_TranHoangKhanh\QLPhongMachTu\QLPhongMachTu\obj\Debug\QLPhongMachTu(DOAN).csproj.CoreCompileInputs.cache
+G:\QuanLyPhongMachTu_QuachThanhNha_ConKienHuy_BuiLeBichNhung_TrinhMinhThang_TranDangKhoa_TranHoangKhanh\QuanLyPhongMachTu_QuachThanhNha_ConKienHuy_BuiLeBichNhung_TrinhMinhThang_TranDangKhoa_TranHoangKhanh\QLPhongMachTu\QLPhongMachTu\obj\Debug\QLPhongMachTu(DOAN).exe
+G:\QuanLyPhongMachTu_QuachThanhNha_ConKienHuy_BuiLeBichNhung_TrinhMinhThang_TranDangKhoa_TranHoangKhanh\QuanLyPhongMachTu_QuachThanhNha_ConKienHuy_BuiLeBichNhung_TrinhMinhThang_TranDangKhoa_TranHoangKhanh\QLPhongMachTu\QLPhongMachTu\obj\Debug\QLPhongMachTu(DOAN).pdb
+C:\Users\2301\Desktop\QLPhongMachTu\bin\Debug\QLPhongMachTu(DOAN).exe.config
+C:\Users\2301\Desktop\QLPhongMachTu\bin\Debug\QLPhongMachTu(DOAN).exe
+C:\Users\2301\Desktop\QLPhongMachTu\bin\Debug\QLPhongMachTu(DOAN).pdb
+C:\Users\2301\Desktop\QLPhongMachTu\bin\Debug\BouncyCastle.Cryptography.dll
+C:\Users\2301\Desktop\QLPhongMachTu\bin\Debug\ClosedXML.dll
+C:\Users\2301\Desktop\QLPhongMachTu\bin\Debug\ClosedXML.Parser.dll
+C:\Users\2301\Desktop\QLPhongMachTu\bin\Debug\DocumentFormat.OpenXml.dll
+C:\Users\2301\Desktop\QLPhongMachTu\bin\Debug\DocumentFormat.OpenXml.Framework.dll
+C:\Users\2301\Desktop\QLPhongMachTu\bin\Debug\EntityFramework.dll
+C:\Users\2301\Desktop\QLPhongMachTu\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\2301\Desktop\QLPhongMachTu\bin\Debug\ExcelNumberFormat.dll
+C:\Users\2301\Desktop\QLPhongMachTu\bin\Debug\itextsharp.dll
+C:\Users\2301\Desktop\QLPhongMachTu\bin\Debug\Microsoft.Bcl.HashCode.dll
+C:\Users\2301\Desktop\QLPhongMachTu\bin\Debug\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\2301\Desktop\QLPhongMachTu\bin\Debug\Microsoft.EntityFrameworkCore.dll
+C:\Users\2301\Desktop\QLPhongMachTu\bin\Debug\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\2301\Desktop\QLPhongMachTu\bin\Debug\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\2301\Desktop\QLPhongMachTu\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\2301\Desktop\QLPhongMachTu\bin\Debug\Microsoft.Extensions.Configuration.Binder.dll
+C:\Users\2301\Desktop\QLPhongMachTu\bin\Debug\Microsoft.Extensions.Configuration.dll
+C:\Users\2301\Desktop\QLPhongMachTu\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\2301\Desktop\QLPhongMachTu\bin\Debug\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\2301\Desktop\QLPhongMachTu\bin\Debug\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\2301\Desktop\QLPhongMachTu\bin\Debug\Microsoft.Extensions.Logging.dll
+C:\Users\2301\Desktop\QLPhongMachTu\bin\Debug\Microsoft.Extensions.Options.dll
+C:\Users\2301\Desktop\QLPhongMachTu\bin\Debug\Microsoft.Extensions.Primitives.dll
+C:\Users\2301\Desktop\QLPhongMachTu\bin\Debug\RBush.dll
+C:\Users\2301\Desktop\QLPhongMachTu\bin\Debug\Remotion.Linq.dll
+C:\Users\2301\Desktop\QLPhongMachTu\bin\Debug\SixLabors.Fonts.dll
+C:\Users\2301\Desktop\QLPhongMachTu\bin\Debug\System.Buffers.dll
+C:\Users\2301\Desktop\QLPhongMachTu\bin\Debug\System.Collections.Immutable.dll
+C:\Users\2301\Desktop\QLPhongMachTu\bin\Debug\System.ComponentModel.Annotations.dll
+C:\Users\2301\Desktop\QLPhongMachTu\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+C:\Users\2301\Desktop\QLPhongMachTu\bin\Debug\System.Interactive.Async.dll
+C:\Users\2301\Desktop\QLPhongMachTu\bin\Debug\System.Memory.dll
+C:\Users\2301\Desktop\QLPhongMachTu\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\2301\Desktop\QLPhongMachTu\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\2301\Desktop\QLPhongMachTu\bin\Debug\BouncyCastle.Cryptography.xml
+C:\Users\2301\Desktop\QLPhongMachTu\bin\Debug\ClosedXML.pdb
+C:\Users\2301\Desktop\QLPhongMachTu\bin\Debug\ClosedXML.xml
+C:\Users\2301\Desktop\QLPhongMachTu\bin\Debug\ClosedXML.Parser.xml
+C:\Users\2301\Desktop\QLPhongMachTu\bin\Debug\DocumentFormat.OpenXml.xml
+C:\Users\2301\Desktop\QLPhongMachTu\bin\Debug\DocumentFormat.OpenXml.Framework.xml
+C:\Users\2301\Desktop\QLPhongMachTu\bin\Debug\EntityFramework.xml
+C:\Users\2301\Desktop\QLPhongMachTu\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\2301\Desktop\QLPhongMachTu\bin\Debug\ExcelNumberFormat.xml
+C:\Users\2301\Desktop\QLPhongMachTu\bin\Debug\itextsharp.xml
+C:\Users\2301\Desktop\QLPhongMachTu\bin\Debug\Microsoft.Bcl.HashCode.xml
+C:\Users\2301\Desktop\QLPhongMachTu\bin\Debug\Microsoft.EntityFrameworkCore.xml
+C:\Users\2301\Desktop\QLPhongMachTu\bin\Debug\Microsoft.EntityFrameworkCore.Abstractions.xml
+C:\Users\2301\Desktop\QLPhongMachTu\bin\Debug\Microsoft.Extensions.Caching.Abstractions.xml
+C:\Users\2301\Desktop\QLPhongMachTu\bin\Debug\Microsoft.Extensions.Caching.Memory.xml
+C:\Users\2301\Desktop\QLPhongMachTu\bin\Debug\Microsoft.Extensions.Configuration.xml
+C:\Users\2301\Desktop\QLPhongMachTu\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.xml
+C:\Users\2301\Desktop\QLPhongMachTu\bin\Debug\Microsoft.Extensions.Configuration.Binder.xml
+C:\Users\2301\Desktop\QLPhongMachTu\bin\Debug\Microsoft.Extensions.DependencyInjection.xml
+C:\Users\2301\Desktop\QLPhongMachTu\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+C:\Users\2301\Desktop\QLPhongMachTu\bin\Debug\Microsoft.Extensions.Logging.xml
+C:\Users\2301\Desktop\QLPhongMachTu\bin\Debug\Microsoft.Extensions.Logging.Abstractions.xml
+C:\Users\2301\Desktop\QLPhongMachTu\bin\Debug\Microsoft.Extensions.Options.xml
+C:\Users\2301\Desktop\QLPhongMachTu\bin\Debug\Microsoft.Extensions.Primitives.xml
+C:\Users\2301\Desktop\QLPhongMachTu\bin\Debug\RBush.xml
+C:\Users\2301\Desktop\QLPhongMachTu\bin\Debug\Remotion.Linq.xml
+C:\Users\2301\Desktop\QLPhongMachTu\bin\Debug\SixLabors.Fonts.xml
+C:\Users\2301\Desktop\QLPhongMachTu\bin\Debug\System.Buffers.xml
+C:\Users\2301\Desktop\QLPhongMachTu\bin\Debug\System.Collections.Immutable.xml
+C:\Users\2301\Desktop\QLPhongMachTu\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+C:\Users\2301\Desktop\QLPhongMachTu\bin\Debug\System.Interactive.Async.xml
+C:\Users\2301\Desktop\QLPhongMachTu\bin\Debug\System.Memory.xml
+C:\Users\2301\Desktop\QLPhongMachTu\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\2301\Desktop\QLPhongMachTu\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\2301\Desktop\QLPhongMachTu\obj\Debug\QLPhongMachTu(DOAN).csproj.AssemblyReference.cache
+C:\Users\2301\Desktop\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.ChiTietToaThuocGUI.resources
+C:\Users\2301\Desktop\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.DanhSachDonThuocGUI.resources
+C:\Users\2301\Desktop\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.HoaDonKhamBenh.resources
+C:\Users\2301\Desktop\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.HoaDonKhamBenh_BN.resources
+C:\Users\2301\Desktop\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.HoaDonThuocGUI.resources
+C:\Users\2301\Desktop\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.KeToaThuocGUI.resources
+C:\Users\2301\Desktop\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.KhamBenh.resources
+C:\Users\2301\Desktop\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.KhamBenh_BS.resources
+C:\Users\2301\Desktop\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.KhamBenh_Edit.resources
+C:\Users\2301\Desktop\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.KhamBenh_LT.resources
+C:\Users\2301\Desktop\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.KhoThuocGUI.resources
+C:\Users\2301\Desktop\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.LichLamViec_BS.resources
+C:\Users\2301\Desktop\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.Login.resources
+C:\Users\2301\Desktop\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.NavbarBacSi.resources
+C:\Users\2301\Desktop\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.NavbarBenhNhan.resources
+C:\Users\2301\Desktop\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.NavbarDuocSi.resources
+C:\Users\2301\Desktop\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.NavbarLeTan.resources
+C:\Users\2301\Desktop\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.NavbarQuanLi.resources
+C:\Users\2301\Desktop\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.NhanVienGUI.resources
+C:\Users\2301\Desktop\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.PhieuKham_Edit.resources
+C:\Users\2301\Desktop\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.SignUpGUI.resources
+C:\Users\2301\Desktop\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.TaiKhoanGUI.resources
+C:\Users\2301\Desktop\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.TestControl.resources
+C:\Users\2301\Desktop\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.ThanhToan.resources
+C:\Users\2301\Desktop\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.ThanhToanDS.resources
+C:\Users\2301\Desktop\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.ThongKe.resources
+C:\Users\2301\Desktop\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.ToaThuocDonThuoc.resources
+C:\Users\2301\Desktop\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.ToaThuocDonThuoc_DS.resources
+C:\Users\2301\Desktop\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.XemToaThuocGUI.resources
+C:\Users\2301\Desktop\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.Properties.Resources.resources
+C:\Users\2301\Desktop\QLPhongMachTu\obj\Debug\QLPhongMachTu(DOAN).csproj.GenerateResource.cache
+C:\Users\2301\Desktop\QLPhongMachTu\obj\Debug\QLPhongMachTu(DOAN).csproj.CoreCompileInputs.cache
+C:\Users\2301\Desktop\QLPhongMachTu\obj\Debug\QLPhongM.B43FB2E6.Up2Date
+C:\Users\2301\Desktop\QLPhongMachTu\obj\Debug\QLPhongMachTu(DOAN).exe
+C:\Users\2301\Desktop\QLPhongMachTu\obj\Debug\QLPhongMachTu(DOAN).pdb
+C:\Users\2301\Desktop\QLPhongMachTu\bin\Debug\System.Drawing.Common.dll
+C:\Users\2301\Desktop\QLPhongMachTu\bin\Debug\System.Drawing.Common.pdb
+C:\Users\2301\Desktop\QLPhongMachTu\bin\Debug\System.Drawing.Common.xml
+C:\Users\2301\Desktop\QLPhongMachTu\bin\Debug\System.ValueTuple.dll
+C:\Users\2301\Desktop\QLPhongMachTu\bin\Debug\System.ValueTuple.xml
+C:\Users\2301\Desktop\QLPhongMachTu\obj\Debug\QLPhongMachTu_DOAN_.GUI.LichLamViec_QL.resources

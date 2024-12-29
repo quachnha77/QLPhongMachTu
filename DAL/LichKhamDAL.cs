@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Configuration;
-using static QLPhongMachTu_DOAN_.DTO.LichKham;
 using QLPhongMachTu_DOAN_.Enums;
 
 namespace QLPhongMachTu_DOAN_.DAL
@@ -15,16 +14,17 @@ namespace QLPhongMachTu_DOAN_.DAL
 
         ///****************** ConKienHuy <summary>
 
-        public LichKham TaoLichKham(LichKham lk)
+        public DTO.LichKhamDTO TaoLichKham(DTO.LichKhamDTO lk, long MaNV)
         {
-            string query = "INSERT INTO LichKhams (MaBS, MaBN, NgayKham, TrieuChung, TrangThai) OUTPUT INSERTED.MaLK VALUES (@MaBS, @MaBN, @NgayKham, @TrieuChung, @TrangThai)";
+            string query = "INSERT INTO LichKhams (MaBS, MaBN, NgayKham, TrangThai, MaNV) OUTPUT INSERTED.MaLK VALUES (@MaBS, @MaBN, @NgayKham, @TrangThai, @MaNV)";
             SqlParameter[] parameters = {
-        new SqlParameter("@MaBS", lk.MaBS),
-        new SqlParameter("@MaBN", lk.MaBN),
-        new SqlParameter("@NgayKham", lk.NgayKham),
-        //new SqlParameter("@TrieuChung", lk.TrieuChung),
-        new SqlParameter("@TrangThai", (int)ETrangThaiKham.ChuaKham) // Sử dụng giá trị số từ enum
-    };
+                new SqlParameter("@MaBS", lk.MaBS),
+                new SqlParameter("@MaBN", lk.MaBN),
+                new SqlParameter("@NgayKham", lk.NgayKham),
+                //new SqlParameter("@TrieuChung", lk.TrieuChung),
+                new SqlParameter("@MaNV", MaNV),
+                new SqlParameter("@TrangThai", (int)ETrangThaiKham.ChuaKham) // Sử dụng giá trị số từ enum
+            };
 
             using (DataTable result = ExecuteQuery(query, parameters))
             {
@@ -46,10 +46,10 @@ namespace QLPhongMachTu_DOAN_.DAL
             return rowsAffected > 0;
         }
 
-        public List<LichKham> GetByMaBenhNhan(long maBN)
+        public List<DTO.LichKhamDTO> GetByMaBenhNhan(long maBN)
         {
             string query = @"
-                SELECT lk.*, bs.HoTen
+                SELECT lk.*, bs.*
                 FROM LichKhams lk
                 INNER JOIN BacSis bs ON lk.MaBS = bs.MaSo
                 WHERE lk.MaBN = @MaBN";
@@ -59,7 +59,7 @@ namespace QLPhongMachTu_DOAN_.DAL
             return MapLichKhamList(result);
         }
 
-        public List<LichKham> GetAll1() // Kiến Huy
+        public List<DTO.LichKhamDTO> GetAll1() // Kiến Huy
         {
             string query = @"
                 SELECT lk.*, bs.HoTen, bn.HoTen
@@ -71,10 +71,10 @@ namespace QLPhongMachTu_DOAN_.DAL
             return MapLichKhamList(result);
         }
 
-        public List<LichKham> GetByTrangThai(ETrangThaiKham trangThai)
+        public List<DTO.LichKhamDTO> GetByTrangThai(ETrangThaiKham trangThai)
         {
             string query = @"
-                SELECT lk.*, bs.HoTen, bn.HoTen
+                SELECT lk.*, bs.*, bn.*
                 FROM LichKhams lk
                 INNER JOIN BacSis bs ON lk.MaBS = bs.MaSo
                 INNER JOIN BenhNhans bn ON lk.MaBN = bn.MaSo
@@ -88,7 +88,7 @@ namespace QLPhongMachTu_DOAN_.DAL
         }
 
 
-        public List<LichKham> TimKiemTheoNgay(DateTime from, DateTime to)
+        public List<DTO.LichKhamDTO> TimKiemTheoNgay(DateTime from, DateTime to)
         {
             string query = @"SELECT *
                             FROM LichKhams lk
@@ -103,9 +103,9 @@ namespace QLPhongMachTu_DOAN_.DAL
             return MapLichKhamList(result);
         }
 
-        public bool SuaLichKham(long maLK, LichKham updateLichKham)
+        public bool SuaLichKham(long maLK, DTO.LichKhamDTO updateLichKham)
         {
-            string query = "UPDATE LichKhams SET MaBS = @MaBS, NgayKham = @NgayKham, TrieuChung = @TrieuChung" +
+            string query = "UPDATE LichKhams SET MaBS = @MaBS, NgayKham = @NgayKham" +
                 " WHERE MaLK = @MaLK";
             SqlParameter[] parameters = {
                 new SqlParameter("@MaBS", updateLichKham.MaBS),
@@ -118,7 +118,7 @@ namespace QLPhongMachTu_DOAN_.DAL
             return rowsAffected > 0;
         }
 
-        public LichKham GetById(long maLK)
+        public DTO.LichKhamDTO GetById(long maLK)
         {
             string query = @"
                 SELECT lk.*, bs.TenBacSi, bn.TenBenhNhan
@@ -138,14 +138,16 @@ namespace QLPhongMachTu_DOAN_.DAL
             return null;
         }
 
-        public List<LichKham> TimKiemTheoChuyenKhoa(string chuyenKhoa)
+        public List<DTO.LichKhamDTO> TimKiemTheoChuyenKhoa(string chuyenKhoa, long benhNhanId)
         {
             //    string query = @"SELECT * FROM LichKham lk
             //                    INNER JOIN BacSis bs ON bs.MaSo = lk.MaBS
             //                    INNER JOIN PhongKhoas pk ON bs.MaKhoa = lk.MaKhoa
             //                    WHERE bs.MaKhoa = @";
-            string queryChuyenKhoa = @"SELECT * FROM PhongKhoas pk WHERE ChuyenKhoa = @ChuyenKhoa";
-            SqlParameter[] parametersCK = { new SqlParameter("@ChuyenKhoa", chuyenKhoa) };
+            string queryChuyenKhoa = @"SELECT * FROM PhongKhoas pk
+                                        WHERE ChuyenKhoa = @ChuyenKhoa";
+            SqlParameter[] parametersCK = { new SqlParameter("@ChuyenKhoa", chuyenKhoa),
+            };
 
             DataTable chuyenKhoaTbl = ExecuteQuery(queryChuyenKhoa, parametersCK);
             if (chuyenKhoaTbl.Rows.Count > 0)
@@ -154,8 +156,12 @@ namespace QLPhongMachTu_DOAN_.DAL
                 string query = @"SELECT lk.*, bs.*
                                 FROM LichKhams lk
                                 INNER JOIN BacSis bs ON bs.MaSo = lk.MaBS
-                                WHERE bs.MaKhoa = @MaPK";
-                SqlParameter[] parameters = { new SqlParameter("@MaPK", khoaId) };
+                                WHERE bs.MaKhoa = @MaPK
+                                AND MaBN = @MaBN";
+                SqlParameter[] parameters = { 
+                    new SqlParameter("@MaPK", khoaId),
+                    new SqlParameter("@MaBN", benhNhanId)
+                };
                 DataTable result = ExecuteQuery(query, parameters);
                 return MapLichKhamList(result);
             }
@@ -163,14 +169,13 @@ namespace QLPhongMachTu_DOAN_.DAL
             return null;
         }
 
-        public List<LichKham> TimKiem(string str)
+        public List<DTO.LichKhamDTO> TimKiem(string str)
         {
             string query = @"SELECT lk.*, bs.*
                             FROM LichKhams lk
                             INNER JOIN BacSis bs ON bs.MaSo = lk.MaBS
                             INNER JOIN BenhNhans bn ON bn.Maso = lk.MaBN
-                            WHERE lk.TrieuChung LIKE '%' + @str + '%' 
-                            OR lk.TrangThai LIKE '%' + @str + '%' 
+                            WHERE lk.TrangThai LIKE '%' + @str + '%' 
                             OR bn.HoTen LIKE '%' + @str + '%'
                             OR bs.HoTen LIKE '%' + @str + '%'";
             SqlParameter[] parameters = { new SqlParameter("@str", str) };
@@ -179,9 +184,9 @@ namespace QLPhongMachTu_DOAN_.DAL
             return MapLichKhamList(result);
         }
 
-        private List<LichKham> MapLichKhamList(DataTable dataTable)
+        private List<DTO.LichKhamDTO> MapLichKhamList(DataTable dataTable)
         {
-            var list = new List<LichKham>();
+            var list = new List<DTO.LichKhamDTO>();
             foreach (DataRow row in dataTable.Rows)
             {
                 list.Add(MapLichKham(row));
@@ -189,9 +194,9 @@ namespace QLPhongMachTu_DOAN_.DAL
             return list;
         }
 
-        private LichKham MapLichKham(DataRow row)
+        private DTO.LichKhamDTO MapLichKham(DataRow row)
         {
-            return new LichKham
+            return new DTO.LichKhamDTO
             {
                 MaLK = Convert.ToInt64(row["MaLK"]),
                 MaBS = Convert.ToInt64(row["MaBS"]),
@@ -204,7 +209,8 @@ namespace QLPhongMachTu_DOAN_.DAL
                 BacSi = new BacSi
                 {
                     MaSo = Convert.ToInt64(row["MaBS"]),
-                    HoTen = row["HoTen"].ToString() // Sử dụng bí danh BacSiHoTen
+                    HoTen = row["HoTen"].ToString(), // Sử dụng bí danh BacSiHoTen
+                    MaKhoa = Convert.ToInt64(row["MaKhoa"])
                 },
 
                 // Đối tượng BenhNhan với bí danh BenhNhanHoTen
@@ -226,9 +232,9 @@ namespace QLPhongMachTu_DOAN_.DAL
         }
 
         // Phương thức để lấy tất cả các lịch khám
-        public List<LichKham> GetAll()
+        public List<DTO.LichKhamDTO> GetAll()
         {
-            List<LichKham> lichKhamList = new List<LichKham>();
+            List<DTO.LichKhamDTO> lichKhamList = new List<DTO.LichKhamDTO>();
             string query = "SELECT * FROM LichKhams"; // Truy vấn để lấy tất cả lịch khám
 
             using (SqlConnection connection = new SqlConnection(_connectionString))
@@ -240,7 +246,7 @@ namespace QLPhongMachTu_DOAN_.DAL
                 {
                     while (reader.Read())
                     {
-                        LichKham lichKham = new LichKham
+                        DTO.LichKhamDTO lichKham = new DTO.LichKhamDTO
                         {
                             MaLK = Convert.ToInt64(reader["MaLK"]),
                             MaBS = Convert.ToInt64(reader["MaBS"]),
@@ -257,9 +263,9 @@ namespace QLPhongMachTu_DOAN_.DAL
             return lichKhamList;
         }
 
-        public LichKham GetByMaLK(long maLK)
+        public DTO.LichKhamDTO GetByMaLK(long maLK)
         {
-            LichKham lichKham = null;
+            DTO.LichKhamDTO lichKham = null;
             string query = "SELECT * FROM LichKhams WHERE MaLK = @MaLK";
 
             using (SqlConnection connection = new SqlConnection(_connectionString))
@@ -272,7 +278,7 @@ namespace QLPhongMachTu_DOAN_.DAL
                 {
                     if (reader.Read())
                     {
-                        lichKham = new LichKham
+                        lichKham = new DTO.LichKhamDTO
                         {
                             MaLK = Convert.ToInt64(reader["MaLK"]),
                             MaBS = Convert.ToInt64(reader["MaBS"]),
@@ -289,7 +295,7 @@ namespace QLPhongMachTu_DOAN_.DAL
         }
 
 
-        public bool UpdateTrangThai(LichKham lichKham)
+        public bool UpdateTrangThai(DTO.LichKhamDTO lichKham)
         {
             string query = "UPDATE LichKhams SET TrangThai = @TrangThai WHERE MaLK = @MaLK";
 

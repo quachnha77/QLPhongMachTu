@@ -30,25 +30,25 @@
         {
             this.panelMain = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.pnKhamBenh = new System.Windows.Forms.Panel();
-            this.txtKhamBenh = new System.Windows.Forms.Label();
+            this.pnKhoThuoc = new System.Windows.Forms.Panel();
+            this.txtKhoThuoc = new System.Windows.Forms.Label();
             this.txtLogo = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnToaThuocDonThuoc = new System.Windows.Forms.Panel();
             this.txtToaThuocDonThuoc = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.pnThanhToan = new System.Windows.Forms.Panel();
             this.txtThanhToan = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
+            this.pnTaiKhoan = new System.Windows.Forms.Panel();
             this.txtTaiKhoan = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
+            this.pnDangXuat = new System.Windows.Forms.Panel();
             this.txtDangXuat = new System.Windows.Forms.Label();
             this.panel8.SuspendLayout();
-            this.pnKhamBenh.SuspendLayout();
+            this.pnKhoThuoc.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnToaThuocDonThuoc.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.panel4.SuspendLayout();
+            this.pnThanhToan.SuspendLayout();
+            this.pnTaiKhoan.SuspendLayout();
+            this.pnDangXuat.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelMain
@@ -64,13 +64,13 @@
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.panel8.Controls.Add(this.pnKhamBenh);
+            this.panel8.Controls.Add(this.pnKhoThuoc);
             this.panel8.Controls.Add(this.txtLogo);
             this.panel8.Controls.Add(this.pictureBox1);
             this.panel8.Controls.Add(this.pnToaThuocDonThuoc);
-            this.panel8.Controls.Add(this.panel3);
-            this.panel8.Controls.Add(this.panel5);
-            this.panel8.Controls.Add(this.panel4);
+            this.panel8.Controls.Add(this.pnThanhToan);
+            this.panel8.Controls.Add(this.pnTaiKhoan);
+            this.panel8.Controls.Add(this.pnDangXuat);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel8.Location = new System.Drawing.Point(0, 0);
             this.panel8.Margin = new System.Windows.Forms.Padding(2);
@@ -78,29 +78,29 @@
             this.panel8.Size = new System.Drawing.Size(219, 725);
             this.panel8.TabIndex = 2;
             // 
-            // pnKhamBenh
+            // pnKhoThuoc
             // 
-            this.pnKhamBenh.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.pnKhamBenh.Controls.Add(this.txtKhamBenh);
-            this.pnKhamBenh.Location = new System.Drawing.Point(0, 244);
-            this.pnKhamBenh.Margin = new System.Windows.Forms.Padding(2);
-            this.pnKhamBenh.Name = "pnKhamBenh";
-            this.pnKhamBenh.Size = new System.Drawing.Size(219, 54);
-            this.pnKhamBenh.TabIndex = 2;
-            this.pnKhamBenh.Click += new System.EventHandler(this.KhoThuoc_Click);
+            this.pnKhoThuoc.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.pnKhoThuoc.Controls.Add(this.txtKhoThuoc);
+            this.pnKhoThuoc.Location = new System.Drawing.Point(0, 244);
+            this.pnKhoThuoc.Margin = new System.Windows.Forms.Padding(2);
+            this.pnKhoThuoc.Name = "pnKhoThuoc";
+            this.pnKhoThuoc.Size = new System.Drawing.Size(219, 54);
+            this.pnKhoThuoc.TabIndex = 2;
+            this.pnKhoThuoc.Click += new System.EventHandler(this.KhoThuoc_Click);
             // 
-            // txtKhamBenh
+            // txtKhoThuoc
             // 
-            this.txtKhamBenh.AutoSize = true;
-            this.txtKhamBenh.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtKhamBenh.ForeColor = System.Drawing.Color.DarkCyan;
-            this.txtKhamBenh.Location = new System.Drawing.Point(56, 16);
-            this.txtKhamBenh.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.txtKhamBenh.Name = "txtKhamBenh";
-            this.txtKhamBenh.Size = new System.Drawing.Size(105, 23);
-            this.txtKhamBenh.TabIndex = 0;
-            this.txtKhamBenh.Text = "KHO THUỐC";
-            this.txtKhamBenh.Click += new System.EventHandler(this.KhoThuoc_Click);
+            this.txtKhoThuoc.AutoSize = true;
+            this.txtKhoThuoc.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtKhoThuoc.ForeColor = System.Drawing.Color.DarkCyan;
+            this.txtKhoThuoc.Location = new System.Drawing.Point(56, 16);
+            this.txtKhoThuoc.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.txtKhoThuoc.Name = "txtKhoThuoc";
+            this.txtKhoThuoc.Size = new System.Drawing.Size(105, 23);
+            this.txtKhoThuoc.TabIndex = 0;
+            this.txtKhoThuoc.Text = "KHO THUỐC";
+            this.txtKhoThuoc.Click += new System.EventHandler(this.KhoThuoc_Click);
             // 
             // txtLogo
             // 
@@ -150,16 +150,16 @@
             this.txtToaThuocDonThuoc.Text = "TOA THUỐC, ĐƠN THUỐC";
             this.txtToaThuocDonThuoc.Click += new System.EventHandler(this.ToaThuocDonThuoc_click);
             // 
-            // panel3
+            // pnThanhToan
             // 
-            this.panel3.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.panel3.Controls.Add(this.txtThanhToan);
-            this.panel3.Location = new System.Drawing.Point(0, 360);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(219, 54);
-            this.panel3.TabIndex = 1;
-            this.panel3.Click += new System.EventHandler(this.ThanhToan_click);
+            this.pnThanhToan.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.pnThanhToan.Controls.Add(this.txtThanhToan);
+            this.pnThanhToan.Location = new System.Drawing.Point(0, 360);
+            this.pnThanhToan.Margin = new System.Windows.Forms.Padding(2);
+            this.pnThanhToan.Name = "pnThanhToan";
+            this.pnThanhToan.Size = new System.Drawing.Size(219, 54);
+            this.pnThanhToan.TabIndex = 1;
+            this.pnThanhToan.Click += new System.EventHandler(this.ThanhToan_click);
             // 
             // txtThanhToan
             // 
@@ -174,16 +174,16 @@
             this.txtThanhToan.Text = "THANH TOÁN";
             this.txtThanhToan.Click += new System.EventHandler(this.ThanhToan_click);
             // 
-            // panel5
+            // pnTaiKhoan
             // 
-            this.panel5.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.panel5.Controls.Add(this.txtTaiKhoan);
-            this.panel5.Location = new System.Drawing.Point(0, 418);
-            this.panel5.Margin = new System.Windows.Forms.Padding(2);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(219, 54);
-            this.panel5.TabIndex = 1;
-            this.panel5.Click += new System.EventHandler(this.TaiKhoan_Click);
+            this.pnTaiKhoan.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.pnTaiKhoan.Controls.Add(this.txtTaiKhoan);
+            this.pnTaiKhoan.Location = new System.Drawing.Point(0, 418);
+            this.pnTaiKhoan.Margin = new System.Windows.Forms.Padding(2);
+            this.pnTaiKhoan.Name = "pnTaiKhoan";
+            this.pnTaiKhoan.Size = new System.Drawing.Size(219, 54);
+            this.pnTaiKhoan.TabIndex = 1;
+            this.pnTaiKhoan.Click += new System.EventHandler(this.TaiKhoan_Click);
             // 
             // txtTaiKhoan
             // 
@@ -198,15 +198,16 @@
             this.txtTaiKhoan.Text = "TÀI KHOẢN";
             this.txtTaiKhoan.Click += new System.EventHandler(this.TaiKhoan_Click);
             // 
-            // panel4
+            // pnDangXuat
             // 
-            this.panel4.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.panel4.Controls.Add(this.txtDangXuat);
-            this.panel4.Location = new System.Drawing.Point(0, 477);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(219, 54);
-            this.panel4.TabIndex = 1;
+            this.pnDangXuat.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.pnDangXuat.Controls.Add(this.txtDangXuat);
+            this.pnDangXuat.Location = new System.Drawing.Point(0, 477);
+            this.pnDangXuat.Margin = new System.Windows.Forms.Padding(2);
+            this.pnDangXuat.Name = "pnDangXuat";
+            this.pnDangXuat.Size = new System.Drawing.Size(219, 54);
+            this.pnDangXuat.TabIndex = 1;
+            this.pnDangXuat.Click += new System.EventHandler(this.pnDangXuat_Click_1);
             // 
             // txtDangXuat
             // 
@@ -219,6 +220,7 @@
             this.txtDangXuat.Size = new System.Drawing.Size(104, 23);
             this.txtDangXuat.TabIndex = 5;
             this.txtDangXuat.Text = "ĐĂNG XUẤT";
+            this.txtDangXuat.Click += new System.EventHandler(this.pnDangXuat_Click_1);
             // 
             // NavbarDuocSi
             // 
@@ -231,17 +233,17 @@
             this.Text = "NavbarDuocSi";
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
-            this.pnKhamBenh.ResumeLayout(false);
-            this.pnKhamBenh.PerformLayout();
+            this.pnKhoThuoc.ResumeLayout(false);
+            this.pnKhoThuoc.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnToaThuocDonThuoc.ResumeLayout(false);
             this.pnToaThuocDonThuoc.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
+            this.pnThanhToan.ResumeLayout(false);
+            this.pnThanhToan.PerformLayout();
+            this.pnTaiKhoan.ResumeLayout(false);
+            this.pnTaiKhoan.PerformLayout();
+            this.pnDangXuat.ResumeLayout(false);
+            this.pnDangXuat.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -250,15 +252,15 @@
 
         private System.Windows.Forms.Panel panelMain;
         private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Panel pnKhamBenh;
-        private System.Windows.Forms.Label txtKhamBenh;
+        private System.Windows.Forms.Panel pnKhoThuoc;
+        private System.Windows.Forms.Label txtKhoThuoc;
         private System.Windows.Forms.Label txtLogo;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel pnThanhToan;
         private System.Windows.Forms.Label txtThanhToan;
-        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel pnTaiKhoan;
         private System.Windows.Forms.Label txtTaiKhoan;
-        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel pnDangXuat;
         private System.Windows.Forms.Label txtDangXuat;
         private System.Windows.Forms.Panel pnToaThuocDonThuoc;
         private System.Windows.Forms.Label txtToaThuocDonThuoc;

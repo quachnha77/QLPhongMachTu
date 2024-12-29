@@ -1,16 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 using QLPhongMachTu_DOAN_.BLL;
 using QLPhongMachTu_DOAN_.DTO;
-using QLPhongMachTu_DOAN_.DAL;
 using QLPhongMachTu_DOAN_.Enums;
 
 namespace QLPhongMachTu_DOAN_.GUI
@@ -22,12 +17,15 @@ namespace QLPhongMachTu_DOAN_.GUI
         private PhieuKhamBLL phieuKhamBLL;
         private PhieuKhamDichVuBLL phieuKhamDVBLL;
         private DichVuBLL dichVuBLL;
+        private long maPK;
+        private long maBN;
+        private long maBS;
 
         public KhamBenh_BS()
         {
             InitializeComponent();
 
-            lichKhamBLL = new LichKhamBLL(); 
+            lichKhamBLL = new LichKhamBLL();
             benhNhanBLL = new BenhNhanBLL();
             phieuKhamBLL = new PhieuKhamBLL();
             phieuKhamDVBLL = new PhieuKhamDichVuBLL();
@@ -58,7 +56,7 @@ namespace QLPhongMachTu_DOAN_.GUI
         private void LoadDataToGrid()
         {
             // Lấy tất cả lịch khám và bệnh nhân từ BLL
-            List<LichKham> danhSachLichKham = lichKhamBLL.GetAll();
+            List<LichKhamDTO> danhSachLichKham = lichKhamBLL.GetAll();
             List<BenhNhan> danhSachBenhNhan = benhNhanBLL.GetAll();
 
             // Kiểm tra nếu CheckBox lọc theo ngày được chọn
@@ -191,6 +189,10 @@ namespace QLPhongMachTu_DOAN_.GUI
 
                         // Hiển thị các dịch vụ đã sử dụng cho phiếu khám
                         HienThiDichVuDaSuDung(phieuKham.MaPK);
+
+                        maPK = phieuKham.MaPK;
+                        maBS = phieuKham.MaBS;
+                        maBN = phieuKham.MaBN;
                     }
                 }
             }
@@ -201,11 +203,25 @@ namespace QLPhongMachTu_DOAN_.GUI
 
         }
 
+        private void XemToaThuoc_Click(object sender, EventArgs e)
+        {
+            DataGridViewRow selectedRow = tableDanhSachKhamBenh.SelectedRows[0];
+            long maBN = Convert.ToInt64(selectedRow.Cells["MaBN"].Value);
+            long maLK = Convert.ToInt64(selectedRow.Cells["MaLK"].Value);
+            XemToaThuocGUI xemtToaThuocForm = new XemToaThuocGUI(maBN, maLK);
+            xemtToaThuocForm.StartPosition = FormStartPosition.CenterScreen;
+            xemtToaThuocForm.Show();
+        }
+
         private void KeToaThuoc_Click(object sender, EventArgs e)
         {
-            ToaThuoc toaThuocFrom = new ToaThuoc();
-            toaThuocFrom.StartPosition = FormStartPosition.CenterScreen;
-            toaThuocFrom.Show();
+            // lấy ra mã BN
+            DataGridViewRow selectedRow = tableDanhSachKhamBenh.SelectedRows[0];
+            long maBN = Convert.ToInt64(selectedRow.Cells["MaBN"].Value);
+            // Tạo và hiện thị TT
+            KeToaThuocGUI toaThuocForm = new KeToaThuocGUI(maBN);
+            toaThuocForm.StartPosition = FormStartPosition.CenterScreen;
+            toaThuocForm.Show();
         }
 
         private void KhamBenh_Click(object sender, EventArgs e)
@@ -229,7 +245,7 @@ namespace QLPhongMachTu_DOAN_.GUI
 
         private void HoaDonKhamBenh_Click(object sender, EventArgs e)
         {
-            HoaDonKhamBenh hoaDonKBFrom = new HoaDonKhamBenh();
+            HoaDonKhamBenh hoaDonKBFrom = new HoaDonKhamBenh(maPK, maBS, maBN);
             hoaDonKBFrom.StartPosition = FormStartPosition.CenterScreen;
             hoaDonKBFrom.Show();
         }
@@ -241,7 +257,64 @@ namespace QLPhongMachTu_DOAN_.GUI
 
         private void txtTimTheoMaBN_TextChanged(object sender, EventArgs e)
         {
+            string searchMaBN = txtTimTheoMaBN.Text.Trim();
 
+            // Kiểm tra nếu người dùng chưa nhập gì trong TextBox
+            if (string.IsNullOrEmpty(searchMaBN))
+            {
+                // Nếu không có tìm kiếm, load lại toàn bộ dữ liệu
+                LoadDataToGrid();
+            }
+            else
+            {
+                // Nếu có nhập mã bệnh nhân, thực hiện lọc
+                List<LichKhamDTO> danhSachLichKham = lichKhamBLL.GetAll();
+                List<BenhNhan> danhSachBenhNhan = benhNhanBLL.GetAll();
+
+                // Lọc danh sách LichKham theo MaBN của BenhNhan
+                danhSachLichKham = danhSachLichKham
+                    .Where(lk => danhSachBenhNhan
+                                 .Any(bn => bn.MaSo == lk.MaBN && bn.MaSo.ToString().Contains(searchMaBN))
+                    )
+                    .ToList();
+
+                // Tạo mới DataTable và ánh xạ dữ liệu
+                DataTable dataTable = new DataTable();
+                dataTable.Columns.Add("MaLK", typeof(long));
+                dataTable.Columns.Add("MaBN", typeof(long));
+                dataTable.Columns.Add("CCCD", typeof(long));
+                dataTable.Columns.Add("HoTen", typeof(string));
+                dataTable.Columns.Add("NgaySinh", typeof(DateTime));
+                dataTable.Columns.Add("GioiTinh", typeof(string));
+                dataTable.Columns.Add("DiaChi", typeof(string));
+                dataTable.Columns.Add("SDT", typeof(string));
+                dataTable.Columns.Add("NgayKham", typeof(DateTime));
+                dataTable.Columns.Add("TrangThai", typeof(string));
+
+                // Lấy dữ liệu từ LichKham và BenhNhan và đưa vào DataTable
+                foreach (var lichKham in danhSachLichKham)
+                {
+                    var benhNhan = danhSachBenhNhan.FirstOrDefault(bn => bn.MaSo == lichKham.MaBN);
+                    if (benhNhan != null)
+                    {
+                        DataRow row = dataTable.NewRow();
+                        row["MaLK"] = lichKham.MaLK;
+                        row["MaBN"] = benhNhan.MaSo;
+                        row["CCCD"] = benhNhan.CCCD;
+                        row["HoTen"] = benhNhan.HoTen;
+                        row["NgaySinh"] = benhNhan.NgaySinh;
+                        row["GioiTinh"] = benhNhan.GioiTinh;
+                        row["DiaChi"] = benhNhan.DiaChi;
+                        row["SDT"] = benhNhan.SDT;
+                        row["NgayKham"] = lichKham.NgayKham;
+                        row["TrangThai"] = trangThaiKhamBenh(lichKham.TrangThai.ToString());
+                        dataTable.Rows.Add(row);
+                    }
+                }
+
+                // Gán lại DataTable vào DataGridView
+                tableDanhSachKhamBenh.DataSource = dataTable;
+            }
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -257,7 +330,7 @@ namespace QLPhongMachTu_DOAN_.GUI
         private void LocTheoNgay()
         {
             // Lấy danh sách lịch khám từ BLL
-            List<LichKham> danhSachLichKham = lichKhamBLL.GetAll();
+            List<LichKhamDTO> danhSachLichKham = lichKhamBLL.GetAll();
 
             // Kiểm tra nếu CheckBox lọc theo ngày được chọn
             if (cbLocTheoNgay.Checked)
@@ -356,7 +429,7 @@ namespace QLPhongMachTu_DOAN_.GUI
                     long maLK = Convert.ToInt64(selectedRow.Cells["MaLK"].Value);
 
                     // Tạo đối tượng LichKham để cập nhật trạng thái trong cơ sở dữ liệu
-                    LichKham lichKham = new LichKham
+                    LichKhamDTO lichKham = new LichKhamDTO
                     {
                         MaLK = maLK,
                         TrangThai = ETrangThaiKham.DaKham // Cập nhật trạng thái thành "Đã khám"
@@ -397,7 +470,6 @@ namespace QLPhongMachTu_DOAN_.GUI
             }
         }
 
-
         private void CapNhatPhieuKham(PhieuKham phieuKham)
         {
             // Lấy dữ liệu cần cập nhật từ các trường
@@ -413,8 +485,6 @@ namespace QLPhongMachTu_DOAN_.GUI
                 MessageBox.Show("Cập nhật phiếu khám không thành công.");
             }
         }
-
-
 
         private void LuuDichVuDaSuDung(long maPK)
         {
@@ -461,5 +531,7 @@ namespace QLPhongMachTu_DOAN_.GUI
         {
 
         }
+
+
     }
 }

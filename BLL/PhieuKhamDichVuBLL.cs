@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 using QLPhongMachTu_DOAN_.DAL;
 using QLPhongMachTu_DOAN_.DTO;
@@ -33,7 +30,11 @@ namespace QLPhongMachTu_DOAN_.BLL
             return phieuKhamDichVus.Select(pkdv => pkdv.MaDV).ToList();
         }
 
-
+        public List<PhieuKhamDichVu> GetByMaPK(long maPK)
+        {
+            // Lấy danh sách PhieuKhamDichVu theo maPK
+            return phieuKhamDVDAL.GetByMaPK(maPK);
+        }
 
         public void LuuDichVu(PhieuKhamDichVu phieuKhamDichVu)
         {

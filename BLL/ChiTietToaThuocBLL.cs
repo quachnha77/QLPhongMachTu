@@ -1,15 +1,12 @@
 ﻿using QLPhongMachTu_DOAN_.DAL;
 using QLPhongMachTu_DOAN_.DTO;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace QLPhongMachTu_DOAN_.BLL
 {
     public class ChiTietToaThuocBLL
     {
+        // Thanh Nhã
         private readonly ChiTietToaThuocDAL chiTietToaThuocDAL;
 
         public ChiTietToaThuocBLL()
@@ -18,15 +15,32 @@ namespace QLPhongMachTu_DOAN_.BLL
         }
 
         // Phương thức lấy tất cả thuốc từ DAL
-        public List<ChiTietToaThuoc> GetAll()
+        public List<ChiTietToaThuocDTO> GetAll()
         {
             return chiTietToaThuocDAL.GetAll();
         }
 
-        //// Lấy thuốc theo mã thuốc
-        //public KhoThuoc GetByMaThuoc(long maThuoc)
-        //{
-        //    return chiTietToaThuocDAL.GetByMaThuoc(maThuoc);
-        //}
+        // Lấy theo mã toa thuốc
+        public List<ChiTietToaThuocDTO> GetChiTietByMaTT(long maTT)
+        {
+            // Thực hiện nghiệp vụ hoặc xử lý dữ liệu nếu cần
+            return chiTietToaThuocDAL.GetByMaTT(maTT);
+        }
+
+        public bool AddChiTietToaThuoc(List<ChiTietToaThuocDTO> danhSachChiTiet)
+        {
+            foreach (var chiTiet in danhSachChiTiet)
+            {
+                if (!chiTietToaThuocDAL.AddChiTietToaThuoc(chiTiet))
+                {
+                    return false; // Nếu một dòng không thành công, trả về false
+                }
+            }
+            return true;
+        }
+
+
+        // Minh Thắng
+
     }
 }

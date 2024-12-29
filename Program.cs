@@ -1,11 +1,6 @@
 ﻿using QLPhongMachTu_DOAN_.GUI;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-
-using QLPhongMachTu_DOAN_.DAL;
 
 namespace QLPhongMachTu_DOAN_
 {

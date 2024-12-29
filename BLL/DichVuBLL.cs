@@ -1,9 +1,5 @@
 ﻿using QLPhongMachTu_DOAN_.DAL;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using QLPhongMachTu_DOAN_.DTO;
 
 namespace QLPhongMachTu_DOAN_.BLL
 {
@@ -20,6 +16,11 @@ namespace QLPhongMachTu_DOAN_.BLL
         public double LayDonGiaDichVu(long maDV)
         {
             return dichVuDAL.LayDonGiaDichVu(maDV);
+        }
+
+        public DichVuDTO GetByMaDV(long maDV)
+        {
+            return dichVuDAL.GetByMaDV(maDV);
         }
     }
 }

@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace QLPhongMachTu_DOAN_.DTO
 {
@@ -34,7 +30,7 @@ namespace QLPhongMachTu_DOAN_.DTO
         // Thuộc tính mới cho "Lời dặn bác sĩ"
         public string LoiDanBacSi { get; set; }
 
-        public LichKham LichKham { get; set; }
+        public LichKhamDTO LichKham { get; set; }
         public BenhNhan BenhNhan { get; set; }
         public BacSi BacSi { get; set; }
 

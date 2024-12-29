@@ -1,10 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Runtime.CompilerServices;
 
 namespace QLPhongMachTu_DOAN_.DTO
 {
@@ -25,7 +22,9 @@ namespace QLPhongMachTu_DOAN_.DTO
         public DateTime ThoiGian { get; set; }
         public string GhiChu { get; set; }
 
-        public LichKham LichKham { get; set; }
+        //public string TrangThai { get; set; }
+
+        public LichKhamDTO LichKham { get; set; }
         public NhanVien NhanVien { get; set; }
         public BacSi BacSi { get; set; }
     }

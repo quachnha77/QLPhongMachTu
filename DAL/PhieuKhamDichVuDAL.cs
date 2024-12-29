@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Data.SqlClient;
 using System.Configuration;
 using QLPhongMachTu_DOAN_.DTO;
@@ -66,7 +65,8 @@ namespace QLPhongMachTu_DOAN_.DAL
                         {
                             MaPK = Convert.ToInt64(reader["MaPK"]),
                             MaDV = Convert.ToInt64(reader["MaDV"]),
-                            Gia = Convert.ToDouble(reader["Gia"])
+                            Gia = Convert.ToDouble(reader["Gia"]),
+                            SoLuong = Convert.ToInt32(reader["SoLuong"])
                         };
                         phieuKhamDichVuList.Add(phieuKhamDichVu);
                     }

@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace QLPhongMachTu_DOAN_.DTO
 {
@@ -17,6 +12,8 @@ namespace QLPhongMachTu_DOAN_.DTO
         [Key]
         [Column(Order = 1)]
         public long MaDV { get; set; }  // Mã dịch vụ, khóa ngoại
+
+        public int SoLuong { get; set; }  // Mã dịch vụ, khóa ngoại
 
         public double Gia { get; set; }  // Đơn giá của dịch vụ tại thời điểm khám
     }

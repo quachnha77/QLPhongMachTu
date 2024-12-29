@@ -49,6 +49,7 @@
             this.rbChuaKham = new System.Windows.Forms.RadioButton();
             this.btnKhamBenh = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnKeToaThuoc = new System.Windows.Forms.Button();
             this.txtLoiDanBacSi = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.cbNhaKhoa = new System.Windows.Forms.CheckBox();
@@ -61,7 +62,7 @@
             this.cbKhamTongQuat = new System.Windows.Forms.CheckBox();
             this.label16 = new System.Windows.Forms.Label();
             this.btnLuuThayDoi = new System.Windows.Forms.Button();
-            this.btnKeToaThuoc = new System.Windows.Forms.Button();
+            this.btnXemToaThuoc = new System.Windows.Forms.Button();
             this.btnTaoHoaDonKhamBenh = new System.Windows.Forms.Button();
             this.txtSoDienThoai = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
@@ -315,6 +316,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnKeToaThuoc);
             this.groupBox1.Controls.Add(this.txtLoiDanBacSi);
             this.groupBox1.Controls.Add(this.label17);
             this.groupBox1.Controls.Add(this.cbNhaKhoa);
@@ -327,7 +329,7 @@
             this.groupBox1.Controls.Add(this.cbKhamTongQuat);
             this.groupBox1.Controls.Add(this.label16);
             this.groupBox1.Controls.Add(this.btnLuuThayDoi);
-            this.groupBox1.Controls.Add(this.btnKeToaThuoc);
+            this.groupBox1.Controls.Add(this.btnXemToaThuoc);
             this.groupBox1.Controls.Add(this.btnTaoHoaDonKhamBenh);
             this.groupBox1.Controls.Add(this.txtSoDienThoai);
             this.groupBox1.Controls.Add(this.label15);
@@ -363,6 +365,21 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Phiếu khám";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // btnKeToaThuoc
+            // 
+            this.btnKeToaThuoc.BackColor = System.Drawing.Color.CadetBlue;
+            this.btnKeToaThuoc.FlatAppearance.BorderSize = 0;
+            this.btnKeToaThuoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnKeToaThuoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnKeToaThuoc.ForeColor = System.Drawing.Color.White;
+            this.btnKeToaThuoc.Location = new System.Drawing.Point(592, 312);
+            this.btnKeToaThuoc.Name = "btnKeToaThuoc";
+            this.btnKeToaThuoc.Size = new System.Drawing.Size(109, 30);
+            this.btnKeToaThuoc.TabIndex = 52;
+            this.btnKeToaThuoc.Text = "Kê toa thuốc";
+            this.btnKeToaThuoc.UseVisualStyleBackColor = false;
+            this.btnKeToaThuoc.Click += new System.EventHandler(this.KeToaThuoc_Click);
             // 
             // txtLoiDanBacSi
             // 
@@ -477,7 +494,7 @@
             this.btnLuuThayDoi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLuuThayDoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLuuThayDoi.ForeColor = System.Drawing.Color.White;
-            this.btnLuuThayDoi.Location = new System.Drawing.Point(271, 312);
+            this.btnLuuThayDoi.Location = new System.Drawing.Point(217, 312);
             this.btnLuuThayDoi.Name = "btnLuuThayDoi";
             this.btnLuuThayDoi.Size = new System.Drawing.Size(109, 30);
             this.btnLuuThayDoi.TabIndex = 40;
@@ -485,20 +502,20 @@
             this.btnLuuThayDoi.UseVisualStyleBackColor = false;
             this.btnLuuThayDoi.Click += new System.EventHandler(this.btnLuuThayDoi_Click);
             // 
-            // btnKeToaThuoc
+            // btnXemToaThuoc
             // 
-            this.btnKeToaThuoc.BackColor = System.Drawing.Color.CadetBlue;
-            this.btnKeToaThuoc.FlatAppearance.BorderSize = 0;
-            this.btnKeToaThuoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnKeToaThuoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnKeToaThuoc.ForeColor = System.Drawing.Color.White;
-            this.btnKeToaThuoc.Location = new System.Drawing.Point(429, 312);
-            this.btnKeToaThuoc.Name = "btnKeToaThuoc";
-            this.btnKeToaThuoc.Size = new System.Drawing.Size(109, 30);
-            this.btnKeToaThuoc.TabIndex = 39;
-            this.btnKeToaThuoc.Text = "Kê toa thuốc";
-            this.btnKeToaThuoc.UseVisualStyleBackColor = false;
-            this.btnKeToaThuoc.Click += new System.EventHandler(this.KeToaThuoc_Click);
+            this.btnXemToaThuoc.BackColor = System.Drawing.Color.CadetBlue;
+            this.btnXemToaThuoc.FlatAppearance.BorderSize = 0;
+            this.btnXemToaThuoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnXemToaThuoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXemToaThuoc.ForeColor = System.Drawing.Color.White;
+            this.btnXemToaThuoc.Location = new System.Drawing.Point(751, 312);
+            this.btnXemToaThuoc.Name = "btnXemToaThuoc";
+            this.btnXemToaThuoc.Size = new System.Drawing.Size(109, 30);
+            this.btnXemToaThuoc.TabIndex = 39;
+            this.btnXemToaThuoc.Text = "Xem toa thuốc";
+            this.btnXemToaThuoc.UseVisualStyleBackColor = false;
+            this.btnXemToaThuoc.Click += new System.EventHandler(this.XemToaThuoc_Click);
             // 
             // btnTaoHoaDonKhamBenh
             // 
@@ -507,7 +524,7 @@
             this.btnTaoHoaDonKhamBenh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTaoHoaDonKhamBenh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTaoHoaDonKhamBenh.ForeColor = System.Drawing.Color.White;
-            this.btnTaoHoaDonKhamBenh.Location = new System.Drawing.Point(585, 312);
+            this.btnTaoHoaDonKhamBenh.Location = new System.Drawing.Point(376, 312);
             this.btnTaoHoaDonKhamBenh.Name = "btnTaoHoaDonKhamBenh";
             this.btnTaoHoaDonKhamBenh.Size = new System.Drawing.Size(166, 30);
             this.btnTaoHoaDonKhamBenh.TabIndex = 38;
@@ -801,7 +818,7 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox txtSoDienThoai;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Button btnKeToaThuoc;
+        private System.Windows.Forms.Button btnXemToaThuoc;
         private System.Windows.Forms.Button btnTaoHoaDonKhamBenh;
         private System.Windows.Forms.Button btnLuuThayDoi;
         private System.Windows.Forms.Label label16;
@@ -827,5 +844,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn TrangThai;
         private System.Windows.Forms.TextBox txtLoiDanBacSi;
         private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Button btnKeToaThuoc;
     }
 }

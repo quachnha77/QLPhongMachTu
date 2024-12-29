@@ -51,11 +51,35 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BouncyCastle.Cryptography, Version=2.0.0.0, Culture=neutral, PublicKeyToken=072edcf4a5328938, processorArchitecture=MSIL">
+      <HintPath>packages\BouncyCastle.Cryptography.2.4.0\lib\net461\BouncyCastle.Cryptography.dll</HintPath>
+    </Reference>
+    <Reference Include="ClosedXML, Version=0.104.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\ClosedXML.0.104.2\lib\netstandard2.0\ClosedXML.dll</HintPath>
+    </Reference>
+    <Reference Include="ClosedXML.Parser, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1d5f7376574c51ec, processorArchitecture=MSIL">
+      <HintPath>packages\ClosedXML.Parser.1.2.0\lib\netstandard2.0\ClosedXML.Parser.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml, Version=3.2.0.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>packages\DocumentFormat.OpenXml.3.2.0\lib\net46\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml.Framework, Version=3.2.0.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>packages\DocumentFormat.OpenXml.Framework.3.2.0\lib\net46\DocumentFormat.OpenXml.Framework.dll</HintPath>
+    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>packages\EntityFramework.6.5.1\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>packages\EntityFramework.6.5.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelNumberFormat, Version=1.1.0.0, Culture=neutral, PublicKeyToken=23c6f5d73be07eca, processorArchitecture=MSIL">
+      <HintPath>packages\ExcelNumberFormat.1.1.0\lib\net20\ExcelNumberFormat.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.4, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>packages\iTextSharp.5.5.13.4\lib\net461\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.HashCode, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Bcl.HashCode.1.1.1\lib\net461\Microsoft.Bcl.HashCode.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.EntityFrameworkCore.2.1.14\lib\netstandard2.0\Microsoft.EntityFrameworkCore.dll</HintPath>
@@ -96,12 +120,19 @@
     <Reference Include="Microsoft.Extensions.Primitives, Version=2.1.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.Extensions.Primitives.2.1.1\lib\netstandard2.0\Microsoft.Extensions.Primitives.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="RBush, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\RBush.4.0.0\lib\net47\RBush.dll</HintPath>
+    </Reference>
     <Reference Include="Remotion.Linq, Version=2.2.0.0, Culture=neutral, PublicKeyToken=fee00910d6e5f53b, processorArchitecture=MSIL">
       <HintPath>packages\Remotion.Linq.2.2.0\lib\net45\Remotion.Linq.dll</HintPath>
     </Reference>
+    <Reference Include="SixLabors.Fonts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d998eea7b14cab13, processorArchitecture=MSIL">
+      <HintPath>packages\SixLabors.Fonts.1.0.0\lib\netstandard2.0\SixLabors.Fonts.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
-    <Reference Include="System.Buffers, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>packages\System.Buffers.4.4.0\lib\netstandard2.0\System.Buffers.dll</HintPath>
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
     </Reference>
     <Reference Include="System.Collections.Immutable, Version=1.2.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>packages\System.Collections.Immutable.1.5.0\lib\netstandard2.0\System.Collections.Immutable.dll</HintPath>
@@ -116,21 +147,27 @@
       <HintPath>packages\System.Diagnostics.DiagnosticSource.4.5.1\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
     </Reference>
     <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing.Common, Version=9.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Drawing.Common.9.0.0\lib\net462\System.Drawing.Common.dll</HintPath>
+    </Reference>
     <Reference Include="System.Interactive.Async, Version=3.0.3000.0, Culture=neutral, PublicKeyToken=94bc3704cddfc263, processorArchitecture=MSIL">
       <HintPath>packages\System.Interactive.Async.3.1.1\lib\net46\System.Interactive.Async.dll</HintPath>
     </Reference>
-    <Reference Include="System.Memory, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>packages\System.Memory.4.5.1\lib\netstandard2.0\System.Memory.dll</HintPath>
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
     </Reference>
     <Reference Include="System.Numerics" />
-    <Reference Include="System.Numerics.Vectors, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>packages\System.Numerics.Vectors.4.4.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
     </Reference>
-    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>packages\System.Runtime.CompilerServices.Unsafe.4.5.1\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.6.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.CompilerServices.Unsafe.4.7.0\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
     </Reference>
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
     <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Windows.Forms.DataVisualization.Design" />
     <Reference Include="System.Xml.Linq" />
@@ -142,43 +179,53 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLL\BacSiBLL.cs" />
     <Compile Include="BLL\BenhNhanBLL.cs" />
     <Compile Include="BLL\ChiTietToaThuocBLL.cs" />
     <Compile Include="BLL\DichVuBLL.cs" />
+    <Compile Include="BLL\HoaDonKhamBenhBLL.cs" />
+    <Compile Include="BLL\HoaDonThuocBLL.cs" />
     <Compile Include="BLL\KhoaBLL.cs" />
     <Compile Include="BLL\KhoThuocBLL.cs" />
     <Compile Include="BLL\LichKhamBLL.cs" />
+    <Compile Include="BLL\NhanVienBLL.cs" />
     <Compile Include="BLL\PhanCongBLL.cs" />
+    <Compile Include="BLL\PhanQuyenBLL.cs" />
     <Compile Include="BLL\PhieuKhamBLL.cs" />
     <Compile Include="BLL\PhieuKhamDichVuBLL.cs" />
+    <Compile Include="BLL\ThongKeBLL.cs" />
     <Compile Include="BLL\ToaThuocBLL.cs" />
     <Compile Include="BLL\UserBLL.cs" />
-    <Compile Include="DAL\ApplicationDbContext.cs" />
     <Compile Include="DAL\BacSiDAL.cs" />
     <Compile Include="DAL\BenhNhanDAL.cs" />
     <Compile Include="DAL\ChiTietToaThuocDAL.cs" />
     <Compile Include="DAL\DatabaseHelper.cs" />
     <Compile Include="DAL\DichVuDAL.cs" />
+    <Compile Include="DAL\HoaDonKhamBenhDAL.cs" />
+    <Compile Include="DAL\HoaDonThuocDAL.cs" />
     <Compile Include="DAL\KhoaDAL.cs" />
     <Compile Include="DAL\KhoThuocDAL.cs" />
     <Compile Include="DAL\LichKhamDAL.cs" />
+    <Compile Include="DAL\NhanVienDAL.cs" />
     <Compile Include="DAL\PhanCongDAL.cs" />
+    <Compile Include="DAL\PhanQuyenDAL.cs" />
     <Compile Include="DAL\PhieuKhamDAL.cs" />
     <Compile Include="DAL\PhieuKhamDichVuDAL.cs" />
+    <Compile Include="DAL\ThongKeDAL.cs" />
     <Compile Include="DAL\ToaThuocDAL.cs" />
     <Compile Include="DAL\UserDAL.cs" />
     <Compile Include="DTO\BacSi.cs" />
     <Compile Include="DTO\BaseConNguoi.cs" />
     <Compile Include="DTO\BenhNhan.cs" />
-    <Compile Include="DTO\ChiTietToaThuoc.cs" />
-    <Compile Include="DTO\DichVu.cs" />
-    <Compile Include="DTO\HoaDonKhamBenh.cs" />
+    <Compile Include="DTO\ChiTietToaThuocDTO.cs" />
+    <Compile Include="DTO\DichVuDTO.cs" />
+    <Compile Include="DTO\HoaDonKhamBenhDTO.cs" />
     <Compile Include="DTO\HoaDonThuoc.cs" />
-    <Compile Include="DTO\KhoThuoc.cs" />
-    <Compile Include="DTO\LichKham.cs" />
+    <Compile Include="DTO\KhoThuocDTO.cs" />
+    <Compile Include="DTO\LichKhamDTO.cs" />
     <Compile Include="DTO\LichPhanCong.cs" />
     <Compile Include="DTO\NhanVien.cs" />
     <Compile Include="DTO\NhapThuoc.cs" />
@@ -186,15 +233,75 @@
     <Compile Include="DTO\PhieuKham.cs" />
     <Compile Include="DTO\PhieuKhamDichVu.cs" />
     <Compile Include="DTO\PhongKhoa.cs" />
-    <Compile Include="DTO\ToaThuoc.cs" />
+    <Compile Include="DTO\ToaThuocDTO.cs" />
     <Compile Include="DTO\User.cs" />
     <Compile Include="Enums\ETrangThaiKham.cs" />
     <Compile Include="Enums\EQuyen.cs" />
+    <Compile Include="GUI\ChiTietToaThuocGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ChiTietToaThuocGUI.Designer.cs">
+      <DependentUpon>ChiTietToaThuocGUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DanhSachDonThuocGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DanhSachDonThuocGUI.Designer.cs">
+      <DependentUpon>DanhSachDonThuocGUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ForgotPasswordGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ForgotPasswordGUI.Designer.cs">
+      <DependentUpon>ForgotPasswordGUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\LichLamViec_QL.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\LichLamViec_QL.Designer.cs">
+      <DependentUpon>LichLamViec_QL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ResetPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ResetPassword.Designer.cs">
+      <DependentUpon>ResetPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\TaiKhoan_ChangeUsername.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\TaiKhoan_ChangeUsername.Designer.cs">
+      <DependentUpon>TaiKhoan_ChangeUsername.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\TaiKhoan_ChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\TaiKhoan_ChangePassword.Designer.cs">
+      <DependentUpon>TaiKhoan_ChangePassword.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\HoaDonKhamBenh.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\HoaDonKhamBenh.Designer.cs">
       <DependentUpon>HoaDonKhamBenh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\HoaDonKhamBenh_BN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\HoaDonKhamBenh_BN.Designer.cs">
+      <DependentUpon>HoaDonKhamBenh_BN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\HoaDonThuocGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\HoaDonThuocGUI.Designer.cs">
+      <DependentUpon>HoaDonThuocGUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\KeToaThuocGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\KeToaThuocGUI.Designer.cs">
+      <DependentUpon>KeToaThuocGUI.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\KhamBenh.cs">
       <SubType>UserControl</SubType>
@@ -208,11 +315,11 @@
     <Compile Include="GUI\KhamBenh_BS.Designer.cs">
       <DependentUpon>KhamBenh_BS.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\KhamBenh_Edit_LT.cs">
+    <Compile Include="GUI\KhamBenh_Edit.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="GUI\KhamBenh_Edit_LT.Designer.cs">
-      <DependentUpon>KhamBenh_Edit_LT.cs</DependentUpon>
+    <Compile Include="GUI\KhamBenh_Edit.Designer.cs">
+      <DependentUpon>KhamBenh_Edit.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\KhamBenh_LT.cs">
       <SubType>UserControl</SubType>
@@ -232,23 +339,11 @@
     <Compile Include="GUI\LichLamViec_BS.Designer.cs">
       <DependentUpon>LichLamViec_BS.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\LichLamViec_QL.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="GUI\LichLamViec_QL.Designer.cs">
-      <DependentUpon>LichLamViec_QL.cs</DependentUpon>
-    </Compile>
     <Compile Include="GUI\Login.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\Login1.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="GUI\Login1.Designer.cs">
-      <DependentUpon>Login1.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\NavbarBacSi.cs">
       <SubType>Form</SubType>
@@ -280,29 +375,41 @@
     <Compile Include="GUI\NavbarQuanLi.Designer.cs">
       <DependentUpon>NavbarQuanLi.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\NavbarYTa.cs">
+    <Compile Include="GUI\NhanVienGUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\NhanVienGUI.Designer.cs">
+      <DependentUpon>NhanVienGUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\NhanVien_Add.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\NavbarYTa.Designer.cs">
-      <DependentUpon>NavbarYTa.cs</DependentUpon>
+    <Compile Include="GUI\NhanVien_Add.Designer.cs">
+      <DependentUpon>NhanVien_Add.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\NhanVien.cs">
+    <Compile Include="GUI\NhanVien_Edit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\NhanVien_Edit.Designer.cs">
+      <DependentUpon>NhanVien_Edit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\PhieuKham_Edit.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="GUI\NhanVien.Designer.cs">
-      <DependentUpon>NhanVien.cs</DependentUpon>
+    <Compile Include="GUI\PhieuKham_Edit.Designer.cs">
+      <DependentUpon>PhieuKham_Edit.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\SignUp.cs">
+    <Compile Include="GUI\SignUpGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\SignUpGUI.Designer.cs">
+      <DependentUpon>SignUpGUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\TaiKhoanGUI.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="GUI\SignUp.Designer.cs">
-      <DependentUpon>SignUp.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\TaiKhoan.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="GUI\TaiKhoan.Designer.cs">
-      <DependentUpon>TaiKhoan.cs</DependentUpon>
+    <Compile Include="GUI\TaiKhoanGUI.Designer.cs">
+      <DependentUpon>TaiKhoanGUI.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\TestControl.cs">
       <SubType>UserControl</SubType>
@@ -316,23 +423,17 @@
     <Compile Include="GUI\ThanhToan.Designer.cs">
       <DependentUpon>ThanhToan.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\ThanhToan_DS.cs">
+    <Compile Include="GUI\ThanhToanDS.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="GUI\ThanhToan_DS.Designer.cs">
-      <DependentUpon>ThanhToan_DS.cs</DependentUpon>
+    <Compile Include="GUI\ThanhToanDS.Designer.cs">
+      <DependentUpon>ThanhToanDS.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\ThongKe.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="GUI\ThongKe.Designer.cs">
       <DependentUpon>ThongKe.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\ToaThuoc.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\ToaThuoc.Designer.cs">
-      <DependentUpon>ToaThuoc.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\ToaThuocDonThuoc.cs">
       <SubType>UserControl</SubType>
@@ -346,10 +447,32 @@
     <Compile Include="GUI\ToaThuocDonThuoc_DS.Designer.cs">
       <DependentUpon>ToaThuocDonThuoc_DS.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\XemToaThuocGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\XemToaThuocGUI.Designer.cs">
+      <DependentUpon>XemToaThuocGUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Session\LoginSession.cs" />
+    <EmbeddedResource Include="GUI\ChiTietToaThuocGUI.resx">
+      <DependentUpon>ChiTietToaThuocGUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DanhSachDonThuocGUI.resx">
+      <DependentUpon>DanhSachDonThuocGUI.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\HoaDonKhamBenh.resx">
       <DependentUpon>HoaDonKhamBenh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\HoaDonKhamBenh_BN.resx">
+      <DependentUpon>HoaDonKhamBenh_BN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\HoaDonThuocGUI.resx">
+      <DependentUpon>HoaDonThuocGUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\KeToaThuocGUI.resx">
+      <DependentUpon>KeToaThuocGUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\KhamBenh.resx">
       <DependentUpon>KhamBenh.cs</DependentUpon>
@@ -357,8 +480,8 @@
     <EmbeddedResource Include="GUI\KhamBenh_BS.resx">
       <DependentUpon>KhamBenh_BS.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\KhamBenh_Edit_LT.resx">
-      <DependentUpon>KhamBenh_Edit_LT.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\KhamBenh_Edit.resx">
+      <DependentUpon>KhamBenh_Edit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\KhamBenh_LT.resx">
       <DependentUpon>KhamBenh_LT.cs</DependentUpon>
@@ -375,9 +498,6 @@
     <EmbeddedResource Include="GUI\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\Login1.resx">
-      <DependentUpon>Login1.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="GUI\NavbarBacSi.resx">
       <DependentUpon>NavbarBacSi.cs</DependentUpon>
     </EmbeddedResource>
@@ -393,17 +513,17 @@
     <EmbeddedResource Include="GUI\NavbarQuanLi.resx">
       <DependentUpon>NavbarQuanLi.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\NavbarYTa.resx">
-      <DependentUpon>NavbarYTa.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\NhanVienGUI.resx">
+      <DependentUpon>NhanVienGUI.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\NhanVien.resx">
-      <DependentUpon>NhanVien.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\PhieuKham_Edit.resx">
+      <DependentUpon>PhieuKham_Edit.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\SignUp.resx">
-      <DependentUpon>SignUp.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\SignUpGUI.resx">
+      <DependentUpon>SignUpGUI.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\TaiKhoan.resx">
-      <DependentUpon>TaiKhoan.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\TaiKhoanGUI.resx">
+      <DependentUpon>TaiKhoanGUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\TestControl.resx">
       <DependentUpon>TestControl.cs</DependentUpon>
@@ -411,20 +531,20 @@
     <EmbeddedResource Include="GUI\ThanhToan.resx">
       <DependentUpon>ThanhToan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\ThanhToan_DS.resx">
-      <DependentUpon>ThanhToan_DS.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\ThanhToanDS.resx">
+      <DependentUpon>ThanhToanDS.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\ThongKe.resx">
       <DependentUpon>ThongKe.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\ToaThuoc.resx">
-      <DependentUpon>ToaThuoc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\ToaThuocDonThuoc.resx">
       <DependentUpon>ToaThuocDonThuoc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\ToaThuocDonThuoc_DS.resx">
       <DependentUpon>ToaThuocDonThuoc_DS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\XemToaThuocGUI.resx">
+      <DependentUpon>XemToaThuocGUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -465,6 +585,9 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="TEMP\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

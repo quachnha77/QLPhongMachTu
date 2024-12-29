@@ -201,9 +201,9 @@
             this.ClientSize = new System.Drawing.Size(1296, 725);
             this.Controls.Add(this.pancelControl);
             this.Controls.Add(this.panelMain);
+            this.MaximizeBox = false;
             this.Name = "NavbarBacSi";
             this.Text = "NavbarBacSi";
-            this.Load += new System.EventHandler(this.NavbarBacSi_Load);
             this.pancelControl.ResumeLayout(false);
             this.pancelControl.PerformLayout();
             this.pnKhamBenh.ResumeLayout(false);

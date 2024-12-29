@@ -35,8 +35,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.lbBanChuaCoTaiKhoan = new System.Windows.Forms.Label();
-            this.dangnhapBtn = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
@@ -48,9 +46,9 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.txtLogo = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.dangNhapbtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.dangnhapBtn.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -75,11 +73,11 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Azure;
+            this.panel2.Controls.Add(this.dangNhapbtn);
             this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.textBox4);
             this.panel2.Controls.Add(this.lbBanChuaCoTaiKhoan);
-            this.panel2.Controls.Add(this.dangnhapBtn);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.checkBox1);
@@ -143,31 +141,6 @@
             this.lbBanChuaCoTaiKhoan.Size = new System.Drawing.Size(163, 18);
             this.lbBanChuaCoTaiKhoan.TabIndex = 0;
             this.lbBanChuaCoTaiKhoan.Text = "Bạn chưa có tài khoản?";
-            // 
-            // dangnhapBtn
-            // 
-            this.dangnhapBtn.BackColor = System.Drawing.Color.Teal;
-            this.dangnhapBtn.Controls.Add(this.label5);
-            this.dangnhapBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dangnhapBtn.Location = new System.Drawing.Point(195, 493);
-            this.dangnhapBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.dangnhapBtn.Name = "dangnhapBtn";
-            this.dangnhapBtn.Size = new System.Drawing.Size(245, 38);
-            this.dangnhapBtn.TabIndex = 7;
-            this.dangnhapBtn.Click += new System.EventHandler(this.dangnhapBtn_Click);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label5.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(82, 9);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(94, 19);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "ĐĂNG NHẬP";
             // 
             // label4
             // 
@@ -303,6 +276,21 @@
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 
+            // dangNhapbtn
+            // 
+            this.dangNhapbtn.BackColor = System.Drawing.Color.CadetBlue;
+            this.dangNhapbtn.FlatAppearance.BorderSize = 0;
+            this.dangNhapbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.dangNhapbtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dangNhapbtn.ForeColor = System.Drawing.Color.White;
+            this.dangNhapbtn.Location = new System.Drawing.Point(235, 486);
+            this.dangNhapbtn.Name = "dangNhapbtn";
+            this.dangNhapbtn.Size = new System.Drawing.Size(148, 45);
+            this.dangNhapbtn.TabIndex = 67;
+            this.dangNhapbtn.Text = "ĐĂNG NHẬP";
+            this.dangNhapbtn.UseVisualStyleBackColor = false;
+            this.dangNhapbtn.Click += new System.EventHandler(this.dangNhapbtn_Click);
+            // 
             // Login1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -314,8 +302,6 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.dangnhapBtn.ResumeLayout(false);
-            this.dangnhapBtn.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -330,8 +316,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label lbBanChuaCoTaiKhoan;
-        private System.Windows.Forms.Panel dangnhapBtn;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.CheckBox checkBox1;
@@ -343,5 +327,6 @@
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label txtLogo;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button dangNhapbtn;
     }
 }

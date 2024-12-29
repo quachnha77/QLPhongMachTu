@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Data.SqlClient;
 using System.Configuration;
 using QLPhongMachTu_DOAN_.DTO;
@@ -63,6 +62,42 @@ namespace QLPhongMachTu_DOAN_.DAL
             {
                 SqlCommand command = new SqlCommand(query, connection);
                 command.Parameters.AddWithValue("@MaLK", maLK);
+                connection.Open();
+
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        phieuKham = new PhieuKham
+                        {
+                            MaPK = Convert.ToInt64(reader["MaPK"]),
+                            MaLK = Convert.ToInt64(reader["MaLK"]),
+                            MaBN = Convert.ToInt64(reader["MaBN"]),
+                            MaBS = Convert.ToInt64(reader["MaBS"]),
+                            NgayKham = Convert.ToDateTime(reader["NgayKham"]),
+                            SoThuTu = Convert.ToInt32(reader["SoThuTu"]),
+                            TrieuChung = reader["TrieuChung"].ToString(),
+                            TieuSuBenhLy = reader["TieuSuBenhLy"].ToString(),
+                            ChuanDoan = reader["ChuanDoan"].ToString(),
+                            LoiDanBacSi = reader["LoiDanBacSi"]?.ToString() // Lấy dữ liệu từ cột mới
+                        };
+                    }
+                }
+            }
+
+            return phieuKham;
+        }
+
+        // Phương thức để lấy phiếu khám theo mã lịch khám (MaLK)
+        public PhieuKham GetByMaPK(long maPK)
+        {
+            PhieuKham phieuKham = null;
+            string query = "SELECT * FROM PhieuKhams WHERE MaPK = @MaPK";
+
+            using (SqlConnection connection = new SqlConnection(_connectionString))
+            {
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@MaPK", maPK);
                 connection.Open();
 
                 using (SqlDataReader reader = command.ExecuteReader())

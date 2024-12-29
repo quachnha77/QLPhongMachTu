@@ -1,10 +1,6 @@
 ﻿using QLPhongMachTu_DOAN_.DAL;
 using QLPhongMachTu_DOAN_.DTO;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace QLPhongMachTu_DOAN_.BLL
 {
@@ -30,6 +26,23 @@ namespace QLPhongMachTu_DOAN_.BLL
         public PhongKhoa GetByChuyenKhoa(string chuyenKhoa)
         {
             return dal.GetByChuyenKhoa(chuyenKhoa);
+        }
+
+
+        //BichNhung
+        public List<string> GetName()
+        {
+            return dal.GetName();
+        }
+
+        public long GetMaKhoaByName(string name)
+        {
+            return dal.GetMaKhoaByName(name);
+        }
+
+        public string GetChuyenKhoaByMaBS(long maBS)
+        {
+            return dal.GetChuyenKhoaByMaBS(maBS);
         }
     }
 }

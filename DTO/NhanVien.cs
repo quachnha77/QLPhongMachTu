@@ -1,13 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace QLPhongMachTu_DOAN_.DTO
 {
+    [Table("NhanVien")]
     public class NhanVien : BaseConNguoi
     {
-        
+        [Key]
+        public long MaNV { get; set; }
+        public string ChucVu { get; set; }
     }
 }

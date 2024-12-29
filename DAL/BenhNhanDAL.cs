@@ -12,21 +12,28 @@ namespace QLPhongMachTu_DOAN_.DAL
         //*****ConKienHuy
         public BenhNhan Create(BenhNhan newBenhNhan)
         {
-            //string query = "INSERT INTO BenhNhan (MaUser, Ten) OUTPUT INSERTED.Id VALUES (@MaUser, @Ten)";
-            //SqlParameter[] parameters = {
-            //    new SqlParameter("@MaUser", newBenhNhan.MaUser),
-            //    new SqlParameter("@Ten", newBenhNhan.Ten)
-            //    // Add other parameters as needed
-            //};
+            string query = @"INSERT INTO BenhNhans (CCCD, HoTen, NgaySinh, GioiTinh, DiaChi, SDT, MaUser) 
+                            OUTPUT INSERTED.MaSo
+                            VALUES (@CCCD, @HoTen, @NgaySinh, @GioiTinh, @DiaChi, @SDT, @MaUser)";
 
-            //using (DataTable result = ExecuteQuery(query, parameters))
-            //{
-            //    if (result.Rows.Count > 0)
-            //    {
-            //        newBenhNhan.Id = Convert.ToInt64(result.Rows[0]["Id"]);
-            //    }
-            //    return newBenhNhan;
-            //}
+            SqlParameter[] parameters = {
+                new SqlParameter("@HoTen", newBenhNhan.HoTen),
+                new SqlParameter("@CCCD", newBenhNhan.CCCD),
+                new SqlParameter("@NgaySinh", newBenhNhan.NgaySinh),
+                new SqlParameter("@GioiTinh", newBenhNhan.GioiTinh),
+                new SqlParameter("@DiaChi", newBenhNhan.DiaChi),
+                new SqlParameter("@SDT", newBenhNhan.SDT),
+                new SqlParameter("@MaUser", newBenhNhan.MaUser)
+            };
+
+            using (DataTable result = ExecuteQuery(query, parameters))
+            {
+                if (result.Rows.Count > 0)
+                {
+                    newBenhNhan.MaSo = Convert.ToInt64(result.Rows[0]["MaSo"]);
+                }
+                return newBenhNhan;
+            }
             return null;
         }
 
@@ -45,12 +52,13 @@ namespace QLPhongMachTu_DOAN_.DAL
                 var bn = new BenhNhan()
                 {
                     MaSo = Convert.ToInt64(row[0]),
-                    //CCCD = Convert.ToString(row[1]),
+                    CCCD = Convert.ToInt64(row[1]),
                     HoTen = (string)row[2],
                     NgaySinh = (DateTime)row[3],
                     GioiTinh = (string)row[4],
                     DiaChi = (string)row[5],
-                    MaUser = Convert.ToInt64(row[6]),
+                    SDT = Convert.ToString(row[6]),
+                    MaUser = Convert.ToInt64(row[7]),
                 };
                 return bn;
             }
@@ -72,18 +80,40 @@ namespace QLPhongMachTu_DOAN_.DAL
                 return new BenhNhan
                 {
                     MaSo = Convert.ToInt64(row[0]),
-                    //CCCD = Convert.ToString(row[1]),
+                    CCCD = Convert.ToInt64(row[1]),
                     HoTen = (string)row[2],
                     NgaySinh = (DateTime)row[3],
                     GioiTinh = (string)row[4],
                     DiaChi = (string)row[5],
-                    MaUser = Convert.ToInt64(row[6]),
-
+                    SDT = Convert.ToString(row[6]),
+                    MaUser = Convert.ToInt64(row[7]),
                 };
             }
             return null;
         }
 
+        public BenhNhan UpdateBenhNhan(long benhNhanId, BenhNhan updatedBenhNhan)
+        { // HoTen, DiaChi, SDT, GioiTinh
+            string query = @"UPDATE BenhNhans 
+                            SET HoTen = @HoTen, DiaChi = @DiaChi, SDT = @SDT, GioiTinh = @GioiTinh
+                            WHERE MaSo = @MaSo";
+            SqlParameter[] parameters = {
+                new SqlParameter("@HoTen", updatedBenhNhan.HoTen),
+                new SqlParameter("@DiaChi", updatedBenhNhan.DiaChi),
+                new SqlParameter("@SDT", updatedBenhNhan.SDT),
+                new SqlParameter("@GioiTinh", updatedBenhNhan.GioiTinh),
+                new SqlParameter("@MaSo", benhNhanId),
+            };
+
+            int rowAffected = ExecuteNonQuery(query, parameters);
+            if (rowAffected > 0)
+            {
+                return updatedBenhNhan;
+            }
+            return null;
+        }
+
+        // Con Kiến Huy
 
 
         //*****QuachThanhNha
@@ -148,10 +178,13 @@ namespace QLPhongMachTu_DOAN_.DAL
                         benhNhan = new BenhNhan
                         {
                             MaSo = Convert.ToInt64(reader["MaSo"]),
-                            HoTen = reader["HoTen"].ToString(),
-                            NgaySinh = Convert.ToDateTime(reader["NgaySinh"]),
-                            GioiTinh = reader["GioiTinh"].ToString(),
-                            CCCD = Convert.ToInt64(reader["MaSo"]),
+                            CCCD = reader["CCCD"] != DBNull.Value ? Convert.ToInt64(reader["CCCD"]) : 0,
+                            HoTen = reader["HoTen"]?.ToString(),
+                            NgaySinh = reader["NgaySinh"] != DBNull.Value ? Convert.ToDateTime(reader["NgaySinh"]) : DateTime.MinValue,
+                            GioiTinh = reader["GioiTinh"]?.ToString(),
+                            DiaChi = reader["DiaChi"]?.ToString(),
+                            SDT = reader["SDT"]?.ToString(),
+                            MaUser = reader["MaUser"] != DBNull.Value ? Convert.ToInt64(reader["MaUser"]) : 0
                         };
                     }
                 }

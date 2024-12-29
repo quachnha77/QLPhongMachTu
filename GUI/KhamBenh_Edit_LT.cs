@@ -8,7 +8,7 @@ namespace QLPhongMachTu_DOAN_.GUI
 {
     public partial class KhamBenh_Edit_LT : UserControl
     {
-        private LichKham LichKham = new LichKham();
+        private DTO.LichKhamDTO LichKham = new DTO.LichKhamDTO();
         private BenhNhan BenhNhan = new BenhNhan();
         private BacSi BacSi = new BacSi();
 
@@ -17,7 +17,7 @@ namespace QLPhongMachTu_DOAN_.GUI
         private PhanCongBLL phanCongBll = new PhanCongBLL();
         private LichKhamBLL lichKhamBll = new LichKhamBLL();
 
-        public KhamBenh_Edit_LT(LichKham lk, BenhNhan bn, BacSi bs)
+        public KhamBenh_Edit_LT(DTO.LichKhamDTO lk, BenhNhan bn, BacSi bs)
         {
             InitializeComponent();
             LichKham = lk; BenhNhan = bn; BacSi = bs;
@@ -97,7 +97,7 @@ namespace QLPhongMachTu_DOAN_.GUI
             long bacSiId = Convert.ToInt64(comboBox2.SelectedValue);
             long phanCongId = Convert.ToInt64(comboBox3.SelectedValue);
 
-            LichKham updateLichKham = new LichKham()
+            DTO.LichKhamDTO updateLichKham = new DTO.LichKhamDTO()
             {
                 MaBS = bacSiId,
                 //TrieuChung = textBox5.Text

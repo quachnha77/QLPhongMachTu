@@ -1,7 +1,6 @@
 ﻿using QLPhongMachTu_DOAN_.DAL;
 using QLPhongMachTu_DOAN_.DTO;
 using System.Collections.Generic;
-using System.Windows.Forms;
 
 namespace QLPhongMachTu_DOAN_.BLL
 {
@@ -43,6 +42,14 @@ namespace QLPhongMachTu_DOAN_.BLL
         {
             var user = benhNhanDAL.GetByUserID(userID);
             return user;
+        }
+
+        public bool UpdateBenhNhan(long benhNhanId, BenhNhan updatedBenhNhan)
+        {
+            BenhNhan result = benhNhanDAL.UpdateBenhNhan(benhNhanId, updatedBenhNhan);
+            if (result != null)
+                return true;
+            return false;
         }
     }
 }
